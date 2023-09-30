@@ -33,7 +33,7 @@ struct StartScreenView: View {
                     
                 }) {
                     Rectangle()
-                        .frame(width: 343, height: 48)
+                        .frame(height: 48)
                         .foregroundColor(CustomColors.yellowColor)
                         .cornerRadius(10)
                         .overlay(
@@ -42,6 +42,7 @@ struct StartScreenView: View {
                                 .foregroundColor(.white)
                         )
                 }
+                .padding(.horizontal, 16)
                 Spacer()
                 VStack(spacing: 24) {
                     HStack(spacing: 3) {
@@ -56,6 +57,7 @@ struct StartScreenView: View {
                                 .foregroundColor(CustomColors.darkBrownColor)
                         }
                     }
+                    // TODO: underline links
                     Text("Продолжая, вы соглашаетесь с [правилами использования приложения](https://www.apple.com/) и [политикой конфиденциальности](https://www.apple.com/)")
                         .font(.system(size: 11))
                         .foregroundColor(CustomColors.beigeColor)
