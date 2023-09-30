@@ -14,6 +14,10 @@
 		9DA945D32AC0BA0B002302D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945D22AC0BA0B002302D1 /* Assets.xcassets */; };
 		9DA945D62AC0BA0B002302D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945D42AC0BA0B002302D1 /* LaunchScreen.storyboard */; };
 		9DA945DE2AC0BA26002302D1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945DD2AC0BA26002302D1 /* .gitignore */; };
+		FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */; };
+		FE7A80112AC60EA0000A8711 /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A80102AC60EA0000A8711 /* StartScreenView.swift */; };
+		FEF6972B2AC5E7CF00708E1E /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */; };
+		FEF697302AC5EF1800708E1E /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6972F2AC5EF1800708E1E /* CustomActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		9DA945D52AC0BA0B002302D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DA945D72AC0BA0B002302D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA945DD2AC0BA26002302D1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		FE7A80102AC60EA0000A8711 /* StartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
+		FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		FEF6972F2AC5EF1800708E1E /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +67,59 @@
 		9DA945C82AC0BA0A002302D1 /* KnigomaniaApp */ = {
 			isa = PBXGroup;
 			children = (
-				9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */,
-				9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */,
+				FEF697282AC5E69300708E1E /* Application */,
 				9DA945CD2AC0BA0A002302D1 /* ViewController.swift */,
+				FE713E4B2AC5DE5200F6DA62 /* SplashScreen */,
+				FE70D7952AC815510018C5A1 /* StartScreen */,
+				FEF697292AC5E7B800708E1E /* Helpers */,
 				9DA945CF2AC0BA0A002302D1 /* Main.storyboard */,
 				9DA945D22AC0BA0B002302D1 /* Assets.xcassets */,
 				9DA945D42AC0BA0B002302D1 /* LaunchScreen.storyboard */,
 				9DA945D72AC0BA0B002302D1 /* Info.plist */,
 			);
 			path = KnigomaniaApp;
+			sourceTree = "<group>";
+		};
+		FE70D7952AC815510018C5A1 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FE7A80102AC60EA0000A8711 /* StartScreenView.swift */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		FE713E4B2AC5DE5200F6DA62 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */,
+				FEF6972E2AC5EEFA00708E1E /* SubViews */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		FEF697282AC5E69300708E1E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */,
+				9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FEF697292AC5E7B800708E1E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FEF6972E2AC5EEFA00708E1E /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				FEF6972F2AC5EF1800708E1E /* CustomActivityIndicator.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +195,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DA945CE2AC0BA0A002302D1 /* ViewController.swift in Sources */,
+				FEF6972B2AC5E7CF00708E1E /* CustomColors.swift in Sources */,
 				9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */,
+				FE7A80112AC60EA0000A8711 /* StartScreenView.swift in Sources */,
 				9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */,
+				FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */,
+				FEF697302AC5EF1800708E1E /* CustomActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +360,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +368,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ilyaagoryaev.KnigomaniaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -332,6 +392,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +400,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ilyaagoryaev.KnigomaniaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

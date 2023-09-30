@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "startscreenimage.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
