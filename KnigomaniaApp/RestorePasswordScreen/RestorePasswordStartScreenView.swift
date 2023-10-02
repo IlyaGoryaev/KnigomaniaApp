@@ -1,5 +1,5 @@
 //
-//  LoginScreenView.swift
+//  RestorePasswordStartScreenView.swift
 //  KnigomaniaApp
 //
 //  Created by Arina Postnikova on 30/9/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LoginScreenView: View {
+struct RestorePasswordStartScreenView: View {
     @State private var email: String = ""
     
     var body: some View {
@@ -57,29 +57,6 @@ struct LoginScreenView: View {
                     .padding(.horizontal, 16)
                 }
                 .padding(.top, 40)
-                VStack(spacing: 8) {
-                    HStack {
-                        Text("Пароль")
-                            .font(.system(size: 14, weight: .regular))
-                            .foregroundColor(CustomColors.darkBrownColor)
-                            .padding(.leading, 17)
-                        Spacer()
-                    }
-                }
-                .padding(.top, 16)
-                // TODO: add password field
-                HStack {
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Забыли пароль?")
-                            .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(CustomColors.darkBrownColor)
-                    })
-                    .padding(.leading, 18)
-                    Spacer()
-                }
-                .padding(.top, 16)
                 Button(action: {
                     
                 }) {
@@ -95,7 +72,7 @@ struct LoginScreenView: View {
                 }
                 .padding(.horizontal, 16)
                 .padding(.top, 32)
-                HStack(spacing: 3) {
+                HStack(spacing: 4) {
                     Text("Еще нет аккаунта?")
                         .font(.system(size: 14, weight: .regular))
                         .foregroundColor(CustomColors.darkBrownColor)
@@ -115,5 +92,5 @@ struct LoginScreenView: View {
 }
 
 #Preview {
-    LoginScreenView()
+    RestorePasswordStartScreenView()
 }

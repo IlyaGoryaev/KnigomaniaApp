@@ -45,7 +45,7 @@ struct StartScreenView: View {
                 .padding(.horizontal, 16)
                 Spacer()
                 VStack(spacing: 24) {
-                    HStack(spacing: 3) {
+                    HStack(spacing: 4) {
                         Text("Уже есть аккаунт?")
                             .font(.system(size: 14, weight: .regular))
                             .foregroundColor(CustomColors.darkBrownColor)
