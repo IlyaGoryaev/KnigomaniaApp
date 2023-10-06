@@ -65,26 +65,13 @@ struct RestorePasswordStartScreenView: View {
                         .foregroundColor(CustomColors.yellowColor)
                         .cornerRadius(10)
                         .overlay(
-                            Text("Войти")
+                            Text("Восстановить пароль")
                                 .font(.system(size: 16, weight: .medium))
                                 .foregroundColor(.white)
                         )
                 }
                 .padding(.horizontal, 16)
                 .padding(.top, 32)
-                HStack(spacing: 4) {
-                    Text("Еще нет аккаунта?")
-                        .font(.system(size: 14, weight: .regular))
-                        .foregroundColor(CustomColors.darkBrownColor)
-                    Button(action: {
-                        
-                    }) {
-                        Text("Зарегистрироваться")
-                            .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(CustomColors.darkBrownColor)
-                    }
-                }
-                .padding(.top, 16)
                 Spacer()
             }
         }

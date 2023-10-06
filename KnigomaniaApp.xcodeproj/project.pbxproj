@@ -14,12 +14,17 @@
 		9DA945D32AC0BA0B002302D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945D22AC0BA0B002302D1 /* Assets.xcassets */; };
 		9DA945D62AC0BA0B002302D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945D42AC0BA0B002302D1 /* LaunchScreen.storyboard */; };
 		9DA945DE2AC0BA26002302D1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945DD2AC0BA26002302D1 /* .gitignore */; };
+		FE314D442ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE314D432ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift */; };
+		FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F142AD02F2400AE00DF /* DaySelectionModalView.swift */; };
+		FE347F182AD032A900AE00DF /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F172AD032A900AE00DF /* Day.swift */; };
+		FE347F1A2AD055EE00AE00DF /* TimeSelectionModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F192AD055ED00AE00DF /* TimeSelectionModalView.swift */; };
 		FE70D79B2AC819400018C5A1 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE70D79A2AC819400018C5A1 /* LoginScreenView.swift */; };
 		FE70D79E2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE70D79D2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift */; };
 		FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */; };
 		FE7A80112AC60EA0000A8711 /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A80102AC60EA0000A8711 /* StartScreenView.swift */; };
 		FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */; };
 		FEAA59BA2ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */; };
+		FEC8EB082AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8EB072AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift */; };
 		FEF6972B2AC5E7CF00708E1E /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */; };
 		FEF697302AC5EF1800708E1E /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6972F2AC5EF1800708E1E /* CustomActivityIndicator.swift */; };
 /* End PBXBuildFile section */
@@ -34,12 +39,17 @@
 		9DA945D52AC0BA0B002302D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DA945D72AC0BA0B002302D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA945DD2AC0BA26002302D1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FE314D432ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerSetupRemindersScreenView.swift; sourceTree = "<group>"; };
+		FE347F142AD02F2400AE00DF /* DaySelectionModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySelectionModalView.swift; sourceTree = "<group>"; };
+		FE347F172AD032A900AE00DF /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		FE347F192AD055ED00AE00DF /* TimeSelectionModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionModalView.swift; sourceTree = "<group>"; };
 		FE70D79A2AC819400018C5A1 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		FE70D79D2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordStartScreenView.swift; sourceTree = "<group>"; };
 		FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		FE7A80102AC60EA0000A8711 /* StartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
 		FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenConfirmationView.swift; sourceTree = "<group>"; };
 		FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenSuccessView.swift; sourceTree = "<group>"; };
+		FEC8EB072AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerSetupConfirmationScreenView.swift; sourceTree = "<group>"; };
 		FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		FEF6972F2AC5EF1800708E1E /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +91,7 @@
 				FE70D7952AC815510018C5A1 /* StartScreen */,
 				FE70D7992AC8192F0018C5A1 /* LoginScreen */,
 				FE70D79C2AC861790018C5A1 /* RestorePasswordScreen */,
+				FE314D422ACC81E100BA3356 /* TrackerSetupScreen */,
 				FEF697292AC5E7B800708E1E /* Helpers */,
 				9DA945CF2AC0BA0A002302D1 /* Main.storyboard */,
 				9DA945D22AC0BA0B002302D1 /* Assets.xcassets */,
@@ -88,6 +99,34 @@
 				9DA945D72AC0BA0B002302D1 /* Info.plist */,
 			);
 			path = KnigomaniaApp;
+			sourceTree = "<group>";
+		};
+		FE314D422ACC81E100BA3356 /* TrackerSetupScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FE314D432ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift */,
+				FEC8EB072AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift */,
+				FE314D452ACC8E0600BA3356 /* SubViews */,
+				FE347F162AD0326A00AE00DF /* Models */,
+			);
+			path = TrackerSetupScreen;
+			sourceTree = "<group>";
+		};
+		FE314D452ACC8E0600BA3356 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				FE347F142AD02F2400AE00DF /* DaySelectionModalView.swift */,
+				FE347F192AD055ED00AE00DF /* TimeSelectionModalView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		FE347F162AD0326A00AE00DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE347F172AD032A900AE00DF /* Day.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FE70D7952AC815510018C5A1 /* StartScreen */ = {
@@ -222,7 +261,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE347F182AD032A900AE00DF /* Day.swift in Sources */,
+				FE347F1A2AD055EE00AE00DF /* TimeSelectionModalView.swift in Sources */,
+				FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */,
 				9DA945CE2AC0BA0A002302D1 /* ViewController.swift in Sources */,
+				FEC8EB082AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift in Sources */,
+				FE314D442ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift in Sources */,
 				FEF6972B2AC5E7CF00708E1E /* CustomColors.swift in Sources */,
 				FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */,
 				9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */,
