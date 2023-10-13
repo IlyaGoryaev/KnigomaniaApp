@@ -7,14 +7,17 @@
 
 import SwiftUI
 import UIKit
-
+import Combine
 
 final class ApplicationCoordinator: Coordinator{
 	
 	var navigationController: UINavigationController
 	
-	init(navigationController: UINavigationController) {
+	let isUserAutorise: CurrentValueSubject<Bool, Never>
+	
+	init(navigationController: UINavigationController, isUserAutorise: CurrentValueSubject<Bool, Never>) {
 		self.navigationController = navigationController
+		self.isUserAutorise = isUserAutorise
 	}
 	
 	func start() {
@@ -22,8 +25,7 @@ final class ApplicationCoordinator: Coordinator{
 		var view = RegistrationOnboardingStep3View()
 		view.applicationCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: false)
-		
+		self.navigationController.pushViewController(viewController, animated: false)
 	}
 	
 	func openStep3(){
@@ -58,6 +60,10 @@ final class ApplicationCoordinator: Coordinator{
 		let viewController = UIHostingController(rootView: view)
 		navigationController.pushViewController(viewController, animated: true)
 		
+	}
+	
+	func logIn(){
+		isUserAutorise.send(true)
 	}
 	
 	func backAction(){

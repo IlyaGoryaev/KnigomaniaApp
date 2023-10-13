@@ -24,7 +24,7 @@ struct ButtonView: View {
 				.foregroundStyle(!isButtonEnable ? CustomColors.darkBrownColor : Color.white)
 				.frame(maxWidth: .infinity)
 				.frame(height: 48)
-				.background(!isButtonEnable ? CustomColors.orangeButtonColor : CustomColors.orangeActiveButtonColor)
+				.background(!isButtonEnable ? CustomColors.orangeActiveButtonColor : CustomColors.orangeButtonColor)
 				.clipShape(RoundedRectangle(cornerRadius: 10))
 				.padding(.horizontal, 16)
 			

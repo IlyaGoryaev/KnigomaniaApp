@@ -21,7 +21,7 @@ struct SetupTrackerStep4View: View {
 				Text("Настроить напоминания")
 					.padding(.top, 20)
 					.font(.system(size: 24, weight: .bold))
-					.foregroundStyle(CustomColors.brownColor)
+					.foregroundStyle(CustomColors.darkBrownColor)
 					.frame(maxWidth: .infinity, alignment: .leading)
 					.padding(.horizontal, 16)
 					.multilineTextAlignment(.leading)
@@ -39,7 +39,7 @@ struct SetupTrackerStep4View: View {
 						Text("Пропустить")
 						Image(systemName: "chevron.right")
 					}
-					.foregroundStyle(CustomColors.brownColor)
+					.foregroundStyle(CustomColors.darkBrownColor)
 					.font(.system(size: 14, weight: .semibold))
 				})
 				.padding(.top, 24)

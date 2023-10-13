@@ -6,17 +6,45 @@
 //
 
 import UIKit
+import Combine
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+	
+	var coordinator: Coordinator?
 
     var window: UIWindow?
-
+	
+	private let isUserAutorise = CurrentValueSubject<Bool, Never>(false)
+	var cancallables = Set<AnyCancellable>()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+		guard let windowScene = (scene as? UIWindowScene) else { return }
+		
+		let window = UIWindow(windowScene: windowScene)
+		let viewController = UINavigationController()
+		let uiHostingController = UIHostingController(rootView: SplashScreenView())
+		viewController.pushViewController(uiHostingController, animated: false)
+		viewController.navigationBar.isHidden = true
+		self.window = window
+		self.window?.rootViewController = viewController
+		self.window?.makeKeyAndVisible()
+				
+		DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+			self.isUserAutorise.sink { [weak self] boolValue in
+				guard let self = self else { return }
+				if boolValue{
+					let mainCoordinator = MainCoordinator(navigationController: viewController)
+					mainCoordinator.start()
+					self.coordinator = mainCoordinator
+				} else {
+					let apllicationCoordinator = ApplicationCoordinator(navigationController: viewController, isUserAutorise: self.isUserAutorise)
+					apllicationCoordinator.start()
+					self.coordinator = apllicationCoordinator
+				}
+			}.store(in: &self.cancallables)
+
+		}
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

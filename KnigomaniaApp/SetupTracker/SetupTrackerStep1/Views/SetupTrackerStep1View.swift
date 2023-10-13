@@ -51,7 +51,7 @@ struct SetupTrackerStep1View: View {
 		})
 		.padding(.horizontal, 16)
 		.padding(.top, 24)
-		.tint(CustomColors.brownColor)
+		.tint(CustomColors.darkBrownColor)
 		.onAppear{
 			setupAppearance()
 		}
@@ -64,7 +64,7 @@ struct SetupTrackerStep1View: View {
 	}
 	
 	func setupAppearance() {
-		UISlider.appearance().thumbTintColor = UIColor(CustomColors.brownColor)
+		UISlider.appearance().thumbTintColor = UIColor(CustomColors.darkBrownColor)
 		UISlider.appearance().maximumTrackTintColor = UIColor(CustomColors.brownColor)
 	}
 	

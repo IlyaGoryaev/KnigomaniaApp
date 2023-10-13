@@ -27,6 +27,8 @@
 		9D61F9FC2AD8896B0000393C /* SetupTrackerStep3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9FB2AD8896B0000393C /* SetupTrackerStep3View.swift */; };
 		9D61FA022AD889B20000393C /* SetupTrackerStep4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61FA012AD889B20000393C /* SetupTrackerStep4View.swift */; };
 		9D61FA042AD889F90000393C /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61FA032AD889F90000393C /* NavBar.swift */; };
+		9D61FA0B2AD995000000393C /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61FA0A2AD995000000393C /* MainScreen.swift */; };
+		9D61FA0D2AD996230000393C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61FA0C2AD996230000393C /* MainCoordinator.swift */; };
 		9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */; };
 		9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */; };
 		9DA945CE2AC0BA0A002302D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945CD2AC0BA0A002302D1 /* ViewController.swift */; };
@@ -70,6 +72,8 @@
 		9D61F9FB2AD8896B0000393C /* SetupTrackerStep3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTrackerStep3View.swift; sourceTree = "<group>"; };
 		9D61FA012AD889B20000393C /* SetupTrackerStep4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTrackerStep4View.swift; sourceTree = "<group>"; };
 		9D61FA032AD889F90000393C /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		9D61FA0A2AD995000000393C /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		9D61FA0C2AD996230000393C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		9DA945C62AC0BA0A002302D1 /* KnigomaniaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnigomaniaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				9D61F9BD2AD8820E0000393C /* ApplicationCoordinator.swift */,
 				9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */,
 				9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */,
+				9D61FA0C2AD996230000393C /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -377,6 +382,30 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		9D61FA072AD994D30000393C /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9D61FA092AD994E10000393C /* ViewModels */,
+				9D61FA082AD994DC0000393C /* Views */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		9D61FA082AD994DC0000393C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D61FA0A2AD995000000393C /* MainScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9D61FA092AD994E10000393C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		9DA945BD2AC0BA0A002302D1 = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +428,7 @@
 			children = (
 				FEF697282AC5E69300708E1E /* Application */,
 				9DA945CD2AC0BA0A002302D1 /* ViewController.swift */,
+				9D61FA072AD994D30000393C /* MainScreen */,
 				9D61F9E82AD887FB0000393C /* SetupTracker */,
 				9D61F9C32AD8829A0000393C /* DesignElements */,
 				9D61F9B62AD881810000393C /* RegistrationOnboarding */,
@@ -579,6 +609,7 @@
 			files = (
 				FE347F182AD032A900AE00DF /* Day.swift in Sources */,
 				9D61F9FC2AD8896B0000393C /* SetupTrackerStep3View.swift in Sources */,
+				9D61FA0B2AD995000000393C /* MainScreen.swift in Sources */,
 				FE347F1A2AD055EE00AE00DF /* TimeSelectionModalView.swift in Sources */,
 				FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */,
 				9DA945CE2AC0BA0A002302D1 /* ViewController.swift in Sources */,
@@ -609,6 +640,7 @@
 				9D61FA042AD889F90000393C /* NavBar.swift in Sources */,
 				9D61F9F62AD888B90000393C /* SetupTrackerStep2View.swift in Sources */,
 				9D61F9F02AD888840000393C /* SetupTrackerStep1View.swift in Sources */,
+				9D61FA0D2AD996230000393C /* MainCoordinator.swift in Sources */,
 				9D61F9E72AD885950000393C /* RegistrationOnboardingStep6View.swift in Sources */,
 				FEAA59BA2ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift in Sources */,
 				9D61F9DE2AD884F70000393C /* CustomButtonStyle.swift in Sources */,

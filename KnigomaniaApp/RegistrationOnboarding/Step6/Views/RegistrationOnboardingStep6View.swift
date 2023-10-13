@@ -30,7 +30,7 @@ struct RegistrationOnboardingStep6View: View {
 				})
 				.padding(.top, 32)
 				ButtonView(title: "Настроить", isButtonEnable: true){
-					
+					applicationCoordinator?.logIn()
 				}
 				.padding(.top, 8)
 				Spacer()

@@ -85,7 +85,7 @@ struct SelectedGenre: ViewModifier{
 			.frame(height: 40)
 			.frame(maxWidth: .infinity)
 			.foregroundStyle(Color.white)
-			.background(CustomColors.darkBrownColor)
+			.background(CustomColors.brownColor)
 			.clipShape(RoundedRectangle(cornerRadius: 20))
 	}
 	
