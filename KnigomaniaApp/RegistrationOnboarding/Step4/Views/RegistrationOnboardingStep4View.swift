@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RegistrationOnboardingStep4View: View {
 	
-	var applicationCoordinator: ApplicationCoordinator?
+	weak var applicationCoordinator: RegistrationOnboardingCoordinator?
 	
 	var body: some View {
 		ZStack{

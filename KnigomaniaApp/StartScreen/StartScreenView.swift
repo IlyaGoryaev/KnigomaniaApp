@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct StartScreenView: View {
+	
+	weak var entryCoordinator: EntryCoordinator?
+	
     var body: some View {
         ZStack {
             CustomColors.background
@@ -30,7 +33,7 @@ struct StartScreenView: View {
                 .padding(.top, 40)
                 Spacer(minLength: 32)
                 Button(action: {
-                    
+					entryCoordinator?.openRegistrationScreen()
                 }) {
                     Rectangle()
                         .frame(height: 48)
@@ -50,7 +53,7 @@ struct StartScreenView: View {
                             .font(.system(size: 14, weight: .regular))
                             .foregroundColor(CustomColors.darkBrownColor)
                         Button(action: {
-                            
+							entryCoordinator?.openEntryScreen()
                         }) {
                             Text("Войти")
                                 .font(.system(size: 14, weight: .medium))

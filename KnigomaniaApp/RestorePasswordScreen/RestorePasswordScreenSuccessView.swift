@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RestorePasswordScreenSuccessView: View {
+	
+	weak var resetPasswordCoordinator: ResetPasswordCoordinator?
+	
     var body: some View {
         ZStack {
             CustomColors.background
@@ -28,7 +31,7 @@ struct RestorePasswordScreenSuccessView: View {
                     .foregroundColor(CustomColors.darkBrownColor)
                     .padding(.top, 24)
                 Button(action: {
-                    
+					resetPasswordCoordinator?.backToEntryScreen()
                 }) {
                     Rectangle()
                         .frame(height: 48)

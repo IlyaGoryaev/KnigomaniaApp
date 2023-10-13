@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RestorePasswordScreenConfirmationView: View {
+	
+	weak var resetPasswordCoordinator: ResetPasswordCoordinator?
+	
     var body: some View {
         ZStack {
             CustomColors.background
@@ -39,7 +42,7 @@ struct RestorePasswordScreenConfirmationView: View {
                 .padding(.top, 16)
                 // TODO: add password fields
                 Button(action: {
-                    
+					resetPasswordCoordinator?.savePassword()
                 }) {
                     Rectangle()
                         .frame(height: 48)

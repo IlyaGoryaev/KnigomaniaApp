@@ -3,7 +3,7 @@ import Combine
 
 struct SetupTrackerStep3View: View {
 	
-	var trackerCoordinator: TrackerCoordinator?
+	weak var trackerCoordinator: TrackerCoordinator?
 	
 	@State private var amountOfDays: Double = 0
 	@State private var amountOfDaysString: String = ""

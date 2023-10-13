@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RestorePasswordStartScreenView: View {
+	
+	weak var resetPasswordCoordinator: ResetPasswordCoordinator?
+	
     @State private var email: String = ""
     
     var body: some View {
@@ -58,7 +61,7 @@ struct RestorePasswordStartScreenView: View {
                 }
                 .padding(.top, 40)
                 Button(action: {
-                    
+					resetPasswordCoordinator?.resetPasswordByEmail()
                 }) {
                     Rectangle()
                         .frame(height: 48)

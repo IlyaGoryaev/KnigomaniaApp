@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LoginScreenView: View {
+	
+	weak var entryCoordinator: EntryCoordinator?
+	
     @State private var email: String = ""
     
     var body: some View {
@@ -70,7 +73,7 @@ struct LoginScreenView: View {
                 // TODO: add password field
                 HStack {
                     Button(action: {
-                        
+						entryCoordinator?.resetPassword()
                     }, label: {
                         Text("Забыли пароль?")
                             .font(.system(size: 14, weight: .medium))
@@ -81,7 +84,7 @@ struct LoginScreenView: View {
                 }
                 .padding(.top, 16)
                 Button(action: {
-                    
+					entryCoordinator?.logIn()
                 }) {
                     Rectangle()
                         .frame(height: 48)

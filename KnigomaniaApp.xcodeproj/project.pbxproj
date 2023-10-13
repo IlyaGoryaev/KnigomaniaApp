@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D5042B42AD9E8410028C2FF /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5042B32AD9E8410028C2FF /* RegistrationView.swift */; };
 		9D61F9BB2AD881D40000393C /* RegistrationOnBoardingStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BA2AD881D40000393C /* RegistrationOnBoardingStep2View.swift */; };
-		9D61F9BE2AD8820E0000393C /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BD2AD8820E0000393C /* ApplicationCoordinator.swift */; };
+		9D61F9BE2AD8820E0000393C /* RegistrationOnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BD2AD8820E0000393C /* RegistrationOnboardingCoordinator.swift */; };
 		9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */; };
 		9D61F9C22AD8825D0000393C /* TrackerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */; };
 		9D61F9C52AD882B30000393C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9C42AD882B30000393C /* ButtonView.swift */; };
@@ -29,6 +30,8 @@
 		9D61FA042AD889F90000393C /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61FA032AD889F90000393C /* NavBar.swift */; };
 		9D61FA0B2AD995000000393C /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61FA0A2AD995000000393C /* MainScreen.swift */; };
 		9D61FA0D2AD996230000393C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61FA0C2AD996230000393C /* MainCoordinator.swift */; };
+		9D8A926D2AD9DDC8002E7270 /* EntryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A926C2AD9DDC8002E7270 /* EntryCoordinator.swift */; };
+		9D8A926F2AD9E1C0002E7270 /* ResetPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A926E2AD9E1C0002E7270 /* ResetPasswordCoordinator.swift */; };
 		9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */; };
 		9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */; };
 		9DA945CE2AC0BA0A002302D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945CD2AC0BA0A002302D1 /* ViewController.swift */; };
@@ -52,8 +55,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D5042B32AD9E8410028C2FF /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		9D61F9BA2AD881D40000393C /* RegistrationOnBoardingStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOnBoardingStep2View.swift; sourceTree = "<group>"; };
-		9D61F9BD2AD8820E0000393C /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		9D61F9BD2AD8820E0000393C /* RegistrationOnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOnboardingCoordinator.swift; sourceTree = "<group>"; };
 		9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCoordinator.swift; sourceTree = "<group>"; };
 		9D61F9C42AD882B30000393C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		9D61FA032AD889F90000393C /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		9D61FA0A2AD995000000393C /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		9D61FA0C2AD996230000393C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		9D8A926C2AD9DDC8002E7270 /* EntryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCoordinator.swift; sourceTree = "<group>"; };
+		9D8A926E2AD9E1C0002E7270 /* ResetPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCoordinator.swift; sourceTree = "<group>"; };
 		9DA945C62AC0BA0A002302D1 /* KnigomaniaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnigomaniaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +115,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D5042B02AD9E81C0028C2FF /* RegistrationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9D5042B22AD9E82C0028C2FF /* ViewModels */,
+				9D5042B12AD9E8270028C2FF /* Views */,
+			);
+			path = RegistrationScreen;
+			sourceTree = "<group>";
+		};
+		9D5042B12AD9E8270028C2FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D5042B32AD9E8410028C2FF /* RegistrationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9D5042B22AD9E82C0028C2FF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9D5042B52AD9F1590028C2FF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		9D61F9B62AD881810000393C /* RegistrationOnboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,10 +186,12 @@
 		9D61F9BC2AD881EE0000393C /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				9D61F9BD2AD8820E0000393C /* ApplicationCoordinator.swift */,
-				9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */,
+				9D5042B52AD9F1590028C2FF /* Protocols */,
+				9D61F9BD2AD8820E0000393C /* RegistrationOnboardingCoordinator.swift */,
 				9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */,
 				9D61FA0C2AD996230000393C /* MainCoordinator.swift */,
+				9D8A926C2AD9DDC8002E7270 /* EntryCoordinator.swift */,
+				9D8A926E2AD9E1C0002E7270 /* ResetPasswordCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -428,6 +468,7 @@
 			children = (
 				FEF697282AC5E69300708E1E /* Application */,
 				9DA945CD2AC0BA0A002302D1 /* ViewController.swift */,
+				9D5042B02AD9E81C0028C2FF /* RegistrationScreen */,
 				9D61FA072AD994D30000393C /* MainScreen */,
 				9D61F9E82AD887FB0000393C /* SetupTracker */,
 				9D61F9C32AD8829A0000393C /* DesignElements */,
@@ -614,16 +655,18 @@
 				FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */,
 				9DA945CE2AC0BA0A002302D1 /* ViewController.swift in Sources */,
 				FEC8EB082AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift in Sources */,
-				9D61F9BE2AD8820E0000393C /* ApplicationCoordinator.swift in Sources */,
+				9D61F9BE2AD8820E0000393C /* RegistrationOnboardingCoordinator.swift in Sources */,
 				9D61F9CB2AD883090000393C /* TextFieldTime.swift in Sources */,
 				9D61F9D62AD884760000393C /* RegistrationOnboardingStep4View.swift in Sources */,
 				9D61FA022AD889B20000393C /* SetupTrackerStep4View.swift in Sources */,
+				9D8A926F2AD9E1C0002E7270 /* ResetPasswordCoordinator.swift in Sources */,
 				FE314D442ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift in Sources */,
 				9D61F9C22AD8825D0000393C /* TrackerCoordinator.swift in Sources */,
 				FEF6972B2AC5E7CF00708E1E /* CustomColors.swift in Sources */,
 				9D61F9C92AD882F20000393C /* NumberTextField.swift in Sources */,
 				FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */,
 				9D61F9D12AD884180000393C /* RegistrationOnboardingStep3View.swift in Sources */,
+				9D8A926D2AD9DDC8002E7270 /* EntryCoordinator.swift in Sources */,
 				9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */,
 				9D61F9E22AD885290000393C /* RegistrationStep5View.swift in Sources */,
 				9D61F9BB2AD881D40000393C /* RegistrationOnBoardingStep2View.swift in Sources */,
@@ -638,6 +681,7 @@
 				FE70D79E2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift in Sources */,
 				FEF697302AC5EF1800708E1E /* CustomActivityIndicator.swift in Sources */,
 				9D61FA042AD889F90000393C /* NavBar.swift in Sources */,
+				9D5042B42AD9E8410028C2FF /* RegistrationView.swift in Sources */,
 				9D61F9F62AD888B90000393C /* SetupTrackerStep2View.swift in Sources */,
 				9D61F9F02AD888840000393C /* SetupTrackerStep1View.swift in Sources */,
 				9D61FA0D2AD996230000393C /* MainCoordinator.swift in Sources */,

@@ -3,7 +3,7 @@ import SwiftUI
 struct SetupTrackerStep4View: View {
 	
 	
-	var trackerCoordinator: TrackerCoordinator?
+	weak var trackerCoordinator: TrackerCoordinator?
 	
 	var body: some View {
 		ZStack{
@@ -33,7 +33,7 @@ struct SetupTrackerStep4View: View {
 					.lineSpacing(10)
 					.multilineTextAlignment(.leading)
 				Button(action: {
-					
+					trackerCoordinator?.logIn()
 				}, label: {
 					HStack{
 						Text("Пропустить")
