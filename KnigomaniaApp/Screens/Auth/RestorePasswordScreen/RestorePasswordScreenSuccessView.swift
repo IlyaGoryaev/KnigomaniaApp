@@ -27,20 +27,9 @@ struct RestorePasswordScreenSuccessView: View {
                     .multilineTextAlignment(.center)
                     .foregroundColor(CustomColors.darkBrownColor)
                     .padding(.top, 24)
-                Button(action: {
+                ButtonView(title: "Войти", isButtonEnable: true) {
                     
-                }) {
-                    Rectangle()
-                        .frame(height: 48)
-                        .foregroundColor(CustomColors.yellowColor)
-                        .cornerRadius(10)
-                        .overlay(
-                            Text("Войти")
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(.white)
-                        )
                 }
-                .padding(.horizontal, 16)
                 .padding(.top, 22)
                 Spacer()
             }

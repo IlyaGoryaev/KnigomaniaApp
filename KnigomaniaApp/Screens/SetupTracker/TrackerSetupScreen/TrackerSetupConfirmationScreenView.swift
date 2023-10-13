@@ -28,21 +28,10 @@ struct TrackerSetupConfirmationScreenView: View {
                         .padding(.horizontal, 16)
                 }
                 .padding(.top, 64)
-                Button(action: {
+                ButtonView(title: "Поехали", isButtonEnable: true) {
                     
-                }) {
-                    Rectangle()
-                        .frame(height: 48)
-                        .foregroundColor(CustomColors.yellowColor)
-                        .cornerRadius(10)
-                        .overlay(
-                            Text("Поехали")
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(.white)
-                        )
                 }
                 .padding(.top, 32)
-                .padding(.horizontal, 16)
                 Spacer()
             }
         }

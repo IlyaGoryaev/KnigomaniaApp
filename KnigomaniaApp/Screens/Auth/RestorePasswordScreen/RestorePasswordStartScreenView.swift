@@ -57,20 +57,9 @@ struct RestorePasswordStartScreenView: View {
                     .padding(.horizontal, 16)
                 }
                 .padding(.top, 40)
-                Button(action: {
+                ButtonView(title: "Восстановить пароль", isButtonEnable: true) {
                     
-                }) {
-                    Rectangle()
-                        .frame(height: 48)
-                        .foregroundColor(CustomColors.yellowColor)
-                        .cornerRadius(10)
-                        .overlay(
-                            Text("Восстановить пароль")
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(.white)
-                        )
                 }
-                .padding(.horizontal, 16)
                 .padding(.top, 32)
                 Spacer()
             }

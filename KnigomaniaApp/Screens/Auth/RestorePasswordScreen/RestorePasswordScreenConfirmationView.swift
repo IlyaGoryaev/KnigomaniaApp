@@ -38,20 +38,9 @@ struct RestorePasswordScreenConfirmationView: View {
                 }
                 .padding(.top, 16)
                 // TODO: add password fields
-                Button(action: {
+                ButtonView(title: "Сохранить", isButtonEnable: true) {
                     
-                }) {
-                    Rectangle()
-                        .frame(height: 48)
-                        .foregroundColor(CustomColors.yellowColor)
-                        .cornerRadius(10)
-                        .overlay(
-                            Text("Сохранить")
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(.white)
-                        )
                 }
-                .padding(.horizontal, 16)
                 .padding(.top, 32)
                 Spacer()
             }
