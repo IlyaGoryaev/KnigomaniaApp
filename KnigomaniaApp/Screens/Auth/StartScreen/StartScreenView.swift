@@ -29,20 +29,9 @@ struct StartScreenView: View {
                 }
                 .padding(.top, 40)
                 Spacer(minLength: 32)
-                Button(action: {
+                ButtonView(title: "Регистрация", isButtonEnable: true) {
                     
-                }) {
-                    Rectangle()
-                        .frame(height: 48)
-                        .foregroundColor(CustomColors.yellowColor)
-                        .cornerRadius(10)
-                        .overlay(
-                            Text("Регистрация")
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(.white)
-                        )
                 }
-                .padding(.horizontal, 16)
                 Spacer()
                 VStack(spacing: 24) {
                     HStack(spacing: 4) {

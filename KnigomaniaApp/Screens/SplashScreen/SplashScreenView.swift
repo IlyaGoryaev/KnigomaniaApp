@@ -13,12 +13,13 @@ struct SplashScreenView: View {
             CustomColors.background
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                Spacer()
                 Text("КНИГОМАНИЯ")
                     .font(.system(size: 32, weight: .heavy))
                     .foregroundColor(CustomColors.darkBrownColor)
+                    .padding(.top, 343)
                 CustomActivityIndicator()
-                    .padding(.top, 287)
+                    .padding(.top, 290)
+                Spacer()
             }
         }
     }

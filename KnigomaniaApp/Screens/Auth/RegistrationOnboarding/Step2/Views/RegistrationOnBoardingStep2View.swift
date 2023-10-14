@@ -38,7 +38,7 @@ struct RegistrationOnBoardingStep2View: View {
 						applicationCoordinator?.openStep3()
 					}, label: {
 						Text("Отправить еще раз")
-							.foregroundStyle(CustomColors.brownColor)
+							.foregroundStyle(CustomColors.darkBrownColor)
 							.font(.system(size: 14, weight: .bold))
 					})
 				}
