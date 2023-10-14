@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RegistrationView: View {
 	
-	var entryCoordinator: EntryCoordinator?
+	weak var entryCoordinator: EntryCoordinator?
 	
     var body: some View {
 		ZStack{

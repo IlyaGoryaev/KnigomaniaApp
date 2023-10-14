@@ -72,7 +72,7 @@ final class RegistrationOnboardingCoordinator: Coordinator{
 	}
 	
 	func setUpTracker(){
-		var trackerCoordinator = TrackerCoordinator(navigationController: navigationController, isUserAuthorise: isUserAuthorise!)
+		let trackerCoordinator = TrackerCoordinator(navigationController: navigationController, isUserAuthorise: isUserAuthorise!)
 		trackerCoordinator.start()
 		childCoordinators.append(trackerCoordinator)
 	}
