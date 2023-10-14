@@ -29,8 +29,7 @@ struct TrackerSetupRemindersScreenView: View {
                     }
                     .toggleStyle(SwitchToggleStyle(tint: CustomColors.brownColor))
                 }
-                .padding(.leading, 28)
-                .padding(. trailing, 16)
+                .padding(.horizontal, 16)
                 .padding(.top, 40)
                 HStack {
                     Text("Когда напоминать")
@@ -45,8 +44,19 @@ struct TrackerSetupRemindersScreenView: View {
                             .foregroundColor(CustomColors.brownColor)
                     }
                 }
-                .padding(.leading, 28)
-                .padding(.trailing, 16)
+                .padding(.horizontal, 16)
+                .padding(.top, 32)
+                HStack {
+                    Text("Время")
+                        .font(.system(size: 16, weight: .regular))
+                        .foregroundColor(CustomColors.darkBrownColor)
+                    Spacer()
+                }
+                .padding(.horizontal, 16)
+                .padding(.top, 32)
+                ButtonView(title: "Завершить", isButtonEnable: true) {
+                    
+                }
                 .padding(.top, 32)
                 Spacer()
             }
