@@ -11,6 +11,9 @@ struct RestorePasswordScreenConfirmationView: View {
 	
 	weak var resetPasswordCoordinator: ResetPasswordCoordinator?
 	
+	@State private var passwordTextField: String = ""
+	@State private var confirmPasswordTextField: String = ""
+	
     var body: some View {
         ZStack {
             CustomColors.background
@@ -28,6 +31,7 @@ struct RestorePasswordScreenConfirmationView: View {
                             .padding(.leading, 17)
                         Spacer()
                     }
+					PasswordTextField(text: $passwordTextField, title: "Введите пароль")
                 }
                 .padding(.top, 32)
                 VStack(spacing: 8) {
@@ -38,6 +42,7 @@ struct RestorePasswordScreenConfirmationView: View {
                             .padding(.leading, 17)
                         Spacer()
                     }
+					PasswordTextField(text: $confirmPasswordTextField, title: "Введите пароль")
                 }
                 .padding(.top, 16)
                 // TODO: add password fields
@@ -61,7 +66,6 @@ struct RestorePasswordScreenConfirmationView: View {
         }
     }
 }
-
 #Preview {
     RestorePasswordScreenConfirmationView()
 }

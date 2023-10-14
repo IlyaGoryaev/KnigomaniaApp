@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D5042B42AD9E8410028C2FF /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5042B32AD9E8410028C2FF /* RegistrationView.swift */; };
+		9D5042D92ADADE9B0028C2FF /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5042D82ADADE9B0028C2FF /* PasswordTextField.swift */; };
 		9D61F9BB2AD881D40000393C /* RegistrationOnBoardingStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BA2AD881D40000393C /* RegistrationOnBoardingStep2View.swift */; };
 		9D61F9BE2AD8820E0000393C /* RegistrationOnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BD2AD8820E0000393C /* RegistrationOnboardingCoordinator.swift */; };
 		9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		9D5042B32AD9E8410028C2FF /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		9D5042D82ADADE9B0028C2FF /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		9D61F9BA2AD881D40000393C /* RegistrationOnBoardingStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOnBoardingStep2View.swift; sourceTree = "<group>"; };
 		9D61F9BD2AD8820E0000393C /* RegistrationOnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOnboardingCoordinator.swift; sourceTree = "<group>"; };
 		9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				9D61F9C82AD882F20000393C /* NumberTextField.swift */,
 				9D61F9CA2AD883090000393C /* TextFieldTime.swift */,
 				9D61FA032AD889F90000393C /* NavBar.swift */,
+				9D5042D82ADADE9B0028C2FF /* PasswordTextField.swift */,
 			);
 			path = DesignElements;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 			files = (
 				FE347F182AD032A900AE00DF /* Day.swift in Sources */,
 				9D61F9FC2AD8896B0000393C /* SetupTrackerStep3View.swift in Sources */,
+				9D5042D92ADADE9B0028C2FF /* PasswordTextField.swift in Sources */,
 				9D61FA0B2AD995000000393C /* MainScreen.swift in Sources */,
 				FE347F1A2AD055EE00AE00DF /* TimeSelectionModalView.swift in Sources */,
 				FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */,

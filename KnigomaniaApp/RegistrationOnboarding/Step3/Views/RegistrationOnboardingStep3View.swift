@@ -18,7 +18,7 @@ struct RegistrationOnboardingStep3View: View {
 				.ignoresSafeArea()
 			VStack{
 				NavBar(title: "Регистрация") {
-					applicationCoordinator?.backAction()
+					
 				}
 				.padding(.top, 20)
 				Text("Ваш адрес электронной почты подтвержден!")

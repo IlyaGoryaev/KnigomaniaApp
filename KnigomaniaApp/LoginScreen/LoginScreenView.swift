@@ -12,6 +12,8 @@ struct LoginScreenView: View {
 	weak var entryCoordinator: EntryCoordinator?
 	
     @State private var email: String = ""
+	
+	@State private var passwordText: String = ""
     
     var body: some View {
         ZStack {
@@ -68,6 +70,7 @@ struct LoginScreenView: View {
                             .padding(.leading, 17)
                         Spacer()
                     }
+					PasswordTextField(text: $passwordText, title: "Введите пароль")
                 }
                 .padding(.top, 16)
                 // TODO: add password field
