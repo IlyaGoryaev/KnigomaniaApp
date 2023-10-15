@@ -22,7 +22,7 @@ struct RegistrationView: View {
 				.ignoresSafeArea()
 			VStack(spacing: 0){
 				NavBar(title: "Регистрация") {
-					
+					entryCoordinator?.backAction()
 				}
 				.padding(.top, 32)
 				VStack{
@@ -71,7 +71,7 @@ struct RegistrationView: View {
 					Text("Уже есть аккаунт?")
 						.font(.system(size: 14))
 					Button(action: {
-						
+						entryCoordinator?.fromRegToEntry()
 					}, label: {
 						Text("Войти")
 							.foregroundStyle(CustomColors.darkBrownColor)
