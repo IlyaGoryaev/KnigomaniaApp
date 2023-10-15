@@ -106,7 +106,7 @@ struct LoginScreenView: View {
                         .font(.system(size: 14, weight: .regular))
                         .foregroundColor(CustomColors.darkBrownColor)
                     Button(action: {
-                        
+                        entryCoordinator?.fromEntryToReg()
                     }) {
                         Text("Зарегистрироваться")
                             .font(.system(size: 14, weight: .medium))
