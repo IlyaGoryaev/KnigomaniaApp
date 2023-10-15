@@ -41,6 +41,23 @@ final class EntryCoordinator: Coordinator{
 		childCoordinators.append(resetPasswordCoordinator)
 		resetPasswordCoordinator.start()
 	}
+
+	func fromRegToEntry(){
+		navigationController.popViewController(animated: false)
+		var view = LoginScreenView()
+		view.entryCoordinator = self
+		let viewController = UIHostingController(rootView: view)
+		navigationController.pushViewController(viewController, animated: false)
+		
+	}
+	
+	func fromEntryToReg(){
+		navigationController.popViewController(animated: false)
+		var view = RegistrationView()
+		view.entryCoordinator = self
+		let viewController = UIHostingController(rootView: view)
+		navigationController.pushViewController(viewController, animated: false)
+	}
 	
 	func logIn(){
 		isUserAutorise?.send(true)
@@ -57,6 +74,10 @@ final class EntryCoordinator: Coordinator{
 		let registrationOnboardingCoordinator = RegistrationOnboardingCoordinator(navigationController: navigationController, isUserAuthorise: isUserAutorise!)
 		childCoordinators.append(registrationOnboardingCoordinator)
 		registrationOnboardingCoordinator.start()
+	}
+
+	func backAction(){
+		navigationController.popViewController(animated: true)
 	}
 	
 }
