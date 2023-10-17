@@ -38,6 +38,12 @@
 		FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F142AD02F2400AE00DF /* DaySelectionModalView.swift */; };
 		FE347F182AD032A900AE00DF /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F172AD032A900AE00DF /* Day.swift */; };
 		FE347F1A2AD055EE00AE00DF /* TimeSelectionModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F192AD055ED00AE00DF /* TimeSelectionModalView.swift */; };
+		FE4931442ADEB3A60020D805 /* TabbedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4931432ADEB3A60020D805 /* TabbedItems.swift */; };
+		FE4B8AFD2ADEA6C700FE28CE /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8AFC2ADEA6C700FE28CE /* HomeScreenView.swift */; };
+		FE4B8B002ADEA94A00FE28CE /* HomePageScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8AFF2ADEA94A00FE28CE /* HomePageScreenView.swift */; };
+		FE4B8B022ADEA9A500FE28CE /* LibraryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8B012ADEA9A500FE28CE /* LibraryScreenView.swift */; };
+		FE4B8B042ADEA9B800FE28CE /* ScanScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */; };
+		FE4B8B062ADEA9D200FE28CE /* SettingsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8B052ADEA9D200FE28CE /* SettingsScreenView.swift */; };
 		FE70D79B2AC819400018C5A1 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE70D79A2AC819400018C5A1 /* LoginScreenView.swift */; };
 		FE70D79E2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE70D79D2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift */; };
 		FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */; };
@@ -83,6 +89,12 @@
 		FE347F142AD02F2400AE00DF /* DaySelectionModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySelectionModalView.swift; sourceTree = "<group>"; };
 		FE347F172AD032A900AE00DF /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		FE347F192AD055ED00AE00DF /* TimeSelectionModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionModalView.swift; sourceTree = "<group>"; };
+		FE4931432ADEB3A60020D805 /* TabbedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedItems.swift; sourceTree = "<group>"; };
+		FE4B8AFC2ADEA6C700FE28CE /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		FE4B8AFF2ADEA94A00FE28CE /* HomePageScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageScreenView.swift; sourceTree = "<group>"; };
+		FE4B8B012ADEA9A500FE28CE /* LibraryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryScreenView.swift; sourceTree = "<group>"; };
+		FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanScreenView.swift; sourceTree = "<group>"; };
+		FE4B8B052ADEA9D200FE28CE /* SettingsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenView.swift; sourceTree = "<group>"; };
 		FE70D79A2AC819400018C5A1 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		FE70D79D2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordStartScreenView.swift; sourceTree = "<group>"; };
 		FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -436,6 +448,35 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FE4931422ADEB3730020D805 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE4931432ADEB3A60020D805 /* TabbedItems.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FE4B8AFB2ADEA62500FE28CE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FE4B8AFC2ADEA6C700FE28CE /* HomeScreenView.swift */,
+				FE4B8AFE2ADEA93000FE28CE /* Tab Items */,
+				FE4931422ADEB3730020D805 /* Models */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FE4B8AFE2ADEA93000FE28CE /* Tab Items */ = {
+			isa = PBXGroup;
+			children = (
+				FE4B8AFF2ADEA94A00FE28CE /* HomePageScreenView.swift */,
+				FE4B8B012ADEA9A500FE28CE /* LibraryScreenView.swift */,
+				FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */,
+				FE4B8B052ADEA9D200FE28CE /* SettingsScreenView.swift */,
+			);
+			path = "Tab Items";
+			sourceTree = "<group>";
+		};
 		FE70D7952AC815510018C5A1 /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +518,7 @@
 				FE713E4B2AC5DE5200F6DA62 /* SplashScreen */,
 				FEEF84C42AD9B05E00B6DC39 /* Auth */,
 				9D61F9E82AD887FB0000393C /* SetupTracker */,
+				FE4B8AFB2ADEA62500FE28CE /* Home */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -597,6 +639,7 @@
 				9D61F9FC2AD8896B0000393C /* SetupTrackerStep3View.swift in Sources */,
 				FE347F1A2AD055EE00AE00DF /* TimeSelectionModalView.swift in Sources */,
 				FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */,
+				FE4B8B022ADEA9A500FE28CE /* LibraryScreenView.swift in Sources */,
 				9DA945CE2AC0BA0A002302D1 /* ViewController.swift in Sources */,
 				FEC8EB082AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift in Sources */,
 				9D61F9BE2AD8820E0000393C /* ApplicationCoordinator.swift in Sources */,
@@ -607,6 +650,8 @@
 				9D61F9C22AD8825D0000393C /* TrackerCoordinator.swift in Sources */,
 				FEF6972B2AC5E7CF00708E1E /* CustomColors.swift in Sources */,
 				9D61F9C92AD882F20000393C /* NumberTextField.swift in Sources */,
+				FE4B8B062ADEA9D200FE28CE /* SettingsScreenView.swift in Sources */,
+				FE4B8B042ADEA9B800FE28CE /* ScanScreenView.swift in Sources */,
 				FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */,
 				9D61F9D12AD884180000393C /* RegistrationOnboardingStep3View.swift in Sources */,
 				9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */,
@@ -621,6 +666,7 @@
 				9D61F9DC2AD884D90000393C /* GenreModel.swift in Sources */,
 				9D61F9C72AD882D70000393C /* HeadlineTextModifier.swift in Sources */,
 				FE70D79E2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift in Sources */,
+				FE4B8B002ADEA94A00FE28CE /* HomePageScreenView.swift in Sources */,
 				FEF697302AC5EF1800708E1E /* CustomActivityIndicator.swift in Sources */,
 				9D61FA042AD889F90000393C /* NavBar.swift in Sources */,
 				9D61F9F62AD888B90000393C /* SetupTrackerStep2View.swift in Sources */,
@@ -629,6 +675,8 @@
 				FEAA59BA2ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift in Sources */,
 				9D61F9DE2AD884F70000393C /* CustomButtonStyle.swift in Sources */,
 				9D61F9C52AD882B30000393C /* ButtonView.swift in Sources */,
+				FE4931442ADEB3A60020D805 /* TabbedItems.swift in Sources */,
+				FE4B8AFD2ADEA6C700FE28CE /* HomeScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

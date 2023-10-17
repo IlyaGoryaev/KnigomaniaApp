@@ -15,4 +15,5 @@ struct CustomColors {
     static let beigeColor = Color("beigecolor")
 	static let orangeButtonColor = Color("orangeButtonColor")
 	static let orangeActiveButtonColor = Color("orangeActiveButtonColor")
+    static let lightColor = Color("lightColor")
 }
