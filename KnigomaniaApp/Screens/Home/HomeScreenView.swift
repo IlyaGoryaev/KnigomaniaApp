@@ -38,8 +38,6 @@ struct HomeScreenView: View {
             .clipShape(
                 .rect(
                     topLeadingRadius: 8,
-                    bottomLeadingRadius: 0,
-                    bottomTrailingRadius: 0,
                     topTrailingRadius: 8
                 )
             )

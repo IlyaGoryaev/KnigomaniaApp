@@ -33,6 +33,7 @@ struct HomePageScreenView: View {
                 }
                 .padding(.top, 29)
                 .padding(.horizontal, 16)
+                
                 Spacer()
             }
         }
