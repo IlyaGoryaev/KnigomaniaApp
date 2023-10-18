@@ -12,13 +12,13 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	
 	var coordinator: Coordinator?
-
-    var window: UIWindow?
+	
+	var window: UIWindow?
 	
 	private let isUserAutorise = CurrentValueSubject<Bool, Never>(false)
 	var cancallables = Set<AnyCancellable>()
-
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+	
+	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		
 		let window = UIWindow(windowScene: windowScene)
@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		self.window = window
 		self.window?.rootViewController = viewController
 		self.window?.makeKeyAndVisible()
-				
+		
 		DispatchQueue.main.asyncAfter(deadline: .now() + 3){
 			self.isUserAutorise.sink { [weak self] boolValue in
 				guard let self = self else { return }
@@ -44,8 +44,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 					self.coordinator = entryCoordinator
 				}
 			}.store(in: &self.cancallables)
-
+			
 		}
-    }
+	}
 }
-

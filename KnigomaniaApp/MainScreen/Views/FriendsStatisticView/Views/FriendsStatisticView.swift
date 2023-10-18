@@ -9,7 +9,9 @@ import SwiftUI
 
 struct FriendsStatisticView: View {
 	
-	var friendsArray: [FriendModel] = []
+	@State var friendsArray: [FriendModel] = []
+	
+	@GestureState var isDragging = false
 	
 	var body: some View {
 		ZStack{
@@ -33,15 +35,68 @@ struct FriendsStatisticView: View {
 				} else {
 					VStack(spacing: 16.5){
 						ForEach(friendsArray.indices, id: \.self){ index in
-							FriendCellView(name: friendsArray[index].friendName, goalValue: friendsArray[index].goalValue, currentValue: friendsArray[index].currentValue)
+							ZStack{
+								HStack{
+									Spacer()
+									Text("Удалить")
+										.foregroundStyle(Color.white)
+										.padding(.horizontal, 24)
+										.padding(.vertical, 10)
+										.background(CustomColors.orangeButtonColor)
+										.clipShape(RoundedRectangle(cornerRadius: 10))
+										.padding(.trailing, 24)
+										.onTapGesture {
+											deleteFriend(index: index)
+										}
+								}
+								FriendCellView(name: friendsArray[index].friendName, goalValue: friendsArray[index].goalValue, currentValue: friendsArray[index].currentValue)
+									.background(CustomColors.background)
+									.offset(x: friendsArray[index].offset)
+									.gesture(DragGesture()
+										.updating($isDragging, body: { value, state, _ in
+											state = true
+											onChanged(value: value, index: index)
+										})
+										.onChanged({ (value) in
+											onChanged(value: value, index: index)
+										})
+										.onEnded({ (value) in
+											onEnded(value: value, index: index)
+										}))
+							}
+							
 						}
 					}
 					.padding(.top, 40)}
+				Spacer()
 			}
 		}
 	}
+	
+	func deleteFriend(index: Int){
+		friendsArray.remove(at: index)
+	}
+	
+	func onChanged(value: DragGesture.Value, index: Int){
+		
+		if value.translation.width < 0 && isDragging{
+			friendsArray[index].offset = value.translation.width
+		}
+	}
+	
+	func onEnded(value: DragGesture.Value, index: Int){
+		
+		withAnimation {
+			
+			if -value.translation.width >= 100{
+				friendsArray[index].offset = -140
+			} else {
+				friendsArray[index].offset = 0
+			}
+		}
+		
+	}
 }
-
 struct FriendCellView: View {
 	
 	var name: String
@@ -49,12 +104,6 @@ struct FriendCellView: View {
 	var goalValue: Double
 	
 	var currentValue: Double
-	
-	@State private var startingOffsetX: CGFloat = 0
-	@State private var currentDragOffsetX: CGFloat = 0
-	@State private var endingOffsetX: CGFloat = 0
-	
-	@State private var isSwiped: Bool = false
 		
 	var body: some View {
 		VStack(spacing: 0){
@@ -92,37 +141,9 @@ struct FriendCellView: View {
 				.frame(height: 0.5)
 				.padding(.horizontal, 16)
 		}
-		.offset(x: endingOffsetX)
-		.offset(x: startingOffsetX)
-		.offset(x: currentDragOffsetX)
-		.gesture(DragGesture(minimumDistance: 3, coordinateSpace: .local)
-			.onChanged({ value in
-				withAnimation(.spring){
-					currentDragOffsetX = value.translation.width
-				}
-			})
-				.onEnded({ value in
-					if isSwiped{
-						withAnimation {
-							if currentDragOffsetX < -150{
-								endingOffsetX = -startingOffsetX
-								currentDragOffsetX = -100
-							} else if endingOffsetX != 0 && currentDragOffsetX > 150{
-								endingOffsetX = 0
-								currentDragOffsetX = 0
-							}
-							currentDragOffsetX = 0
-						}
-						isSwiped.toggle()
-					} else {
-						
-					}
-					
-				})
-		)
 	}
 }
 
 #Preview {
-	FriendsStatisticView(friendsArray: [FriendModel(friendName: "Антон", goalValue: 12, currentValue: 10)])
+	FriendsStatisticView(friendsArray: [FriendModel(friendName: "Антон", goalValue: 12, currentValue: 10), FriendModel(friendName: "fiohewofhiwe", goalValue: 45, currentValue: 34)])
 }

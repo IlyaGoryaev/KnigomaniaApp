@@ -11,4 +11,5 @@ struct FriendModel{
 	let friendName: String
 	let goalValue: Double
 	let currentValue: Double
+	var offset: CGFloat = 0
 }
