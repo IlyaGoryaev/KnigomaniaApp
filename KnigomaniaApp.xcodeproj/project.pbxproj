@@ -133,6 +133,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D055E9A2AE0532000BDDF50 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FE713E4B2AC5DE5200F6DA62 /* SplashScreen */,
+				9D61F9E82AD887FB0000393C /* SetupTracker */,
+				9D055E9C2AE0541A00BDDF50 /* Home */,
+				9D055E9B2AE0534F00BDDF50 /* Auth */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		9D055E9B2AE0534F00BDDF50 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				9D5042B02AD9E81C0028C2FF /* RegistrationScreen */,
+				9D61F9B62AD881810000393C /* RegistrationOnboarding */,
+				FE70D7952AC815510018C5A1 /* StartScreen */,
+				FE70D7992AC8192F0018C5A1 /* LoginScreen */,
+				FE70D79C2AC861790018C5A1 /* RestorePasswordScreen */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		9D055E9C2AE0541A00BDDF50 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9D61FA072AD994D30000393C /* MainScreen */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		9D5042B02AD9E81C0028C2FF /* RegistrationScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +418,7 @@
 		9D61F9E82AD887FB0000393C /* SetupTracker */ = {
 			isa = PBXGroup;
 			children = (
+				FE314D422ACC81E100BA3356 /* TrackerSetupScreen */,
 				9D61F9FD2AD8898B0000393C /* SetupTrackerStep4 */,
 				9D61F9F72AD889170000393C /* SetupTrackerStep3 */,
 				9D61F9F12AD888900000393C /* SetupTrackerStep2 */,
@@ -543,16 +575,8 @@
 			children = (
 				FEF697282AC5E69300708E1E /* Application */,
 				9DA945CD2AC0BA0A002302D1 /* ViewController.swift */,
-				9D5042B02AD9E81C0028C2FF /* RegistrationScreen */,
-				9D61FA072AD994D30000393C /* MainScreen */,
-				9D61F9E82AD887FB0000393C /* SetupTracker */,
+				9D055E9A2AE0532000BDDF50 /* Screens */,
 				9D61F9C32AD8829A0000393C /* DesignElements */,
-				9D61F9B62AD881810000393C /* RegistrationOnboarding */,
-				FE713E4B2AC5DE5200F6DA62 /* SplashScreen */,
-				FE70D7952AC815510018C5A1 /* StartScreen */,
-				FE70D7992AC8192F0018C5A1 /* LoginScreen */,
-				FE70D79C2AC861790018C5A1 /* RestorePasswordScreen */,
-				FE314D422ACC81E100BA3356 /* TrackerSetupScreen */,
 				FEF697292AC5E7B800708E1E /* Helpers */,
 				9DA945CF2AC0BA0A002302D1 /* Main.storyboard */,
 				9DA945D22AC0BA0B002302D1 /* Assets.xcassets */,
