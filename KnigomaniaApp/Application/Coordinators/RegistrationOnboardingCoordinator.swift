@@ -7,22 +7,34 @@
 
 import SwiftUI
 import UIKit
+import Combine
 
-
-final class ApplicationCoordinator: Coordinator{
+final class RegistrationOnboardingCoordinator: Coordinator{
 	
 	var navigationController: UINavigationController
 	
-	init(navigationController: UINavigationController) {
+	weak var isUserAuthorise: CurrentValueSubject<Bool, Never>?
+	
+	var childCoordinators = [Coordinator]()
+	
+	init(navigationController: UINavigationController, isUserAuthorise: CurrentValueSubject<Bool, Never>) {
 		self.navigationController = navigationController
+		self.isUserAuthorise = isUserAuthorise
 	}
 	
 	func start() {
 		
-		var view = RegistrationOnboardingStep3View()
+		var view = RegistrationOnBoardingStep2View()
 		view.applicationCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: false)
+		self.navigationController.pushViewController(viewController, animated: false)
+		
+		DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+			var view = RegistrationOnboardingStep3View()
+			view.applicationCoordinator = self
+			let viewController = UIHostingController(rootView: view)
+			self.navigationController.pushViewController(viewController, animated: false)
+		}
 		
 	}
 	
@@ -57,7 +69,16 @@ final class ApplicationCoordinator: Coordinator{
 		view.applicationCoordinator = self
 		let viewController = UIHostingController(rootView: view)
 		navigationController.pushViewController(viewController, animated: true)
-		
+	}
+	
+	func setUpTracker(){
+		let trackerCoordinator = TrackerCoordinator(navigationController: navigationController, isUserAuthorise: isUserAuthorise!)
+		trackerCoordinator.start()
+		childCoordinators.append(trackerCoordinator)
+	}
+	
+	func logIn(){
+		isUserAuthorise?.send(true)
 	}
 	
 	func backAction(){

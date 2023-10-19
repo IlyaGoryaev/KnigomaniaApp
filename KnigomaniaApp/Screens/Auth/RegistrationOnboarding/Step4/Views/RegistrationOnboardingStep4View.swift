@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RegistrationOnboardingStep4View: View {
 	
-	var applicationCoordinator: ApplicationCoordinator?
+	weak var applicationCoordinator: RegistrationOnboardingCoordinator?
 	
 	var body: some View {
 		ZStack{
@@ -51,7 +51,7 @@ struct CharacterView: View{
 							}
 					}
 					Text("Мечтатель")
-						.foregroundStyle(CustomColors.brownColor)
+						.foregroundStyle(CustomColors.darkBrownColor)
 						.font(.system(size: 20, weight: .medium))
 						.padding(.top, 24)
 					Text("Проводит вечера за любимой книгой и горячей чашечкой чая. Обожает читать о путешествиях, погружается в любовные романы с головой.")

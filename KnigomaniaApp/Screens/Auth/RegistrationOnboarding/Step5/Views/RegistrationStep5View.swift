@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RegistrationStep5View: View {
 	
-	var applicationCoordinator: ApplicationCoordinator?
+	weak var applicationCoordinator: RegistrationOnboardingCoordinator?
 	
 	var genres = Genre.allValues
 	@State var numberOfGenresChosen: Int = 0

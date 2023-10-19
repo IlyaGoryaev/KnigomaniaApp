@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import Combine
 
 final class TrackerCoordinator: Coordinator{
 	
 	var navigationController: UINavigationController
 	
-	init(navigationController: UINavigationController) {
+	weak var isUserAuthorise: CurrentValueSubject<Bool, Never>?
+	
+	init(navigationController: UINavigationController, isUserAuthorise: CurrentValueSubject<Bool, Never>) {
 		self.navigationController = navigationController
+		self.isUserAuthorise = isUserAuthorise
 	}
 	
 	func start() {
@@ -45,6 +49,10 @@ final class TrackerCoordinator: Coordinator{
 	
 	func backAction(){
 		navigationController.popViewController(animated: true)
+	}
+	
+	func logIn(){
+		isUserAuthorise?.send(true)
 	}
 	
 }

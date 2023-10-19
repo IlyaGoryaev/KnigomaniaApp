@@ -2,7 +2,7 @@ import SwiftUI
 
 struct RegistrationOnboardingStep6View: View {
 	
-	var applicationCoordinator: ApplicationCoordinator?
+	weak var applicationCoordinator: RegistrationOnboardingCoordinator?
 	
 	var body: some View {
 		ZStack{
@@ -19,7 +19,7 @@ struct RegistrationOnboardingStep6View: View {
 					.padding(.horizontal, 16)
 					.padding(.top, 40)
 				Button(action: {
-					
+					applicationCoordinator?.logIn()
 				}, label: {
 					HStack(spacing: 8){
 						Text("Пропустить")
@@ -30,7 +30,7 @@ struct RegistrationOnboardingStep6View: View {
 				})
 				.padding(.top, 32)
 				ButtonView(title: "Настроить", isButtonEnable: true){
-					
+					applicationCoordinator?.setUpTracker()
 				}
 				.padding(.top, 8)
 				Spacer()

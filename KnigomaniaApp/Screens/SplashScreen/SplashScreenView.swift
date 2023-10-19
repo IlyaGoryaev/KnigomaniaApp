@@ -15,7 +15,7 @@ struct SplashScreenView: View {
             VStack {
                 Text("КНИГОМАНИЯ")
                     .font(.system(size: 32, weight: .heavy))
-                    .foregroundColor(CustomColors.darkBrownColor)
+                    .foregroundColor(CustomColors.yellowColor)
                     .padding(.top, 343)
                 CustomActivityIndicator()
                     .padding(.top, 290)
