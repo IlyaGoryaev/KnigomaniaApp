@@ -41,7 +41,7 @@ struct TrackerView: View {
 				})
 				.frame(width: 200, height: 200)
 				.rotationEffect(Angle(degrees: 126))
-				.foregroundStyle(CustomColors.trackerColor)
+                .foregroundStyle(CustomColors.trackerColor.opacity(0.5))
 			if isTracketSetup{
 				Circle()
 					.trim(from: 0, to: (currentValue / goalValue) * 0.8)
@@ -53,12 +53,12 @@ struct TrackerView: View {
 					}
 					.frame(width: 200, height: 200)
 					.rotationEffect(Angle(degrees: 125))
-					.foregroundStyle(CustomColors.orangeTrackerColor)
+					.foregroundStyle(CustomColors.yellowColor)
 			}
 			VStack(spacing: 8){
 				Text("Прочитано")
 					.font(.system(size: 16))
-					.foregroundStyle(CustomColors.trackerColor)
+					.foregroundStyle(CustomColors.greyColor)
 				Text("\(Int(currentValue)) / \(Int(goalValue))")
 					.font(.system(size: 24, weight: .bold))
 					.opacity(isTracketSetup ? 1 : 0)

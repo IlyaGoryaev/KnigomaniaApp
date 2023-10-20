@@ -7,18 +7,17 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct CustomColors {
-	static let background = Color("backgroundColor")
-	static let darkBrownColor = Color("darkBrownColor")
-	static let brownColor = Color("brownColor")
-	static let yellowColor = Color("yellowColor")
-	static let beigeColor = Color("beigeColor")
-	static let orangeButtonColor = Color("orangeButtonColor")
-	static let orangeActiveButtonColor = Color("orangeActiveButtonColor")
-	static let lightBrownColor = Color("lightBrownColor")
-	static let trackerColor = Color("trackerColor")
-	static let orangeTrackerColor = Color("orangeTrackerColor")
-	static let lightColor = Color("lightColor")
+	static let background = Color("backgroundcolor")
+	static let darkBrownColor = Color("darkbrowncolor")
+	static let brownColor = Color("browncolor")
+	static let yellowColor = Color("yellowcolor")
+	static let beigeColor = Color("beigecolor")
+	static let orangeButtonColor = Color("orangebuttoncolor")
+	static let orangeActiveButtonColor = Color("orangeactivebuttoncolor")
+	static let lightBrownColor = Color("lightbrowncolor")
+	static let trackerColor = Color("trackercolor")
+	static let orangeTrackerColor = Color("orangetrackercolor")
+	static let lightColor = Color("lightcolor")
+    static let greyColor = Color("greycolor")
 }

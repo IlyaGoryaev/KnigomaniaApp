@@ -26,7 +26,7 @@ struct BookChallengeView: View {
 		}
 		.padding(.horizontal, 16)
 		.padding(.vertical, 20)
-		.background(RoundedRectangle(cornerRadius: 8).foregroundStyle(CustomColors.lightBrownColor))
+        .background(RoundedRectangle(cornerRadius: 8).foregroundStyle(CustomColors.brownColor).opacity(0.5))
 		.padding(.horizontal, 16)
 		.onTapGesture {
 			action()

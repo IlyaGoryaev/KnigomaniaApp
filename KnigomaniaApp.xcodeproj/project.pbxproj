@@ -17,7 +17,7 @@
 		9D055EB02AE0EEE800BDDF50 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D055EAF2AE0EEE800BDDF50 /* MainScreen.swift */; };
 		9D055EB22AE0EEFB00BDDF50 /* BooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D055EB12AE0EEFB00BDDF50 /* BooksCollectionView.swift */; };
 		9D055EB42AE0EF0A00BDDF50 /* BookChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D055EB32AE0EF0A00BDDF50 /* BookChallengeView.swift */; };
-		9D055EB72AE0EF3B00BDDF50 /* CurrentLabraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D055EB62AE0EF3B00BDDF50 /* CurrentLabraryView.swift */; };
+		9D055EB72AE0EF3B00BDDF50 /* CurrentLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D055EB62AE0EF3B00BDDF50 /* CurrentLibraryView.swift */; };
 		9D055EBB2AE0EF8E00BDDF50 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D055EBA2AE0EF8E00BDDF50 /* FriendModel.swift */; };
 		9D055EBE2AE0EFA600BDDF50 /* FriendsStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D055EBD2AE0EFA600BDDF50 /* FriendsStatisticView.swift */; };
 		9D055EC32AE0EFEB00BDDF50 /* MyProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D055EC22AE0EFEB00BDDF50 /* MyProgress.swift */; };
@@ -64,6 +64,7 @@
 		FE7A80112AC60EA0000A8711 /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A80102AC60EA0000A8711 /* StartScreenView.swift */; };
 		FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */; };
 		FEAA59BA2ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */; };
+		FEAB7AF12AE2BD000057F3C5 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB7AF02AE2BD000057F3C5 /* StatisticsView.swift */; };
 		FEC8EB082AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8EB072AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift */; };
 		FEF6972B2AC5E7CF00708E1E /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */; };
 		FEF697302AC5EF1800708E1E /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6972F2AC5EF1800708E1E /* CustomActivityIndicator.swift */; };
@@ -80,7 +81,7 @@
 		9D055EAF2AE0EEE800BDDF50 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		9D055EB12AE0EEFB00BDDF50 /* BooksCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionView.swift; sourceTree = "<group>"; };
 		9D055EB32AE0EF0A00BDDF50 /* BookChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookChallengeView.swift; sourceTree = "<group>"; };
-		9D055EB62AE0EF3B00BDDF50 /* CurrentLabraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLabraryView.swift; sourceTree = "<group>"; };
+		9D055EB62AE0EF3B00BDDF50 /* CurrentLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLibraryView.swift; sourceTree = "<group>"; };
 		9D055EBA2AE0EF8E00BDDF50 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		9D055EBD2AE0EFA600BDDF50 /* FriendsStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsStatisticView.swift; sourceTree = "<group>"; };
 		9D055EC22AE0EFEB00BDDF50 /* MyProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgress.swift; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 		FE7A80102AC60EA0000A8711 /* StartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
 		FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenConfirmationView.swift; sourceTree = "<group>"; };
 		FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenSuccessView.swift; sourceTree = "<group>"; };
+		FEAB7AF02AE2BD000057F3C5 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		FEC8EB072AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerSetupConfirmationScreenView.swift; sourceTree = "<group>"; };
 		FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		FEF6972F2AC5EF1800708E1E /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
@@ -180,7 +182,7 @@
 		9D055EB52AE0EF1C00BDDF50 /* CurrentLibraryView */ = {
 			isa = PBXGroup;
 			children = (
-				9D055EB62AE0EF3B00BDDF50 /* CurrentLabraryView.swift */,
+				9D055EB62AE0EF3B00BDDF50 /* CurrentLibraryView.swift */,
 			);
 			path = CurrentLibraryView;
 			sourceTree = "<group>";
@@ -573,9 +575,6 @@
 		FE4B8AFB2ADEA62500FE28CE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9D055EC02AE0EFD500BDDF50 /* MyProgress */,
-				9D055EB82AE0EF6800BDDF50 /* FriendsStatisticsView */,
-				9D055EB52AE0EF1C00BDDF50 /* CurrentLibraryView */,
 				FE4B8AFC2ADEA6C700FE28CE /* HomeScreenView.swift */,
 				FE4B8AFE2ADEA93000FE28CE /* Tab Items */,
 				FE4931422ADEB3730020D805 /* Models */,
@@ -589,12 +588,24 @@
 		FE4B8AFE2ADEA93000FE28CE /* Tab Items */ = {
 			isa = PBXGroup;
 			children = (
-				FE4B8AFF2ADEA94A00FE28CE /* HomePageScreenView.swift */,
+				FE5C93E72AE16FDD00107985 /* HomePage */,
 				FE4B8B012ADEA9A500FE28CE /* LibraryScreenView.swift */,
 				FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */,
 				FE4B8B052ADEA9D200FE28CE /* SettingsScreenView.swift */,
 			);
 			path = "Tab Items";
+			sourceTree = "<group>";
+		};
+		FE5C93E72AE16FDD00107985 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				FE4B8AFF2ADEA94A00FE28CE /* HomePageScreenView.swift */,
+				FEAB7AF02AE2BD000057F3C5 /* StatisticsView.swift */,
+				9D055EC02AE0EFD500BDDF50 /* MyProgress */,
+				9D055EB52AE0EF1C00BDDF50 /* CurrentLibraryView */,
+				9D055EB82AE0EF6800BDDF50 /* FriendsStatisticsView */,
+			);
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 		FE70D7952AC815510018C5A1 /* StartScreen */ = {
@@ -646,8 +657,8 @@
 		FEEF84C42AD9B05E00B6DC39 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				9D055EA82AE0EDE200BDDF50 /* RegistrationScreen */,
 				FE70D7952AC815510018C5A1 /* StartScreen */,
+				9D055EA82AE0EDE200BDDF50 /* RegistrationScreen */,
 				9D61F9B62AD881810000393C /* RegistrationOnboarding */,
 				FE70D7992AC8192F0018C5A1 /* LoginScreen */,
 				FE70D79C2AC861790018C5A1 /* RestorePasswordScreen */,
@@ -773,6 +784,7 @@
 				9D055EA52AE0E49600BDDF50 /* ResetPasswordCoordinator.swift in Sources */,
 				9D61FA022AD889B20000393C /* SetupTrackerStep4View.swift in Sources */,
 				FE314D442ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift in Sources */,
+				FEAB7AF12AE2BD000057F3C5 /* StatisticsView.swift in Sources */,
 				9D61F9C22AD8825D0000393C /* TrackerCoordinator.swift in Sources */,
 				FEF6972B2AC5E7CF00708E1E /* CustomColors.swift in Sources */,
 				9D61F9C92AD882F20000393C /* NumberTextField.swift in Sources */,
@@ -781,7 +793,7 @@
 				9D055EAC2AE0EE0E00BDDF50 /* RegistrationView.swift in Sources */,
 				FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */,
 				9D055EBB2AE0EF8E00BDDF50 /* FriendModel.swift in Sources */,
-				9D055EB72AE0EF3B00BDDF50 /* CurrentLabraryView.swift in Sources */,
+				9D055EB72AE0EF3B00BDDF50 /* CurrentLibraryView.swift in Sources */,
 				9D61F9D12AD884180000393C /* RegistrationOnboardingStep3View.swift in Sources */,
 				9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */,
 				9D61F9E22AD885290000393C /* RegistrationStep5View.swift in Sources */,

@@ -23,7 +23,7 @@ struct MyProgress: View {
 					print("Tap book challenge")
 					
 				}
-				.padding(.top, 27)
+				.padding(.top, 24)
 				TrackerView(isTracketSetup: isTracketSetup, goalValue: goalValue, currentValue: currentValue)
 					.padding(.top, 32)
 				Text(isTracketSetup ? "Ты молодец! Продолжай в том же духе, чтобы достигнуть своей цели!" : "Упс! Трекер еще не настроен. Настроить сейчас?")
@@ -38,6 +38,7 @@ struct MyProgress: View {
 					}
 					.padding(.top, 16)
 				}
+                Spacer()
 			}
 		}
 		

@@ -1,5 +1,5 @@
 //
-//  CurrentLabraryView.swift
+//  CurrentLibraryView.swift
 //  KnigomaniaApp
 //
 //  Created by Илья Горяев on 17.10.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CurrentLabraryView: View {
+struct CurrentLibraryView: View {
 	
 	var books: [BookModel] = []
 	
@@ -33,6 +33,6 @@ struct CurrentLabraryView: View {
 }
 
 #Preview {
-	//	CurrentLabraryView(books: [BookModel(bookName: "Book1", imageName: "Book1"), BookModel(bookName: "Book2", imageName: "Book2"), BookModel(bookName: "Book3", imageName: "Book3"), BookModel(bookName: "Book4", imageName: "Book4"), BookModel(bookName: "Book5", imageName: "Book5")])
-	CurrentLabraryView(books: [])
+	//	CurrentLibraryView(books: [BookModel(bookName: "Book1", imageName: "Book1"), BookModel(bookName: "Book2", imageName: "Book2"), BookModel(bookName: "Book3", imageName: "Book3"), BookModel(bookName: "Book4", imageName: "Book4"), BookModel(bookName: "Book5", imageName: "Book5")])
+	CurrentLibraryView(books: [])
 }
