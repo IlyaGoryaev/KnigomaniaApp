@@ -68,5 +68,5 @@ struct TrackerView: View {
 }
 
 #Preview {
-	TrackerView(isTracketSetup: false)
+	TrackerView(isTracketSetup: true)
 }

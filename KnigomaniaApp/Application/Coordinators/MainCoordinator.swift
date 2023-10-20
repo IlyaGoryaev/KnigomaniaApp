@@ -17,7 +17,7 @@ final class MainCoordinator: Coordinator{
 	}
 	
 	func start() {
-		var view = MainScreen()
+		var view = HomeScreenView()
 		view.mainScreenCoordinator = self
 		let viewController = UIHostingController(rootView: view)
 		navigationController.pushViewController(viewController, animated: false)

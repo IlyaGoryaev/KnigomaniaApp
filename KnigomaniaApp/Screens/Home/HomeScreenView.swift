@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeScreenView: View {
+	
+	weak var mainScreenCoordinator: MainCoordinator?
+	
     @State private var selection = 0
     
     var body: some View {

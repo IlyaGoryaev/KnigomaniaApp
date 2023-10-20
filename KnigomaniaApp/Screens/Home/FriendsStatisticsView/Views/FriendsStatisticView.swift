@@ -81,6 +81,7 @@ struct FriendsStatisticView: View {
 		
 		if value.translation.width < 0 && isDragging{
 			friendsArray[index].offset = value.translation.width
+			print(value.translation.width)
 		}
 	}
 	
