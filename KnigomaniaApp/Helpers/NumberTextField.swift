@@ -28,7 +28,7 @@ struct NumberTextField: View {
 		.keyboardType(.numberPad)
 		.multilineTextAlignment(.center)
 		.font(.system(size: 24, weight: .semibold))
-		.foregroundStyle(CustomColors.brownColor)
+		.foregroundStyle(CustomColors.darkBrownColor)
 		.padding(.vertical, 10)
 		.padding(.horizontal, 10)
 		.background(Color.white)

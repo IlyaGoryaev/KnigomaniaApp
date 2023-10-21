@@ -18,62 +18,31 @@ struct RestorePasswordStartScreenView: View {
 			CustomColors.background
 				.edgesIgnoringSafeArea(.all)
 			VStack {
-				Text("Войти")
-					.font(.system(size: 20, weight: .medium))
-					.foregroundColor(CustomColors.darkBrownColor)
-					.padding(.top, 32)
-				VStack(spacing: 8) {
-					HStack {
-						Text("E-mail")
-							.font(.system(size: 14, weight: .regular))
-							.foregroundColor(CustomColors.darkBrownColor)
-							.padding(.leading, 17)
-						Spacer()
+				NavBar(title: "Войти", action: {
+					resetPasswordCoordinator?.backAction()
+				})
+				.padding(.top, 20)
+				VStack{
+					Text("E-mail")
+						.font(.system(size: 14))
+						.foregroundStyle(CustomColors.darkBrownColor)
+						.frame(maxWidth: .infinity, alignment: .leading)
+						.padding(.horizontal, 16)
+					TextField(text: $email) {
+						Text("Введите электронную почту")
+							.foregroundStyle(CustomColors.brownColor)
+							.font(.system(size: 14))
 					}
-					ZStack {
-						Rectangle()
-							.foregroundColor(.clear)
-							.frame(height: 48)
-							.background(.white)
-							.cornerRadius(10)
-							.overlay(
-								RoundedRectangle(cornerRadius: 10)
-									.inset(by: 0.5)
-									.stroke(CustomColors.darkBrownColor)
-							)
-						TextField("", text: $email)
-							.font(.system(size: 16, weight: .regular))
-							.foregroundColor(.black)
-							.padding(.leading, 10)
-							.textFieldStyle(PlainTextFieldStyle())
-					}
-					.overlay(
-						HStack {
-							Text("Введите вашу электронную почту")
-								.lineLimit(1)
-								.font(.system(size: 16, weight: .regular))
-								.foregroundColor(CustomColors.beigeColor)
-								.padding(.leading, 14)
-							Spacer()
-						}
-					)
+					.foregroundStyle(CustomColors.darkBrownColor)
+					.padding(.horizontal, 12)
+					.padding(.vertical, 15)
+					.background(RoundedRectangle(cornerRadius: 10).foregroundStyle(Color.white))
 					.padding(.horizontal, 16)
 				}
 				.padding(.top, 40)
-				Button(action: {
+				ButtonView(title: "Восстановить пароль", isButtonEnable: true) {
 					resetPasswordCoordinator?.resetPasswordByEmail()
-				}) {
-					Rectangle()
-						.frame(height: 48)
-						.foregroundColor(CustomColors.yellowColor)
-						.cornerRadius(10)
-						.overlay(
-							Text("Восстановить пароль")
-								.font(.system(size: 16, weight: .medium))
-								.foregroundColor(.white)
-						)
 				}
-				.padding(.horizontal, 16)
 				.padding(.top, 32)
 				Spacer()
 			}

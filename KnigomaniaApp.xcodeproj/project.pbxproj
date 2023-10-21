@@ -48,6 +48,7 @@
 		9D7A76DA2AE43A2A00158781 /* BookActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A76D92AE43A2A00158781 /* BookActionsView.swift */; };
 		9D7A76DC2AE43A7F00158781 /* SimilarBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A76DB2AE43A7F00158781 /* SimilarBooksView.swift */; };
 		9D7A76DE2AE43DDC00158781 /* BookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A76DD2AE43DDC00158781 /* BookCoordinator.swift */; };
+		9D7A77152AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A77142AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift */; };
 		9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */; };
 		9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */; };
 		9DA945CE2AC0BA0A002302D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945CD2AC0BA0A002302D1 /* ViewController.swift */; };
@@ -119,6 +120,7 @@
 		9D7A76D92AE43A2A00158781 /* BookActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookActionsView.swift; sourceTree = "<group>"; };
 		9D7A76DB2AE43A7F00158781 /* SimilarBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarBooksView.swift; sourceTree = "<group>"; };
 		9D7A76DD2AE43DDC00158781 /* BookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCoordinator.swift; sourceTree = "<group>"; };
+		9D7A77142AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpReminderTrackerCoordinator.swift; sourceTree = "<group>"; };
 		9DA945C62AC0BA0A002302D1 /* KnigomaniaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnigomaniaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			children = (
 				9D055E9D2AE0E3EC00BDDF50 /* Protocols */,
 				9D055E9E2AE0E42300BDDF50 /* EntryCoordinator.swift */,
+				9D7A77142AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift */,
 				9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */,
 				9D055EA02AE0E45E00BDDF50 /* MainCoordinator.swift */,
 				9D055EA22AE0E47E00BDDF50 /* RegistrationOnboardingCoordinator.swift */,
@@ -877,6 +880,7 @@
 				9D055EA72AE0EC0A00BDDF50 /* PasswordTextField.swift in Sources */,
 				9D61F9C72AD882D70000393C /* HeadlineTextModifier.swift in Sources */,
 				FE70D79E2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift in Sources */,
+				9D7A77152AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift in Sources */,
 				FE4B8B002ADEA94A00FE28CE /* HomePageScreenView.swift in Sources */,
 				FEF697302AC5EF1800708E1E /* CustomActivityIndicator.swift in Sources */,
 				9D61FA042AD889F90000393C /* NavBar.swift in Sources */,

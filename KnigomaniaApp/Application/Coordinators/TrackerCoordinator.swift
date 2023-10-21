@@ -14,6 +14,8 @@ final class TrackerCoordinator: Coordinator{
 	
 	weak var isUserAuthorise: CurrentValueSubject<Bool, Never>?
 	
+	var childCoordinators = [Coordinator]()
+	
 	init(navigationController: UINavigationController, isUserAuthorise: CurrentValueSubject<Bool, Never>? = nil) {
 		self.navigationController = navigationController
 		self.isUserAuthorise = isUserAuthorise
@@ -59,6 +61,12 @@ final class TrackerCoordinator: Coordinator{
 				navigationController.popViewController(animated: false)
 			}
 		}
+	}
+	
+	func setUpReminder(){
+		let reminderCoordinator = SetUpReminderTrackerCoordinator(navigationController: navigationController, isUserAuthorise: isUserAuthorise)
+		reminderCoordinator.start()
+		childCoordinators.append(reminderCoordinator)
 	}
 	
 }

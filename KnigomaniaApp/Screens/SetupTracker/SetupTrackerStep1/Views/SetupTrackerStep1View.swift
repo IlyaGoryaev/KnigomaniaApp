@@ -65,7 +65,7 @@ struct SetupTrackerStep1View: View {
 	
 	func setupAppearance() {
 		UISlider.appearance().thumbTintColor = UIColor(CustomColors.darkBrownColor)
-		UISlider.appearance().maximumTrackTintColor = UIColor(CustomColors.brownColor)
+		UISlider.appearance().maximumTrackTintColor = UIColor(CustomColors.beigeColor)
 	}
 	
 	func isButtonEnable() -> Bool{

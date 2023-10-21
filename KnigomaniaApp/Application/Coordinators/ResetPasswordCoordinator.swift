@@ -42,4 +42,8 @@ final class ResetPasswordCoordinator: Coordinator{
 		navigationController.popViewController(animated: false)
 	}
 	
+	func backAction(){
+		navigationController.popViewController(animated: true)
+	}
+	
 }

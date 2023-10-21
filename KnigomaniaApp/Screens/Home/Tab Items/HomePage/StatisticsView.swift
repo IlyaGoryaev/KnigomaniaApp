@@ -17,7 +17,7 @@ struct StatisticsView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            MyProgress(isTracketSetup: true, goalValue: 10, currentValue: 10, mainScreenCoordinator: mainScreenCoordinator)
+            MyProgress(isTracketSetup: true, goalValue: 15, currentValue: 10, mainScreenCoordinator: mainScreenCoordinator)
 				.onAppear(perform: {
 					DispatchQueue.main.async {
 						if !friends.isEmpty{

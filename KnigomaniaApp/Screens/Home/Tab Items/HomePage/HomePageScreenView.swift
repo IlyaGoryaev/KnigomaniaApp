@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomePageScreenView: View {
+	
     @State private var selection = 0
     @State private var index = 0
 	

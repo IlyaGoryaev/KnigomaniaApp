@@ -2,7 +2,6 @@ import SwiftUI
 
 struct SetupTrackerStep4View: View {
 	
-	
 	weak var trackerCoordinator: TrackerCoordinator?
 	
 	var body: some View {
@@ -44,7 +43,7 @@ struct SetupTrackerStep4View: View {
 				})
 				.padding(.top, 24)
 				ButtonView(title: "Настроить напоминания", isButtonEnable: true){
-					
+					trackerCoordinator?.setUpReminder()
 				}
 				.padding(.top, 8)
 				Spacer()

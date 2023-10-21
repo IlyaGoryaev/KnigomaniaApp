@@ -19,5 +19,5 @@ struct CustomColors {
 	static let trackerColor = Color("trackerColor")
 	static let orangeTrackerColor = Color("orangeTrackerColor")
 	static let lightColor = Color("lightColor")
-    static let greyColor = Color("greyсolor")
+    static let greyColor = Color("greycolor")
 }

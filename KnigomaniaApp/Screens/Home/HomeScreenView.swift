@@ -71,7 +71,7 @@ extension HomeScreenView {
             Image(imageName)
                 .resizable()
                 .renderingMode(.template)
-				.foregroundColor(isActive ? .white : .light)
+				.foregroundColor(isActive ? .white : CustomColors.greyColor)
                 .frame(width: 30, height: 30)
             Spacer()
         }
