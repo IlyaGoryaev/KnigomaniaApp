@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomePageScreenView: View {
     @State private var selection = 0
-    @State private var index = 0
+    @Namespace private var lineAnimation
     
     var body: some View {
         ZStack {
@@ -40,40 +40,36 @@ struct HomePageScreenView: View {
                     Text("Мой прогресс")
                         .foregroundColor(CustomColors.darkBrownColor)
                         .font(.system(size: 14))
-                        .fontWeight(index == 0 ? .semibold : .regular)
+                        .fontWeight(selection == 0 ? .semibold : .regular)
                         .onTapGesture {
                             withAnimation(.default) {
-                                index = 0
                                 selection = 0
                             }
                         }
-                        .overlay(
-                            Rectangle()
-                                .frame(height: index == 0 ? 2 : 0)
-                                .foregroundColor(CustomColors.yellowColor)
-                                .padding(.top, 22)
-                        )
                     Text("Читаю сейчас")
                         .foregroundColor(CustomColors.darkBrownColor)
                         .font(.system(size: 14))
-                        .fontWeight(index == 1 ? .semibold : .regular)
+                        .fontWeight(selection == 1 ? .semibold : .regular)
                         .onTapGesture {
                             withAnimation(.default) {
-                                index = 1
                                 selection = 1
                             }
                         }
-                        .overlay(
-                            Rectangle()
-                                .frame(height: index == 1 ? 2 : 0)
-                                .foregroundColor(CustomColors.yellowColor)
-                                .padding(.top, 22)
-                        )
+                    Spacer()
+                }
+                .padding(.leading, 21)
+                .padding(.top, 24)
+                .edgesIgnoringSafeArea(.trailing)
+                HStack {
+                    Rectangle()
+                        .frame(width: 109, height: 2)
+                        .foregroundColor(CustomColors.yellowColor)
+                        .matchedGeometryEffect(id: "line", in: lineAnimation)
+                        .offset(x: CGFloat(selection) * (UIScreen.main.bounds.width / 3))
+                        .animation(.default, value: selection)
                     Spacer()
                 }
                 .padding(.leading, 16)
-                .padding(.top, 24)
-                .edgesIgnoringSafeArea(.trailing)
                 TabView(selection: $selection) {
                     StatisticsView()
                         .tag(0)
@@ -81,11 +77,6 @@ struct HomePageScreenView: View {
                         .tag(1)
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                .onChange(of: selection) { s in
-                    withAnimation {
-                        index = s
-                    }
-                }
                 Spacer()
             }
         }
