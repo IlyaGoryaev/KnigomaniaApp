@@ -9,10 +9,10 @@ import SwiftUI
 
 struct FriendsStatisticView: View {
 	
-	@State var friendsArray: [FriendModel] = []
+	@Binding var friendsArray: [FriendModel]
 	
 	@GestureState var isDragging = false
-	
+		
 	var body: some View {
 		ZStack{
 			CustomColors.background.ignoresSafeArea()
@@ -63,6 +63,11 @@ struct FriendsStatisticView: View {
 												.onEnded({ (value) in
 													onEnded(value: value, index: index)
 												}))
+									.gesture(TapGesture().onEnded({ _ in
+										withAnimation {
+											friendsArray[index].offset = 0
+										}
+									}))
 							}
 							
 						}
@@ -78,9 +83,17 @@ struct FriendsStatisticView: View {
 	}
 	
 	func onChanged(value: DragGesture.Value, index: Int){
-		
-		if value.translation.width < 0 && isDragging{
+		if value.translation.width < 0 && isDragging && friendsArray[index].offset != -140 {
 			friendsArray[index].offset = value.translation.width
+			DispatchQueue.main.async {
+				for i in 0...friendsArray.count - 1{
+					if i != index{
+						withAnimation {
+							friendsArray[i].offset = 0
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -93,6 +106,7 @@ struct FriendsStatisticView: View {
 			} else {
 				friendsArray[index].offset = 0
 			}
+			
 		}
 		
 	}
@@ -144,6 +158,6 @@ struct FriendCellView: View {
 	}
 }
 
-#Preview {
-	FriendsStatisticView(friendsArray: [FriendModel(friendName: "Антон", goalValue: 12, currentValue: 10), FriendModel(friendName: "fiohewofhiwe", goalValue: 45, currentValue: 34)])
-}
+//#Preview {
+//	FriendsStatisticView(friendsArray: [FriendModel(friendName: "Антон", goalValue: 12, currentValue: 10), FriendModel(friendName: "fiohewofhiwe", goalValue: 45, currentValue: 34)])
+//}

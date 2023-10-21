@@ -15,6 +15,8 @@ struct MyProgress: View {
 	
 	var currentValue: Double
 	
+	weak var mainScreenCoordinator: MainCoordinator?
+	
 	var body: some View {
 		ZStack{
 			CustomColors.background.ignoresSafeArea()
@@ -34,7 +36,7 @@ struct MyProgress: View {
 					.padding(.top, 48)
 				if !isTracketSetup{
 					ButtonView(title: "Настроить", isButtonEnable: true) {
-						print("Setup")
+						mainScreenCoordinator?.setUpTracker()
 					}
 					.padding(.top, 16)
 				}

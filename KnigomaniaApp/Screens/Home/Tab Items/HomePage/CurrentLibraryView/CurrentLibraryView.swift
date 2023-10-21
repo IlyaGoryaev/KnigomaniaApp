@@ -11,6 +11,8 @@ struct CurrentLibraryView: View {
 	
 	var books: [BookModel] = []
 	
+	weak var mainScreenCoordinator: MainCoordinator?
+	
 	var body: some View {
 		ZStack{
 			CustomColors.background.ignoresSafeArea()
@@ -23,7 +25,7 @@ struct CurrentLibraryView: View {
 						.padding(.top, 26)
 					Spacer()
 				} else {
-					BooksCollectionView(books: books)
+					BooksCollectionView(books: books, mainScreenCoordinator: mainScreenCoordinator)
 						.padding(.top, 26)
 				}
 			}
@@ -33,6 +35,5 @@ struct CurrentLibraryView: View {
 }
 
 #Preview {
-	//	CurrentLibraryView(books: [BookModel(bookName: "Book1", imageName: "Book1"), BookModel(bookName: "Book2", imageName: "Book2"), BookModel(bookName: "Book3", imageName: "Book3"), BookModel(bookName: "Book4", imageName: "Book4"), BookModel(bookName: "Book5", imageName: "Book5")])
-	CurrentLibraryView(books: [])
+		CurrentLibraryView(books: [BookModel(bookName: "Book1", imageName: "book1"), BookModel(bookName: "Book2", imageName: "book2"), BookModel(bookName: "Book3", imageName: "book3"), BookModel(bookName: "Book4", imageName: "book4"), BookModel(bookName: "Book5", imageName: "book5")])
 }

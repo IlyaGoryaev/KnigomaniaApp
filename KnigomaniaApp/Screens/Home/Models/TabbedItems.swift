@@ -16,13 +16,13 @@ enum TabbedItems: Int, CaseIterable{
     var iconName: String{
         switch self {
         case .home:
-            return "homeicon"
+            return "homeIcon"
         case .library:
-            return "libraryicon"
+            return "libraryIcon"
         case .scan:
-            return "scanicon"
+            return "scanIcon"
         case .settings:
-            return "settingsicon"
+            return "settingsIcon"
         }
     }
 }

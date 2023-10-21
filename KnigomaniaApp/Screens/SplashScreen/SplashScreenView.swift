@@ -8,21 +8,18 @@
 import SwiftUI
 
 struct SplashScreenView: View {
-    var body: some View {
-        ZStack {
-            CustomColors.background
-                .edgesIgnoringSafeArea(.all)
-            VStack {
-                Text("КНИГОМАНИЯ")
-                    .font(.system(size: 32, weight: .heavy))
-                    .foregroundColor(CustomColors.yellowColor)
-                    .padding(.top, 343)
-                CustomActivityIndicator()
-                    .padding(.top, 290)
-                Spacer()
-            }
-        }
-    }
+	var body: some View {
+		ZStack {
+			CustomColors.background
+			Text("КНИГОМАНИЯ")
+				.font(.system(size: 32, weight: .heavy))
+				.foregroundColor(CustomColors.yellowColor)
+			CustomActivityIndicator()
+				.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+				.padding(.bottom, 52)
+		}
+		.ignoresSafeArea()
+	}
 }
 
 #Preview {

@@ -14,7 +14,7 @@ final class TrackerCoordinator: Coordinator{
 	
 	weak var isUserAuthorise: CurrentValueSubject<Bool, Never>?
 	
-	init(navigationController: UINavigationController, isUserAuthorise: CurrentValueSubject<Bool, Never>) {
+	init(navigationController: UINavigationController, isUserAuthorise: CurrentValueSubject<Bool, Never>? = nil) {
 		self.navigationController = navigationController
 		self.isUserAuthorise = isUserAuthorise
 	}
@@ -52,7 +52,13 @@ final class TrackerCoordinator: Coordinator{
 	}
 	
 	func logIn(){
-		isUserAuthorise?.send(true)
+		if let isUserAuthorise = isUserAuthorise {
+			isUserAuthorise.send(true)
+		} else {
+			for _ in 0...3{
+				navigationController.popViewController(animated: false)
+			}
+		}
 	}
 	
 }
