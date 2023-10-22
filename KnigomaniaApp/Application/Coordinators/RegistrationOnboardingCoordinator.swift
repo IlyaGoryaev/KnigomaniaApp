@@ -17,7 +17,7 @@ final class RegistrationOnboardingCoordinator: Coordinator{
 	
 	var childCoordinators = [Coordinator]()
 	
-	init(navigationController: UINavigationController, isUserAuthorise: CurrentValueSubject<Bool, Never>) {
+	init(navigationController: UINavigationController, isUserAuthorise: CurrentValueSubject<Bool, Never>? = nil) {
 		self.navigationController = navigationController
 		self.isUserAuthorise = isUserAuthorise
 	}
@@ -78,7 +78,12 @@ final class RegistrationOnboardingCoordinator: Coordinator{
 	}
 	
 	func logIn(){
-		isUserAuthorise?.send(true)
+		if let isUserAuthorise = isUserAuthorise {
+			isUserAuthorise.send(true)
+		} else {
+			navigationController.popToRootViewController(animated: false)
+		}
+		
 	}
 	
 	func backAction(){

@@ -10,6 +10,9 @@ import SwiftUI
 struct HomePageScreenView: View {
     @State private var selection = 0
     @Namespace private var lineAnimation
+    @State private var lineWidth: CGFloat = 0
+    
+    weak var mainScreenCoordinator: MainCoordinator?
     
     var body: some View {
         ZStack {
@@ -42,6 +45,7 @@ struct HomePageScreenView: View {
                         .font(.system(size: 14))
                         .fontWeight(selection == 0 ? .semibold : .regular)
                         .onTapGesture {
+                            lineWidth = getLabelWidth(text: "Мой прогресс")
                             withAnimation(.default) {
                                 selection = 0
                             }
@@ -51,8 +55,10 @@ struct HomePageScreenView: View {
                         .font(.system(size: 14))
                         .fontWeight(selection == 1 ? .semibold : .regular)
                         .onTapGesture {
+                            lineWidth = getLabelWidth(text: "Читаю сейчас")
                             withAnimation(.default) {
                                 selection = 1
+                                
                             }
                         }
                     Spacer()
@@ -62,7 +68,7 @@ struct HomePageScreenView: View {
                 .edgesIgnoringSafeArea(.trailing)
                 HStack {
                     Rectangle()
-                        .frame(width: 109, height: 2)
+                        .frame(width: lineWidth, height: 2)
                         .foregroundColor(CustomColors.yellowColor)
                         .matchedGeometryEffect(id: "line", in: lineAnimation)
                         .offset(x: CGFloat(selection) * (UIScreen.main.bounds.width / 3))
@@ -71,15 +77,34 @@ struct HomePageScreenView: View {
                 }
                 .padding(.leading, 16)
                 TabView(selection: $selection) {
-                    StatisticsView()
+                    StatisticsView(mainScreenCoordinator:mainScreenCoordinator)
                         .tag(0)
-                    CurrentLibraryView()
+                    CurrentLibraryView(books: [BookModel(bookName: "Book1", imageName: "book1"), BookModel(bookName: "Book2", imageName: "book2"), BookModel(bookName: "Book3", imageName: "book3"), BookModel(bookName: "Book4", imageName: "book4"), BookModel(bookName: "Book5", imageName: "book5")], mainScreenCoordinator: mainScreenCoordinator)
                         .tag(1)
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 Spacer()
             }
         }
+        .onAppear(perform: {
+            lineWidth = getLabelWidth(text: "Мой прогресс")
+            setupAppearance()
+        })
+    }
+    
+    func setupAppearance() {
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(CustomColors.brownColor)
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor(CustomColors.brownColor).withAlphaComponent(0.2)
+    }
+        
+    
+    
+    func getLabelWidth(text: String) -> CGFloat {
+        let label = UILabel()
+        label.text = text
+        label.font = .systemFont(ofSize: 16)
+        label.sizeToFit()
+        return label.frame.size.width
     }
 }
 

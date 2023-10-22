@@ -19,10 +19,10 @@ struct RestorePasswordScreenConfirmationView: View {
 			CustomColors.background
 				.edgesIgnoringSafeArea(.all)
 			VStack {
-				Text("Войти")
-					.font(.system(size: 20, weight: .medium))
-					.foregroundColor(CustomColors.darkBrownColor)
-					.padding(.top, 32)
+				NavBar(title: "Войти", action: {
+					resetPasswordCoordinator?.backAction()
+				})
+				.padding(.top, 32)
 				VStack(spacing: 8) {
 					HStack {
 						Text("Новый пароль")

@@ -22,7 +22,7 @@ struct SetupTrackerStep2View: View {
 				.padding(.top, 20)
 				Text("Сколько времени вы тратите в день на чтение?")
 					.font(.system(size: 24, weight: .bold))
-					.foregroundStyle(CustomColors.brownColor)
+					.foregroundStyle(CustomColors.darkBrownColor)
 					.multilineTextAlignment(.center)
 					.padding(.top, 40)
 					.padding(.horizontal, 16)

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TrackerSetupConfirmationScreenView: View {
+	
+	weak var setupReminderCoordinator: SetUpReminderTrackerCoordinator?
+	
     var body: some View {
         ZStack {
             CustomColors.background
@@ -29,7 +32,7 @@ struct TrackerSetupConfirmationScreenView: View {
                 }
                 .padding(.top, 64)
                 ButtonView(title: "Поехали", isButtonEnable: true) {
-                    
+					setupReminderCoordinator?.logIn()
                 }
                 .padding(.top, 32)
                 Spacer()

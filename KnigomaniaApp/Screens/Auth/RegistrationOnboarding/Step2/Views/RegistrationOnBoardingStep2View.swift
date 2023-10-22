@@ -28,7 +28,7 @@ struct RegistrationOnBoardingStep2View: View {
 						.modifier(RegularTextModifier())
 						.padding(.top, 24)
 						.padding(.horizontal, 60)
-					Image("RegistrationStep2Image")
+					Image("imageEmailConfirm")
 						.resizable()
 						.frame(height: 343)
 						.padding(.top, 32)

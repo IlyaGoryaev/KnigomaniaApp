@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DaySelectionModalView: View {
+	
+	@Binding var isShown: Bool
+	
     @State private var days: [Day] = [
         Day(name: "Понедельник"),
         Day(name: "Вторник"),
@@ -51,9 +54,12 @@ struct DaySelectionModalView: View {
                         .padding(.top, -24)
                         .padding(.horizontal, -16)
                         .scrollContentBackground(.hidden)
+						.scrollDisabled(true)
                         HStack {
                             Button(action: {
-                                
+								withAnimation {
+									isShown = false
+								}
                             }) {
                                 Rectangle()
                                     .frame(height: 48)
@@ -67,7 +73,9 @@ struct DaySelectionModalView: View {
                                     )
                             }
                             Button(action: {
-                                
+								withAnimation {
+									isShown = false
+								}
                             }) {
                                 Rectangle()
                                     .frame(height: 48)
@@ -91,8 +99,4 @@ struct DaySelectionModalView: View {
     private func toggleSelection(for day: Binding<Day>) {
         day.wrappedValue.isSelected.toggle()
     }
-}
-
-#Preview {
-    DaySelectionModalView()
 }

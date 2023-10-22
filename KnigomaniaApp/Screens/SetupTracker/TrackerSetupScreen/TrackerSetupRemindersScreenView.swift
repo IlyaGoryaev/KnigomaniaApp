@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct TrackerSetupRemindersScreenView: View {
+	
+	weak var setupReminderCoordinator: SetUpReminderTrackerCoordinator?
+	
     @State private var isReminderEnabled = false
     @State private var showDaySelection = false
     @State private var selectedDays: [String] = []
+	
+	@State private var isDatesShown: Bool = false
+	@State private var isTimeShown: Bool = false
     
     var body: some View {
         ZStack {
@@ -37,6 +43,9 @@ struct TrackerSetupRemindersScreenView: View {
                         .foregroundColor(CustomColors.darkBrownColor)
                     Spacer()
                     Button(action: {
+						withAnimation {
+							isDatesShown = true
+						}
                         showDaySelection.toggle()
                     }) {
                         Text("Выбрать дни")
@@ -51,15 +60,31 @@ struct TrackerSetupRemindersScreenView: View {
                         .font(.system(size: 16, weight: .regular))
                         .foregroundColor(CustomColors.darkBrownColor)
                     Spacer()
+					Button(action: {
+						withAnimation {
+							isTimeShown = true
+						}
+						showDaySelection.toggle()
+					}) {
+						Text("12:00")
+							.font(.system(size: 16, weight: .semibold))
+							.foregroundColor(CustomColors.brownColor)
+					}
+					
                 }
                 .padding(.horizontal, 16)
                 .padding(.top, 32)
                 ButtonView(title: "Завершить", isButtonEnable: true) {
-                    
+					setupReminderCoordinator?.finishSetupReminder()
                 }
                 .padding(.top, 32)
                 Spacer()
             }
+			.blur(radius: isDatesShown || isTimeShown ? 3.0 : 0.0)
+			DaySelectionModalView(isShown: $isDatesShown)
+				.opacity(isDatesShown ? 1 : 0)
+			TimeSelectionModalView(timeIsShown: $isTimeShown)
+				.opacity(isTimeShown ? 1 : 0)
         }
     }
 }

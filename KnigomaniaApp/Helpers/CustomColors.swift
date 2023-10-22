@@ -18,6 +18,7 @@ struct CustomColors {
 	static let lightBrownColor = Color("lightbrowncolor")
 	static let trackerColor = Color("trackercolor")
 	static let orangeTrackerColor = Color("orangetrackercolor")
-	static let lightColor = Color("lightcolor")
+	static let lightColor = Color("lightColor")
     static let greyColor = Color("greycolor")
+    static let tabBarUnselectedColor = Color("tabbarunselectedcolor")
 }

@@ -41,6 +41,14 @@
 		9D61F9FC2AD8896B0000393C /* SetupTrackerStep3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9FB2AD8896B0000393C /* SetupTrackerStep3View.swift */; };
 		9D61FA022AD889B20000393C /* SetupTrackerStep4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61FA012AD889B20000393C /* SetupTrackerStep4View.swift */; };
 		9D61FA042AD889F90000393C /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61FA032AD889F90000393C /* NavBar.swift */; };
+		9D7A76CE2AE42A1C00158781 /* BookPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A76CD2AE42A1C00158781 /* BookPage.swift */; };
+		9D7A76D32AE42BE500158781 /* BookPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A76D22AE42BE500158781 /* BookPageModel.swift */; };
+		9D7A76D62AE432DA00158781 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A76D52AE432DA00158781 /* DescriptionView.swift */; };
+		9D7A76D82AE4358700158781 /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A76D72AE4358700158781 /* ReviewsView.swift */; };
+		9D7A76DA2AE43A2A00158781 /* BookActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A76D92AE43A2A00158781 /* BookActionsView.swift */; };
+		9D7A76DC2AE43A7F00158781 /* SimilarBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A76DB2AE43A7F00158781 /* SimilarBooksView.swift */; };
+		9D7A76DE2AE43DDC00158781 /* BookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A76DD2AE43DDC00158781 /* BookCoordinator.swift */; };
+		9D7A77152AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A77142AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift */; };
 		9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */; };
 		9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */; };
 		9DA945CE2AC0BA0A002302D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945CD2AC0BA0A002302D1 /* ViewController.swift */; };
@@ -105,6 +113,14 @@
 		9D61F9FB2AD8896B0000393C /* SetupTrackerStep3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTrackerStep3View.swift; sourceTree = "<group>"; };
 		9D61FA012AD889B20000393C /* SetupTrackerStep4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTrackerStep4View.swift; sourceTree = "<group>"; };
 		9D61FA032AD889F90000393C /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		9D7A76CD2AE42A1C00158781 /* BookPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPage.swift; sourceTree = "<group>"; };
+		9D7A76D22AE42BE500158781 /* BookPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPageModel.swift; sourceTree = "<group>"; };
+		9D7A76D52AE432DA00158781 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		9D7A76D72AE4358700158781 /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
+		9D7A76D92AE43A2A00158781 /* BookActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookActionsView.swift; sourceTree = "<group>"; };
+		9D7A76DB2AE43A7F00158781 /* SimilarBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarBooksView.swift; sourceTree = "<group>"; };
+		9D7A76DD2AE43DDC00158781 /* BookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCoordinator.swift; sourceTree = "<group>"; };
+		9D7A77142AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpReminderTrackerCoordinator.swift; sourceTree = "<group>"; };
 		9DA945C62AC0BA0A002302D1 /* KnigomaniaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnigomaniaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -270,10 +286,12 @@
 			children = (
 				9D055E9D2AE0E3EC00BDDF50 /* Protocols */,
 				9D055E9E2AE0E42300BDDF50 /* EntryCoordinator.swift */,
+				9D7A77142AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift */,
 				9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */,
 				9D055EA02AE0E45E00BDDF50 /* MainCoordinator.swift */,
 				9D055EA22AE0E47E00BDDF50 /* RegistrationOnboardingCoordinator.swift */,
 				9D055EA42AE0E49600BDDF50 /* ResetPasswordCoordinator.swift */,
+				9D7A76DD2AE43DDC00158781 /* BookCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -502,6 +520,51 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		9D7A76CC2AE4294E00158781 /* BookPage */ = {
+			isa = PBXGroup;
+			children = (
+				9D7A76D12AE42BC600158781 /* ViewModels */,
+				9D7A76D02AE42BC000158781 /* Models */,
+				9D7A76CF2AE42BBB00158781 /* Views */,
+			);
+			path = BookPage;
+			sourceTree = "<group>";
+		};
+		9D7A76CF2AE42BBB00158781 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D7A76D42AE432C900158781 /* BookPageSubviews */,
+				9D7A76CD2AE42A1C00158781 /* BookPage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9D7A76D02AE42BC000158781 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D7A76D22AE42BE500158781 /* BookPageModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9D7A76D12AE42BC600158781 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9D7A76D42AE432C900158781 /* BookPageSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				9D7A76D52AE432DA00158781 /* DescriptionView.swift */,
+				9D7A76D72AE4358700158781 /* ReviewsView.swift */,
+				9D7A76D92AE43A2A00158781 /* BookActionsView.swift */,
+				9D7A76DB2AE43A7F00158781 /* SimilarBooksView.swift */,
+			);
+			path = BookPageSubviews;
+			sourceTree = "<group>";
+		};
 		9DA945BD2AC0BA0A002302D1 = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +709,7 @@
 		FEEF84C32AD9A99000B6DC39 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9D7A76CC2AE4294E00158781 /* BookPage */,
 				FE713E4B2AC5DE5200F6DA62 /* SplashScreen */,
 				FEEF84C42AD9B05E00B6DC39 /* Auth */,
 				9D61F9E82AD887FB0000393C /* SetupTracker */,
@@ -769,6 +833,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE347F182AD032A900AE00DF /* Day.swift in Sources */,
+				9D7A76D32AE42BE500158781 /* BookPageModel.swift in Sources */,
 				9D055EC32AE0EFEB00BDDF50 /* MyProgress.swift in Sources */,
 				9D61F9FC2AD8896B0000393C /* SetupTrackerStep3View.swift in Sources */,
 				FE347F1A2AD055EE00AE00DF /* TimeSelectionModalView.swift in Sources */,
@@ -779,6 +844,7 @@
 				9D055EB22AE0EEFB00BDDF50 /* BooksCollectionView.swift in Sources */,
 				9DA945CE2AC0BA0A002302D1 /* ViewController.swift in Sources */,
 				FEC8EB082AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift in Sources */,
+				9D7A76D82AE4358700158781 /* ReviewsView.swift in Sources */,
 				9D61F9CB2AD883090000393C /* TextFieldTime.swift in Sources */,
 				9D61F9D62AD884760000393C /* RegistrationOnboardingStep4View.swift in Sources */,
 				9D055EA52AE0E49600BDDF50 /* ResetPasswordCoordinator.swift in Sources */,
@@ -795,6 +861,7 @@
 				9D055EBB2AE0EF8E00BDDF50 /* FriendModel.swift in Sources */,
 				9D055EB72AE0EF3B00BDDF50 /* CurrentLibraryView.swift in Sources */,
 				9D61F9D12AD884180000393C /* RegistrationOnboardingStep3View.swift in Sources */,
+				9D7A76DA2AE43A2A00158781 /* BookActionsView.swift in Sources */,
 				9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */,
 				9D61F9E22AD885290000393C /* RegistrationStep5View.swift in Sources */,
 				9D61F9BB2AD881D40000393C /* RegistrationOnBoardingStep2View.swift in Sources */,
@@ -804,17 +871,21 @@
 				9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */,
 				9D055EB02AE0EEE800BDDF50 /* MainScreen.swift in Sources */,
 				9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */,
+				9D7A76DC2AE43A7F00158781 /* SimilarBooksView.swift in Sources */,
 				9D055E9F2AE0E42300BDDF50 /* EntryCoordinator.swift in Sources */,
 				FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */,
+				9D7A76D62AE432DA00158781 /* DescriptionView.swift in Sources */,
 				9D61F9DC2AD884D90000393C /* GenreModel.swift in Sources */,
 				9D055EA32AE0E47E00BDDF50 /* RegistrationOnboardingCoordinator.swift in Sources */,
 				9D055EA72AE0EC0A00BDDF50 /* PasswordTextField.swift in Sources */,
 				9D61F9C72AD882D70000393C /* HeadlineTextModifier.swift in Sources */,
 				FE70D79E2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift in Sources */,
+				9D7A77152AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift in Sources */,
 				FE4B8B002ADEA94A00FE28CE /* HomePageScreenView.swift in Sources */,
 				FEF697302AC5EF1800708E1E /* CustomActivityIndicator.swift in Sources */,
 				9D61FA042AD889F90000393C /* NavBar.swift in Sources */,
 				9D61F9F62AD888B90000393C /* SetupTrackerStep2View.swift in Sources */,
+				9D7A76CE2AE42A1C00158781 /* BookPage.swift in Sources */,
 				9D055EB42AE0EF0A00BDDF50 /* BookChallengeView.swift in Sources */,
 				9D61F9F02AD888840000393C /* SetupTrackerStep1View.swift in Sources */,
 				9D055EBE2AE0EFA600BDDF50 /* FriendsStatisticView.swift in Sources */,
@@ -825,6 +896,7 @@
 				9D61F9C52AD882B30000393C /* ButtonView.swift in Sources */,
 				FE4931442ADEB3A60020D805 /* TabbedItems.swift in Sources */,
 				FE4B8AFD2ADEA6C700FE28CE /* HomeScreenView.swift in Sources */,
+				9D7A76DE2AE43DDC00158781 /* BookCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

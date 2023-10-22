@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TimeSelectionModalView: View {
+	
+	@Binding var timeIsShown: Bool
+	
     @State private var selectedTime = Date()
     
     var body: some View {
@@ -34,7 +37,9 @@ struct TimeSelectionModalView: View {
                             .padding(.top, 16)
                         HStack {
                             Button(action: {
-                                
+								withAnimation {
+									timeIsShown = false
+								}
                             }) {
                                 Rectangle()
                                     .frame(height: 48)
@@ -48,7 +53,9 @@ struct TimeSelectionModalView: View {
                                     )
                             }
                             Button(action: {
-                                
+								withAnimation {
+									timeIsShown = false
+								}
                             }) {
                                 Rectangle()
                                     .frame(height: 48)
@@ -66,10 +73,7 @@ struct TimeSelectionModalView: View {
                         Spacer()
                     }
                 )
+			Spacer()
         }
     }
-}
-
-#Preview {
-    TimeSelectionModalView()
 }
