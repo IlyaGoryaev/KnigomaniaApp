@@ -56,6 +56,7 @@
 		9DA945D32AC0BA0B002302D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945D22AC0BA0B002302D1 /* Assets.xcassets */; };
 		9DA945D62AC0BA0B002302D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945D42AC0BA0B002302D1 /* LaunchScreen.storyboard */; };
 		9DA945DE2AC0BA26002302D1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945DD2AC0BA26002302D1 /* .gitignore */; };
+		FE1BF0F82AE6B9FA00FB302A /* TabBarWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1BF0F72AE6B9FA00FB302A /* TabBarWrapperView.swift */; };
 		FE314D442ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE314D432ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift */; };
 		FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F142AD02F2400AE00DF /* DaySelectionModalView.swift */; };
 		FE347F182AD032A900AE00DF /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F172AD032A900AE00DF /* Day.swift */; };
@@ -130,6 +131,7 @@
 		9DA945D52AC0BA0B002302D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DA945D72AC0BA0B002302D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA945DD2AC0BA26002302D1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FE1BF0F72AE6B9FA00FB302A /* TabBarWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarWrapperView.swift; sourceTree = "<group>"; };
 		FE314D432ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerSetupRemindersScreenView.swift; sourceTree = "<group>"; };
 		FE347F142AD02F2400AE00DF /* DaySelectionModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySelectionModalView.swift; sourceTree = "<group>"; };
 		FE347F172AD032A900AE00DF /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -606,6 +608,7 @@
 				9D055EAF2AE0EEE800BDDF50 /* MainScreen.swift */,
 				9D055EB12AE0EEFB00BDDF50 /* BooksCollectionView.swift */,
 				9D055EB32AE0EF0A00BDDF50 /* BookChallengeView.swift */,
+				FE1BF0F72AE6B9FA00FB302A /* TabBarWrapperView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -878,6 +881,7 @@
 				FE70D79B2AC819400018C5A1 /* LoginScreenView.swift in Sources */,
 				9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */,
 				9D055EB02AE0EEE800BDDF50 /* MainScreen.swift in Sources */,
+				FE1BF0F82AE6B9FA00FB302A /* TabBarWrapperView.swift in Sources */,
 				9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */,
 				9D7A76DC2AE43A7F00158781 /* SimilarBooksView.swift in Sources */,
 				9D055E9F2AE0E42300BDDF50 /* EntryCoordinator.swift in Sources */,

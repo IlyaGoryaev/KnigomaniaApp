@@ -18,16 +18,7 @@ struct HomeScreenView: View {
     var body: some View {
 		ZStack {
 			VStack(spacing: 0) {
-				TabView(selection: $selection) {
-					HomePageScreenView(mainScreenCoordinator: mainScreenCoordinator)
-						.tag(0)
-					LibraryScreenView()
-						.tag(1)
-					ScanScreenView()
-						.tag(2)
-					SettingsScreenView()
-						.tag(3)
-				}
+                TabBarWrapperView(selection: $selection)
 				ZStack {
 					HStack {
 						ForEach((TabbedItems.allCases), id: \.self) { item in
@@ -59,8 +50,6 @@ struct HomeScreenView: View {
 				isShown = false
 			}
 		})
-
-		
     }
 }
 
