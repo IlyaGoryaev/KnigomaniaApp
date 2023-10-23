@@ -16,7 +16,7 @@ struct HomeScreenView: View {
     @State private var selection = 0
     
     var body: some View {
-		ZStack{
+		ZStack {
 			VStack(spacing: 0) {
 				TabView(selection: $selection) {
 					HomePageScreenView(mainScreenCoordinator: mainScreenCoordinator)

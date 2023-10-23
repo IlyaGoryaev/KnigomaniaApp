@@ -96,8 +96,6 @@ struct HomePageScreenView: View {
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(CustomColors.brownColor)
         UIPageControl.appearance().pageIndicatorTintColor = UIColor(CustomColors.brownColor).withAlphaComponent(0.2)
     }
-        
-    
     
     func getLabelWidth(text: String) -> CGFloat {
         let label = UILabel()

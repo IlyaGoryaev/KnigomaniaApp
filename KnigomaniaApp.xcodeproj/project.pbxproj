@@ -301,6 +301,8 @@
 			children = (
 				9D61F9C42AD882B30000393C /* ButtonView.swift */,
 				9D61FA032AD889F90000393C /* NavBar.swift */,
+				9D61F9CA2AD883090000393C /* TextFieldTime.swift */,
+				9D055EA62AE0EC0A00BDDF50 /* PasswordTextField.swift */,
 			);
 			path = DesignElements;
 			sourceTree = "<group>";
@@ -598,6 +600,16 @@
 			path = KnigomaniaApp;
 			sourceTree = "<group>";
 		};
+		FE1BF0EE2AE6A5D000FB302A /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				9D055EAF2AE0EEE800BDDF50 /* MainScreen.swift */,
+				9D055EB12AE0EEFB00BDDF50 /* BooksCollectionView.swift */,
+				9D055EB32AE0EF0A00BDDF50 /* BookChallengeView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		FE314D422ACC81E100BA3356 /* TrackerSetupScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -641,9 +653,7 @@
 				FE4B8AFC2ADEA6C700FE28CE /* HomeScreenView.swift */,
 				FE4B8AFE2ADEA93000FE28CE /* Tab Items */,
 				FE4931422ADEB3730020D805 /* Models */,
-				9D055EAF2AE0EEE800BDDF50 /* MainScreen.swift */,
-				9D055EB12AE0EEFB00BDDF50 /* BooksCollectionView.swift */,
-				9D055EB32AE0EF0A00BDDF50 /* BookChallengeView.swift */,
+				FE1BF0EE2AE6A5D000FB302A /* SubViews */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -746,8 +756,6 @@
 				FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */,
 				9D61F9C62AD882D70000393C /* HeadlineTextModifier.swift */,
 				9D61F9C82AD882F20000393C /* NumberTextField.swift */,
-				9D61F9CA2AD883090000393C /* TextFieldTime.swift */,
-				9D055EA62AE0EC0A00BDDF50 /* PasswordTextField.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";

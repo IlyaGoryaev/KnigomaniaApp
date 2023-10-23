@@ -41,7 +41,7 @@ struct TrackerView: View {
 				})
 				.frame(width: 200, height: 200)
 				.rotationEffect(Angle(degrees: 126))
-                .foregroundStyle(CustomColors.lightColor.opacity(0.5))
+                .foregroundStyle(CustomColors.trackerColor.opacity(0.5))
 			if isTracketSetup{
 				Circle()
 					.trim(from: 0, to: (currentValue / goalValue) * 0.8)
