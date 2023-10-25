@@ -26,7 +26,21 @@ final class BookCoordinator: Coordinator{
 		navigationController.pushViewController(viewController, animated: true)
 	}
 	
-	func backAction(){
+	func makeReview() {
+		var view = MakeReviewPage()
+		view.bookCoordinator = self
+		let viewController = UIHostingController(rootView: view)
+		navigationController.pushViewController(viewController, animated: true)
+	}
+	
+	func addBookToList() {
+		var view = AddBookToListPage()
+		view.bookCoordinator = self
+		let viewController = UIHostingController(rootView: view)
+		navigationController.pushViewController(viewController, animated: true)
+	}
+	
+	func backAction() {
 		navigationController.popViewController(animated: true)
 	}
 	

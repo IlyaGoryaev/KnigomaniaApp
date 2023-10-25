@@ -11,7 +11,7 @@ struct BookPageModel {
 	
 	let title: String
 	let author: String
-	let year: Int
+	let year: String
 	let grade: Double
 	let description: String
 	let reviews: [Review] = []

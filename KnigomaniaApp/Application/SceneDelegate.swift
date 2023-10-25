@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
 	var coordinator: Coordinator?
-	private let isUserAutorise = CurrentValueSubject<Bool, Never>(false)
+	private let isUserAutorise = CurrentValueSubject<Bool, Never>(true)
 	var cancallables = Set<AnyCancellable>()
 	
 

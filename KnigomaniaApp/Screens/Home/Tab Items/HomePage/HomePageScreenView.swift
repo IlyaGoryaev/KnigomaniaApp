@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomePageScreenView: View {
+	
 	@State private var selection = 0
 	@Namespace private var lineAnimation
 	@State private var lineWidth: CGFloat = 0
@@ -39,43 +40,41 @@ struct HomePageScreenView: View {
 				}
 				.padding(.top, 29)
 				.padding(.horizontal, 16)
-				HStack(spacing: 29) {
-					Text("Мой прогресс")
-						.foregroundColor(CustomColors.darkBrownColor)
-						.font(.system(size: 14))
-						.fontWeight(selection == 0 ? .semibold : .regular)
-						.onTapGesture {
-							lineWidth = getLabelWidth(text: "Мой прогресс")
-							withAnimation(.default) {
+				ScrollView(.horizontal, showsIndicators: false){
+					HStack(spacing: 29) {
+						Text("Мой прогресс")
+							.foregroundColor(CustomColors.darkBrownColor)
+							.font(.system(size: 14))
+							.fontWeight(selection == 0 ? .semibold : .regular)
+							.onTapGesture {
+								lineWidth = getLabelWidth(text: "Мой прогресс")
 								selection = 0
 							}
-						}
-					Text("Читаю сейчас")
-						.foregroundColor(CustomColors.darkBrownColor)
-						.font(.system(size: 14))
-						.fontWeight(selection == 1 ? .semibold : .regular)
-						.onTapGesture {
-							lineWidth = getLabelWidth(text: "Читаю сейчас")
-							withAnimation(.default) {
+						Text("Читаю сейчас")
+							.foregroundColor(CustomColors.darkBrownColor)
+							.font(.system(size: 14))
+							.fontWeight(selection == 1 ? .semibold : .regular)
+							.onTapGesture {
+								lineWidth = getLabelWidth(text: "Читаю сейчас")
 								selection = 1
-								
 							}
-						}
-					Spacer()
+						Spacer()
+					}
+					.padding(.leading, 21)
+					.padding(.top, 24)
+					.edgesIgnoringSafeArea(.trailing)
+					HStack {
+						Rectangle()
+							.frame(width: lineWidth, height: 2)
+							.foregroundColor(CustomColors.yellowColor)
+							.matchedGeometryEffect(id: "line", in: lineAnimation)
+							.offset(x: CGFloat(selection) * (UIScreen.main.bounds.width / 3))
+							.animation(.default, value: selection)
+						Spacer()
+					}
+					.padding(.leading, 16)
 				}
-				.padding(.leading, 21)
-				.padding(.top, 24)
-				.edgesIgnoringSafeArea(.trailing)
-				HStack {
-					Rectangle()
-						.frame(width: lineWidth, height: 2)
-						.foregroundColor(CustomColors.yellowColor)
-						.matchedGeometryEffect(id: "line", in: lineAnimation)
-						.offset(x: CGFloat(selection) * (UIScreen.main.bounds.width / 3))
-						.animation(.default, value: selection)
-					Spacer()
-				}
-				.padding(.leading, 16)
+				
 				TabView(selection: $selection) {
 					StatisticsView(mainScreenCoordinator:mainScreenCoordinator)
 						.tag(0)
