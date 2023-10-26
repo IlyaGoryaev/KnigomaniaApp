@@ -1,5 +1,5 @@
 //
-//  LibraryCoordinator.swift
+//  RecommendationsCoordinator.swift
 //  KnigomaniaApp
 //
 //  Created by Илья Горяев on 26.10.2023.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-final class LibraryCoordinator: Coordinator {
+final class RecommendationsCoordinator: Coordinator {
 	
 	var rootController: UINavigationController
 	
@@ -17,10 +17,10 @@ final class LibraryCoordinator: Coordinator {
 	}
 	
 	func start() {
-		var view = LibraryScreenView()
-		view.libraryCoordinator = self
+		var view = RecommendationsScreenView()
+		view.recommendationsCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		rootController.navigationController?.pushViewController(viewController, animated: false)
+		rootController.pushViewController(viewController, animated: false)
 	}
 	
 }

@@ -9,8 +9,7 @@ import SwiftUI
 
 struct RecommendationsScreenView: View {
     @State private var searchText = ""
-    var books: [BookModel] = []
-    weak var mainScreenCoordinator: MainCoordinator?
+    weak var recommendationsCoordinator: RecommendationsCoordinator?
     
     var body: some View {
         ZStack {

@@ -45,11 +45,11 @@ private extension MainCoordinatorWithTabBar {
 	func setupLibraryCoordinator() -> UINavigationController {
 		let navController = UINavigationController()
 		navController.navigationBar.isHidden = true
-		let libraryCoordinator = LibraryCoordinator(navigationController: navController)
-		childCoordinators.append(libraryCoordinator)
-		libraryCoordinator.start()
-		libraryCoordinator.rootController.tabBarItem.image = UIImage(named: "libraryicon")
-		return libraryCoordinator.rootController
+		let recommendationsCoordinator = RecommendationsCoordinator(navigationController: navController)
+		childCoordinators.append(recommendationsCoordinator)
+        recommendationsCoordinator.start()
+        recommendationsCoordinator.rootController.tabBarItem.image = UIImage(named: "libraryicon")
+		return recommendationsCoordinator.rootController
 	}
 	
 	func setupScanCoordinator() -> UINavigationController {
