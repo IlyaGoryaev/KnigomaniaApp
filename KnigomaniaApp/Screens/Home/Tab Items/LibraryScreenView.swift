@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LibraryScreenView: View {
+	
+	weak var libraryCoordinator: LibraryCoordinator?
+	
     var body: some View {
         Text("LibraryScreenView")
     }

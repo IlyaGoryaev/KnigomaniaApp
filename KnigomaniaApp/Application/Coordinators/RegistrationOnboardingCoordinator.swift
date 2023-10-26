@@ -11,14 +11,14 @@ import Combine
 
 final class RegistrationOnboardingCoordinator: Coordinator{
 	
-	var navigationController: UINavigationController
+	var rootController: UINavigationController
 	
 	weak var isUserAuthorise: CurrentValueSubject<Bool, Never>?
 	
-	var childCoordinators = [Coordinator]()
+	var childCoordinators = [any Coordinator]()
 	
 	init(navigationController: UINavigationController, isUserAuthorise: CurrentValueSubject<Bool, Never>? = nil) {
-		self.navigationController = navigationController
+		self.rootController = navigationController
 		self.isUserAuthorise = isUserAuthorise
 	}
 	
@@ -27,13 +27,13 @@ final class RegistrationOnboardingCoordinator: Coordinator{
 		var view = RegistrationOnBoardingStep2View()
 		view.applicationCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		self.navigationController.pushViewController(viewController, animated: false)
+		self.rootController.pushViewController(viewController, animated: false)
 		
 		DispatchQueue.main.asyncAfter(deadline: .now() + 3){
 			var view = RegistrationOnboardingStep3View()
 			view.applicationCoordinator = self
 			let viewController = UIHostingController(rootView: view)
-			self.navigationController.pushViewController(viewController, animated: false)
+			self.rootController.pushViewController(viewController, animated: false)
 		}
 		
 	}
@@ -43,7 +43,7 @@ final class RegistrationOnboardingCoordinator: Coordinator{
 		var view = RegistrationOnboardingStep3View()
 		view.applicationCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 		
 	}
 	
@@ -52,7 +52,7 @@ final class RegistrationOnboardingCoordinator: Coordinator{
 		var view = RegistrationOnboardingStep4View()
 		view.applicationCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func openStep5(){
@@ -60,7 +60,7 @@ final class RegistrationOnboardingCoordinator: Coordinator{
 		var view = RegistrationStep5View()
 		view.applicationCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 		
 	}
 	
@@ -68,11 +68,11 @@ final class RegistrationOnboardingCoordinator: Coordinator{
 		var view = RegistrationOnboardingStep6View()
 		view.applicationCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func setUpTracker(){
-		let trackerCoordinator = TrackerCoordinator(navigationController: navigationController, isUserAuthorise: isUserAuthorise!)
+		let trackerCoordinator = TrackerCoordinator(navigationController: rootController, isUserAuthorise: isUserAuthorise!)
 		trackerCoordinator.start()
 		childCoordinators.append(trackerCoordinator)
 	}
@@ -81,13 +81,13 @@ final class RegistrationOnboardingCoordinator: Coordinator{
 		if let isUserAuthorise = isUserAuthorise {
 			isUserAuthorise.send(true)
 		} else {
-			navigationController.popToRootViewController(animated: false)
+			rootController.popToRootViewController(animated: false)
 		}
 		
 	}
 	
 	func backAction(){
-		navigationController.popViewController(animated: true)
+		rootController.popViewController(animated: true)
 	}
 	
 }

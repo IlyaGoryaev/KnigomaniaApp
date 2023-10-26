@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SettingsScreenView: View {
+	
+	weak var settingsCoordinator: SettingsCoordinator?
+	
     var body: some View {
         Text("SettingsScreenView")
     }

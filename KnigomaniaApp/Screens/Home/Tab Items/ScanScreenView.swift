@@ -8,9 +8,32 @@
 import SwiftUI
 
 struct ScanScreenView: View {
+	
+	weak var scanCoordinator: ScanCoordinator?
+	
     var body: some View {
-        Text("ScanScreenView")
+		VStack{
+			Text("ScanScreenView")
+			ButtonView(title: "Button", isButtonEnable: true) {
+				scanCoordinator!.openNewScreen()
+			}
+		}
+        
     }
+}
+
+struct NextView: View {
+	
+	weak var scanCoordinator: ScanCoordinator?
+	
+	var body: some View {
+		VStack{
+			NavBar(title: "NextView") {
+				scanCoordinator!.backAction()
+			}
+			Spacer()
+		}
+	}
 }
 
 #Preview {

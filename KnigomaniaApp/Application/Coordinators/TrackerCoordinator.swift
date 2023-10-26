@@ -10,14 +10,14 @@ import Combine
 
 final class TrackerCoordinator: Coordinator{
 	
-	var navigationController: UINavigationController
+	var rootController: UINavigationController
 	
 	weak var isUserAuthorise: CurrentValueSubject<Bool, Never>?
 	
-	var childCoordinators = [Coordinator]()
+	var childCoordinators = [any Coordinator]()
 	
 	init(navigationController: UINavigationController, isUserAuthorise: CurrentValueSubject<Bool, Never>? = nil) {
-		self.navigationController = navigationController
+		self.rootController = navigationController
 		self.isUserAuthorise = isUserAuthorise
 	}
 	
@@ -25,32 +25,32 @@ final class TrackerCoordinator: Coordinator{
 		var view = SetupTrackerStep1View()
 		view.trackerCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: false)
+		rootController.pushViewController(viewController, animated: false)
 	}
 	
 	func openStep2(){
 		var view = SetupTrackerStep2View()
 		view.trackerCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func openStep3(){
 		var view = SetupTrackerStep3View()
 		view.trackerCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func openStep4(){
 		var view = SetupTrackerStep4View()
 		view.trackerCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func backAction(){
-		navigationController.popViewController(animated: true)
+		rootController.popViewController(animated: true)
 	}
 	
 	func logIn(){
@@ -58,13 +58,13 @@ final class TrackerCoordinator: Coordinator{
 			isUserAuthorise.send(true)
 		} else {
 			for _ in 0...3{
-				navigationController.popViewController(animated: false)
+				rootController.popViewController(animated: false)
 			}
 		}
 	}
 	
 	func setUpReminder(){
-		let reminderCoordinator = SetUpReminderTrackerCoordinator(navigationController: navigationController, isUserAuthorise: isUserAuthorise)
+		let reminderCoordinator = SetUpReminderTrackerCoordinator(navigationController: rootController, isUserAuthorise: isUserAuthorise)
 		reminderCoordinator.start()
 		childCoordinators.append(reminderCoordinator)
 	}

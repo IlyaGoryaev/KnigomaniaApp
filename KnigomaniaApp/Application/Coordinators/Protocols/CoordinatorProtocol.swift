@@ -10,7 +10,9 @@ import UIKit
 
 protocol Coordinator: AnyObject{
 	
-	var navigationController: UINavigationController { set get }
+	associatedtype controller: UIViewController
+	
+	var rootController: controller { set get }
 	
 	func start()
 	
