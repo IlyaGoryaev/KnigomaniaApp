@@ -25,6 +25,7 @@ struct MyProgress: View {
 					print("Tap book challenge")
 					
 				}
+                .frame(height: 96)
 				.padding(.top, 24)
 				TrackerView(isTracketSetup: isTracketSetup, goalValue: goalValue, currentValue: currentValue)
 					.padding(.top, 32)

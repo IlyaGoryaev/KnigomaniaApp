@@ -72,7 +72,6 @@
 		FE347F182AD032A900AE00DF /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F172AD032A900AE00DF /* Day.swift */; };
 		FE347F1A2AD055EE00AE00DF /* TimeSelectionModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F192AD055ED00AE00DF /* TimeSelectionModalView.swift */; };
 		FE4931442ADEB3A60020D805 /* TabbedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4931432ADEB3A60020D805 /* TabbedItems.swift */; };
-		FE4B8AFD2ADEA6C700FE28CE /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8AFC2ADEA6C700FE28CE /* HomeScreenView.swift */; };
 		FE4B8B002ADEA94A00FE28CE /* HomePageScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8AFF2ADEA94A00FE28CE /* HomePageScreenView.swift */; };
 		FE4B8B022ADEA9A500FE28CE /* LibraryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8B012ADEA9A500FE28CE /* LibraryScreenView.swift */; };
 		FE4B8B042ADEA9B800FE28CE /* ScanScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */; };
@@ -157,7 +156,6 @@
 		FE347F172AD032A900AE00DF /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		FE347F192AD055ED00AE00DF /* TimeSelectionModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionModalView.swift; sourceTree = "<group>"; };
 		FE4931432ADEB3A60020D805 /* TabbedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedItems.swift; sourceTree = "<group>"; };
-		FE4B8AFC2ADEA6C700FE28CE /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		FE4B8AFF2ADEA94A00FE28CE /* HomePageScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageScreenView.swift; sourceTree = "<group>"; };
 		FE4B8B012ADEA9A500FE28CE /* LibraryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryScreenView.swift; sourceTree = "<group>"; };
 		FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanScreenView.swift; sourceTree = "<group>"; };
@@ -330,6 +328,7 @@
 				9D61FA032AD889F90000393C /* NavBar.swift */,
 				9D61F9CA2AD883090000393C /* TextFieldTime.swift */,
 				9D055EA62AE0EC0A00BDDF50 /* PasswordTextField.swift */,
+				9D714E652AEA4D7000992E09 /* CustomTabBarController.swift */,
 			);
 			path = DesignElements;
 			sourceTree = "<group>";
@@ -732,7 +731,6 @@
 			children = (
 				FEF697282AC5E69300708E1E /* Application */,
 				9DA945CD2AC0BA0A002302D1 /* ViewController.swift */,
-				9D714E652AEA4D7000992E09 /* CustomTabBarController.swift */,
 				FEEF84C32AD9A99000B6DC39 /* Screens */,
 				9D61F9C32AD8829A0000393C /* DesignElements */,
 				FEF697292AC5E7B800708E1E /* Helpers */,
@@ -795,7 +793,6 @@
 		FE4B8AFB2ADEA62500FE28CE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FE4B8AFC2ADEA6C700FE28CE /* HomeScreenView.swift */,
 				FE4B8AFE2ADEA93000FE28CE /* Tab Items */,
 				FE4931422ADEB3730020D805 /* Models */,
 				FE1BF0EE2AE6A5D000FB302A /* SubViews */,
@@ -1059,7 +1056,6 @@
 				9D61F9DE2AD884F70000393C /* CustomButtonStyle.swift in Sources */,
 				9D61F9C52AD882B30000393C /* ButtonView.swift in Sources */,
 				FE4931442ADEB3A60020D805 /* TabbedItems.swift in Sources */,
-				FE4B8AFD2ADEA6C700FE28CE /* HomeScreenView.swift in Sources */,
 				9D7A76DE2AE43DDC00158781 /* BookCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

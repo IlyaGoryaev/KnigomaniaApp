@@ -18,7 +18,7 @@ class CustomTabBarViewController: UITabBarController {
 		tabBar.backgroundImage = UIImage()
 		tabBar.backgroundColor = .clear
 		tabBar.shadowImage = UIImage()
-		tabBar.unselectedItemTintColor = UIColor(CustomColors.beigeColor)
+		tabBar.unselectedItemTintColor = UIColor(CustomColors.tabBarUnselectedColor)
 		setUpTabBarAppearence()
 	}
 	
@@ -28,7 +28,7 @@ private extension CustomTabBarViewController {
 	func setUpTabBarAppearence(){
 		let width = tabBar.bounds.width
 		let height = tabBar.bounds.height
-		roundedLayer.fillColor = UIColor(CustomColors.brownColor).cgColor
+        roundedLayer.fillColor = UIColor(CustomColors.brownColor.opacity(0.75)).cgColor
 		
 		let bezierPath = UIBezierPath(roundedRect: CGRect(x: 0, y: -24, width: width, height: 120), cornerRadius: 8)
 		roundedLayer.path = bezierPath.cgPath

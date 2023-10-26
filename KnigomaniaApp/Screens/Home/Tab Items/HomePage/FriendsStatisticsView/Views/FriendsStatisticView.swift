@@ -20,7 +20,8 @@ struct FriendsStatisticView: View {
 				BookChallengeView {
 					print("Tap book challendge")
 				}
-				.padding(.top, 27)
+                .frame(height: 96)
+				.padding(.top, 24)
 				Text("Статистика друзей")
 					.font(.system(size: 20, weight: .medium))
 					.padding(.top, 40)
