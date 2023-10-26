@@ -1,5 +1,5 @@
 //
-//  CustomTextField.swift
+//  SearchBookTextField.swift
 //  KnigomaniaApp
 //
 //  Created by Arina Postnikova on 25/10/23.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct CustomTextField: View {
+struct SearchBookTextField: View {
     @Binding var text: String
     @State private var isEditing = false
 
     var body: some View {
-        ZStack(alignment: .trailing) {
+        ZStack {
             Rectangle()
                 .foregroundColor(.clear)
                 .frame(height: 36)
@@ -49,5 +49,5 @@ struct CustomTextField: View {
 }
 
 #Preview {
-    CustomTextField(text: .constant(""))
+    SearchBookTextField(text: .constant(""))
 }

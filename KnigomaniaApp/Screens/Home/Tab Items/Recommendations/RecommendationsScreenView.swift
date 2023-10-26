@@ -16,7 +16,7 @@ struct RecommendationsScreenView: View {
             CustomColors.background
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                CustomTextField(text: $searchText)
+                SearchBookTextField(text: $searchText)
                     .padding(.top, 20)
                     .padding(.horizontal, 16)
                 ScrollView {
