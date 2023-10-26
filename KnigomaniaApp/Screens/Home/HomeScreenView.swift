@@ -17,7 +17,7 @@ struct HomeScreenView: View {
     var body: some View {
 		ZStack {
 			VStack(spacing: 0) {
-                TabBarWrapperView(selection: $selection)
+//                TabBarWrapperView(selection: $selection)
 				ZStack {
 					HStack {
 						ForEach((TabbedItems.allCases), id: \.self) { item in

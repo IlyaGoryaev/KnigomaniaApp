@@ -50,24 +50,29 @@ struct ReviewsView: View {
 struct ReviewItemView: View {
 	
 	let review: Review
-	
+		
 	var body: some View {
-		VStack{
-			HStack{
-				Text("Книга захватывает")
-				Image("like")
+		HStack{
+			VStack{
+				Text("\(Int(review.grade)) (5)")
+				Image("star.fill")
 			}
-			HStack{
-				VStack{
-					Text("\(review.grade) (5)")
-					Image("star.fill")
+			VStack(alignment: .leading, spacing: 8){
+				HStack{
+					Text("Книга захватывает")
+					Spacer()
+					Image("like")
+						.padding(.horizontal, 16)
 				}
-				Text(review.text)
+				Text("Интересно написано, хотя не во всем соглашусь с автором. Нравится способ повествования, и то как автор поветсвует историю. На самом деле я читал книги в подобном жанре, и fopewpofeopwfopweopfpoweopfopewiofieopwifoieopwifopeiwopfioewiofieowifopewofiopweifopiewopfiopweifoweiofiweoifowieofiweoifopwieofiweoi foewifopiewopifopiweopefiopwei f[pewifweipfiwpeifp[iwp[f fpewof[powep[ofp[owepf fp[ewopfop[ewopfowe")
+					.font(.system(size: 14))
+					.frame(maxHeight: 90)
 			}
 		}
+		.padding(.horizontal, 16)
 	}
 }
 
 #Preview {
-	ReviewsView(reviews: [])
+	ReviewsView(reviews: [Review(text: "cvihdshvidshiovhciosdhiovchsdiohvciohsdiohcviovsdhiochiodshoichosdihiocsdiohiochsdiohiochsdi", grade: 4.5, isLiked: true)])
 }

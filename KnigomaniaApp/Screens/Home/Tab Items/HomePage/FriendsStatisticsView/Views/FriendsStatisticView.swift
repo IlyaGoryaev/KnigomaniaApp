@@ -14,9 +14,9 @@ struct FriendsStatisticView: View {
 	@GestureState var isDragging = false
 		
 	var body: some View {
-		ZStack{
+		ZStack {
 			CustomColors.background.ignoresSafeArea()
-			VStack(spacing: 0){
+			VStack(spacing: 0) {
 				BookChallengeView {
 					print("Tap book challendge")
 				}
@@ -33,46 +33,51 @@ struct FriendsStatisticView: View {
 						.multilineTextAlignment(.leading)
 					
 				} else {
-					VStack(spacing: 16.5){
-						ForEach(friendsArray.indices, id: \.self){ index in
-							ZStack{
-								HStack{
-									Spacer()
-									Text("Удалить")
-										.foregroundStyle(Color.white)
-										.padding(.horizontal, 24)
-										.padding(.vertical, 10)
-										.background(CustomColors.orangeButtonColor)
-										.clipShape(RoundedRectangle(cornerRadius: 10))
-										.padding(.trailing, 24)
-										.onTapGesture {
-											deleteFriend(index: index)
-										}
-								}
-								FriendCellView(name: friendsArray[index].friendName, goalValue: friendsArray[index].goalValue, currentValue: friendsArray[index].currentValue)
-									.background(CustomColors.background)
-									.offset(x: friendsArray[index].offset)
-									.gesture(DragGesture()
-										.updating($isDragging, body: { value, state, _ in
-											state = true
-											onChanged(value: value, index: index)
-										})
-											.onChanged({ (value) in
+					ScrollView{
+						VStack(spacing: 16.5) {
+							ForEach(friendsArray.indices, id: \.self){ index in
+								ZStack{
+									HStack{
+										Spacer()
+										Text("Удалить")
+											.foregroundStyle(Color.white)
+											.padding(.horizontal, 24)
+											.padding(.vertical, 10)
+											.background(CustomColors.orangeButtonColor)
+											.clipShape(RoundedRectangle(cornerRadius: 10))
+											.padding(.trailing, 24)
+											.onTapGesture {
+												deleteFriend(index: index)
+											}
+									}
+									FriendCellView(name: friendsArray[index].friendName, goalValue: friendsArray[index].goalValue, currentValue: friendsArray[index].currentValue)
+										.background(CustomColors.background)
+										.offset(x: friendsArray[index].offset)
+										.gesture(DragGesture()
+											.updating($isDragging, body: { value, state, _ in
+												state = true
 												onChanged(value: value, index: index)
 											})
-												.onEnded({ (value) in
-													onEnded(value: value, index: index)
-												}))
-									.gesture(TapGesture().onEnded({ _ in
-										withAnimation {
-											friendsArray[index].offset = 0
-										}
-									}))
+												.onChanged({ (value) in
+													onChanged(value: value, index: index)
+												})
+													.onEnded({ (value) in
+														onEnded(value: value, index: index)
+													}))
+										.gesture(TapGesture().onEnded({ _ in
+											withAnimation {
+												friendsArray[index].offset = 0
+											}
+										}))
+								}
+								
 							}
-							
 						}
+						.padding(.top, 40)
+
 					}
-					.padding(.top, 40)}
+					.frame(height: 250)
+				}
 				Spacer()
 			}
 		}
@@ -87,8 +92,8 @@ struct FriendsStatisticView: View {
 			friendsArray[index].offset = value.translation.width
 			DispatchQueue.main.async {
 				for i in 0...friendsArray.count - 1{
-					if i != index{
-						withAnimation {
+					withAnimation {
+						if i != index{
 							friendsArray[i].offset = 0
 						}
 					}

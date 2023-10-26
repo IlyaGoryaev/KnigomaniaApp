@@ -11,14 +11,14 @@ import Combine
 
 final class EntryCoordinator: Coordinator{
 	
-	var navigationController: UINavigationController
+	var rootController: UINavigationController
 	
 	weak var isUserAutorise: CurrentValueSubject<Bool, Never>?
 	
-	var childCoordinators = [Coordinator]()
+	var childCoordinators = [any Coordinator]()
 	
 	init(navigationController: UINavigationController, isUserAutorise: CurrentValueSubject<Bool, Never>){
-		self.navigationController = navigationController
+		self.rootController = navigationController
 		self.isUserAutorise = isUserAutorise
 	}
 	
@@ -26,37 +26,37 @@ final class EntryCoordinator: Coordinator{
 		var view = StartScreenView()
 		view.entryCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: false)
+		rootController.pushViewController(viewController, animated: false)
 	}
 	
 	func openEntryScreen(){
 		var view = LoginScreenView()
 		view.entryCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: false)
+		rootController.pushViewController(viewController, animated: false)
 	}
 	
 	func resetPassword(){
-		let resetPasswordCoordinator = ResetPasswordCoordinator(navigationController: navigationController)
+		let resetPasswordCoordinator = ResetPasswordCoordinator(navigationController: rootController)
 		childCoordinators.append(resetPasswordCoordinator)
 		resetPasswordCoordinator.start()
 	}
 	
 	func fromRegToEntry(){
-		navigationController.popViewController(animated: false)
+		rootController.popViewController(animated: false)
 		var view = LoginScreenView()
 		view.entryCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: false)
+		rootController.pushViewController(viewController, animated: false)
 		
 	}
 	
 	func fromEntryToReg(){
-		navigationController.popViewController(animated: false)
+		rootController.popViewController(animated: false)
 		var view = RegistrationView()
 		view.entryCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: false)
+		rootController.pushViewController(viewController, animated: false)
 	}
 	
 	func logIn(){
@@ -67,17 +67,17 @@ final class EntryCoordinator: Coordinator{
 		var view = RegistrationView()
 		view.entryCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func startRegistrationOnboarding(){
-		let registrationOnboardingCoordinator = RegistrationOnboardingCoordinator(navigationController: navigationController, isUserAuthorise: isUserAutorise!)
+		let registrationOnboardingCoordinator = RegistrationOnboardingCoordinator(navigationController: rootController, isUserAuthorise: isUserAutorise!)
 		childCoordinators.append(registrationOnboardingCoordinator)
 		registrationOnboardingCoordinator.start()
 	}
 	
 	func backAction(){
-		navigationController.popViewController(animated: true)
+		rootController.popViewController(animated: true)
 	}
 	
 }

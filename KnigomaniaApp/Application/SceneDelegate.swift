@@ -13,8 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-	var coordinator: Coordinator?
-	private let isUserAutorise = CurrentValueSubject<Bool, Never>(false)
+	var coordinator: (any Coordinator)?
+	private let isUserAutorise = CurrentValueSubject<Bool, Never>(true)
 	var cancallables = Set<AnyCancellable>()
 	
 
@@ -34,7 +34,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			self.isUserAutorise.sink { [weak self] boolValue in
 				guard let self = self else { return }
 				if boolValue{
-					let mainCoordinator = MainCoordinator(navigationController: viewController)
+//					let mainCoordinator = MainCoordinator(navigationController: viewController)
+//					mainCoordinator.start()
+//					self.coordinator = mainCoordinator
+					let tabBarController = CustomTabBarViewController()
+					self.window?.rootViewController = tabBarController
+					self.window?.makeKeyAndVisible()
+					print("Main Coordinator")
+					let mainCoordinator = MainCoordinatorWithTabBar(tabBarController: tabBarController)
 					mainCoordinator.start()
 					self.coordinator = mainCoordinator
 				} else {

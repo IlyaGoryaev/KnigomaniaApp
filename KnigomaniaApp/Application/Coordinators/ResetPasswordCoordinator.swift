@@ -9,41 +9,41 @@ import Foundation
 import SwiftUI
 
 final class ResetPasswordCoordinator: Coordinator{
-	var navigationController: UINavigationController
+	var rootController: UINavigationController
 	
 	init(navigationController: UINavigationController) {
-		self.navigationController = navigationController
+		self.rootController = navigationController
 	}
 	
 	func start() {
 		var view = RestorePasswordStartScreenView()
 		view.resetPasswordCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func resetPasswordByEmail(){
 		var view = RestorePasswordScreenConfirmationView()
 		view.resetPasswordCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func savePassword(){
 		var view = RestorePasswordScreenSuccessView()
 		view.resetPasswordCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func backToEntryScreen(){
-		navigationController.popViewController(animated: false)
-		navigationController.popViewController(animated: false)
-		navigationController.popViewController(animated: false)
+		rootController.popViewController(animated: false)
+		rootController.popViewController(animated: false)
+		rootController.popViewController(animated: false)
 	}
 	
 	func backAction(){
-		navigationController.popViewController(animated: true)
+		rootController.popViewController(animated: true)
 	}
 	
 }

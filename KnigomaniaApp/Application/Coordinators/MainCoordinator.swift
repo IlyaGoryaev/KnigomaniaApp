@@ -10,30 +10,30 @@ import SwiftUI
 
 final class MainCoordinator: Coordinator{
 	
-	var navigationController: UINavigationController
+	var rootController: UINavigationController
 	
-	var childCoordinators = [Coordinator]()
+	var childCoordinators = [any Coordinator]()
 	
 	init(navigationController: UINavigationController) {
-		self.navigationController = navigationController
+		self.rootController = navigationController
 	}
 	
 	func start() {
 		var view = HomeScreenView()
 		view.mainScreenCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: false)
+		rootController.pushViewController(viewController, animated: false)
 	}
 	
 	func setUpTracker() {
-		let trackerCoordinator = TrackerCoordinator(navigationController: navigationController)
+		let trackerCoordinator = TrackerCoordinator(navigationController: rootController)
 		trackerCoordinator.start()
 		childCoordinators.append(trackerCoordinator)
 		// retain cycle
 	}
 	
 	func bookPage(book: BookPageModel){
-		let bookPageCoordinator = BookCoordinator(navigationController: navigationController, book: book)
+		let bookPageCoordinator = BookCoordinator(navigationController: rootController, book: book)
 		bookPageCoordinator.start()
 		childCoordinators.append(bookPageCoordinator)
 		// retain cycle
