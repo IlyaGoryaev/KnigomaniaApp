@@ -112,50 +112,50 @@ struct FriendsStatisticView: View {
 	}
 }
 struct FriendCellView: View {
-	
-	var name: String
-	
-	var goalValue: Double
-	
-	var currentValue: Double
-	
-	var body: some View {
-		VStack(spacing: 0){
-			HStack{
-				HStack(spacing: 0){
-					Circle()
-						.frame(width: 50, height: 50)
-					Text(name)
-						.font(.system(size: 16))
-						.padding(.leading, 24)
-				}
-				Spacer()
-				HStack{
-					Text("\(Int(currentValue))/\(Int(goalValue))")
-						.font(.system(size: 18, weight: .medium))
-					ZStack{
-						Circle()
-							.stroke(lineWidth: 1)
-							.frame(width: 28, height: 28)
-							.foregroundStyle(CustomColors.trackerColor)
-						Circle()
-							.trim(from: 0, to: CGFloat(currentValue / goalValue))
-							.stroke(style: StrokeStyle(lineWidth: 2, lineCap: .round))
-							.frame(width: 28, height: 28)
-							.foregroundStyle(CustomColors.orangeTrackerColor)
-							.rotationEffect(Angle(degrees: 90))
-					}
-					
-				}
-			}
-			.padding(.horizontal, 32)
-			.padding(.bottom, 16.5)
-			.foregroundStyle(CustomColors.darkBrownColor)
-			RoundedRectangle(cornerRadius: 8)
-				.frame(height: 0.5)
-				.padding(.horizontal, 16)
-		}
-	}
+    
+    var name: String
+    
+    var goalValue: Double
+    
+    var currentValue: Double
+    
+    var body: some View {
+        VStack(spacing: 0){
+            HStack{
+                HStack(spacing: 0){
+                    Circle()
+                        .frame(width: 50, height: 50)
+                    Text(name)
+                        .font(.system(size: 16))
+                        .padding(.leading, 24)
+                }
+                Spacer()
+                HStack{
+                    Text("\(Int(currentValue))/\(Int(goalValue))")
+                        .font(.system(size: 18, weight: .medium))
+                    ZStack{
+                        Circle()
+                            .stroke(lineWidth: 1)
+                            .frame(width: 28, height: 28)
+                            .foregroundStyle(CustomColors.trackerColor)
+                        Circle()
+                            .trim(from: 0, to: CGFloat(currentValue / goalValue))
+                            .stroke(style: StrokeStyle(lineWidth: 2, lineCap: .round))
+                            .frame(width: 28, height: 28)
+                            .foregroundStyle(CustomColors.orangeTrackerColor)
+                            .rotationEffect(Angle(degrees: 90))
+                    }
+                    
+                }
+            }
+            .padding(.horizontal, 32)
+            .padding(.bottom, 16.5)
+            .foregroundStyle(CustomColors.darkBrownColor)
+            RoundedRectangle(cornerRadius: 8)
+                .frame(height: 0.5)
+                .padding(.horizontal, 16)
+        }
+    }
 }
 
 //#Preview {

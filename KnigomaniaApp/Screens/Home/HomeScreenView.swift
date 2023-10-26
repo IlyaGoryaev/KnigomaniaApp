@@ -40,7 +40,7 @@ struct HomeScreenView: View {
 				)
 			}
 			.blur(radius: isShown ? 3 : 0)
-			.edgesIgnoringSafeArea(.bottom)
+			.edgesIgnoringSafeArea(.all)
 			
 			CustomActivityIndicator()
 				.opacity(isShown ? 1 : 0)

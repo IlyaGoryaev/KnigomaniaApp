@@ -64,7 +64,7 @@
 		FE4931442ADEB3A60020D805 /* TabbedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4931432ADEB3A60020D805 /* TabbedItems.swift */; };
 		FE4B8AFD2ADEA6C700FE28CE /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8AFC2ADEA6C700FE28CE /* HomeScreenView.swift */; };
 		FE4B8B002ADEA94A00FE28CE /* HomePageScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8AFF2ADEA94A00FE28CE /* HomePageScreenView.swift */; };
-		FE4B8B022ADEA9A500FE28CE /* LibraryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8B012ADEA9A500FE28CE /* LibraryScreenView.swift */; };
+		FE4B8B022ADEA9A500FE28CE /* RecommendationsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8B012ADEA9A500FE28CE /* RecommendationsScreenView.swift */; };
 		FE4B8B042ADEA9B800FE28CE /* ScanScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */; };
 		FE4B8B062ADEA9D200FE28CE /* SettingsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8B052ADEA9D200FE28CE /* SettingsScreenView.swift */; };
 		FE70D79B2AC819400018C5A1 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE70D79A2AC819400018C5A1 /* LoginScreenView.swift */; };
@@ -75,6 +75,11 @@
 		FEAA59BA2ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */; };
 		FEAB7AF12AE2BD000057F3C5 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB7AF02AE2BD000057F3C5 /* StatisticsView.swift */; };
 		FEC8EB082AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8EB072AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift */; };
+		FECBDACE2AE9323F0006767B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECBDACD2AE9323F0006767B /* CustomTextField.swift */; };
+		FECBDAD02AE934EC0006767B /* SectionNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECBDACF2AE934EC0006767B /* SectionNameView.swift */; };
+		FECBDAD22AE9403C0006767B /* NotFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECBDAD12AE9403C0006767B /* NotFoundView.swift */; };
+		FECBDAD42AE9425F0006767B /* BookAddingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECBDAD32AE9425F0006767B /* BookAddingCoordinator.swift */; };
+		FECBDAD62AE9487D0006767B /* BookAddingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECBDAD52AE9487D0006767B /* BookAddingScreenView.swift */; };
 		FEF6972B2AC5E7CF00708E1E /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */; };
 		FEF697302AC5EF1800708E1E /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6972F2AC5EF1800708E1E /* CustomActivityIndicator.swift */; };
 /* End PBXBuildFile section */
@@ -139,7 +144,7 @@
 		FE4931432ADEB3A60020D805 /* TabbedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedItems.swift; sourceTree = "<group>"; };
 		FE4B8AFC2ADEA6C700FE28CE /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		FE4B8AFF2ADEA94A00FE28CE /* HomePageScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageScreenView.swift; sourceTree = "<group>"; };
-		FE4B8B012ADEA9A500FE28CE /* LibraryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryScreenView.swift; sourceTree = "<group>"; };
+		FE4B8B012ADEA9A500FE28CE /* RecommendationsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsScreenView.swift; sourceTree = "<group>"; };
 		FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanScreenView.swift; sourceTree = "<group>"; };
 		FE4B8B052ADEA9D200FE28CE /* SettingsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenView.swift; sourceTree = "<group>"; };
 		FE70D79A2AC819400018C5A1 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
@@ -150,6 +155,11 @@
 		FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenSuccessView.swift; sourceTree = "<group>"; };
 		FEAB7AF02AE2BD000057F3C5 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		FEC8EB072AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerSetupConfirmationScreenView.swift; sourceTree = "<group>"; };
+		FECBDACD2AE9323F0006767B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		FECBDACF2AE934EC0006767B /* SectionNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionNameView.swift; sourceTree = "<group>"; };
+		FECBDAD12AE9403C0006767B /* NotFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundView.swift; sourceTree = "<group>"; };
+		FECBDAD32AE9425F0006767B /* BookAddingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAddingCoordinator.swift; sourceTree = "<group>"; };
+		FECBDAD52AE9487D0006767B /* BookAddingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAddingScreenView.swift; sourceTree = "<group>"; };
 		FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		FEF6972F2AC5EF1800708E1E /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -294,6 +304,7 @@
 				9D055EA22AE0E47E00BDDF50 /* RegistrationOnboardingCoordinator.swift */,
 				9D055EA42AE0E49600BDDF50 /* ResetPasswordCoordinator.swift */,
 				9D7A76DD2AE43DDC00158781 /* BookCoordinator.swift */,
+				FECBDAD32AE9425F0006767B /* BookAddingCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -665,7 +676,7 @@
 			isa = PBXGroup;
 			children = (
 				FE5C93E72AE16FDD00107985 /* HomePage */,
-				FE4B8B012ADEA9A500FE28CE /* LibraryScreenView.swift */,
+				FECBDAC92AE9287C0006767B /* Recommendations */,
 				FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */,
 				FE4B8B052ADEA9D200FE28CE /* SettingsScreenView.swift */,
 			);
@@ -717,6 +728,26 @@
 				FEF6972E2AC5EEFA00708E1E /* SubViews */,
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		FECBDAC92AE9287C0006767B /* Recommendations */ = {
+			isa = PBXGroup;
+			children = (
+				FE4B8B012ADEA9A500FE28CE /* RecommendationsScreenView.swift */,
+				FECBDAD52AE9487D0006767B /* BookAddingScreenView.swift */,
+				FECBDACA2AE929350006767B /* SubViews */,
+			);
+			path = Recommendations;
+			sourceTree = "<group>";
+		};
+		FECBDACA2AE929350006767B /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				FECBDACD2AE9323F0006767B /* CustomTextField.swift */,
+				FECBDACF2AE934EC0006767B /* SectionNameView.swift */,
+				FECBDAD12AE9403C0006767B /* NotFoundView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		FEEF84C32AD9A99000B6DC39 /* Screens */ = {
@@ -843,13 +874,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FECBDAD42AE9425F0006767B /* BookAddingCoordinator.swift in Sources */,
 				FE347F182AD032A900AE00DF /* Day.swift in Sources */,
 				9D7A76D32AE42BE500158781 /* BookPageModel.swift in Sources */,
 				9D055EC32AE0EFEB00BDDF50 /* MyProgress.swift in Sources */,
 				9D61F9FC2AD8896B0000393C /* SetupTrackerStep3View.swift in Sources */,
 				FE347F1A2AD055EE00AE00DF /* TimeSelectionModalView.swift in Sources */,
 				FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */,
-				FE4B8B022ADEA9A500FE28CE /* LibraryScreenView.swift in Sources */,
+				FE4B8B022ADEA9A500FE28CE /* RecommendationsScreenView.swift in Sources */,
 				9D055EA12AE0E45E00BDDF50 /* MainCoordinator.swift in Sources */,
 				9D055EAE2AE0EEC800BDDF50 /* BookModel.swift in Sources */,
 				9D055EB22AE0EEFB00BDDF50 /* BooksCollectionView.swift in Sources */,
@@ -869,12 +901,14 @@
 				FE4B8B042ADEA9B800FE28CE /* ScanScreenView.swift in Sources */,
 				9D055EAC2AE0EE0E00BDDF50 /* RegistrationView.swift in Sources */,
 				FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */,
+				FECBDAD02AE934EC0006767B /* SectionNameView.swift in Sources */,
 				9D055EBB2AE0EF8E00BDDF50 /* FriendModel.swift in Sources */,
 				9D055EB72AE0EF3B00BDDF50 /* CurrentLibraryView.swift in Sources */,
 				9D61F9D12AD884180000393C /* RegistrationOnboardingStep3View.swift in Sources */,
 				9D7A76DA2AE43A2A00158781 /* BookActionsView.swift in Sources */,
 				9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */,
 				9D61F9E22AD885290000393C /* RegistrationStep5View.swift in Sources */,
+				FECBDAD62AE9487D0006767B /* BookAddingScreenView.swift in Sources */,
 				9D61F9BB2AD881D40000393C /* RegistrationOnBoardingStep2View.swift in Sources */,
 				9D61F9E02AD885100000393C /* GenreSelection.swift in Sources */,
 				FE7A80112AC60EA0000A8711 /* StartScreenView.swift in Sources */,
@@ -886,6 +920,7 @@
 				9D7A76DC2AE43A7F00158781 /* SimilarBooksView.swift in Sources */,
 				9D055E9F2AE0E42300BDDF50 /* EntryCoordinator.swift in Sources */,
 				FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */,
+				FECBDAD22AE9403C0006767B /* NotFoundView.swift in Sources */,
 				9D7A76D62AE432DA00158781 /* DescriptionView.swift in Sources */,
 				9D61F9DC2AD884D90000393C /* GenreModel.swift in Sources */,
 				9D055EA32AE0E47E00BDDF50 /* RegistrationOnboardingCoordinator.swift in Sources */,
@@ -898,6 +933,7 @@
 				9D61FA042AD889F90000393C /* NavBar.swift in Sources */,
 				9D61F9F62AD888B90000393C /* SetupTrackerStep2View.swift in Sources */,
 				9D7A76CE2AE42A1C00158781 /* BookPage.swift in Sources */,
+				FECBDACE2AE9323F0006767B /* CustomTextField.swift in Sources */,
 				9D055EB42AE0EF0A00BDDF50 /* BookChallengeView.swift in Sources */,
 				9D61F9F02AD888840000393C /* SetupTrackerStep1View.swift in Sources */,
 				9D055EBE2AE0EFA600BDDF50 /* FriendsStatisticView.swift in Sources */,

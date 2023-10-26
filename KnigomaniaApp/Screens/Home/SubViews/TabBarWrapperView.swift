@@ -22,7 +22,7 @@ struct TabBarWrapperView: UIViewControllerRepresentable {
         let homeViewController = UIHostingController(rootView: HomePageScreenView(mainScreenCoordinator: mainScreenCoordinator))
         homeViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: ""), tag: 0)
         
-        let libraryViewController = UIHostingController(rootView: LibraryScreenView())
+        let libraryViewController = UIHostingController(rootView: RecommendationsScreenView())
         libraryViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: ""), tag: 1)
         
         let scanViewController = UIHostingController(rootView: ScanScreenView())
