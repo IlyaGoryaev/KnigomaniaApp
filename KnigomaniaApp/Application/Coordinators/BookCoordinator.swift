@@ -8,14 +8,14 @@
 import Foundation
 import SwiftUI
 
-final class BookCoordinator: Coordinator{
+final class BookCoordinator: Coordinator{	
 	
-	var navigationController: UINavigationController
+	var rootController: UINavigationController
 	
 	var book: BookPageModel
 	
 	init(navigationController: UINavigationController, book: BookPageModel) {
-		self.navigationController = navigationController
+		self.rootController = navigationController
 		self.book = book
 	}
 	
@@ -23,25 +23,25 @@ final class BookCoordinator: Coordinator{
 		var view = BookPage(book: book)
 		view.bookCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func makeReview() {
 		var view = MakeReviewPage()
 		view.bookCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func addBookToList() {
 		var view = AddBookToListPage()
 		view.bookCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func backAction() {
-		navigationController.popViewController(animated: true)
+		rootController.popViewController(animated: true)
 	}
 	
 }

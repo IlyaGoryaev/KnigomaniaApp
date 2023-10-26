@@ -12,12 +12,12 @@ import Combine
 
 final class SetUpReminderTrackerCoordinator: Coordinator {
 	
-	var navigationController: UINavigationController
+	var rootController: UINavigationController
 	
 	weak var isUserAuthorise: CurrentValueSubject<Bool, Never>?
 	
 	init(navigationController: UINavigationController, isUserAuthorise: CurrentValueSubject<Bool, Never>? = nil) {
-		self.navigationController = navigationController
+		self.rootController = navigationController
 		self.isUserAuthorise = isUserAuthorise
 	}
 	
@@ -25,14 +25,14 @@ final class SetUpReminderTrackerCoordinator: Coordinator {
 		var view = TrackerSetupRemindersScreenView()
 		view.setupReminderCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func finishSetupReminder(){
 		var view = TrackerSetupConfirmationScreenView()
 		view.setupReminderCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		navigationController.pushViewController(viewController, animated: true)
+		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func logIn(){

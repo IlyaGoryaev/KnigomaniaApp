@@ -28,6 +28,7 @@ struct BooksCollectionView: View {
 						.frame(width: 103, height: 146)
 						.clipShape(RoundedRectangle(cornerRadius: 4))
 						.onTapGesture {
+							print("Open book coordinator")
 							mainScreenCoordinator?.bookPage(book: BookPageModel(title: books[index].bookName, author: "fioehioswf", year: "2016", grade: 5, description: "В конце XIX века особняк купца Клюквина считался одним из самых богатых домов Петербурга. Особую гордость хозяина представляло венецианское зеркало необыкновенной красоты, привезённое из Италии и долгое время украшавшее усыпальницу самого графа Дракулы."))
 						}
 				}
