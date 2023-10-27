@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct GalleryPickerButtonView: View {
-    private(set) var action: () -> ()
+    @State private var image = UIImage()
+    @State private var showSheet = false
     
     var body: some View {
         Button(action: {
-            action()
+            showSheet = true
         }, label: {
             Text("Выбрать из галереи")
                 .font(.system(size: 16, weight: .medium))
@@ -23,9 +24,12 @@ struct GalleryPickerButtonView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.horizontal, 72)
         })
+        .sheet(isPresented: $showSheet) {
+                ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
+        }
     }
 }
 
 #Preview {
-    GalleryPickerButtonView() {}
+    GalleryPickerButtonView()
 }

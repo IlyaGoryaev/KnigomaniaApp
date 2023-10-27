@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct GalleryPickerView: View {
-    private(set) var action: () -> ()
-    
     var body: some View {
         VStack {
             HStack {
@@ -26,9 +24,7 @@ struct GalleryPickerView: View {
                     .background(Color.white)
                     .cornerRadius(10)
                 HStack {
-                    GalleryPickerButtonView(action: {
-                        action()
-                    })
+                    GalleryPickerButtonView()
                 }
             }
             .padding(.horizontal, 16)
@@ -37,5 +33,5 @@ struct GalleryPickerView: View {
 }
 
 #Preview {
-    GalleryPickerView() {}
+    GalleryPickerView()
 }

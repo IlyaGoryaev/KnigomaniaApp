@@ -25,7 +25,7 @@ struct BookAddingScreenView: View {
                         .padding(.top, 16)
                     TextFieldSection(title: "Количество страниц", placeholder: "Введите количество страниц")
                         .padding(.top, 16)
-                    GalleryPickerView(action: {})
+                    GalleryPickerView()
                         .padding(.top, 16)
                     TextFieldSection(title: "Год издания", placeholder: "Укажите год издания")
                         .padding(.top, 16)
