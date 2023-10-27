@@ -22,7 +22,7 @@ final class BookAddingCoordinator: Coordinator {
         rootController.pushViewController(viewController, animated: false)
     }
     
-    func addBook() {
+    func openAddingBookScreen() {
         var view = BookAddingScreenView()
         view.bookAddingCoordinator = self
         let viewController = UIHostingController(rootView: view)

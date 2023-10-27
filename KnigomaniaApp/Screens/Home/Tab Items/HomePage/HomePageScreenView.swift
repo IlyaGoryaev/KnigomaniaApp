@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomePageScreenView: View {
-	
 	@State private var selection = 0
 	@Namespace private var lineAnimation
 	@State private var lineWidth: CGFloat = 0
@@ -68,13 +67,12 @@ struct HomePageScreenView: View {
 							.frame(width: lineWidth, height: 2)
 							.foregroundColor(CustomColors.yellowColor)
 							.matchedGeometryEffect(id: "line", in: lineAnimation)
-							.offset(x: CGFloat(selection) * (UIScreen.main.bounds.width / 3))
+							.offset(x: CGFloat(selection) * (lineWidth + 20))
 							.animation(.default, value: selection)
 						Spacer()
 					}
 					.padding(.leading, 16)
 				}
-				
 				TabView(selection: $selection) {
 					StatisticsView(mainScreenCoordinator:mainScreenCoordinator)
 						.tag(0)
@@ -95,8 +93,6 @@ struct HomePageScreenView: View {
 		UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(CustomColors.brownColor)
 		UIPageControl.appearance().pageIndicatorTintColor = UIColor(CustomColors.brownColor).withAlphaComponent(0.2)
 	}
-	
-	
 	
 	func getLabelWidth(text: String) -> CGFloat {
 		let label = UILabel()

@@ -10,6 +10,7 @@ import SwiftUI
 struct RecommendationsScreenView: View {
     @State private var searchText = ""
     weak var recommendationsCoordinator: RecommendationsCoordinator?
+    weak var bookAddingCoordinator: BookAddingCoordinator?
     
     var body: some View {
         ZStack {
@@ -20,17 +21,22 @@ struct RecommendationsScreenView: View {
                     .padding(.top, 20)
                     .padding(.horizontal, 16)
                 ScrollView {
-                    VStack {
-                        SectionNameView(title: "Бестселлеры", action: {})
-                            .padding(.top, 32)
-                    }
-                    VStack {
-                        SectionNameView(title: "Новинки", action: {})
-                            .padding(.top, 24)
-                    }
-                    VStack {
-                        SectionNameView(title: "Экранизации", action: {})
-                            .padding(.top, 24)
+                    if searchText == "" {
+                        VStack {
+                            SectionNameView(title: "Бестселлеры", action: {})
+                                .padding(.top, 32)
+                        }
+                        VStack {
+                            SectionNameView(title: "Новинки", action: {})
+                                .padding(.top, 24)
+                        }
+                        VStack {
+                            SectionNameView(title: "Экранизации", action: {})
+                                .padding(.top, 24)
+                        }
+                    } else {
+                        NotFoundView(bookAddingCoordinator: bookAddingCoordinator)
+                            .padding(.top, 282)
                     }
                 }
                 Spacer()

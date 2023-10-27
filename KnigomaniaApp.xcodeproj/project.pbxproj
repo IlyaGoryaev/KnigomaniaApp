@@ -87,6 +87,8 @@
 		FE70D79E2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE70D79D2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift */; };
 		FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */; };
 		FE7A80112AC60EA0000A8711 /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A80102AC60EA0000A8711 /* StartScreenView.swift */; };
+		FE9119442AEBDDF600B31380 /* GalleryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9119432AEBDDF600B31380 /* GalleryPickerView.swift */; };
+		FE9119462AEBDEF400B31380 /* GalleryPickerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9119452AEBDEF400B31380 /* GalleryPickerButtonView.swift */; };
 		FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */; };
 		FEAA59BA2ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */; };
 		FEAB7AF12AE2BD000057F3C5 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB7AF02AE2BD000057F3C5 /* StatisticsView.swift */; };
@@ -178,6 +180,8 @@
 		FE70D79D2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordStartScreenView.swift; sourceTree = "<group>"; };
 		FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		FE7A80102AC60EA0000A8711 /* StartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
+		FE9119432AEBDDF600B31380 /* GalleryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPickerView.swift; sourceTree = "<group>"; };
+		FE9119452AEBDEF400B31380 /* GalleryPickerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPickerButtonView.swift; sourceTree = "<group>"; };
 		FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenConfirmationView.swift; sourceTree = "<group>"; };
 		FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenSuccessView.swift; sourceTree = "<group>"; };
 		FEAB7AF02AE2BD000057F3C5 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
@@ -844,6 +848,8 @@
 				FE5BC06A2AEAD01B008F366F /* NotFoundView.swift */,
 				FE5BC0702AEAD774008F366F /* TextFieldSection.swift */,
 				FE5BC0762AEAD9A6008F366F /* AddBookTextField.swift */,
+				FE9119432AEBDDF600B31380 /* GalleryPickerView.swift */,
+				FE9119452AEBDEF400B31380 /* GalleryPickerButtonView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -1061,6 +1067,7 @@
 				9D61F9E02AD885100000393C /* GenreSelection.swift in Sources */,
 				FE7A80112AC60EA0000A8711 /* StartScreenView.swift in Sources */,
 				FE70D79B2AC819400018C5A1 /* LoginScreenView.swift in Sources */,
+				FE9119442AEBDDF600B31380 /* GalleryPickerView.swift in Sources */,
 				9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */,
 				9D055EB02AE0EEE800BDDF50 /* MainScreen.swift in Sources */,
 				FE1BF0F82AE6B9FA00FB302A /* TabBarWrapperView.swift in Sources */,
@@ -1071,6 +1078,7 @@
 				9D7A76D62AE432DA00158781 /* DescriptionView.swift in Sources */,
 				9D61F9DC2AD884D90000393C /* GenreModel.swift in Sources */,
 				9D055EA32AE0E47E00BDDF50 /* RegistrationOnboardingCoordinator.swift in Sources */,
+				FE9119462AEBDEF400B31380 /* GalleryPickerButtonView.swift in Sources */,
 				9D055EA72AE0EC0A00BDDF50 /* PasswordTextField.swift in Sources */,
 				9D61F9C72AD882D70000393C /* HeadlineTextModifier.swift in Sources */,
 				FE5BC06D2AEAD01B008F366F /* NotFoundView.swift in Sources */,

@@ -16,7 +16,7 @@ struct NotFoundView: View {
                 .foregroundColor(CustomColors.darkBrownColor)
                 .font(.system(size: 16))
             ButtonView(title: "Добавить книгу", isButtonEnable: true, action: {
-                bookAddingCoordinator?.addBook()
+                bookAddingCoordinator?.openAddingBookScreen()
             })
         }
     }
