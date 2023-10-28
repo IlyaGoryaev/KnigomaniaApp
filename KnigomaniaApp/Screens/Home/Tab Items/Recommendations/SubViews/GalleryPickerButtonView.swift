@@ -17,23 +17,26 @@ struct GalleryPickerButtonView: View {
         Button(action: {
             if !hasAccess {
                 let status = PHPhotoLibrary.authorizationStatus()
-                if status == .authorized {
+                switch status {
+                case .authorized:
                     hasAccess = true
                     showSheet = true
-                } else if status == .notDetermined {
+                case .notDetermined:
                     PHPhotoLibrary.requestAuthorization { newStatus in
                         if newStatus == .authorized {
                             hasAccess = true
                             showSheet = true
                         }
                     }
-                } else if status == .denied {
+                case .denied:
                     PHPhotoLibrary.requestAuthorization { newStatus in
                         if newStatus == .authorized {
                             hasAccess = true
                             showSheet = true
                         }
                     }
+                default:
+                    print("authorizationStatus: \(status.rawValue)")
                 }
             } else {
                 showSheet = true
