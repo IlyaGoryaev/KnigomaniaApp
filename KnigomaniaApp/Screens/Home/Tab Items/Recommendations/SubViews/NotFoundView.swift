@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NotFoundView: View {
-    weak var bookAddingCoordinator: BookAddingCoordinator?
+    weak var recommendationsCoordinator: RecommendationsCoordinator?
     
     var body: some View {
         VStack(spacing: 16) {
@@ -16,7 +16,7 @@ struct NotFoundView: View {
                 .foregroundColor(CustomColors.darkBrownColor)
                 .font(.system(size: 16))
             ButtonView(title: "Добавить книгу", isButtonEnable: true, action: {
-                bookAddingCoordinator?.openAddingBookScreen()
+                recommendationsCoordinator?.openAddingBookScreen()
             })
         }
     }

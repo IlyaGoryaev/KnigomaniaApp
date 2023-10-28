@@ -10,10 +10,14 @@ import SwiftUI
 struct GalleryPickerButtonView: View {
     @State private var image = UIImage()
     @State private var showSheet = false
+    @State private var showAlert = false
+    
+    private let hasAllowedPhotoAccessKey = "hasAllowedPhotoAccess"
     
     var body: some View {
         Button(action: {
-            showSheet = true
+            showSheet = UserDefaults.standard.bool(forKey: hasAllowedPhotoAccessKey) ? true : false
+//            showAlert = true
         }, label: {
             Text("Выбрать из галереи")
                 .font(.system(size: 16, weight: .medium))
@@ -26,6 +30,23 @@ struct GalleryPickerButtonView: View {
         })
         .sheet(isPresented: $showSheet) {
                 ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text(""),
+                message: Text("Разрешить приложению доступ к фото на вашем устройстве?"),
+                primaryButton: .destructive(
+                    Text("Запретить"),
+                    action: { showSheet = false }
+                ),
+                secondaryButton: .default(
+                    Text("Разрешить"),
+                    action: {
+                        UserDefaults.standard.set(true, forKey: hasAllowedPhotoAccessKey)
+                        showSheet = true
+                    }
+                )
+            )
         }
     }
 }

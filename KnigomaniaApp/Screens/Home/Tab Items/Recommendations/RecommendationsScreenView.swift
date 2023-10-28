@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RecommendationsScreenView: View {
     @State private var searchText = ""
+    
     weak var recommendationsCoordinator: RecommendationsCoordinator?
-    weak var bookAddingCoordinator: BookAddingCoordinator?
     
     var body: some View {
         ZStack {
@@ -35,7 +35,7 @@ struct RecommendationsScreenView: View {
                                 .padding(.top, 24)
                         }
                     } else {
-                        NotFoundView(bookAddingCoordinator: bookAddingCoordinator)
+                        NotFoundView(recommendationsCoordinator: recommendationsCoordinator)
                             .padding(.top, 282)
                     }
                 }

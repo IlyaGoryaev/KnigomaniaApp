@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddBookTextField: View {
     @Binding var text: String
+    
     private(set) var placeholder: String
     
     var body: some View {

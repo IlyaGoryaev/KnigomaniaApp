@@ -15,22 +15,5 @@ final class BookAddingCoordinator: Coordinator {
         self.rootController = navigationController
     }
     
-    func start() {
-        var view = NotFoundView()
-        view.bookAddingCoordinator = self
-        let viewController = UIHostingController(rootView: view)
-        rootController.pushViewController(viewController, animated: false)
-    }
-    
-    func openAddingBookScreen() {
-        var view = BookAddingScreenView()
-        view.bookAddingCoordinator = self
-        let viewController = UIHostingController(rootView: view)
-        rootController.pushViewController(viewController, animated: true)
-        print(rootController)
-    }
-    
-    func backAction() {
-        rootController.popViewController(animated: true)
-    }
+    func start() {}
 }

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct BookAddingScreenView: View {
-    weak var bookAddingCoordinator: BookAddingCoordinator?
     @State private var bookAuthor: String = ""
     @State private var bookTitle: String = ""
     @State private var numOfBookPages: String = ""
@@ -16,13 +15,15 @@ struct BookAddingScreenView: View {
     @State private var publisherOfBook: String = ""
     @State private var bookISBN: String = ""
     
+    weak var recommendationsCoordinator: RecommendationsCoordinator?
+    
     var body: some View {
         ZStack {
             CustomColors.background
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 NavBar(title: "") {
-                    bookAddingCoordinator?.backAction()
+                    recommendationsCoordinator?.backAction()
                 }
                 ScrollView {
                     TextFieldSection(text: $bookAuthor, title: "Автор", star: "*", placeholder: "Укажите автора")

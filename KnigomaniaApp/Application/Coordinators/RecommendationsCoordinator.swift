@@ -22,5 +22,16 @@ final class RecommendationsCoordinator: Coordinator {
 		let viewController = UIHostingController(rootView: view)
 		rootController.pushViewController(viewController, animated: false)
 	}
-	
+    
+    func openAddingBookScreen() {
+        var view = BookAddingScreenView()
+        view.recommendationsCoordinator = self
+        let viewController = UIHostingController(rootView: view)
+        rootController.pushViewController(viewController, animated: true)
+        print(rootController)
+    }
+    
+    func backAction() {
+        rootController.popViewController(animated: true)
+    }
 }

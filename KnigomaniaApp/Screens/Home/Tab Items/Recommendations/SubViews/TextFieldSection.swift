@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TextFieldSection: View {
     @Binding var text: String
+    
     private(set) var title: String
     private(set) var star: String
     private(set) var placeholder: String
@@ -34,7 +35,3 @@ struct TextFieldSection: View {
         }
     }
 }
-
-//#Preview {
-//    TextFieldSection(title: "Автор", star: "*", placeholder: "Укажите автора")
-//}
