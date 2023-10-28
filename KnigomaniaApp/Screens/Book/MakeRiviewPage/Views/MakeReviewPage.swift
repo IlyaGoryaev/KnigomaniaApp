@@ -28,7 +28,6 @@ struct MakeReviewPage: View {
 				NavBar(title: "") {
 					bookCoordinator?.backAction()
 				}
-				.padding(.top, 32)
 				MakeReviewPageBook(author: "fewfew", year: "2016", bookGrade: 4.1)
 					.padding(.top, 20)
 				if isSend{

@@ -16,7 +16,6 @@ struct ReviewPage: View {
 				NavBar(title: "") {
 					
 				}
-				.padding(.top, 30)
 				
 				Spacer()
 			}

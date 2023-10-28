@@ -25,7 +25,6 @@ struct AddBookToListPage: View {
 				NavBar(title: "") {
 					bookCoordinator?.backAction()
 				}
-				.padding(.top, 32)
 				MakeReviewPageBook(author: "feiohfiew", year: "2022", bookGrade: 5.0)
 					.padding(.top, 20)
 				Text("Добавить в список")

@@ -13,6 +13,8 @@ struct HomePageScreenView: View {
 	@Namespace private var lineAnimation
 	@State private var lineWidth: CGFloat = 0
 	
+	@State private var categories: [String] = ["Мой прогресс", "Читаю сейчас", "Прочитал"]
+	
 	weak var mainScreenCoordinator: MainCoordinator?
 	
 	var body: some View {
@@ -40,52 +42,59 @@ struct HomePageScreenView: View {
 				}
 				.padding(.top, 29)
 				.padding(.horizontal, 16)
-				ScrollView(.horizontal, showsIndicators: false){
-					HStack(spacing: 29) {
-						Text("Мой прогресс")
-							.foregroundColor(CustomColors.darkBrownColor)
-							.font(.system(size: 14))
-							.fontWeight(selection == 0 ? .semibold : .regular)
-							.onTapGesture {
-								lineWidth = getLabelWidth(text: "Мой прогресс")
-								selection = 0
+				
+				ScrollView(.horizontal, showsIndicators: false) {
+					HStack {
+						ForEach(categories.indices, id: \.self) { index in
+							if selection == index {
+								VStack {
+									Text(categories[index])
+										.foregroundStyle(CustomColors.darkBrownColor)
+										.font(.system(size: 14))
+									RoundedRectangle(cornerRadius: 2)
+										.foregroundColor(CustomColors.yellowColor)
+										.frame(height: 2)
+										.matchedGeometryEffect(id: "line", in: lineAnimation)
+
+									Spacer()
+								}
+								
+									
+							} else {
+								VStack{
+									Text(categories[index])
+										.foregroundStyle(CustomColors.darkBrownColor)
+										.font(.system(size: 14))
+										.onTapGesture {
+											withAnimation {
+												selection = index
+											}
+										}
+									Spacer()
+								}
+								
 							}
-						Text("Читаю сейчас")
-							.foregroundColor(CustomColors.darkBrownColor)
-							.font(.system(size: 14))
-							.fontWeight(selection == 1 ? .semibold : .regular)
-							.onTapGesture {
-								lineWidth = getLabelWidth(text: "Читаю сейчас")
-								selection = 1
-							}
-						Spacer()
+						}
 					}
 					.padding(.leading, 21)
 					.padding(.top, 24)
 					.edgesIgnoringSafeArea(.trailing)
-					HStack {
-						Rectangle()
-							.frame(width: lineWidth, height: 2)
-							.foregroundColor(CustomColors.yellowColor)
-							.matchedGeometryEffect(id: "line", in: lineAnimation)
-							.offset(x: CGFloat(selection) * (UIScreen.main.bounds.width / 3))
-							.animation(.default, value: selection)
-						Spacer()
-					}
-					.padding(.leading, 16)
 				}
+				.frame(height: 40)
 				
 				TabView(selection: $selection) {
 					StatisticsView(mainScreenCoordinator:mainScreenCoordinator)
 						.tag(0)
 					CurrentLibraryView(books: [BookModel(bookName: "Book1", imageName: "book1"), BookModel(bookName: "Book2", imageName: "book2"), BookModel(bookName: "Book3", imageName: "book3"), BookModel(bookName: "Book4", imageName: "book4"), BookModel(bookName: "Book5", imageName: "book5")], mainScreenCoordinator: mainScreenCoordinator)
 						.tag(1)
+					CurrentLibraryView(books: [BookModel(bookName: "Book1", imageName: "book1"), BookModel(bookName: "Book2", imageName: "book2"), BookModel(bookName: "Book3", imageName: "book3"), BookModel(bookName: "Book4", imageName: "book4"), BookModel(bookName: "Book5", imageName: "book5")], mainScreenCoordinator: mainScreenCoordinator)
+						.tag(2)
 				}
 				.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-				Spacer()
 			}
 		}
 		.onAppear(perform: {
+			
 			lineWidth = getLabelWidth(text: "Мой прогресс")
 			setupAppearance()
 		})

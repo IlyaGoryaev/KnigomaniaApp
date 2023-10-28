@@ -12,7 +12,7 @@ struct ReviewsView: View {
 	let reviews: [Review]
 	
     var body: some View {
-		VStack{
+		VStack(spacing: 0){
 			HStack{
 				Text("Рецензии")
 					.font(.system(size: 20, weight: .medium))
@@ -70,6 +70,14 @@ struct ReviewItemView: View {
 			}
 		}
 		.padding(.horizontal, 16)
+	}
+	
+	func getReviewTextHeight(text: String) -> CGFloat {
+		let label = UILabel()
+		label.text = text
+		label.font = .systemFont(ofSize: 14)
+		label.sizeToFit()
+		return label.frame.height
 	}
 }
 

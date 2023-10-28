@@ -70,7 +70,10 @@ struct BookPage: View {
 						.padding(.top, 56)
 					SimilarBooksView()
 						.padding(.top, 56)
+					Spacer()
+						.frame(height: 40)
 				}
+				
 			}
 		}
 	}
