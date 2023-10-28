@@ -6,18 +6,38 @@
 //
 
 import SwiftUI
+import Photos
 
 struct GalleryPickerButtonView: View {
     @State private var image = UIImage()
     @State private var showSheet = false
-    @State private var showAlert = false
-    
-    private let hasAllowedPhotoAccessKey = "hasAllowedPhotoAccess"
+    @State private var hasAccess = false
     
     var body: some View {
         Button(action: {
-            showSheet = UserDefaults.standard.bool(forKey: hasAllowedPhotoAccessKey) ? true : false
-//            showAlert = true
+            if !hasAccess {
+                let status = PHPhotoLibrary.authorizationStatus()
+                if status == .authorized {
+                    hasAccess = true
+                    showSheet = true
+                } else if status == .notDetermined {
+                    PHPhotoLibrary.requestAuthorization { newStatus in
+                        if newStatus == .authorized {
+                            hasAccess = true
+                            showSheet = true
+                        }
+                    }
+                } else if status == .denied {
+                    PHPhotoLibrary.requestAuthorization { newStatus in
+                        if newStatus == .authorized {
+                            hasAccess = true
+                            showSheet = true
+                        }
+                    }
+                }
+            } else {
+                showSheet = true
+            }
         }, label: {
             Text("Выбрать из галереи")
                 .font(.system(size: 16, weight: .medium))
@@ -30,23 +50,6 @@ struct GalleryPickerButtonView: View {
         })
         .sheet(isPresented: $showSheet) {
                 ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
-        }
-        .alert(isPresented: $showAlert) {
-            Alert(
-                title: Text(""),
-                message: Text("Разрешить приложению доступ к фото на вашем устройстве?"),
-                primaryButton: .destructive(
-                    Text("Запретить"),
-                    action: { showSheet = false }
-                ),
-                secondaryButton: .default(
-                    Text("Разрешить"),
-                    action: {
-                        UserDefaults.standard.set(true, forKey: hasAllowedPhotoAccessKey)
-                        showSheet = true
-                    }
-                )
-            )
         }
     }
 }
