@@ -27,7 +27,7 @@ private extension CustomTabBarViewController {
 	
 	func setUpTabBarAppearence(){
 		let width = tabBar.bounds.width
-		let height = tabBar.bounds.height
+        _ = tabBar.bounds.height
         roundedLayer.fillColor = UIColor(CustomColors.brownColor.opacity(0.75)).cgColor
 		
 		let bezierPath = UIBezierPath(roundedRect: CGRect(x: 0, y: -24, width: width, height: 120), cornerRadius: 8)
