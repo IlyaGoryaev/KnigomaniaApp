@@ -24,7 +24,7 @@ struct SetupTrackerStep4View: View {
 					.frame(maxWidth: .infinity, alignment: .leading)
 					.padding(.horizontal, 16)
 					.multilineTextAlignment(.leading)
-				Text("Подключите напоминания, так вам будет удобнее отслеживать свой прогресс по чтению")
+				Text("Включи напоминания, чтобы эффективнее двигаться к цели.")
 					.foregroundStyle(CustomColors.brownColor)
 					.frame(maxWidth: .infinity, alignment: .leading)
 					.padding(.horizontal, 16)

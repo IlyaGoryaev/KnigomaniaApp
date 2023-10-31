@@ -17,14 +17,14 @@ struct TrackerView: View {
 	
 	var theta: CGFloat
 	
-	var isTracketSetup: Bool
+	var isTrackerSetup: Bool
 	
 	init(isTracketSetup: Bool, goalValue: Double = 0, currentValue: Double = 0){
 		self.currentValue = currentValue
 		self.goalValue = goalValue
 		self.percent = currentValue / goalValue * 0.8
 		self.theta = (Double(Float.pi) * (percent * 360) / 180)
-		self.isTracketSetup = isTracketSetup
+		self.isTrackerSetup = isTracketSetup
 	}
 	
 	var body: some View {
@@ -33,7 +33,7 @@ struct TrackerView: View {
 				.trim(from: 0, to: 0.8)
 				.stroke(style: StrokeStyle(lineWidth: 6, lineCap: .round))
 				.overlay(content: {
-					if !isTracketSetup{
+					if !isTrackerSetup{
 						Image("Book")
 							.rotationEffect(Angle(degrees: -125))
 							.offset(x: 200 / 2)
@@ -42,7 +42,7 @@ struct TrackerView: View {
 				.frame(width: 200, height: 200)
 				.rotationEffect(Angle(degrees: 126))
                 .foregroundStyle(CustomColors.trackerColor.opacity(0.5))
-			if isTracketSetup{
+			if isTrackerSetup{
 				Circle()
 					.trim(from: 0, to: (currentValue / goalValue) * 0.8)
 					.stroke(style: StrokeStyle(lineWidth: 10, lineCap: .round))
@@ -61,7 +61,7 @@ struct TrackerView: View {
 					.foregroundStyle(CustomColors.greyColor)
 				Text("\(Int(currentValue)) / \(Int(goalValue))")
 					.font(.system(size: 24, weight: .bold))
-					.opacity(isTracketSetup ? 1 : 0)
+					.opacity(isTrackerSetup ? 1 : 0)
 			}
 		}
 	}

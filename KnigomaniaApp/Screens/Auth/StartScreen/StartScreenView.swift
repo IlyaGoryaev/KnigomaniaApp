@@ -24,7 +24,7 @@ struct StartScreenView: View {
 						.foregroundColor(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
 						.padding(.leading, 17)
-					Text("Отслеживайте свой прогресс по чтению, и соревнуйтесь с друзьями ")
+					Text("Отслеживай свой прогресс по чтению и соревнуйся с друзьями!")
 						.font(.system(size: 16, weight: .regular))
 						.foregroundColor(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
