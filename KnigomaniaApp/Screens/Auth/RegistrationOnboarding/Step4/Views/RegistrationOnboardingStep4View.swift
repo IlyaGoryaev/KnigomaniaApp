@@ -6,72 +6,88 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct RegistrationOnboardingStep4View: View {
 	
 	weak var applicationCoordinator: RegistrationOnboardingCoordinator?
 	
+	@State private var showImagePicker: Bool = false
+	@State private var image = Image("PersonImage")
+	@State private var inputImage: UIImage?
+	
 	var body: some View {
 		ZStack{
 			CustomColors.background
 				.ignoresSafeArea()
-			VStack{
-				NavBar(title: "Регистрация") {
+			VStack(spacing: 0){
+				NavBar(title: .registrationTitle) {
 					applicationCoordinator?.backAction()
 				}
 				.padding(.top, 20)
 				Text("Выберите аватар для своего профиля")
 					.modifier(RegularTextModifier())
-					.padding(.top, 20)
-				CharacterView()
-				ButtonView(title: "Продолжить", isButtonEnable: true) {
-					applicationCoordinator?.openStep5()
+					.padding(.top, 32)
+				ZStack{
+					Circle()
+						.foregroundStyle(CustomColors.lightBrownColor)
+						.frame(width: 167, height: 167)
+					image
+						.profileImageModifier(isChosen: inputImage != nil)
+					ZStack{
+						Circle()
+							.frame(width: 27, height: 27)
+							.foregroundStyle(CustomColors.brownColor)
+						Image("pencil")
+					}
+					.offset(x: 167 / 3, y: 167 / 3)
+					.opacity(inputImage == nil ? 1 : 0)
 				}
+				.padding(.top, 32)
+				.onTapGesture {
+					showImagePicker = true
+				}
+				.onChange(of: inputImage) { _ in
+					loadImage()
+				}
+				.sheet(isPresented: $showImagePicker, content: {
+					ImagePickerRegistration(image: $inputImage)
+				})
+				
+				VStack{
+					Button(action: {
+						applicationCoordinator?.openStep5()
+					}, label: {
+						HStack(spacing: 8){
+							Text("Пропустить")
+							Image(systemName: "chevron.right")
+						}
+						.foregroundStyle(CustomColors.brownColor)
+						.font(.system(size: 14, weight: .semibold))
+					})
+					ButtonView(title: "Продолжить", isButtonEnable: true) {
+						applicationCoordinator?.openStep5()
+					}
+				}
+				.padding(.top, 32)
+				
 				Spacer()
 			}
 		}
 	}
+	
+	func loadImage() {
+		guard let inputImage = inputImage else { return }
+		image = Image(uiImage: inputImage)
+	}
 }
 
-struct CharacterView: View{
-	
-	var body: some View{
-		
-		TabView {
-			ForEach(0..<3){ _ in
-				VStack{
-					ZStack{
-						Circle()
-							.foregroundStyle(Color.white)
-							.frame(width: 167, height: 167)
-							.overlay {
-								Image("RegistrationStep4ImageView")
-									.resizable()
-									.frame(width: 167, height: 167)
-							}
-					}
-					Text("Мечтатель")
-						.foregroundStyle(CustomColors.darkBrownColor)
-						.font(.system(size: 20, weight: .medium))
-						.padding(.top, 24)
-					Text("Проводит вечера за любимой книгой и горячей чашечкой чая. Обожает читать о путешествиях, погружается в любовные романы с головой.")
-						.modifier(RegularTextModifier())
-						.lineSpacing(10)
-						.padding(.top, 16)
-				}
-			}
-		}
-		.tabViewStyle(PageTabViewStyle())
-		.onAppear {
-			setupAppearance()
-		}
-		.frame(height: 440)
-	}
-	
-	
-	func setupAppearance() {
-		UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(CustomColors.brownColor)
-		UIPageControl.appearance().pageIndicatorTintColor = UIColor(CustomColors.brownColor).withAlphaComponent(0.2)
+extension Image {
+	func profileImageModifier(isChosen: Bool) -> some View {
+		self
+			.resizable()
+			.frame(width: isChosen ? 167 : 80, height: isChosen ? 167 : 80)
+			.clipShape(Circle())
 	}
 }
 
