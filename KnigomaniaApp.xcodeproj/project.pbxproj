@@ -88,14 +88,13 @@
 		FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */; };
 		FE7A80112AC60EA0000A8711 /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A80102AC60EA0000A8711 /* StartScreenView.swift */; };
 		FE9119442AEBDDF600B31380 /* GalleryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9119432AEBDDF600B31380 /* GalleryPickerView.swift */; };
-		FE9119462AEBDEF400B31380 /* GalleryPickerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9119452AEBDEF400B31380 /* GalleryPickerButtonView.swift */; };
 		FE91194C2AEC44E500B31380 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE91194B2AEC44E500B31380 /* ImagePicker.swift */; };
-		FE9C68652AED6DBE008C4071 /* PickedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9C68642AED6DBE008C4071 /* PickedImageView.swift */; };
 		FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */; };
 		FEAA59BA2ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */; };
 		FEAB7AF12AE2BD000057F3C5 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB7AF02AE2BD000057F3C5 /* StatisticsView.swift */; };
 		FEC8EB082AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8EB072AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift */; };
 		FED451272AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED451262AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift */; };
+		FED451292AF3EBE000FAAFA5 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED451282AF3EBE000FAAFA5 /* ImageExtension.swift */; };
 		FEF6972B2AC5E7CF00708E1E /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */; };
 		FEF697302AC5EF1800708E1E /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6972F2AC5EF1800708E1E /* CustomActivityIndicator.swift */; };
 /* End PBXBuildFile section */
@@ -184,14 +183,13 @@
 		FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		FE7A80102AC60EA0000A8711 /* StartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
 		FE9119432AEBDDF600B31380 /* GalleryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPickerView.swift; sourceTree = "<group>"; };
-		FE9119452AEBDEF400B31380 /* GalleryPickerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPickerButtonView.swift; sourceTree = "<group>"; };
 		FE91194B2AEC44E500B31380 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		FE9C68642AED6DBE008C4071 /* PickedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickedImageView.swift; sourceTree = "<group>"; };
 		FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenConfirmationView.swift; sourceTree = "<group>"; };
 		FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenSuccessView.swift; sourceTree = "<group>"; };
 		FEAB7AF02AE2BD000057F3C5 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		FEC8EB072AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerSetupConfirmationScreenView.swift; sourceTree = "<group>"; };
 		FED451262AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerRegistration.swift; sourceTree = "<group>"; };
+		FED451282AF3EBE000FAAFA5 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		FEF6972F2AC5EF1800708E1E /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -855,8 +853,6 @@
 				FE5BC0702AEAD774008F366F /* TextFieldSection.swift */,
 				FE5BC0762AEAD9A6008F366F /* AddBookTextField.swift */,
 				FE9119432AEBDDF600B31380 /* GalleryPickerView.swift */,
-				FE9119452AEBDEF400B31380 /* GalleryPickerButtonView.swift */,
-				FE9C68642AED6DBE008C4071 /* PickedImageView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -950,6 +946,7 @@
 				9D61F9C82AD882F20000393C /* NumberTextField.swift */,
 				FE91194B2AEC44E500B31380 /* ImagePicker.swift */,
 				FED451262AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift */,
+				FED451282AF3EBE000FAAFA5 /* ImageExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1085,11 +1082,11 @@
 				9D7A76DC2AE43A7F00158781 /* SimilarBooksView.swift in Sources */,
 				9D055E9F2AE0E42300BDDF50 /* EntryCoordinator.swift in Sources */,
 				FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */,
+				FED451292AF3EBE000FAAFA5 /* ImageExtension.swift in Sources */,
 				FED451272AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift in Sources */,
 				9D7A76D62AE432DA00158781 /* DescriptionView.swift in Sources */,
 				9D61F9DC2AD884D90000393C /* GenreModel.swift in Sources */,
 				9D055EA32AE0E47E00BDDF50 /* RegistrationOnboardingCoordinator.swift in Sources */,
-				FE9119462AEBDEF400B31380 /* GalleryPickerButtonView.swift in Sources */,
 				9D055EA72AE0EC0A00BDDF50 /* PasswordTextField.swift in Sources */,
 				9D61F9C72AD882D70000393C /* HeadlineTextModifier.swift in Sources */,
 				FE5BC06D2AEAD01B008F366F /* NotFoundView.swift in Sources */,
@@ -1115,7 +1112,6 @@
 				FE5BC06C2AEAD01B008F366F /* SectionNameView.swift in Sources */,
 				FEAA59BA2ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift in Sources */,
 				9D055EC52AE0EFFC00BDDF50 /* TrackerView.swift in Sources */,
-				FE9C68652AED6DBE008C4071 /* PickedImageView.swift in Sources */,
 				9D714E2A2AE8238600992E09 /* MakeReviewPage.swift in Sources */,
 				9D61F9DE2AD884F70000393C /* CustomButtonStyle.swift in Sources */,
 				9D61F9C52AD882B30000393C /* ButtonView.swift in Sources */,

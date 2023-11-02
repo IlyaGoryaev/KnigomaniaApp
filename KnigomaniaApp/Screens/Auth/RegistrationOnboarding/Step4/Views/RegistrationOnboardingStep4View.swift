@@ -21,7 +21,7 @@ struct RegistrationOnboardingStep4View: View {
 			CustomColors.background
 				.ignoresSafeArea()
 			VStack(spacing: 0){
-				NavBar(title: .registrationTitle) {
+				NavBar(title: "Регистрация") {
 					applicationCoordinator?.backAction()
 				}
 				.padding(.top, 20)
@@ -79,15 +79,6 @@ struct RegistrationOnboardingStep4View: View {
 	func loadImage() {
 		guard let inputImage = inputImage else { return }
 		image = Image(uiImage: inputImage)
-	}
-}
-
-extension Image {
-	func profileImageModifier(isChosen: Bool) -> some View {
-		self
-			.resizable()
-			.frame(width: isChosen ? 167 : 80, height: isChosen ? 167 : 80)
-			.clipShape(Circle())
 	}
 }
 
