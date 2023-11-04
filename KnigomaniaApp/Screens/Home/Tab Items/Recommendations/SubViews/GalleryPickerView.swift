@@ -52,7 +52,6 @@ struct GalleryPickerView: View {
                     Rectangle()
                         .foregroundColor(.clear)
                         .frame(width: 83, height: 109)
-                        .background(.black.opacity(0.1))
                         .background(
                             ZStack {
                                 image
@@ -61,6 +60,7 @@ struct GalleryPickerView: View {
                                     HStack {
                                         Spacer()
                                         Button(action: {
+                                            print("deleting...")
                                             isImageSelected = false
                                             inputImage = nil
                                         }, label: {
