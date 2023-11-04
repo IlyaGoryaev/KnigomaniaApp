@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct GalleryPickerView: View {
     @State private var showImagePicker = false
@@ -30,7 +31,7 @@ struct GalleryPickerView: View {
                     .cornerRadius(10)
                 HStack {
                     Button(action: {
-                        showImagePicker = true
+                        requestAuthorizationForPhotos()
                     }, label: {
                         Text("Выбрать из галереи")
                             .font(.system(size: 16, weight: .medium))
@@ -60,7 +61,6 @@ struct GalleryPickerView: View {
                                     HStack {
                                         Spacer()
                                         Button(action: {
-                                            print("deleting...")
                                             isImageSelected = false
                                             inputImage = nil
                                         }, label: {
@@ -88,7 +88,22 @@ struct GalleryPickerView: View {
         }
     }
     
-    func loadImage() {
+    private func requestAuthorizationForPhotos() {
+        PHPhotoLibrary.requestAuthorization { status in
+            switch status {
+            case .authorized, .limited:
+                showImagePicker = true
+            case .denied, .notDetermined:
+                break
+            case .restricted:
+                break
+            @unknown default:
+                break
+            }
+        }
+    }
+    
+    private func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
         isImageSelected = true
