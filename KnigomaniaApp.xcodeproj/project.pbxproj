@@ -87,6 +87,7 @@
 		FE70D79E2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE70D79D2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift */; };
 		FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */; };
 		FE7A80112AC60EA0000A8711 /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A80102AC60EA0000A8711 /* StartScreenView.swift */; };
+		FE7ABC562AF932AC0069C4C4 /* TextFieldDynamicWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7ABC552AF932AC0069C4C4 /* TextFieldDynamicWidth.swift */; };
 		FE9119442AEBDDF600B31380 /* GalleryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9119432AEBDDF600B31380 /* GalleryPickerView.swift */; };
 		FE91194C2AEC44E500B31380 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE91194B2AEC44E500B31380 /* ImagePicker.swift */; };
 		FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */; };
@@ -182,6 +183,7 @@
 		FE70D79D2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordStartScreenView.swift; sourceTree = "<group>"; };
 		FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		FE7A80102AC60EA0000A8711 /* StartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
+		FE7ABC552AF932AC0069C4C4 /* TextFieldDynamicWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDynamicWidth.swift; sourceTree = "<group>"; };
 		FE9119432AEBDDF600B31380 /* GalleryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPickerView.swift; sourceTree = "<group>"; };
 		FE91194B2AEC44E500B31380 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenConfirmationView.swift; sourceTree = "<group>"; };
@@ -947,6 +949,7 @@
 				FE91194B2AEC44E500B31380 /* ImagePicker.swift */,
 				FED451262AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift */,
 				FED451282AF3EBE000FAAFA5 /* ImageExtension.swift */,
+				FE7ABC552AF932AC0069C4C4 /* TextFieldDynamicWidth.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1052,6 +1055,7 @@
 				9D61FA022AD889B20000393C /* SetupTrackerStep4View.swift in Sources */,
 				FE5BC0712AEAD774008F366F /* TextFieldSection.swift in Sources */,
 				FE314D442ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift in Sources */,
+				FE7ABC562AF932AC0069C4C4 /* TextFieldDynamicWidth.swift in Sources */,
 				FEAB7AF12AE2BD000057F3C5 /* StatisticsView.swift in Sources */,
 				9D61F9C22AD8825D0000393C /* TrackerCoordinator.swift in Sources */,
 				FEF6972B2AC5E7CF00708E1E /* CustomColors.swift in Sources */,

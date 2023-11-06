@@ -10,7 +10,7 @@ import SwiftUI
 struct SearchBookTextField: View {
     @Binding var text: String
     @State private var isEditing = false
-
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -26,22 +26,39 @@ struct SearchBookTextField: View {
                 Image("searchicon")
                     .resizable()
                     .frame(width: 16, height: 16)
-                    .foregroundColor(CustomColors.greyColor)
+                    .foregroundColor(isEditing ? CustomColors.darkBrownColor : CustomColors.greyColor)
                     .padding(.leading, 8)
-                TextField("Название, автор или ISBN", text: $text)
-                    .foregroundColor(CustomColors.greyColor)
-                    .font(.system(size: 14))
-                    .padding(.leading, 12)
-                    .onTapGesture {
-                        isEditing = true
+                HStack(spacing: 8) {
+                    TextFieldDynamicWidth(title: "Название, автор или ISBN", text: $text)
+                        .foregroundColor(CustomColors.greyColor)
+                        .font(.system(size: 14))
+                        .onTapGesture {
+                            isEditing = true
+                        }
+                        .onSubmit {
+                            isEditing = false
+                        }
+                    if !text.isEmpty {
+                        Button(action: {
+                            text = ""
+                        }, label: {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 23, height: 23)
+                                    .cornerRadius(50)
+                                    .foregroundStyle(CustomColors.background)
+                                Image("closeicon")
+                                    .foregroundStyle(CustomColors.darkBrownColor)
+                            }
+                        })
                     }
-                    .onSubmit {
-                        isEditing = false
-                    }
+                    Spacer()
+                }
+                .padding(.leading, 8)
                 Image("scanicon")
                     .resizable()
                     .frame(width: 16, height: 16)
-                    .foregroundColor(CustomColors.greyColor)
+                    .foregroundColor(isEditing ? CustomColors.darkBrownColor : CustomColors.greyColor)
                     .padding(.trailing, 8)
             }
         }
