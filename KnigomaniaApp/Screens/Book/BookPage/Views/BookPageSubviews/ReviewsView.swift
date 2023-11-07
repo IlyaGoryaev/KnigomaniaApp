@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ReviewsView: View {
 	
-	let reviews: [Review]
+	let reviews: [Review] = TestBookPageData.reviews
+	
+	var action: () -> ()
 	
     var body: some View {
 		VStack{
@@ -19,12 +21,15 @@ struct ReviewsView: View {
 					.foregroundStyle(CustomColors.darkBrownColor)
 				Spacer()
 				if !reviews.isEmpty{
-					HStack{
-						Text("Весь раздел")
-						Image(systemName: "chevron.right")
-					}
-					.font(.system(size: 14))
-					.foregroundStyle(CustomColors.darkBrownColor)
+					Button(action: {
+						action()
+					}, label: {
+						HStack{
+							Text("Весь раздел")
+							Image(systemName: "chevron.right")
+						}
+						.textStyle(.regularText)
+					})
 				}
 			}
 			.padding(.horizontal, 16)
@@ -50,29 +55,32 @@ struct ReviewsView: View {
 struct ReviewItemView: View {
 	
 	let review: Review
-		
+
 	var body: some View {
-		HStack{
-			VStack{
+		HStack(spacing: 0) {
+			VStack(spacing: 0){
 				Text("\(Int(review.grade)) (5)")
 				Image("star.fill")
 			}
 			VStack(alignment: .leading, spacing: 8){
 				HStack{
-					Text("Книга захватывает")
+					Text(review.title)
 					Spacer()
-					Image("like")
-						.padding(.horizontal, 16)
+					ZStack(alignment: .bottomTrailing){
+						Image("like")
+							.padding(.horizontal, 16)
+						Text("\(review.likes)")
+							.font(.system(size: 11))
+							.foregroundStyle(CustomColors.darkBrownColor)
+					}
 				}
-				Text("Интересно написано, хотя не во всем соглашусь с автором. Нравится способ повествования, и то как автор поветсвует историю. На самом деле я читал книги в подобном жанре, и fopewpofeopwfopweopfpoweopfopewiofieopwifoieopwifopeiwopfioewiofieowifopewofiopweifopiewopfiopweifoweiofiweoifowieofiweoifopwieofiweoi foewifopiewopifopiweopefiopwei f[pewifweipfiwpeifp[iwp[f fpewof[powep[ofp[owepf fp[ewopfop[ewopfowe")
+				Text(review.text)
 					.font(.system(size: 14))
 					.frame(maxHeight: 90)
+					.multilineTextAlignment(.leading)
 			}
+			.padding(.horizontal, 16)
 		}
 		.padding(.horizontal, 16)
 	}
-}
-
-#Preview {
-	ReviewsView(reviews: [Review(text: "cvihdshvidshiovhciosdhiovchsdiohvciohsdiohcviovsdhiochiodshoichosdihiocsdiohiochsdiohiochsdi", grade: 4.5, isLiked: true)])
 }
