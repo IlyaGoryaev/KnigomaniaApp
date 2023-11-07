@@ -18,8 +18,7 @@ struct DescriptionView: View {
 				.foregroundStyle(CustomColors.darkBrownColor)
 			Text(description)
 				.lineSpacing(10)
-				.font(.system(size: 16))
-				.foregroundStyle(CustomColors.darkBrownColor)
+				.textStyle(.regularText)
 		}
 		.frame(maxWidth: .infinity, alignment: .leading)
 		.padding(.horizontal, 16)
