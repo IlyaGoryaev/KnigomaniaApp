@@ -9,11 +9,7 @@ import SwiftUI
 
 struct BookPage: View {
 	
-	let book: BookPageModel
-	
-	@State var selection: Int = 0
-	
-	@State var rating: Int = 4
+	@StateObject private var viewModel = BookPageViewModel()
 	
 	weak var bookCoordinator: BookCoordinator?
 	
@@ -22,40 +18,39 @@ struct BookPage: View {
 			CustomColors.background
 				.ignoresSafeArea()
 			VStack{
-				NavBar(title: "") {
+				NavBar(title: .emptyTitle) {
 					bookCoordinator?.backAction()
 				}
+				.padding(.vertical, 8)
 				ScrollView{
 					Image("book1")
 						.resizable()
 						.frame(width: 255, height: 360)
-						.padding(.top, 20)
-					VStack{
-						Text("**Автор**: \(book.author)")
-						Text("**Год**: \(book.year)")
+						.padding(.top, Padding._20)
+					VStack(spacing: 8){
+						Text("**Автор**: \(viewModel.book.author)")
+						Text("**Название**: \(viewModel.book.title)")
+						Text("**Год**: \(viewModel.book.year)")
 					}
-					.font(.system(size: 16))
-					.foregroundStyle(CustomColors.darkBrownColor)
+					.textStyle(.regularText)
 					.padding(.top, 24)
 					HStack(spacing: 8){
 						Text("Оценить:")
-							.font(.system(size: 16, weight: .bold))
-							.foregroundStyle(CustomColors.darkBrownColor)
+							.textStyle(.boldText)
 						HStack(spacing: 4){
 							ForEach(1..<6){ index in
-								Image(index > rating ? "Star 1" : "Star 5")
+								Image(index > viewModel.selection ? "Star 1" : "Star 5")
 									.onTapGesture {
 										withAnimation {
-											rating = index
+											viewModel.selection = index
 										}
 										
 									}
 							}
 						}
 						HStack(spacing: 5){
-							Text(book.grade.description)
-								.font(.system(size: 16, weight: .bold))
-								.foregroundStyle(CustomColors.darkBrownColor)
+							Text(viewModel.book.grade.description)
+								.textStyle(.boldText)
 							Text("(5)")
 								.font(.system(size: 16))
 								.foregroundStyle(CustomColors.brownColor)
@@ -64,13 +59,17 @@ struct BookPage: View {
 					.padding(.top, 24)
 					BookActionsView(bookCoordinator: bookCoordinator)
 						.padding(.top, 40)
-					DescriptionView(description: book.description)
+					DescriptionView(description: viewModel.book.description)
 						.padding(.top, 56)
-					ReviewsView(reviews: [])
+					ReviewsView{
+						bookCoordinator?.reviewsPage()
+					}
 						.padding(.top, 56)
 					SimilarBooksView()
 						.padding(.top, 56)
 				}
+				.ignoresSafeArea()
+				.padding(.bottom, 28)
 			}
 		}
 	}
@@ -78,5 +77,5 @@ struct BookPage: View {
 
 
 #Preview {
-	BookPage(book: BookPageModel(title: "Черное зеркало", author: "Наталья Александрова", year: "2016", grade: 4.1, description: "В конце XIX века особняк купца Клюквина считался одним из самых богатых домов Петербурга. Особую гордость хозяина представляло венецианское зеркало необыкновенной красоты, привезённое из Италии и долгое время украшавшее усыпальницу самого графа Дракулы."))
+	BookPage()
 }
