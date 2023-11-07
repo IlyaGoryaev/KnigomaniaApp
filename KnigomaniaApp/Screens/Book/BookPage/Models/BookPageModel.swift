@@ -14,16 +14,18 @@ struct BookPageModel {
 	let year: String
 	let grade: Double
 	let description: String
-	let reviews: [Review] = []
-	let similar: [BookPageModel] = []
+	let reviews: [Review]
+	let similar: [BookPageModel]
 	
 }
 
 
 struct Review {
 	
+	let title: String
 	let text: String
 	let grade: Double
 	var isLiked: Bool
+	var likes: Int
 	
 }
