@@ -9,14 +9,22 @@ import SwiftUI
 
 struct NavBar: View {
 	
-	var title: String
+	enum Titles: String {
+		case emptyTitle = ""
+		case reviewsTitle = "Рецензии"
+		case entryTitle = "Войти"
+		case registrationTitle = "Регистрация"
+		case setupTrackerTitle = "Настройка трекера"
+	}
+	
+	var title: Titles
 	
 	var action: () -> ()
 	
 	var body: some View {
 		ZStack(alignment: .leading){
 			HStack{
-				Text(title)
+				Text(title.rawValue)
 					.font(.system(size: 20, weight: .semibold))
 					.foregroundStyle(CustomColors.darkBrownColor)
 					.frame(maxWidth: .infinity)
@@ -33,7 +41,7 @@ struct NavBar: View {
 }
 
 #Preview {
-	NavBar(title: "Регистрация"){
+	NavBar(title: .registrationTitle){
 		print("registration")
 	}
 }
