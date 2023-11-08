@@ -20,7 +20,7 @@ final class BookCoordinator: Coordinator{
 	}
 	
 	func start() {
-		var view = BookPage(book: book)
+		var view = BookPage()
 		view.bookCoordinator = self
 		let viewController = UIHostingController(rootView: view)
 		rootController.pushViewController(viewController, animated: true)

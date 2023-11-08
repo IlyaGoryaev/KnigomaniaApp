@@ -62,7 +62,7 @@ struct BookPage: View {
 					DescriptionView(description: viewModel.book.description)
 						.padding(.top, 56)
 					ReviewsView{
-						bookCoordinator?.reviewsPage()
+//						bookCoordinator?.reviewsPage()
 					}
 						.padding(.top, 56)
 					SimilarBooksView()
