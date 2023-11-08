@@ -25,7 +25,7 @@ struct MakeReviewPage: View {
 			CustomColors.background
 				.ignoresSafeArea()
 			VStack(spacing: 0){
-				NavBar(title: "") {
+                NavBar(title: .emptyTitle) {
 					bookCoordinator?.backAction()
 				}
 				.padding(.top, 32)

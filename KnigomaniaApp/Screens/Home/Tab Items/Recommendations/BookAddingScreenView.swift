@@ -22,7 +22,7 @@ struct BookAddingScreenView: View {
             CustomColors.background
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                NavBar(title: "") {
+                NavBar(title: .emptyTitle) {
                     recommendationsCoordinator?.backAction()
                 }
                 ScrollView {

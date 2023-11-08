@@ -17,5 +17,5 @@ class BookPageViewModel: ObservableObject {
 	init() {
 		self.book = TestBookPageData.book
 	}
-	
+
 }

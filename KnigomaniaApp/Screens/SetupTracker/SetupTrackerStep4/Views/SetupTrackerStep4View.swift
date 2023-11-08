@@ -9,7 +9,7 @@ struct SetupTrackerStep4View: View {
 			CustomColors.background
 				.ignoresSafeArea()
 			VStack{
-				NavBar(title: "") {
+                NavBar(title: .emptyTitle) {
 					trackerCoordinator?.backAction()
 				}
 				.padding(.top, 20)

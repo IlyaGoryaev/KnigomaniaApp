@@ -21,7 +21,7 @@ struct RegistrationOnboardingStep4View: View {
 			CustomColors.background
 				.ignoresSafeArea()
 			VStack(spacing: 0){
-				NavBar(title: "Регистрация") {
+                NavBar(title: .registrationTitle) {
 					applicationCoordinator?.backAction()
 				}
 				.padding(.top, 20)

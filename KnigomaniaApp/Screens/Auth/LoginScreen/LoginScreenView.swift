@@ -20,7 +20,7 @@ struct LoginScreenView: View {
 			CustomColors.background
 				.edgesIgnoringSafeArea(.all)
 			VStack {
-				NavBar(title: "Войти") {
+                NavBar(title: .entryTitle) {
 					entryCoordinator?.backAction()
 				}
 				.padding(.top, 20)

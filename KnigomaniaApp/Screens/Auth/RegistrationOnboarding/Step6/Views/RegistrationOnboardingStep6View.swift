@@ -10,7 +10,7 @@ struct RegistrationOnboardingStep6View: View {
 				.ignoresSafeArea()
 			//Main layer
 			VStack{
-				NavBar(title: "Регистрация") {
+                NavBar(title: .registrationTitle) {
 					applicationCoordinator?.backAction()
 				}
 				.padding(.top, 20)

@@ -66,6 +66,8 @@
 		9DA945D32AC0BA0B002302D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945D22AC0BA0B002302D1 /* Assets.xcassets */; };
 		9DA945D62AC0BA0B002302D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945D42AC0BA0B002302D1 /* LaunchScreen.storyboard */; };
 		9DA945DE2AC0BA26002302D1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945DD2AC0BA26002302D1 /* .gitignore */; };
+		FE171B152AFB80F300AFDCDB /* TestBookPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */; };
+		FE171B172AFB812C00AFDCDB /* BookPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */; };
 		FE1BF0F82AE6B9FA00FB302A /* TabBarWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1BF0F72AE6B9FA00FB302A /* TabBarWrapperView.swift */; };
 		FE314D442ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE314D432ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift */; };
 		FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F142AD02F2400AE00DF /* DaySelectionModalView.swift */; };
@@ -92,6 +94,7 @@
 		FE91194C2AEC44E500B31380 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE91194B2AEC44E500B31380 /* ImagePicker.swift */; };
 		FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */; };
 		FEAA59BA2ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */; };
+		FEAAB6322AFB7F4D009C0919 /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAAB6312AFB7F4D009C0919 /* TextModifier.swift */; };
 		FEAB7AF12AE2BD000057F3C5 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB7AF02AE2BD000057F3C5 /* StatisticsView.swift */; };
 		FEC8EB082AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8EB072AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift */; };
 		FED451272AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED451262AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift */; };
@@ -162,6 +165,8 @@
 		9DA945D52AC0BA0B002302D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DA945D72AC0BA0B002302D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA945DD2AC0BA26002302D1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBookPageData.swift; sourceTree = "<group>"; };
+		FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookPageViewModel.swift; sourceTree = "<group>"; };
 		FE1BF0F72AE6B9FA00FB302A /* TabBarWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarWrapperView.swift; sourceTree = "<group>"; };
 		FE314D432ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerSetupRemindersScreenView.swift; sourceTree = "<group>"; };
 		FE347F142AD02F2400AE00DF /* DaySelectionModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySelectionModalView.swift; sourceTree = "<group>"; };
@@ -188,6 +193,7 @@
 		FE91194B2AEC44E500B31380 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenConfirmationView.swift; sourceTree = "<group>"; };
 		FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenSuccessView.swift; sourceTree = "<group>"; };
+		FEAAB6312AFB7F4D009C0919 /* TextModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
 		FEAB7AF02AE2BD000057F3C5 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		FEC8EB072AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerSetupConfirmationScreenView.swift; sourceTree = "<group>"; };
 		FED451262AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerRegistration.swift; sourceTree = "<group>"; };
@@ -219,7 +225,6 @@
 		9D055EA82AE0EDE200BDDF50 /* RegistrationScreen */ = {
 			isa = PBXGroup;
 			children = (
-				9D055EAA2AE0EDFB00BDDF50 /* ViewModels */,
 				9D055EA92AE0EDF500BDDF50 /* Views */,
 			);
 			path = RegistrationScreen;
@@ -231,13 +236,6 @@
 				9D055EAB2AE0EE0E00BDDF50 /* RegistrationView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		9D055EAA2AE0EDFB00BDDF50 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		9D055EB52AE0EF1C00BDDF50 /* CurrentLibraryView */ = {
@@ -305,7 +303,6 @@
 		9D61F9B72AD881A90000393C /* Step2 */ = {
 			isa = PBXGroup;
 			children = (
-				9D61F9B92AD881B50000393C /* ViewModels */,
 				9D61F9B82AD881AF0000393C /* Views */,
 			);
 			path = Step2;
@@ -317,13 +314,6 @@
 				9D61F9BA2AD881D40000393C /* RegistrationOnBoardingStep2View.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		9D61F9B92AD881B50000393C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		9D61F9BC2AD881EE0000393C /* Coordinators */ = {
@@ -354,6 +344,7 @@
 				9D61F9CA2AD883090000393C /* TextFieldTime.swift */,
 				9D055EA62AE0EC0A00BDDF50 /* PasswordTextField.swift */,
 				9D714E652AEA4D7000992E09 /* CustomTabBarController.swift */,
+				FEAAB6312AFB7F4D009C0919 /* TextModifier.swift */,
 			);
 			path = DesignElements;
 			sourceTree = "<group>";
@@ -361,7 +352,6 @@
 		9D61F9CC2AD883EE0000393C /* Step3 */ = {
 			isa = PBXGroup;
 			children = (
-				9D61F9CF2AD883FE0000393C /* ViewModels */,
 				9D61F9CE2AD883F90000393C /* Views */,
 			);
 			path = Step3;
@@ -375,17 +365,9 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9D61F9CF2AD883FE0000393C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		9D61F9D22AD8844B0000393C /* Step4 */ = {
 			isa = PBXGroup;
 			children = (
-				9D61F9D42AD8845B0000393C /* ViewModels */,
 				9D61F9D32AD884560000393C /* Views */,
 			);
 			path = Step4;
@@ -399,17 +381,9 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9D61F9D42AD8845B0000393C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		9D61F9D72AD884930000393C /* Step5 */ = {
 			isa = PBXGroup;
 			children = (
-				9D61F9DA2AD884A40000393C /* ViewModels */,
 				9D61F9D92AD8849F0000393C /* Views */,
 				9D61F9D82AD8849A0000393C /* Models */,
 			);
@@ -434,17 +408,9 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9D61F9DA2AD884A40000393C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		9D61F9E32AD885760000393C /* Step6 */ = {
 			isa = PBXGroup;
 			children = (
-				9D61F9E52AD885820000393C /* ViewModels */,
 				9D61F9E42AD8857C0000393C /* Views */,
 			);
 			path = Step6;
@@ -456,13 +422,6 @@
 				9D61F9E62AD885950000393C /* RegistrationOnboardingStep6View.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		9D61F9E52AD885820000393C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		9D61F9E82AD887FB0000393C /* SetupTracker */ = {
@@ -480,7 +439,6 @@
 		9D61F9EC2AD888500000393C /* SetupTrackerStep1 */ = {
 			isa = PBXGroup;
 			children = (
-				9D61F9EE2AD8886B0000393C /* ViewModels */,
 				9D61F9ED2AD888650000393C /* Views */,
 			);
 			path = SetupTrackerStep1;
@@ -494,17 +452,9 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9D61F9EE2AD8886B0000393C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		9D61F9F12AD888900000393C /* SetupTrackerStep2 */ = {
 			isa = PBXGroup;
 			children = (
-				9D61F9F32AD888A50000393C /* ViewModels */,
 				9D61F9F22AD888A00000393C /* Views */,
 			);
 			path = SetupTrackerStep2;
@@ -518,17 +468,9 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9D61F9F32AD888A50000393C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		9D61F9F72AD889170000393C /* SetupTrackerStep3 */ = {
 			isa = PBXGroup;
 			children = (
-				9D61F9FA2AD8892D0000393C /* ViewModels */,
 				9D61F9F92AD889290000393C /* Views */,
 			);
 			path = SetupTrackerStep3;
@@ -542,17 +484,9 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9D61F9FA2AD8892D0000393C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		9D61F9FD2AD8898B0000393C /* SetupTrackerStep4 */ = {
 			isa = PBXGroup;
 			children = (
-				9D61F9FF2AD8899F0000393C /* ViewModels */,
 				9D61F9FE2AD8899A0000393C /* Views */,
 			);
 			path = SetupTrackerStep4;
@@ -566,29 +500,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9D61F9FF2AD8899F0000393C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		9D714E252AE8234500992E09 /* MakeRiviewPage */ = {
 			isa = PBXGroup;
 			children = (
-				9D714E2B2AE823B200992E09 /* SubViews */,
-				9D714E282AE8236500992E09 /* ViewModels */,
 				9D714E272AE8235F00992E09 /* Views */,
-				9D714E262AE8235B00992E09 /* Models */,
 			);
 			path = MakeRiviewPage;
-			sourceTree = "<group>";
-		};
-		9D714E262AE8235B00992E09 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		9D714E272AE8235F00992E09 /* Views */ = {
@@ -599,25 +516,10 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9D714E282AE8236500992E09 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		9D714E2B2AE823B200992E09 /* SubViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SubViews;
-			sourceTree = "<group>";
-		};
 		9D714E2C2AE8E00400992E09 /* AddBookToList */ = {
 			isa = PBXGroup;
 			children = (
 				9D714E312AE8E10800992E09 /* Models */,
-				9D714E2E2AE8E01D00992E09 /* ViewModels */,
 				9D714E2D2AE8E01800992E09 /* Views */,
 			);
 			path = AddBookToList;
@@ -631,13 +533,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9D714E2E2AE8E01D00992E09 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		9D714E312AE8E10800992E09 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -649,7 +544,6 @@
 		9D7A76CC2AE4294E00158781 /* BookPage */ = {
 			isa = PBXGroup;
 			children = (
-				9D7A76D12AE42BC600158781 /* ViewModels */,
 				9D7A76D02AE42BC000158781 /* Models */,
 				9D7A76CF2AE42BBB00158781 /* Views */,
 			);
@@ -673,13 +567,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		9D7A76D12AE42BC600158781 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		9D7A76D42AE432C900158781 /* BookPageSubviews */ = {
 			isa = PBXGroup;
 			children = (
@@ -698,6 +585,7 @@
 				9D714E252AE8234500992E09 /* MakeRiviewPage */,
 				9DA5E4F22AE666B900F4F99F /* BookReviewPage */,
 				9D7A76CC2AE4294E00158781 /* BookPage */,
+				FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -705,18 +593,9 @@
 		9DA5E4F22AE666B900F4F99F /* BookReviewPage */ = {
 			isa = PBXGroup;
 			children = (
-				9DA5E4F52AE6670300F4F99F /* ViewModels */,
 				9DA5E4F42AE666FB00F4F99F /* Views */,
-				9DA5E4F32AE666F500F4F99F /* Models */,
 			);
 			path = BookReviewPage;
-			sourceTree = "<group>";
-		};
-		9DA5E4F32AE666F500F4F99F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		9DA5E4F42AE666FB00F4F99F /* Views */ = {
@@ -725,13 +604,6 @@
 				9DA5E4F82AE6678D00F4F99F /* ReviewPage.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		9DA5E4F52AE6670300F4F99F /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		9DA945BD2AC0BA0A002302D1 = {
@@ -950,6 +822,7 @@
 				FED451262AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift */,
 				FED451282AF3EBE000FAAFA5 /* ImageExtension.swift */,
 				FE7ABC552AF932AC0069C4C4 /* TextFieldDynamicWidth.swift */,
+				FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1051,6 +924,7 @@
 				9D7A76D82AE4358700158781 /* ReviewsView.swift in Sources */,
 				9D61F9CB2AD883090000393C /* TextFieldTime.swift in Sources */,
 				9D61F9D62AD884760000393C /* RegistrationOnboardingStep4View.swift in Sources */,
+				FEAAB6322AFB7F4D009C0919 /* TextModifier.swift in Sources */,
 				9D055EA52AE0E49600BDDF50 /* ResetPasswordCoordinator.swift in Sources */,
 				9D61FA022AD889B20000393C /* SetupTrackerStep4View.swift in Sources */,
 				FE5BC0712AEAD774008F366F /* TextFieldSection.swift in Sources */,
@@ -1072,6 +946,7 @@
 				9D7A76DA2AE43A2A00158781 /* BookActionsView.swift in Sources */,
 				9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */,
 				9D61F9E22AD885290000393C /* RegistrationStep5View.swift in Sources */,
+				FE171B152AFB80F300AFDCDB /* TestBookPageData.swift in Sources */,
 				FE91194C2AEC44E500B31380 /* ImagePicker.swift in Sources */,
 				9D61F9BB2AD881D40000393C /* RegistrationOnBoardingStep2View.swift in Sources */,
 				FE5BC0772AEAD9A6008F366F /* AddBookTextField.swift in Sources */,
@@ -1084,6 +959,7 @@
 				FE1BF0F82AE6B9FA00FB302A /* TabBarWrapperView.swift in Sources */,
 				9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */,
 				9D7A76DC2AE43A7F00158781 /* SimilarBooksView.swift in Sources */,
+				FE171B172AFB812C00AFDCDB /* BookPageViewModel.swift in Sources */,
 				9D055E9F2AE0E42300BDDF50 /* EntryCoordinator.swift in Sources */,
 				FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */,
 				FED451292AF3EBE000FAAFA5 /* ImageExtension.swift in Sources */,

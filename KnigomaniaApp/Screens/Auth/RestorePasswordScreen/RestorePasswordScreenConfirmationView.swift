@@ -19,7 +19,7 @@ struct RestorePasswordScreenConfirmationView: View {
 			CustomColors.background
 				.edgesIgnoringSafeArea(.all)
 			VStack {
-				NavBar(title: "Войти", action: {
+                NavBar(title: .entryTitle, action: {
 					resetPasswordCoordinator?.backAction()
 				})
 				.padding(.top, 32)

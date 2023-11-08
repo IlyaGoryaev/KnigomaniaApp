@@ -26,7 +26,7 @@ struct BookPage: View {
 					Image("book1")
 						.resizable()
 						.frame(width: 255, height: 360)
-						.padding(.top, Padding._20)
+						.padding(.top, 20)
 					VStack(spacing: 8){
 						Text("**Автор**: \(viewModel.book.author)")
 						Text("**Название**: \(viewModel.book.title)")

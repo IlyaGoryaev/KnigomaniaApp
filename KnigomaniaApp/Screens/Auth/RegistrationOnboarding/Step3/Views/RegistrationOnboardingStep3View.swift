@@ -17,7 +17,7 @@ struct RegistrationOnboardingStep3View: View {
 			CustomColors.background
 				.ignoresSafeArea()
 			VStack{
-				NavBar(title: "Регистрация") {
+                NavBar(title: .registrationTitle) {
 					
 				}
 				.padding(.top, 20)

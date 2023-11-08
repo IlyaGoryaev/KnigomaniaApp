@@ -13,7 +13,7 @@ struct ReviewPage: View {
 			CustomColors.background
 				.ignoresSafeArea()
 			VStack{
-				NavBar(title: "") {
+                NavBar(title: .emptyTitle) {
 					
 				}
 				.padding(.top, 30)

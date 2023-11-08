@@ -22,7 +22,7 @@ struct AddBookToListPage: View {
 			CustomColors.background
 				.ignoresSafeArea()
 			VStack{
-				NavBar(title: "") {
+                NavBar(title: .emptyTitle) {
 					bookCoordinator?.backAction()
 				}
 				.padding(.top, 32)

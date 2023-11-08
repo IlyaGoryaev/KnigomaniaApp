@@ -15,7 +15,7 @@ struct SetupTrackerStep1View: View {
 			CustomColors.background
 				.ignoresSafeArea()
 			VStack{
-				NavBar(title: "Настройка трекера") {
+                NavBar(title: .setupTrackerTitle) {
 					
 				}
 				.padding(.top, 20)

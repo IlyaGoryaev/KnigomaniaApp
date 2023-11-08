@@ -28,7 +28,7 @@ struct NextView: View {
 	
 	var body: some View {
 		VStack{
-			NavBar(title: "NextView") {
+            NavBar(title: .emptyTitle) {
 				scanCoordinator!.backAction()
 			}
 			Spacer()
