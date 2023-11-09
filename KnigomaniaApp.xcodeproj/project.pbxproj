@@ -67,6 +67,10 @@
 		9DA945D62AC0BA0B002302D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945D42AC0BA0B002302D1 /* LaunchScreen.storyboard */; };
 		9DA945DE2AC0BA26002302D1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945DD2AC0BA26002302D1 /* .gitignore */; };
 		9DC2D1122AFCFA9C0087FB34 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D1112AFCFA9C0087FB34 /* TextFieldModifier.swift */; };
+		9DC2D1152AFCFC060087FB34 /* UserActionsTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D1142AFCFC060087FB34 /* UserActionsTitle.swift */; };
+		9DC2D1182AFD05E70087FB34 /* BookCoordinatorViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D1172AFD05E70087FB34 /* BookCoordinatorViewProtocol.swift */; };
+		9DC2D11B2AFD77E40087FB34 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D11A2AFD77E40087FB34 /* BookView.swift */; };
+		9DC2D11D2AFD79870087FB34 /* GradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D11C2AFD79870087FB34 /* GradeView.swift */; };
 		FE171B152AFB80F300AFDCDB /* TestBookPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */; };
 		FE171B172AFB812C00AFDCDB /* BookPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */; };
 		FE1BF0F82AE6B9FA00FB302A /* TabBarWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1BF0F72AE6B9FA00FB302A /* TabBarWrapperView.swift */; };
@@ -167,6 +171,10 @@
 		9DA945D72AC0BA0B002302D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA945DD2AC0BA26002302D1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		9DC2D1112AFCFA9C0087FB34 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		9DC2D1142AFCFC060087FB34 /* UserActionsTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActionsTitle.swift; sourceTree = "<group>"; };
+		9DC2D1172AFD05E70087FB34 /* BookCoordinatorViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCoordinatorViewProtocol.swift; sourceTree = "<group>"; };
+		9DC2D11A2AFD77E40087FB34 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		9DC2D11C2AFD79870087FB34 /* GradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeView.swift; sourceTree = "<group>"; };
 		FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBookPageData.swift; sourceTree = "<group>"; };
 		FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookPageViewModel.swift; sourceTree = "<group>"; };
 		FE1BF0F72AE6B9FA00FB302A /* TabBarWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarWrapperView.swift; sourceTree = "<group>"; };
@@ -547,6 +555,7 @@
 		9D7A76CC2AE4294E00158781 /* BookPage */ = {
 			isa = PBXGroup;
 			children = (
+				9DC2D1192AFD77450087FB34 /* ViewModels */,
 				9D7A76D02AE42BC000158781 /* Models */,
 				9D7A76CF2AE42BBB00158781 /* Views */,
 			);
@@ -573,7 +582,9 @@
 		9D7A76D42AE432C900158781 /* BookPageSubviews */ = {
 			isa = PBXGroup;
 			children = (
+				9DC2D11A2AFD77E40087FB34 /* BookView.swift */,
 				9D7A76D52AE432DA00158781 /* DescriptionView.swift */,
+				9DC2D11C2AFD79870087FB34 /* GradeView.swift */,
 				9D7A76D72AE4358700158781 /* ReviewsView.swift */,
 				9D7A76D92AE43A2A00158781 /* BookActionsView.swift */,
 				9D7A76DB2AE43A7F00158781 /* SimilarBooksView.swift */,
@@ -584,11 +595,11 @@
 		9DA5E4F12AE6669E00F4F99F /* Book */ = {
 			isa = PBXGroup;
 			children = (
+				9DC2D1162AFD05D60087FB34 /* Protocols */,
 				9D714E2C2AE8E00400992E09 /* AddBookToList */,
 				9D714E252AE8234500992E09 /* MakeRiviewPage */,
 				9DA5E4F22AE666B900F4F99F /* BookReviewPage */,
 				9D7A76CC2AE4294E00158781 /* BookPage */,
-				FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -640,6 +651,31 @@
 				9DA945D72AC0BA0B002302D1 /* Info.plist */,
 			);
 			path = KnigomaniaApp;
+			sourceTree = "<group>";
+		};
+		9DC2D1132AFCFBB30087FB34 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */,
+				9DC2D1142AFCFC060087FB34 /* UserActionsTitle.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9DC2D1162AFD05D60087FB34 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9DC2D1172AFD05E70087FB34 /* BookCoordinatorViewProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9DC2D1192AFD77450087FB34 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FE1BF0EE2AE6A5D000FB302A /* SubViews */ = {
@@ -818,6 +854,7 @@
 		FEF697292AC5E7B800708E1E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9DC2D1132AFCFBB30087FB34 /* Data */,
 				FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */,
 				9D61F9C62AD882D70000393C /* HeadlineTextModifier.swift */,
 				9D61F9C82AD882F20000393C /* NumberTextField.swift */,
@@ -825,7 +862,6 @@
 				FED451262AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift */,
 				FED451282AF3EBE000FAAFA5 /* ImageExtension.swift */,
 				FE7ABC552AF932AC0069C4C4 /* TextFieldDynamicWidth.swift */,
-				FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -952,11 +988,13 @@
 				FE171B152AFB80F300AFDCDB /* TestBookPageData.swift in Sources */,
 				FE91194C2AEC44E500B31380 /* ImagePicker.swift in Sources */,
 				9D61F9BB2AD881D40000393C /* RegistrationOnBoardingStep2View.swift in Sources */,
+				9DC2D11D2AFD79870087FB34 /* GradeView.swift in Sources */,
 				FE5BC0772AEAD9A6008F366F /* AddBookTextField.swift in Sources */,
 				9D61F9E02AD885100000393C /* GenreSelection.swift in Sources */,
 				FE7A80112AC60EA0000A8711 /* StartScreenView.swift in Sources */,
 				FE70D79B2AC819400018C5A1 /* LoginScreenView.swift in Sources */,
 				9DC2D1122AFCFA9C0087FB34 /* TextFieldModifier.swift in Sources */,
+				9DC2D11B2AFD77E40087FB34 /* BookView.swift in Sources */,
 				FE9119442AEBDDF600B31380 /* GalleryPickerView.swift in Sources */,
 				9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */,
 				9D055EB02AE0EEE800BDDF50 /* MainScreen.swift in Sources */,
@@ -978,6 +1016,7 @@
 				9D714E682AEA50B500992E09 /* RecommendationsCoordinator.swift in Sources */,
 				9D714E622AEA4A2C00992E09 /* SettingsCoordinator.swift in Sources */,
 				9DA5E4F92AE6678D00F4F99F /* ReviewPage.swift in Sources */,
+				9DC2D1182AFD05E70087FB34 /* BookCoordinatorViewProtocol.swift in Sources */,
 				9D7A77152AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift in Sources */,
 				FE4B8B002ADEA94A00FE28CE /* HomePageScreenView.swift in Sources */,
 				FEF697302AC5EF1800708E1E /* CustomActivityIndicator.swift in Sources */,
@@ -989,6 +1028,7 @@
 				9D714E302AE8E03400992E09 /* AddBookToListPage.swift in Sources */,
 				9D7A76CE2AE42A1C00158781 /* BookPage.swift in Sources */,
 				9D055EB42AE0EF0A00BDDF50 /* BookChallengeView.swift in Sources */,
+				9DC2D1152AFCFC060087FB34 /* UserActionsTitle.swift in Sources */,
 				FE5BC0622AEACFE9008F366F /* RecommendationsScreenView.swift in Sources */,
 				9D61F9F02AD888840000393C /* SetupTrackerStep1View.swift in Sources */,
 				9D055EBE2AE0EFA600BDDF50 /* FriendsStatisticView.swift in Sources */,

@@ -29,7 +29,7 @@ struct RegistrationOnboardingStep6View: View {
 					.font(.system(size: 14, weight: .semibold))
 				})
 				.padding(.top, 32)
-				ButtonView(title: "Настроить", isButtonEnable: true){
+				ButtonView(title: .setup, isButtonEnable: true){
 					applicationCoordinator?.setUpTracker()
 				}
 				.padding(.top, 8)

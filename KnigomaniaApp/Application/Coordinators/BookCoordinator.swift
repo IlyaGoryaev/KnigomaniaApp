@@ -11,34 +11,37 @@ import SwiftUI
 final class BookCoordinator: Coordinator{	
 	
 	var rootController: UINavigationController
-	
+		
 	var book: BookPageModel
+	
+	enum Views {
+		
+		case makeReview
+		case addBookToList
+		case bookPage
+		
+		var view: any BookCoordinatorViewProtocol {
+			switch self {
+			case .makeReview:
+				return MakeReviewPage()
+			case .addBookToList:
+				return AddBookToListPage()
+			case .bookPage:
+				return BookPage()
+			}
+		}
+	}
+
+	func route(view: Views, animated: Bool = true) {
+		var view = view.view
+		view.bookCoordinator = self
+		let viewController = UIHostingController(rootView: AnyView(view))
+		rootController.pushViewController(viewController, animated: animated)
+	}
 	
 	init(navigationController: UINavigationController, book: BookPageModel) {
 		self.rootController = navigationController
 		self.book = book
-	}
-	
-	func start() {
-		var view = BookPage()
-		view.bookCoordinator = self
-		let viewController = UIHostingController(rootView: view)
-		rootController.pushViewController(viewController, animated: true)
-	}
-	
-	func makeReview() {
-		var view = MakeReviewPage()
-		view.bookCoordinator = self
-		let viewController = UIHostingController(rootView: view)
-		//rootController.pushViewController(viewController, animated: true)
-		rootController.present(viewController, animated: true)
-	}
-	
-	func addBookToList() {
-		var view = AddBookToListPage()
-		view.bookCoordinator = self
-		let viewController = UIHostingController(rootView: view)
-		rootController.pushViewController(viewController, animated: true)
 	}
 	
 	func backAction() {
@@ -48,5 +51,4 @@ final class BookCoordinator: Coordinator{
 	func dismiss() {
 		rootController.dismiss(animated: true)
 	}
-	
 }

@@ -74,7 +74,7 @@ struct TrackerSetupRemindersScreenView: View {
                 }
                 .padding(.horizontal, 16)
                 .padding(.top, 32)
-                ButtonView(title: "Завершить", isButtonEnable: true) {
+				ButtonView(title: .complete, isButtonEnable: true) {
 					setupReminderCoordinator?.finishSetupReminder()
                 }
                 .padding(.top, 32)

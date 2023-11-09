@@ -63,7 +63,7 @@ struct RegistrationView: View {
 					PasswordTextField(text: $confirmPasswordText, title: "Повторите пароль")
 				}
 				.padding(.top, 16)
-				ButtonView(title: "Продолжить", isButtonEnable: true) {
+				ButtonView(title: .continuation, isButtonEnable: true) {
 					entryCoordinator?.startRegistrationOnboarding()
 				}
 				.padding(.top, 32)

@@ -29,7 +29,7 @@ struct SetupTrackerStep1View: View {
 					.foregroundStyle(Int(amountOfBooksString) ?? 0 <= 100 && Int(amountOfBooksString) ?? 0 >= 0 ? CustomColors.brownColor : Color.red)
 				numberTextField
 				slider
-				ButtonView(title: "Продолжить", isButtonEnable: isButtonEnable(), action: {
+				ButtonView(title: .continuation, isButtonEnable: isButtonEnable(), action: {
 					trackerCoordinator?.openStep2()
 					strokeColor = .white
 				})

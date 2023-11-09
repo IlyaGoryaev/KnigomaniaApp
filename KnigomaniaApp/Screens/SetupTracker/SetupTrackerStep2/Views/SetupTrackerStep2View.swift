@@ -32,7 +32,7 @@ struct SetupTrackerStep2View: View {
 									 CustomColors.brownColor : Color.red)
 				timeInput
 					.padding(.top, 19)
-				ButtonView(title: "Продолжить", isButtonEnable: isButtonEnable()) {
+				ButtonView(title: .continuation, isButtonEnable: isButtonEnable()) {
 					trackerCoordinator?.openStep3()
 					strokeColor = .white
 				}

@@ -14,7 +14,7 @@ struct ScanScreenView: View {
     var body: some View {
 		VStack{
 			Text("ScanScreenView")
-			ButtonView(title: "Button", isButtonEnable: true) {
+			ButtonView(title: .addBook, isButtonEnable: true) {
 				scanCoordinator!.openNewScreen()
 			}
 		}

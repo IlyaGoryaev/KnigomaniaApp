@@ -34,7 +34,8 @@ final class MainCoordinator: Coordinator{
 	
 	func bookPage(book: BookPageModel){
 		let bookPageCoordinator = BookCoordinator(navigationController: rootController, book: book)
-		bookPageCoordinator.start()
+		bookPageCoordinator.route(view: .bookPage)
+		//bookPageCoordinator.start()
 		childCoordinators.append(bookPageCoordinator)
 		// retain cycle
 	}

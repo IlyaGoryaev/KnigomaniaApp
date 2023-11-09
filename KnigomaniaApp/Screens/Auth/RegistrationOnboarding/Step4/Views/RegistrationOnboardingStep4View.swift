@@ -65,7 +65,7 @@ struct RegistrationOnboardingStep4View: View {
 						.foregroundStyle(CustomColors.brownColor)
 						.font(.system(size: 14, weight: .semibold))
 					})
-					ButtonView(title: "Продолжить", isButtonEnable: true) {
+					ButtonView(title: .continuation, isButtonEnable: true) {
 						applicationCoordinator?.openStep5()
 					}
 				}

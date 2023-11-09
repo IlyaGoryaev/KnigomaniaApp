@@ -73,7 +73,7 @@ struct MyProgress: View {
                         .padding(.horizontal, 16)
                         .foregroundStyle(CustomColors.darkBrownColor)
                         .padding(.top, 48)
-                    ButtonView(title: "Настроить", isButtonEnable: true) {
+					ButtonView(title: .setup, isButtonEnable: true) {
                         mainScreenCoordinator?.setUpTracker()
                     }
                     .padding(.top, 16)

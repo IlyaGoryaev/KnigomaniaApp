@@ -14,6 +14,7 @@ struct TextFieldModifier: ViewModifier {
 	
 	func body(content: Content) -> some View {
 		content
+			.foregroundStyle(CustomColors.darkBrownColor)
 			.background(RoundedRectangle(cornerRadius: 10)
 				.foregroundStyle(.white))
 			.overlay {

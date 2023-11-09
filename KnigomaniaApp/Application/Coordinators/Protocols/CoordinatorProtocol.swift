@@ -14,6 +14,6 @@ protocol Coordinator: AnyObject{
 	
 	var rootController: controller { set get }
 	
-	func start()
+	//func start()
 	
 }

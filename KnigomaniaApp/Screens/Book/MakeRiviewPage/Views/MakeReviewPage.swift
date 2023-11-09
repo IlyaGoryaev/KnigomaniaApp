@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-struct MakeReviewPage: View {
+struct MakeReviewPage: BookCoordinatorViewProtocol {
 	
 	weak var bookCoordinator: BookCoordinator?
 
@@ -27,14 +27,14 @@ struct MakeReviewPage: View {
 				.ignoresSafeArea()
 			VStack(spacing: 0){
                 NavBar(title: .emptyTitle) {
-					bookCoordinator?.dismiss()
+					bookCoordinator?.backAction()
 				}
 				.padding(.top, 32)
 				MakeReviewPageBook(author: "fewfew", year: "2016", bookGrade: 4.1)
 					.padding(.top, 20)
 				if isSend{
 					VStack(spacing: 0){
-						Text("Благодарим за ваш отзыв! Отправленная вами рецензия будет опубликована после прохождения модерации.")
+						Text(UserActionsTitle(section: .makeReviewPage).title)
 							.lineSpacing(10)
 							.font(.system(size: 16))
 							.foregroundStyle(CustomColors.darkBrownColor)
@@ -49,7 +49,7 @@ struct MakeReviewPage: View {
 							.padding(.top, 24)
 						ReviewText(text: $textReview)
 							.padding(.top, 16)
-						ButtonView(title: "Отправить", isButtonEnable: validateTextReview() && validateTextHeadline() ? true : false) {
+						ButtonView(title: .send, isButtonEnable: validateTextReview() && validateTextHeadline() ? true : false) {
 							withAnimation{
 								isSend = true
 							}
@@ -88,7 +88,6 @@ struct ReviewText: View {
 						.font(.system(size: 14))
 						.foregroundStyle(CustomColors.beigeColor)
 				}
-				.foregroundStyle(CustomColors.darkBrownColor)
 				.padding(.top, 16)
 				.padding(.horizontal, 8)
 				.padding(.bottom, 28)
@@ -125,7 +124,6 @@ struct HeadlineReview: View {
 						.font(.system(size: 14))
 						.foregroundStyle(CustomColors.beigeColor)
 				}
-				.foregroundStyle(CustomColors.darkBrownColor)
 				.padding(.leading, 8)
 				.padding(.vertical, 16)
 				.padding(.trailing, 60)

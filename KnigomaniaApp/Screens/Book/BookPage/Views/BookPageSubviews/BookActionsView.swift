@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+
+// Исправить
+
 struct BookActionsView: View {
 	
 	weak var bookCoordinator: BookCoordinator?
@@ -17,11 +20,11 @@ struct BookActionsView: View {
 	var body: some View {
 		HStack {
 			BookPageButton(imageName: bookButtonInfoDict[categoryNames[0]]!, buttonText: categoryNames[0]){
-				bookCoordinator?.makeReview()
+				bookCoordinator?.route(view: .makeReview)
 			}
 			Spacer()
 			BookPageButton(imageName: bookButtonInfoDict[categoryNames[1]]!, buttonText: categoryNames[1]){
-				bookCoordinator?.addBookToList()
+				bookCoordinator?.route(view: .addBookToList)
 			}
 			Spacer()
 			BookPageButton(imageName: bookButtonInfoDict[categoryNames[2]]!, buttonText: categoryNames[2]){

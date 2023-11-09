@@ -10,9 +10,11 @@ import Combine
 
 class BookPageViewModel: ObservableObject {
 	
-	@Published var book: BookPageModel
+	@Published 
+	var book: BookPageModel
 	
-	@Published var selection: Int = 0
+	@Published 
+	var selection: Int = 0
 	
 	init() {
 		self.book = TestBookPageData.book

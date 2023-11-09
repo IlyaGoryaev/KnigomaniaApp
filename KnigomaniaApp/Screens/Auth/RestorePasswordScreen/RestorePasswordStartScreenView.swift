@@ -40,7 +40,7 @@ struct RestorePasswordStartScreenView: View {
 					.padding(.horizontal, 16)
 				}
 				.padding(.top, 40)
-				ButtonView(title: "Восстановить пароль", isButtonEnable: true) {
+				ButtonView(title: .resetPassword, isButtonEnable: true) {
 					resetPasswordCoordinator?.resetPasswordByEmail()
 				}
 				.padding(.top, 32)

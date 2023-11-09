@@ -15,9 +15,13 @@ struct SimilarBooksView: View {
 					.font(.system(size: 20, weight: .medium))
 					.foregroundStyle(CustomColors.darkBrownColor)
 				Spacer()
-				HStack{
-					Text("Весь раздел")
-					Image(systemName: "chevron.right")
+				Button {
+					print("Весь раздел")
+				} label: {
+					HStack{
+						Text("Весь раздел")
+						Image(systemName: "chevron.right")
+					}
 				}
 				.font(.system(size: 14))
 				.foregroundStyle(CustomColors.darkBrownColor)

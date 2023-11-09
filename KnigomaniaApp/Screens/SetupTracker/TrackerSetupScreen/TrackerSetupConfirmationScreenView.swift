@@ -31,7 +31,7 @@ struct TrackerSetupConfirmationScreenView: View {
                         .padding(.horizontal, 16)
                 }
                 .padding(.top, 64)
-                ButtonView(title: "Поехали", isButtonEnable: true) {
+				ButtonView(title: .continuation, isButtonEnable: true) {
 					setupReminderCoordinator?.logIn()
                 }
                 .padding(.top, 32)

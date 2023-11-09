@@ -42,7 +42,7 @@ struct SetupTrackerStep4View: View {
 					.font(.system(size: 14, weight: .semibold))
 				})
 				.padding(.top, 24)
-				ButtonView(title: "Настроить напоминания", isButtonEnable: true){
+				ButtonView(title: .setupNotification, isButtonEnable: true){
 					trackerCoordinator?.setUpReminder()
 				}
 				.padding(.top, 8)

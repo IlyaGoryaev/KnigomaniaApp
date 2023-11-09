@@ -40,7 +40,7 @@ struct BookAddingScreenView: View {
                         .padding(.top, 16)
                     TextFieldSection(text: $bookISBN, title: "ISBN", star: "", placeholder: "Введите ISBN")
                         .padding(.top, 16)
-                    ButtonView(title: "Добавить книгу", isButtonEnable: isButtonEnable, action: {})
+					ButtonView(title: .addBook, isButtonEnable: isButtonEnable, action: {})
                         .padding(.top, 32)
                 }
                 Spacer()

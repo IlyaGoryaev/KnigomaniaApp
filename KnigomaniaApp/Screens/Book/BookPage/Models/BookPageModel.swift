@@ -8,7 +8,6 @@
 import Foundation
 
 struct BookPageModel {
-	
 	let title: String
 	let author: String
 	let year: String
@@ -16,16 +15,12 @@ struct BookPageModel {
 	let description: String
 	let reviews: [Review]
 	let similar: [BookPageModel]
-	
 }
 
-
 struct Review {
-	
 	let title: String
 	let text: String
 	let grade: Double
 	var isLiked: Bool
-	var likes: Int
-	
+	var likes: Int	
 }

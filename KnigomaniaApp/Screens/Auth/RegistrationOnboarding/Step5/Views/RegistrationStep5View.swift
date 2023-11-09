@@ -36,7 +36,7 @@ struct RegistrationStep5View: View {
 							.padding(.top, 24)
 					}
 				}
-				ButtonView(title: "Продолжить", isButtonEnable: isButtonEnable()){
+				ButtonView(title: .continuation, isButtonEnable: isButtonEnable()){
 					applicationCoordinator?.openStep6()
 				}
 				.padding(.top, 16)

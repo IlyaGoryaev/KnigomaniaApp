@@ -25,7 +25,7 @@ struct RegistrationOnboardingStep3View: View {
 					.modifier(HeadlineTextModifier())
 					.padding(.top, 40)
 					.padding(.horizontal, 35)
-				ButtonView(title: "Продолжить", isButtonEnable: true){
+				ButtonView(title: .continuation, isButtonEnable: true){
 					applicationCoordinator?.openStep4()
 				}
 				.padding(.top, 32)

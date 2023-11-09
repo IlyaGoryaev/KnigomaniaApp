@@ -7,15 +7,18 @@
 
 import SwiftUI
 
-struct AddBookToListPage: View {
+struct AddBookToListPage: BookCoordinatorViewProtocol {
 	
 	weak var bookCoordinator: BookCoordinator?
 	
-	@State private var category: ListCategories = .toRead
+	@State 
+	private var category: ListCategories = .toRead
 	
-	@State private var isListExpanded: Bool = false
+	@State 
+	private var isListExpanded: Bool = false
 	
-	@State private var customCategoryText: String = ""
+	@State 
+	private var customCategoryText: String = ""
 	
     var body: some View {
 		ZStack{
@@ -39,12 +42,12 @@ struct AddBookToListPage: View {
 						if category == .addList{
 							CategoryNameTextField(nameText: $customCategoryText)
 								.padding(.top, 24)
-							ButtonView(title: "Сохранить", isButtonEnable: true) {
+							ButtonView(title: .save, isButtonEnable: true) {
 								bookCoordinator?.backAction()
 							}
 							.padding(.top, 32)
 						} else {
-							ButtonView(title: "Добавить книгу", isButtonEnable: true) {
+							ButtonView(title: .addBook, isButtonEnable: true) {
 								bookCoordinator?.backAction()
 							}
 							.padding(.top, 32)
