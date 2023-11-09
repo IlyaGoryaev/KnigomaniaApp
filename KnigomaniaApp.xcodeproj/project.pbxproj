@@ -66,6 +66,7 @@
 		9DA945D32AC0BA0B002302D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945D22AC0BA0B002302D1 /* Assets.xcassets */; };
 		9DA945D62AC0BA0B002302D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945D42AC0BA0B002302D1 /* LaunchScreen.storyboard */; };
 		9DA945DE2AC0BA26002302D1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9DA945DD2AC0BA26002302D1 /* .gitignore */; };
+		9DC2D1122AFCFA9C0087FB34 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D1112AFCFA9C0087FB34 /* TextFieldModifier.swift */; };
 		FE171B152AFB80F300AFDCDB /* TestBookPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */; };
 		FE171B172AFB812C00AFDCDB /* BookPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */; };
 		FE1BF0F82AE6B9FA00FB302A /* TabBarWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1BF0F72AE6B9FA00FB302A /* TabBarWrapperView.swift */; };
@@ -165,6 +166,7 @@
 		9DA945D52AC0BA0B002302D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DA945D72AC0BA0B002302D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA945DD2AC0BA26002302D1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		9DC2D1112AFCFA9C0087FB34 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBookPageData.swift; sourceTree = "<group>"; };
 		FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookPageViewModel.swift; sourceTree = "<group>"; };
 		FE1BF0F72AE6B9FA00FB302A /* TabBarWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarWrapperView.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				9D055EA62AE0EC0A00BDDF50 /* PasswordTextField.swift */,
 				9D714E652AEA4D7000992E09 /* CustomTabBarController.swift */,
 				FEAAB6312AFB7F4D009C0919 /* TextModifier.swift */,
+				9DC2D1112AFCFA9C0087FB34 /* TextFieldModifier.swift */,
 			);
 			path = DesignElements;
 			sourceTree = "<group>";
@@ -953,6 +956,7 @@
 				9D61F9E02AD885100000393C /* GenreSelection.swift in Sources */,
 				FE7A80112AC60EA0000A8711 /* StartScreenView.swift in Sources */,
 				FE70D79B2AC819400018C5A1 /* LoginScreenView.swift in Sources */,
+				9DC2D1122AFCFA9C0087FB34 /* TextFieldModifier.swift in Sources */,
 				FE9119442AEBDDF600B31380 /* GalleryPickerView.swift in Sources */,
 				9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */,
 				9D055EB02AE0EEE800BDDF50 /* MainScreen.swift in Sources */,

@@ -30,7 +30,8 @@ final class BookCoordinator: Coordinator{
 		var view = MakeReviewPage()
 		view.bookCoordinator = self
 		let viewController = UIHostingController(rootView: view)
-		rootController.pushViewController(viewController, animated: true)
+		//rootController.pushViewController(viewController, animated: true)
+		rootController.present(viewController, animated: true)
 	}
 	
 	func addBookToList() {
@@ -42,6 +43,10 @@ final class BookCoordinator: Coordinator{
 	
 	func backAction() {
 		rootController.popViewController(animated: true)
+	}
+	
+	func dismiss() {
+		rootController.dismiss(animated: true)
 	}
 	
 }
