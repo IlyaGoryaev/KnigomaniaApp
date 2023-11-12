@@ -65,7 +65,7 @@ private extension MainCoordinatorWithTabBar {
 	func setupSettingsCoordinator() -> UINavigationController {
 		let navController = UINavigationController()
 		navController.navigationBar.isHidden = true
-		let settingsCoordinator = SettingsCoordinator(navigationController: navController)
+		let settingsCoordinator = SettingsCoordinator(rootController: navController)
 		childCoordinators.append(settingsCoordinator)
 		settingsCoordinator.start()
 		settingsCoordinator.rootController.tabBarItem.image = UIImage(named: "settingsicon")
