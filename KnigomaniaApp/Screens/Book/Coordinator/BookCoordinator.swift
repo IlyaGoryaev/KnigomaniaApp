@@ -19,6 +19,8 @@ final class BookCoordinator: Coordinator{
 		case makeReview
 		case addBookToList
 		case bookPage
+		//case similarBooksPage
+		case reviewsPage
 		
 		var view: any BookCoordinatorViewProtocol {
 			switch self {
@@ -28,6 +30,8 @@ final class BookCoordinator: Coordinator{
 				return AddBookToListPage()
 			case .bookPage:
 				return BookPage()
+			case .reviewsPage:
+				return ReviewPage()
 			}
 		}
 	}
