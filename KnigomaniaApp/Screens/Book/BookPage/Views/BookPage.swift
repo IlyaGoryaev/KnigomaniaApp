@@ -19,7 +19,7 @@ struct BookPage: BookCoordinatorViewProtocol {
 				.ignoresSafeArea()
 			VStack {
 				NavBar(title: .emptyTitle) {
-					bookCoordinator?.backAction()
+					bookCoordinator?.backAction(type: .backAction)
 				}
 				.padding(.vertical, 8)
 				ScrollView {
@@ -32,7 +32,7 @@ struct BookPage: BookCoordinatorViewProtocol {
 					DescriptionView(description: viewModel.book.description)
 						.padding(.top, 56)
 					ReviewsView {
-						bookCoordinator?.route(view: .makeReview)
+						bookCoordinator?.route(view: .reviewsPage)
 						}
 						.padding(.top, 56)
 					SimilarBooksView()

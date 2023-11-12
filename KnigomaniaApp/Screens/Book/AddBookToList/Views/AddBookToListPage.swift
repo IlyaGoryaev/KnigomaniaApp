@@ -26,7 +26,7 @@ struct AddBookToListPage: BookCoordinatorViewProtocol {
 				.ignoresSafeArea()
 			VStack{
                 NavBar(title: .emptyTitle) {
-					bookCoordinator?.backAction()
+					bookCoordinator?.backAction(type: .backAction)
 				}
 				.padding(.top, 32)
 				MakeReviewPageBook(author: "feiohfiew", year: "2022", bookGrade: 5.0)
@@ -43,12 +43,12 @@ struct AddBookToListPage: BookCoordinatorViewProtocol {
 							CategoryNameTextField(nameText: $customCategoryText)
 								.padding(.top, 24)
 							ButtonView(title: .save, isButtonEnable: true) {
-								bookCoordinator?.backAction()
+								bookCoordinator?.backAction(type: .backAction)
 							}
 							.padding(.top, 32)
 						} else {
 							ButtonView(title: .addBook, isButtonEnable: true) {
-								bookCoordinator?.backAction()
+								bookCoordinator?.backAction(type: .backAction)
 							}
 							.padding(.top, 32)
 						}

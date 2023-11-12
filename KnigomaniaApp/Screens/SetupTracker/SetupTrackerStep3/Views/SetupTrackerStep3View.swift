@@ -59,7 +59,7 @@ struct SetupTrackerStep3View: View {
 	}
 	
 	var numberTextField: some View{
-		NumberTextField(text: amountOfDaysString, strokeColor: $strokeColor, amountOfElementsString: $amountOfDaysString, amountOfElemnts: $amountOfDays, firstEdge: 0, secondEdge: 7)
+		NumberTextField(strokeColor: $strokeColor, amountOfElementsString: $amountOfDaysString, amountOfElemnts: $amountOfDays, firstEdge: 0, secondEdge: 7, text: amountOfDaysString)
 			.padding(.top, 18)
 			.frame(width: 100)
 	}

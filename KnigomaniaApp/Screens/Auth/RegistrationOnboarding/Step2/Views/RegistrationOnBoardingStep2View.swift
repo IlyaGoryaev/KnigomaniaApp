@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RegistrationOnBoardingStep2View: View {
+struct RegistrationOnBoardingStep2View: RegistrationOnboardingViewProtocol {
 	
 	weak var applicationCoordinator: RegistrationOnboardingCoordinator?
 	var email: String = "123356gmail.com"
@@ -37,7 +37,7 @@ struct RegistrationOnBoardingStep2View: View {
 						Text("Не получили письмо?")
 							.modifier(RegularTextModifier())
 						Button(action: {
-							applicationCoordinator?.openStep3()
+							applicationCoordinator?.route(view: .step3)
 						}, label: {
 							Text("Отправить еще раз")
 								.foregroundStyle(CustomColors.darkBrownColor)

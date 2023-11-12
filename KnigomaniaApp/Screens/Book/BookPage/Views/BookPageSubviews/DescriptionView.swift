@@ -26,5 +26,5 @@ struct DescriptionView: View {
 }
 
 #Preview {
-	DescriptionView(description: "dfiojfidjweioj")
+	DescriptionView(description: TestBookPageData.book.description)
 }

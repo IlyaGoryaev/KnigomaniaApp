@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RegistrationOnboardingStep3View: View {
+struct RegistrationOnboardingStep3View: RegistrationOnboardingViewProtocol {
 	
 	weak var applicationCoordinator: RegistrationOnboardingCoordinator?
 	
@@ -26,7 +26,7 @@ struct RegistrationOnboardingStep3View: View {
 					.padding(.top, 40)
 					.padding(.horizontal, 35)
 				ButtonView(title: .continuation, isButtonEnable: true){
-					applicationCoordinator?.openStep4()
+					applicationCoordinator?.route(view: .step4)
 				}
 				.padding(.top, 32)
 				Spacer()

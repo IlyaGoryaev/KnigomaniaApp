@@ -3,12 +3,20 @@ import Combine
 
 struct NumberTextField: View {
 	
-	private(set) var text: String
-	@Binding private(set) var strokeColor: Color
-	@Binding private(set) var amountOfElementsString: String
-	@Binding private(set) var amountOfElemnts: Double
+	@Binding
+	private(set) var strokeColor: Color
+	
+	@Binding
+	private(set) var amountOfElementsString: String
+	
+	@Binding
+	private(set) var amountOfElemnts: Double
+	
 	private(set) var firstEdge: Int
+	
 	private(set) var secondEdge: Int
+	
+	private(set) var text: String
 	
 	var body: some View{
 		TextField(text: $amountOfElementsString) {

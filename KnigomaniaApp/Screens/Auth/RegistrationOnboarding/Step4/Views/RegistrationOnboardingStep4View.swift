@@ -8,7 +8,7 @@
 import SwiftUI
 import PhotosUI
 
-struct RegistrationOnboardingStep4View: View {
+struct RegistrationOnboardingStep4View: RegistrationOnboardingViewProtocol {
 	
 	weak var applicationCoordinator: RegistrationOnboardingCoordinator?
 	
@@ -56,7 +56,7 @@ struct RegistrationOnboardingStep4View: View {
 				
 				VStack{
 					Button(action: {
-						applicationCoordinator?.openStep5()
+						applicationCoordinator?.route(view: .step5)
 					}, label: {
 						HStack(spacing: 8){
 							Text("Пропустить")
@@ -66,7 +66,7 @@ struct RegistrationOnboardingStep4View: View {
 						.font(.system(size: 14, weight: .semibold))
 					})
 					ButtonView(title: .continuation, isButtonEnable: true) {
-						applicationCoordinator?.openStep5()
+						applicationCoordinator?.route(view: .step5)
 					}
 				}
 				.padding(.top, 32)

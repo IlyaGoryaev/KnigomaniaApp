@@ -4,9 +4,13 @@ import SwiftUI
 struct GenreSelection: View {
 	
 	private(set) var tags: [String]
+	
 	private(set) var groupItems: [[String]] = []
+	
 	private(set) var screenWidth = UIScreen.main.bounds.width
-	@Binding private(set) var numberOfGenresChosen: Int
+	
+	@Binding 
+	private(set) var numberOfGenresChosen: Int
 	
 	
 	init(tags: [String], numberOfGenresChosen: Binding<Int>){

@@ -7,17 +7,19 @@
 
 import SwiftUI
 
-struct ReviewPage: View {
+struct ReviewPage: BookCoordinatorViewProtocol {
+	
+	var bookCoordinator: BookCoordinator?
+	
     var body: some View {
 		ZStack{
 			CustomColors.background
 				.ignoresSafeArea()
 			VStack{
                 NavBar(title: .emptyTitle) {
-					
+					bookCoordinator?.backAction(type: .backAction)
 				}
 				.padding(.top, 30)
-				
 				Spacer()
 			}
 		}

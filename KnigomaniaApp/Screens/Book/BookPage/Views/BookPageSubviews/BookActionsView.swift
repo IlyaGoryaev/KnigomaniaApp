@@ -20,7 +20,7 @@ struct BookActionsView: View {
 	var body: some View {
 		HStack {
 			BookPageButton(imageName: bookButtonInfoDict[categoryNames[0]]!, buttonText: categoryNames[0]){
-				bookCoordinator?.route(view: .makeReview)
+				bookCoordinator?.route(view: .makeReview, presentType: .present)
 			}
 			Spacer()
 			BookPageButton(imageName: bookButtonInfoDict[categoryNames[1]]!, buttonText: categoryNames[1]){

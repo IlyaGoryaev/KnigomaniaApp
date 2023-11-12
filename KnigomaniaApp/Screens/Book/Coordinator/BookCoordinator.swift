@@ -36,23 +36,39 @@ final class BookCoordinator: Coordinator{
 		}
 	}
 
-	func route(view: Views, animated: Bool = true) {
+	func route(
+		view: Views,
+		presentType: PresentActionTypes = .push,
+		animated: Bool = true
+	) {
 		var view = view.view
 		view.bookCoordinator = self
 		let viewController = UIHostingController(rootView: AnyView(view))
-		rootController.pushViewController(viewController, animated: animated)
+		switch presentType {
+		case .present:
+			rootController.present(viewController, animated: animated)
+		case .push:
+			rootController.pushViewController(viewController, animated: animated)
+		}
 	}
 	
-	init(navigationController: UINavigationController, book: BookPageModel) {
+	init(
+		navigationController: UINavigationController,
+		book: BookPageModel
+	) {
 		self.rootController = navigationController
 		self.book = book
 	}
 	
-	func backAction() {
-		rootController.popViewController(animated: true)
-	}
-	
-	func dismiss() {
-		rootController.dismiss(animated: true)
+	func backAction(
+		type: BackActionTypes,
+		animated: Bool = true
+	) {
+		switch type {
+		case .dismiss:
+			rootController.dismiss(animated: animated)
+		case .backAction:
+			rootController.popViewController(animated: animated)
+		}
 	}
 }

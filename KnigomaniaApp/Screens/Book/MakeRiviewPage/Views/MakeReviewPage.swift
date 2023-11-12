@@ -27,10 +27,10 @@ struct MakeReviewPage: BookCoordinatorViewProtocol {
 				.ignoresSafeArea()
 			VStack(spacing: 0){
                 NavBar(title: .emptyTitle) {
-					bookCoordinator?.backAction()
+					bookCoordinator?.backAction(type: .dismiss)
 				}
 				.padding(.top, 32)
-				MakeReviewPageBook(author: "fewfew", year: "2016", bookGrade: 4.1)
+				MakeReviewPageBook(author: TestBookPageData.book.author, year: TestBookPageData.book.year, bookGrade: TestBookPageData.book.grade)
 					.padding(.top, 20)
 				if isSend{
 					VStack(spacing: 0){
@@ -94,6 +94,7 @@ struct ReviewText: View {
 				.frame(height: 180, alignment: .topLeading)
 				.modifier(TextFieldModifier(isActive: $isActive))
 				Text("\(text.count)/500")
+					.foregroundStyle(text.count > 500 ? Color.red : CustomColors.darkBrownColor)
 					.textStyle(.regularText)
 					.padding(8)
 			}
@@ -130,6 +131,7 @@ struct HeadlineReview: View {
 				.modifier(TextFieldModifier(isActive: $isActive))
 
 				Text("\(text.count)/30")
+					.foregroundStyle(text.count > 30 ? Color.red : CustomColors.darkBrownColor)
 					.textStyle(.regularText)
 					.padding(.horizontal, 8)
 			}

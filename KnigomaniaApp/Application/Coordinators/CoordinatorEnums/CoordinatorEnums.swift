@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+enum BackActionTypes {
+	case dismiss
+	case backAction
+}
+
+enum PresentActionTypes {
+	case present
+	case push
+}

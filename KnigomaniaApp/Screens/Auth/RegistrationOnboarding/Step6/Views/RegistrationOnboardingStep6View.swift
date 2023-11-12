@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct RegistrationOnboardingStep6View: View {
+struct RegistrationOnboardingStep6View: RegistrationOnboardingViewProtocol {
 	
 	weak var applicationCoordinator: RegistrationOnboardingCoordinator?
 	

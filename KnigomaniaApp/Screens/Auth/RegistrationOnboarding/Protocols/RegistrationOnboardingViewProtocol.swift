@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
+
+protocol RegistrationOnboardingViewProtocol: View {
+	
+	var applicationCoordinator: RegistrationOnboardingCoordinator? { set get }
+	
+}
