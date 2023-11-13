@@ -26,6 +26,12 @@
 		9D072BD32B0166F1001C2F54 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D072BD22B0166F1001C2F54 /* SettingsCoordinator.swift */; };
 		9D072BD52B01678D001C2F54 /* SettingsCoordinatorViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D072BD42B01678D001C2F54 /* SettingsCoordinatorViewProtocol.swift */; };
 		9D072BD72B016A94001C2F54 /* ProfileSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D072BD62B016A94001C2F54 /* ProfileSettingsView.swift */; };
+		9D072C202B019A6A001C2F54 /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D072C1F2B019A6A001C2F54 /* NotificationCoordinator.swift */; };
+		9D072C222B019AE6001C2F54 /* NotificationCoordinatorViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D072C212B019AE6001C2F54 /* NotificationCoordinatorViewProtocol.swift */; };
+		9D072C242B019B27001C2F54 /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D072C232B019B27001C2F54 /* NotificationList.swift */; };
+		9D072C262B019CAC001C2F54 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D072C252B019CAC001C2F54 /* NotificationModel.swift */; };
+		9D072C292B01A06E001C2F54 /* NotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D072C282B01A06E001C2F54 /* NotificationItem.swift */; };
+		9D072C2B2B01A0AC001C2F54 /* NotificationDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D072C2A2B01A0AC001C2F54 /* NotificationDescription.swift */; };
 		9D61F9BB2AD881D40000393C /* RegistrationOnBoardingStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BA2AD881D40000393C /* RegistrationOnBoardingStep2View.swift */; };
 		9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */; };
 		9D61F9C22AD8825D0000393C /* TrackerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */; };
@@ -86,7 +92,6 @@
 		FE4931442ADEB3A60020D805 /* TabbedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4931432ADEB3A60020D805 /* TabbedItems.swift */; };
 		FE4B8B002ADEA94A00FE28CE /* HomePageScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8AFF2ADEA94A00FE28CE /* HomePageScreenView.swift */; };
 		FE4B8B042ADEA9B800FE28CE /* ScanScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */; };
-		FE4B8B062ADEA9D200FE28CE /* SettingsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8B052ADEA9D200FE28CE /* SettingsScreenView.swift */; };
 		FE5BC0622AEACFE9008F366F /* RecommendationsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BC0612AEACFE9008F366F /* RecommendationsScreenView.swift */; };
 		FE5BC0642AEACFF2008F366F /* BookAddingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BC0632AEACFF2008F366F /* BookAddingScreenView.swift */; };
 		FE5BC06B2AEAD01B008F366F /* SearchBookTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BC0682AEAD01B008F366F /* SearchBookTextField.swift */; };
@@ -133,6 +138,12 @@
 		9D072BD22B0166F1001C2F54 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		9D072BD42B01678D001C2F54 /* SettingsCoordinatorViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorViewProtocol.swift; sourceTree = "<group>"; };
 		9D072BD62B016A94001C2F54 /* ProfileSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsView.swift; sourceTree = "<group>"; };
+		9D072C1F2B019A6A001C2F54 /* NotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinator.swift; sourceTree = "<group>"; };
+		9D072C212B019AE6001C2F54 /* NotificationCoordinatorViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinatorViewProtocol.swift; sourceTree = "<group>"; };
+		9D072C232B019B27001C2F54 /* NotificationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationList.swift; sourceTree = "<group>"; };
+		9D072C252B019CAC001C2F54 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		9D072C282B01A06E001C2F54 /* NotificationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItem.swift; sourceTree = "<group>"; };
+		9D072C2A2B01A0AC001C2F54 /* NotificationDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDescription.swift; sourceTree = "<group>"; };
 		9D61F9BA2AD881D40000393C /* RegistrationOnBoardingStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOnBoardingStep2View.swift; sourceTree = "<group>"; };
 		9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCoordinator.swift; sourceTree = "<group>"; };
@@ -195,7 +206,6 @@
 		FE4931432ADEB3A60020D805 /* TabbedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedItems.swift; sourceTree = "<group>"; };
 		FE4B8AFF2ADEA94A00FE28CE /* HomePageScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageScreenView.swift; sourceTree = "<group>"; };
 		FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanScreenView.swift; sourceTree = "<group>"; };
-		FE4B8B052ADEA9D200FE28CE /* SettingsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenView.swift; sourceTree = "<group>"; };
 		FE5BC0612AEACFE9008F366F /* RecommendationsScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationsScreenView.swift; sourceTree = "<group>"; };
 		FE5BC0632AEACFF2008F366F /* BookAddingScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookAddingScreenView.swift; sourceTree = "<group>"; };
 		FE5BC0682AEAD01B008F366F /* SearchBookTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBookTextField.swift; sourceTree = "<group>"; };
@@ -397,6 +407,75 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9D072C182B01998A001C2F54 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				9D072C1B2B0199AD001C2F54 /* Coordinator */,
+				9D072C1A2B0199A7001C2F54 /* Protocols */,
+				9D072C192B019999001C2F54 /* NotificationsScreen */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		9D072C192B019999001C2F54 /* NotificationsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9D072C272B01A05F001C2F54 /* SubViews */,
+				9D072C1E2B019A0E001C2F54 /* Models */,
+				9D072C1D2B019A06001C2F54 /* ViewModels */,
+				9D072C1C2B019A00001C2F54 /* Views */,
+			);
+			path = NotificationsScreen;
+			sourceTree = "<group>";
+		};
+		9D072C1A2B0199A7001C2F54 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9D072C212B019AE6001C2F54 /* NotificationCoordinatorViewProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9D072C1B2B0199AD001C2F54 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9D072C1F2B019A6A001C2F54 /* NotificationCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9D072C1C2B019A00001C2F54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D072C232B019B27001C2F54 /* NotificationList.swift */,
+				9D072C2A2B01A0AC001C2F54 /* NotificationDescription.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9D072C1D2B019A06001C2F54 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9D072C1E2B019A0E001C2F54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D072C252B019CAC001C2F54 /* NotificationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9D072C272B01A05F001C2F54 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				9D072C282B01A06E001C2F54 /* NotificationItem.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		9D61F9B62AD881810000393C /* RegistrationOnboarding */ = {
@@ -876,7 +955,6 @@
 				FE5C93E72AE16FDD00107985 /* HomePage */,
 				FE5BC0602AEACF2A008F366F /* Recommendations */,
 				FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */,
-				FE4B8B052ADEA9D200FE28CE /* SettingsScreenView.swift */,
 			);
 			path = "Tab Items";
 			sourceTree = "<group>";
@@ -954,6 +1032,7 @@
 		FEEF84C32AD9A99000B6DC39 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9D072C182B01998A001C2F54 /* Notifications */,
 				9D072BC32B015E74001C2F54 /* Settings */,
 				9DA5E4F12AE6669E00F4F99F /* Book */,
 				FE713E4B2AC5DE5200F6DA62 /* SplashScreen */,
@@ -1108,11 +1187,12 @@
 				FEAB7AF12AE2BD000057F3C5 /* StatisticsView.swift in Sources */,
 				9D61F9C22AD8825D0000393C /* TrackerCoordinator.swift in Sources */,
 				FEF6972B2AC5E7CF00708E1E /* CustomColors.swift in Sources */,
+				9D072C202B019A6A001C2F54 /* NotificationCoordinator.swift in Sources */,
+				9D072C2B2B01A0AC001C2F54 /* NotificationDescription.swift in Sources */,
 				9D714E6A2AEA521700992E09 /* ScanCoordinator.swift in Sources */,
 				9D61F9C92AD882F20000393C /* NumberTextField.swift in Sources */,
 				FE5BC06B2AEAD01B008F366F /* SearchBookTextField.swift in Sources */,
 				9DC2D1212AFD801B0087FB34 /* CoordinatorEnums.swift in Sources */,
-				FE4B8B062ADEA9D200FE28CE /* SettingsScreenView.swift in Sources */,
 				FE4B8B042ADEA9B800FE28CE /* ScanScreenView.swift in Sources */,
 				9D055EAC2AE0EE0E00BDDF50 /* RegistrationView.swift in Sources */,
 				FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */,
@@ -1135,6 +1215,7 @@
 				9DC2D11B2AFD77E40087FB34 /* BookView.swift in Sources */,
 				FE9119442AEBDDF600B31380 /* GalleryPickerView.swift in Sources */,
 				9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */,
+				9D072C222B019AE6001C2F54 /* NotificationCoordinatorViewProtocol.swift in Sources */,
 				9D055EB02AE0EEE800BDDF50 /* MainScreen.swift in Sources */,
 				FE1BF0F82AE6B9FA00FB302A /* TabBarWrapperView.swift in Sources */,
 				9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */,
@@ -1173,13 +1254,16 @@
 				9D055EBE2AE0EFA600BDDF50 /* FriendsStatisticView.swift in Sources */,
 				9D61F9E72AD885950000393C /* RegistrationOnboardingStep6View.swift in Sources */,
 				FE5BC06C2AEAD01B008F366F /* SectionNameView.swift in Sources */,
+				9D072C262B019CAC001C2F54 /* NotificationModel.swift in Sources */,
 				FEAA59BA2ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift in Sources */,
+				9D072C292B01A06E001C2F54 /* NotificationItem.swift in Sources */,
 				9D072BD52B01678D001C2F54 /* SettingsCoordinatorViewProtocol.swift in Sources */,
 				9D055EC52AE0EFFC00BDDF50 /* TrackerView.swift in Sources */,
 				9D714E2A2AE8238600992E09 /* MakeReviewPage.swift in Sources */,
 				9D61F9DE2AD884F70000393C /* CustomButtonStyle.swift in Sources */,
 				9D61F9C52AD882B30000393C /* ButtonView.swift in Sources */,
 				FE4931442ADEB3A60020D805 /* TabbedItems.swift in Sources */,
+				9D072C242B019B27001C2F54 /* NotificationList.swift in Sources */,
 				9D7A76DE2AE43DDC00158781 /* BookCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

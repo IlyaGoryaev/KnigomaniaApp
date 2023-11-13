@@ -26,9 +26,15 @@ struct HomePageScreenView: View {
 					Spacer()
 					HStack(spacing: 8) {
 						Button(action: {
-							
+							mainScreenCoordinator?.openNotification()
 						}, label: {
-							Image("notificationicon")
+							ZStack {
+								Image("notificationicon")
+								Circle()
+									.foregroundStyle(Color.red)
+									.frame(width: 8, height: 8)
+									.offset(x: 8 / 2, y: -8 / 1.5)
+							}
 						})
 						Image("")
 							.resizable()

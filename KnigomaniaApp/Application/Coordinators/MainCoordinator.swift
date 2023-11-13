@@ -39,4 +39,10 @@ final class MainCoordinator: Coordinator{
 		childCoordinators.append(bookPageCoordinator)
 		// retain cycle
 	}
+	
+	func openNotification() {
+		let notificationCoordinator = NotificationCoordinator(rootController: rootController)
+		notificationCoordinator.route(view: .notificationList)
+		//childCoordinators.append(notificationCoordinator)
+	}
 }
