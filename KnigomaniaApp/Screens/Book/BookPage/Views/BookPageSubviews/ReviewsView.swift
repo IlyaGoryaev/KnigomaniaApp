@@ -55,6 +55,8 @@ struct ReviewsView: View {
 struct ReviewItemView: View {
 	
 	let review: Review
+	
+	@State var isLiked: Bool = false
 
 	var body: some View {
 		HStack(spacing: 0) {
@@ -65,10 +67,16 @@ struct ReviewItemView: View {
 			VStack(alignment: .leading, spacing: 8){
 				HStack{
 					Text(review.title)
+						.textStyle(.boldText)
 					Spacer()
 					ZStack(alignment: .bottomTrailing){
-						Image("like")
+						Image(isLiked ? "like" : "like.fill")
 							.padding(.horizontal, 16)
+							.onTapGesture {
+								withAnimation {
+									isLiked.toggle()
+								}
+							}
 						Text("\(review.likes)")
 							.font(.system(size: 11))
 							.foregroundStyle(CustomColors.darkBrownColor)

@@ -14,4 +14,8 @@ struct NotificationModel: Decodable, Hashable {
 	let date: String
 	var isRead: Bool
 	
+	mutating func read() {
+		isRead.toggle()
+	}
+	
 }

@@ -7,15 +7,15 @@
 
 import SwiftUI
 
+enum Titles: String {
+	case emptyTitle = ""
+	case reviewsTitle = "Рецензии"
+	case entryTitle = "Войти"
+	case registrationTitle = "Регистрация"
+	case setupTrackerTitle = "Настройка трекера"
+}
+
 struct NavBar: View {
-	
-	enum Titles: String {
-		case emptyTitle = ""
-		case reviewsTitle = "Рецензии"
-		case entryTitle = "Войти"
-		case registrationTitle = "Регистрация"
-		case setupTrackerTitle = "Настройка трекера"
-	}
 	
 	var title: Titles
 	

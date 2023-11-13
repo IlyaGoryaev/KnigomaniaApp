@@ -11,7 +11,6 @@ struct NotificationList: NotificationCoordinatorViewProtocol {
 	
 	var notificationCoordinator: NotificationCoordinator?
 	
-	
 	private let notifications = TestBookPageData.notifications
 	
     var body: some View {
@@ -27,16 +26,13 @@ struct NotificationList: NotificationCoordinatorViewProtocol {
 				ScrollView {
 					VStack(spacing: 24) {
 						ForEach(notifications, id: \.self) { item in
-							NotificationItem(notification: item)
+							NotificationItem(notification: item, false)
 								.onTapGesture {
 									notificationCoordinator?.route(view: .descriptionNotification(notification: item))
 								}
 						}
 					}
 				}
-				
-				
-				
 				Spacer()
 			}
 		}

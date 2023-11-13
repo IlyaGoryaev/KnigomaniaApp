@@ -13,20 +13,32 @@ struct BookView: View {
 	let bookTitle: String
 	let bookYear: String
 	
+	@Binding var imageFrame: CGSize
+	@Binding var opacity: CGFloat
+	
     var body: some View {
-		Image("book1")
-			.resizable()
-			.frame(width: 255, height: 360)
-			.padding(.top, 20)
-		VStack(spacing: 8){
-			Text("**Автор**: \(bookAuthor)")
-			Text("**Название**: \(bookTitle)")
-			Text("**Год**: \(bookYear)")
+		VStack(spacing: 0) {
+			Image("book1")
+				.resizable()
+				.frame(width: imageFrame.width, height: imageFrame.height)
+				.opacity(opacity)
+				.clipShape(RoundedRectangle(cornerRadius: 8))
+				.shadow(color: CustomColors.darkBrownColor, radius: 10, y: 10)
+				.padding(.top, 20)
+				
+			
+			VStack(spacing: 8){
+				Text("**Автор**: \(bookAuthor)")
+				Text("**Название**: \(bookTitle)")
+				Text("**Год**: \(bookYear)")
+			}
+			.textStyle(.regularText)
+			.padding(.top, 24)
 		}
-		.textStyle(.regularText)
+		
     }
 }
 
 #Preview {
-	BookView(bookAuthor: TestBookPageData.book.author, bookTitle: TestBookPageData.book.title, bookYear: TestBookPageData.book.year)
+	BookView(bookAuthor: TestBookPageData.book.author, bookTitle: TestBookPageData.book.title, bookYear: TestBookPageData.book.year, imageFrame: .constant(CGSize(width: 255, height: 360)), opacity: .constant(1))
 }

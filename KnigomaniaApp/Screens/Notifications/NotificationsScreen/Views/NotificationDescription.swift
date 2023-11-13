@@ -11,7 +11,7 @@ struct NotificationDescription: NotificationCoordinatorViewProtocol {
 	
 	var notificationCoordinator: NotificationCoordinator?
 	
-	let notification: NotificationModel
+	@State var notification: NotificationModel
 	
     var body: some View {
 		ZStack {
@@ -22,10 +22,13 @@ struct NotificationDescription: NotificationCoordinatorViewProtocol {
 					notificationCoordinator?.backAction(type: .backAction)
 				}
 				.padding(.top, 32)
-				NotificationItem(notification: notification)
+				NotificationItem(notification: notification, true)
 					.padding(.top, 32)
 				Spacer()
 			}
+		}
+		.onAppear {
+			notification.read()
 		}
     }
 }

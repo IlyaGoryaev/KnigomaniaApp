@@ -9,7 +9,14 @@ import SwiftUI
 
 struct NotificationItem: View {
 	
-	let notification: NotificationModel
+	private let notification: NotificationModel
+	
+	var isHidden: Bool
+	
+	init(notification: NotificationModel, _ isHidden: Bool) {
+		self.notification = notification
+		self.isHidden = isHidden
+	}
 	
 	var body: some View {
 		
@@ -36,6 +43,7 @@ struct NotificationItem: View {
 			Rectangle()
 				.frame(height: 0.5)
 				.padding(.top, 16)
+				.opacity(isHidden ? 0 : 1)
 		}
 		.padding(.horizontal, 16)
 		
@@ -44,5 +52,5 @@ struct NotificationItem: View {
 }
 
 #Preview {
-	NotificationItem(notification: TestBookPageData.notifications[0])
+	NotificationItem(notification: TestBookPageData.notifications[0], true)
 }
