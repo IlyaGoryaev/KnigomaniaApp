@@ -17,10 +17,10 @@ final class ScanCoordinator: Coordinator {
 	}
 	
 	func start() {
-//		var view = ScanScreenView()
-//		view.scanCoordinator = self
-//		let viewController = UIHostingController(rootView: view)
-//		rootController.pushViewController(viewController, animated: false)
+		var view = ScanScreenView()
+		view.scanCoordinator = self
+		let viewController = UIHostingController(rootView: view)
+		rootController.pushViewController(viewController, animated: false)
 	}
 	
 	func backAction() {

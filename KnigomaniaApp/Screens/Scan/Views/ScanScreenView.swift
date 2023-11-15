@@ -9,6 +9,7 @@ import SwiftUI
 import AVFoundation
 
 struct ScanScreenView: View {
+    weak var scanCoordinator: ScanCoordinator?
 	weak var recommendationsCoordinator: RecommendationsCoordinator?
     
     @State private var captureSession: AVCaptureSession?

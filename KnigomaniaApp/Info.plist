@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Разрешить приложению доступ к камере на вашем устройстве?</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Разрешить приложению доступ к фото на вашем устройстве?</string>
 </dict>
 </plist>
