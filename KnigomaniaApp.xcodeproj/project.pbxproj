@@ -85,11 +85,12 @@
 		FE171B152AFB80F300AFDCDB /* TestBookPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */; };
 		FE171B172AFB812C00AFDCDB /* BookPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */; };
 		FE1BF0F82AE6B9FA00FB302A /* TabBarWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1BF0F72AE6B9FA00FB302A /* TabBarWrapperView.swift */; };
+		FE2029282B02AA1F00386526 /* BarcodeOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2029272B02AA1F00386526 /* BarcodeOverlay.swift */; };
+		FE20292A2B02AA4C00386526 /* VideoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2029292B02AA4C00386526 /* VideoCaptureView.swift */; };
 		FE314D442ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE314D432ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift */; };
 		FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F142AD02F2400AE00DF /* DaySelectionModalView.swift */; };
 		FE347F182AD032A900AE00DF /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F172AD032A900AE00DF /* Day.swift */; };
 		FE347F1A2AD055EE00AE00DF /* TimeSelectionModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE347F192AD055ED00AE00DF /* TimeSelectionModalView.swift */; };
-		FE4931442ADEB3A60020D805 /* TabbedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4931432ADEB3A60020D805 /* TabbedItems.swift */; };
 		FE4B8B002ADEA94A00FE28CE /* HomePageScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8AFF2ADEA94A00FE28CE /* HomePageScreenView.swift */; };
 		FE4B8B042ADEA9B800FE28CE /* ScanScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */; };
 		FE5BC0622AEACFE9008F366F /* RecommendationsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BC0612AEACFE9008F366F /* RecommendationsScreenView.swift */; };
@@ -199,11 +200,12 @@
 		FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBookPageData.swift; sourceTree = "<group>"; };
 		FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookPageViewModel.swift; sourceTree = "<group>"; };
 		FE1BF0F72AE6B9FA00FB302A /* TabBarWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarWrapperView.swift; sourceTree = "<group>"; };
+		FE2029272B02AA1F00386526 /* BarcodeOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeOverlay.swift; sourceTree = "<group>"; };
+		FE2029292B02AA4C00386526 /* VideoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureView.swift; sourceTree = "<group>"; };
 		FE314D432ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerSetupRemindersScreenView.swift; sourceTree = "<group>"; };
 		FE347F142AD02F2400AE00DF /* DaySelectionModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySelectionModalView.swift; sourceTree = "<group>"; };
 		FE347F172AD032A900AE00DF /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		FE347F192AD055ED00AE00DF /* TimeSelectionModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionModalView.swift; sourceTree = "<group>"; };
-		FE4931432ADEB3A60020D805 /* TabbedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedItems.swift; sourceTree = "<group>"; };
 		FE4B8AFF2ADEA94A00FE28CE /* HomePageScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageScreenView.swift; sourceTree = "<group>"; };
 		FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanScreenView.swift; sourceTree = "<group>"; };
 		FE5BC0612AEACFE9008F366F /* RecommendationsScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationsScreenView.swift; sourceTree = "<group>"; };
@@ -902,6 +904,24 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
+		FE20291D2B028DAA00386526 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				FE20291E2B02929300386526 /* Views */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		FE20291E2B02929300386526 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */,
+				FE2029272B02AA1F00386526 /* BarcodeOverlay.swift */,
+				FE2029292B02AA4C00386526 /* VideoCaptureView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FE314D422ACC81E100BA3356 /* TrackerSetupScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -933,7 +953,6 @@
 		FE4931422ADEB3730020D805 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FE4931432ADEB3A60020D805 /* TabbedItems.swift */,
 				9D055EAD2AE0EEC800BDDF50 /* BookModel.swift */,
 			);
 			path = Models;
@@ -942,21 +961,11 @@
 		FE4B8AFB2ADEA62500FE28CE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FE4B8AFE2ADEA93000FE28CE /* Tab Items */,
-				FE4931422ADEB3730020D805 /* Models */,
+				FE5C93E72AE16FDD00107985 /* HomePage */,
 				FE1BF0EE2AE6A5D000FB302A /* SubViews */,
+				FE4931422ADEB3730020D805 /* Models */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		FE4B8AFE2ADEA93000FE28CE /* Tab Items */ = {
-			isa = PBXGroup;
-			children = (
-				FE5C93E72AE16FDD00107985 /* HomePage */,
-				FE5BC0602AEACF2A008F366F /* Recommendations */,
-				FE4B8B032ADEA9B800FE28CE /* ScanScreenView.swift */,
-			);
-			path = "Tab Items";
 			sourceTree = "<group>";
 		};
 		FE5BC0602AEACF2A008F366F /* Recommendations */ = {
@@ -1032,13 +1041,15 @@
 		FEEF84C32AD9A99000B6DC39 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				9D072C182B01998A001C2F54 /* Notifications */,
-				9D072BC32B015E74001C2F54 /* Settings */,
-				9DA5E4F12AE6669E00F4F99F /* Book */,
 				FE713E4B2AC5DE5200F6DA62 /* SplashScreen */,
 				FEEF84C42AD9B05E00B6DC39 /* Auth */,
 				9D61F9E82AD887FB0000393C /* SetupTracker */,
 				FE4B8AFB2ADEA62500FE28CE /* Home */,
+				FE5BC0602AEACF2A008F366F /* Recommendations */,
+				FE20291D2B028DAA00386526 /* Scan */,
+				9D072BC32B015E74001C2F54 /* Settings */,
+				9D072C182B01998A001C2F54 /* Notifications */,
+				9DA5E4F12AE6669E00F4F99F /* Book */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -1223,6 +1234,7 @@
 				FE171B172AFB812C00AFDCDB /* BookPageViewModel.swift in Sources */,
 				9D055E9F2AE0E42300BDDF50 /* EntryCoordinator.swift in Sources */,
 				FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */,
+				FE20292A2B02AA4C00386526 /* VideoCaptureView.swift in Sources */,
 				FED451292AF3EBE000FAAFA5 /* ImageExtension.swift in Sources */,
 				FED451272AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift in Sources */,
 				9D7A76D62AE432DA00158781 /* DescriptionView.swift in Sources */,
@@ -1247,6 +1259,7 @@
 				9D714E302AE8E03400992E09 /* AddBookToListPage.swift in Sources */,
 				9D7A76CE2AE42A1C00158781 /* BookPage.swift in Sources */,
 				9D055EB42AE0EF0A00BDDF50 /* BookChallengeView.swift in Sources */,
+				FE2029282B02AA1F00386526 /* BarcodeOverlay.swift in Sources */,
 				9D072BD32B0166F1001C2F54 /* SettingsCoordinator.swift in Sources */,
 				9DC2D1152AFCFC060087FB34 /* UserActionsTitle.swift in Sources */,
 				FE5BC0622AEACFE9008F366F /* RecommendationsScreenView.swift in Sources */,
@@ -1262,7 +1275,6 @@
 				9D714E2A2AE8238600992E09 /* MakeReviewPage.swift in Sources */,
 				9D61F9DE2AD884F70000393C /* CustomButtonStyle.swift in Sources */,
 				9D61F9C52AD882B30000393C /* ButtonView.swift in Sources */,
-				FE4931442ADEB3A60020D805 /* TabbedItems.swift in Sources */,
 				9D072C242B019B27001C2F54 /* NotificationList.swift in Sources */,
 				9D7A76DE2AE43DDC00158781 /* BookCoordinator.swift in Sources */,
 			);
@@ -1414,11 +1426,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 34UB5HMPNV;
+				DEVELOPMENT_TEAM = 767DT3Q3RN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KnigomaniaApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Разрешить приложению доступ к камере на вашем устройстве?";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Разрешить приложению доступ к фото на вашем устройстве?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1432,6 +1447,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ilyaagoryaev.KnigomaniaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1446,11 +1462,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 34UB5HMPNV;
+				DEVELOPMENT_TEAM = 767DT3Q3RN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KnigomaniaApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Разрешить приложению доступ к камере на вашем устройстве?";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Разрешить приложению доступ к фото на вашем устройстве?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1464,6 +1483,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ilyaagoryaev.KnigomaniaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
