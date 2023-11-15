@@ -28,7 +28,13 @@ final class RecommendationsCoordinator: Coordinator {
         view.recommendationsCoordinator = self
         let viewController = UIHostingController(rootView: view)
         rootController.pushViewController(viewController, animated: true)
-        print(rootController)
+    }
+    
+    func openScanScreen() {
+        var view = ScanScreenView()
+        view.recommendationsCoordinator = self
+        let viewController = UIHostingController(rootView: view)
+        rootController.pushViewController(viewController, animated: true)
     }
     
     func backAction() {

@@ -11,6 +11,8 @@ struct SearchBookTextField: View {
     @Binding var text: String
     @State private var isEditing = false
     
+    private (set) var scanAction: () -> ()
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -55,16 +57,20 @@ struct SearchBookTextField: View {
                     Spacer()
                 }
                 .padding(.leading, 8)
-                Image("scanicon")
-                    .resizable()
-                    .frame(width: 16, height: 16)
-                    .foregroundColor(isEditing ? CustomColors.darkBrownColor : CustomColors.greyColor)
-                    .padding(.trailing, 8)
+                Button(action: {
+                    scanAction()
+                }, label: {
+                    Image("scanicon")
+                        .resizable()
+                        .frame(width: 16, height: 16)
+                        .foregroundColor(isEditing ? CustomColors.darkBrownColor : CustomColors.greyColor)
+                        .padding(.trailing, 8)
+                })
             }
         }
     }
 }
 
 #Preview {
-    SearchBookTextField(text: .constant(""))
+    SearchBookTextField(text: .constant("")) {}
 }

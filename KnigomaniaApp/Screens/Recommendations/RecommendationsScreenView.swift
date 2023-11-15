@@ -17,7 +17,9 @@ struct RecommendationsScreenView: View {
             CustomColors.background
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                SearchBookTextField(text: $searchText)
+                SearchBookTextField(text: $searchText, scanAction: {
+                    recommendationsCoordinator?.openScanScreen()
+                })
                     .padding(.top, 20)
                     .padding(.horizontal, 16)
                 ScrollView {
