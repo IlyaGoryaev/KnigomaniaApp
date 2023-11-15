@@ -16,20 +16,11 @@ final class ScanCoordinator: Coordinator {
 		self.rootController = navigationController
 	}
 	
-	
 	func start() {
 		var view = ScanScreenView()
 		view.scanCoordinator = self
 		let viewController = UIHostingController(rootView: view)
 		rootController.pushViewController(viewController, animated: false)
-	}
-	
-	func openNewScreen(){
-		var view = NextView()
-		view.scanCoordinator = self
-		let viewController = UIHostingController(rootView: view)
-		rootController.pushViewController(viewController, animated: true)
-		print(rootController)
 	}
 	
 	func backAction() {

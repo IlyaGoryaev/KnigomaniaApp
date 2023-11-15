@@ -7,9 +7,7 @@
 
 import Foundation
 
-struct BookModel{
-	
+struct BookModel {
 	let bookName: String
 	let imageName: String
-	
 }
