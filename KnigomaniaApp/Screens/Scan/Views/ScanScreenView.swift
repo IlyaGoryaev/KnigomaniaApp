@@ -44,17 +44,22 @@ struct ScanScreenView: View {
     }
     
     private func startSession() {
-        guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
-        do {
-            let input = try AVCaptureDeviceInput(device: captureDevice)
-            captureSession = AVCaptureSession()
-            captureSession?.addInput(input)
-            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
-            videoPreviewLayer?.videoGravity = .resizeAspectFill
-            videoPreviewLayer?.frame = UIScreen.main.bounds
-            captureSession?.startRunning()
-        } catch {
-            print(error)
+        DispatchQueue.global().async {
+            guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
+            do {
+                let input = try AVCaptureDeviceInput(device: captureDevice)
+                captureSession = AVCaptureSession()
+                captureSession?.addInput(input)
+                videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+                videoPreviewLayer?.videoGravity = .resizeAspectFill
+                videoPreviewLayer?.frame = UIScreen.main.bounds
+                
+                DispatchQueue.main.async {
+                    self.captureSession?.startRunning()
+                }
+            } catch {
+                print(error)
+            }
         }
     }
 }

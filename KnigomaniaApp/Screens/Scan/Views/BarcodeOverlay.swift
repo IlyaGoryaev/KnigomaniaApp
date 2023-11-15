@@ -17,10 +17,14 @@ struct BarcodeOverlay: View {
                 .fill(Color.clear)
                 .frame(width: 315, height: 171)
                 .onAppear {
-                    self.captureSession?.startRunning()
+                    DispatchQueue.global().async {
+                        self.captureSession?.startRunning()
+                    }
                 }
                 .onDisappear {
-                    self.captureSession?.stopRunning()
+                    DispatchQueue.global().async {
+                        self.captureSession?.stopRunning()
+                    }
                 }
         }
     }
