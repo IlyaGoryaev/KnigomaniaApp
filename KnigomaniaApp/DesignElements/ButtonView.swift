@@ -19,6 +19,7 @@ struct ButtonView: View {
 		case setupNotification = "Настроить напоминания"
 		case addBook = "Добавить книгу"
 		case complete = "Завершить"
+		case support = "Сообщить о проблеме"
 	}
 	
 	private(set) var title: Titles

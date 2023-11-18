@@ -13,6 +13,8 @@ enum Titles: String {
 	case entryTitle = "Войти"
 	case registrationTitle = "Регистрация"
 	case setupTrackerTitle = "Настройка трекера"
+	case support = "Служба поддержки"
+	case notification = "Уведомления"
 }
 
 struct NavBar: View {

@@ -24,10 +24,21 @@ struct ProfileSettingsView: SettingsCoordinatorViewProtocol {
 					.padding(.top, 32)
 				ProfileSettingsRow(title: "Фамилия")
 					.padding(.top, 32)
+				ProfileSettingsRow(title: "Пол")
+					.padding(.top, 32)
 				ProfileSettingsRow(title: "Пароль")
 					.padding(.top, 32)
 				ProfileSettingsRow(title: "E-mail")
 					.padding(.top, 32)
+				Button(action: {
+					print("Удалить аккаунт")
+				}, label: {
+					Text("Удалить аккаунт")
+						.frame(maxWidth: .infinity, alignment: .leading)
+						.foregroundStyle(Color.red)
+						.padding(.horizontal, 16)
+				})
+				.padding(.top, 32)
 				Spacer()
 			}
 		}
@@ -38,26 +49,57 @@ struct ProfileSettingsRow: View {
 	
 	let title: String
 	
+	@State private var textFieldTitle: String = ""
+	
+	@State private var isEditing: Bool = false
+	
+	var allowEditing: Bool = true
+	
 	var body: some View {
 		VStack(spacing: 0) {
 			Text(title)
 				.textStyle(.boldText)
 				.frame(maxWidth: .infinity, alignment: .leading)
-			HStack {
-				Text(title)
-					.textStyle(.regularText)
-				Spacer()
-				Button {
-					print("Edit")
-				} label: {
-					Image("Icon edit-2")
+			if isEditing {
+				ZStack(alignment: .trailing) {
+					TextField(text: $textFieldTitle) {
+						Text("Введите электронную почту")
+							.foregroundStyle(CustomColors.brownColor)
+							.font(.system(size: 14))
+					}
+					.foregroundStyle(CustomColors.darkBrownColor)
+					.padding(.leading, 12)
+					.padding(.trailing, 48)
+					.padding(.vertical, 15)
+					.background(RoundedRectangle(cornerRadius: 10).foregroundStyle(Color.white))
+					Button {
+						isEditing = false
+					} label: {
+						Image(systemName: "checkmark")
+							.foregroundStyle(CustomColors.darkBrownColor)
+					}
+					.padding(.horizontal, 16)
+					
 				}
+				.padding(.top, 16)
+			} else {
+				HStack {
+					Text(title)
+						.textStyle(.regularText)
+					Spacer()
+					Button {
+						isEditing = true
+					} label: {
+						Image("Icon edit-2")
+					}
+					.opacity(allowEditing ? 1 : 0)
+				}
+				.padding(.top, 24)
+				Rectangle()
+					.textStyle(.regularText)
+					.frame(height: 0.5)
+					.padding(.top, 8)
 			}
-			.padding(.top, 16)
-			Rectangle()
-				.textStyle(.regularText)
-				.frame(height: 0.5)
-				.padding(.top, 8)
 		}
 		.padding(.horizontal, 16)
 	}
