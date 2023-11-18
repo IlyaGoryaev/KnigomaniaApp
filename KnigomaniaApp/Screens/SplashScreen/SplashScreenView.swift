@@ -13,7 +13,7 @@ struct SplashScreenView: View {
 			CustomColors.background
 			Text("КНИГОМАНИЯ")
 				.font(.system(size: 32, weight: .heavy))
-				.foregroundColor(CustomColors.yellowColor)
+				.foregroundColor(CustomColors.darkBrownColor)
 			CustomActivityIndicator()
 				.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
 				.padding(.bottom, 52)
