@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TrackerSetupConfirmationScreenView: View {
-	
 	weak var setupReminderCoordinator: SetUpReminderTrackerCoordinator?
 	
     var body: some View {
@@ -16,8 +15,12 @@ struct TrackerSetupConfirmationScreenView: View {
             CustomColors.background
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                Image("trackerscreenimage")
-                    .padding(.top, 21)
+                NavBar(title: .emptyTitle) {
+                    
+                }
+                .padding(.top, 20)
+                Image("loving")
+                    .padding(.top, 77)
                 VStack(spacing: 10) {
                     Text("Вперёд в Книгоманию!")
                         .font(.system(size: 24, weight: .bold))
@@ -30,7 +33,7 @@ struct TrackerSetupConfirmationScreenView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 16)
                 }
-                .padding(.top, 64)
+                .padding(.top, 145)
 				ButtonView(title: .continuation, isButtonEnable: true) {
 					setupReminderCoordinator?.logIn()
                 }
