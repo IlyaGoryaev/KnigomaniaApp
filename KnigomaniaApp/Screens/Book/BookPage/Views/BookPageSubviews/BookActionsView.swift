@@ -28,7 +28,7 @@ struct BookActionsView: View {
 			}
 			Spacer()
 			BookPageButton(imageName: bookButtonInfoDict[categoryNames[2]]!, buttonText: categoryNames[2]){
-				print("Поделиться книгой")
+				bookCoordinator?.share()
 			}
 		}
 		.padding(.horizontal, 16)

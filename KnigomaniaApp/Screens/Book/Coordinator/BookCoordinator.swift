@@ -71,4 +71,18 @@ final class BookCoordinator: Coordinator{
 			rootController.popViewController(animated: animated)
 		}
 	}
+	
+	func share() {
+		// Для примера
+		guard let image = UIImage(systemName: "bell"), let url = URL(string: "https://www.google.com") else { return }
+		
+		let shareSheetVC = UIActivityViewController(
+			activityItems: [
+				image,
+				url
+			],
+			applicationActivities: nil
+		)
+		rootController.present(shareSheetVC, animated: true)
+	}
 }
