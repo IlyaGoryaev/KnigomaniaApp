@@ -13,12 +13,10 @@ struct SetupTrackerStep4View: View {
 					trackerCoordinator?.backAction()
 				}
 				.padding(.top, 20)
-				Image("SetupTracketStep4")
-					.resizable()
-					.frame(height: 400)
-					.padding(.top, 32)
+				Image("messy")
+					.padding(.top, 63)
 				Text("Настроить напоминания")
-					.padding(.top, 20)
+					.padding(.top, 88)
 					.font(.system(size: 24, weight: .bold))
 					.foregroundStyle(CustomColors.darkBrownColor)
 					.frame(maxWidth: .infinity, alignment: .leading)
@@ -28,7 +26,7 @@ struct SetupTrackerStep4View: View {
 					.foregroundStyle(CustomColors.brownColor)
 					.frame(maxWidth: .infinity, alignment: .leading)
 					.padding(.horizontal, 16)
-					.padding(.top, 8)
+					.padding(.top, 16)
 					.lineSpacing(10)
 					.multilineTextAlignment(.leading)
 				Button(action: {
@@ -38,10 +36,10 @@ struct SetupTrackerStep4View: View {
 						Text("Пропустить")
 						Image(systemName: "chevron.right")
 					}
-					.foregroundStyle(CustomColors.darkBrownColor)
-					.font(.system(size: 14, weight: .semibold))
+					.foregroundStyle(CustomColors.greyColor)
+					.font(.system(size: 14, weight: .regular))
 				})
-				.padding(.top, 24)
+				.padding(.top, 32)
 				ButtonView(title: .setupNotification, isButtonEnable: true){
 					trackerCoordinator?.setUpReminder()
 				}

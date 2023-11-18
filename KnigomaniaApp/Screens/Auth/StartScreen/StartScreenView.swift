@@ -16,8 +16,8 @@ struct StartScreenView: View {
 			CustomColors.background
 				.edgesIgnoringSafeArea(.all)
 			VStack {
-				Image("startscreenimage")
-					.padding(.top, 32)
+				Image("reading")
+					.padding(.top, 94)
 				VStack(spacing: 10) {
 					Text("Добро пожаловать")
 						.font(.system(size: 24, weight: .bold))
