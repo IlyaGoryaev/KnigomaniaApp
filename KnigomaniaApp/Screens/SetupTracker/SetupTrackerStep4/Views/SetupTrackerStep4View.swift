@@ -13,10 +13,10 @@ struct SetupTrackerStep4View: View {
 					trackerCoordinator?.backAction()
 				}
 				.padding(.top, 20)
-				Image("messy")
-					.padding(.top, 63)
+				Image("trackersetupscreenimage1")
+					.padding(.top, 31)
 				Text("Настроить напоминания")
-					.padding(.top, 88)
+					.padding(.top, 68)
 					.font(.system(size: 24, weight: .bold))
 					.foregroundStyle(CustomColors.darkBrownColor)
 					.frame(maxWidth: .infinity, alignment: .leading)

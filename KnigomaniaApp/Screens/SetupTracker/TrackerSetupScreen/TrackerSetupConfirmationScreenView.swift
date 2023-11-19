@@ -19,8 +19,8 @@ struct TrackerSetupConfirmationScreenView: View {
                     
                 }
                 .padding(.top, 20)
-                Image("loving")
-                    .padding(.top, 77)
+                Image("trackersetupscreenimage2")
+                    .padding(.top, 83)
                 VStack(spacing: 10) {
                     Text("Вперёд в Книгоманию!")
                         .font(.system(size: 24, weight: .bold))
@@ -33,7 +33,7 @@ struct TrackerSetupConfirmationScreenView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 16)
                 }
-                .padding(.top, 145)
+                .padding(.top, 53)
 				ButtonView(title: .continuation, isButtonEnable: true) {
 					setupReminderCoordinator?.logIn()
                 }

@@ -16,8 +16,8 @@ struct StartScreenView: View {
 			CustomColors.background
 				.edgesIgnoringSafeArea(.all)
 			VStack {
-				Image("reading")
-					.padding(.top, 94)
+				Image("startscreenimage")
+					.padding(.top, 89)
 				VStack(spacing: 10) {
 					Text("Добро пожаловать")
 						.font(.system(size: 24, weight: .bold))
@@ -30,7 +30,7 @@ struct StartScreenView: View {
 						.frame(maxWidth: .infinity, alignment: .leading)
 						.padding(.leading, 17)
 				}
-				.padding(.top, 40)
+				.padding(.top, 58)
 				Spacer(minLength: 32)
 				Button(action: {
 					entryCoordinator?.openRegistrationScreen()

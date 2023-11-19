@@ -26,8 +26,8 @@ struct RegistrationOnBoardingStep2View: RegistrationOnboardingViewProtocol {
 						.modifier(RegularTextModifier())
 						.padding(.top, 18)
 						.padding(.horizontal, 60)
-					Image("selfie")
-						.padding(.top, 51)
+					Image("registrationscreenimage")
+						.padding(.top, 26)
 						.padding(.horizontal, 16)
 					VStack(spacing: 16){
 						Text("Не получили письмо?")
@@ -41,7 +41,7 @@ struct RegistrationOnBoardingStep2View: RegistrationOnboardingViewProtocol {
 								.font(.system(size: 14, weight: .bold))
 						})
 					}
-					.padding(.top, 72)
+					.padding(.top, 94)
 					Spacer()
 				}
 				.blur(radius: isLoading ? 3 : 0)
