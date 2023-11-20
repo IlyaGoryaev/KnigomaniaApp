@@ -88,6 +88,7 @@ struct HomePageScreenView: View {
 				.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
 				Spacer()
 			}
+            .padding(.bottom, 24)
 		}
 		.onAppear(perform: {
 			lineWidth = getLabelWidth(text: "Мой прогресс")

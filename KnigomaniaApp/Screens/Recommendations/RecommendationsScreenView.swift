@@ -20,8 +20,8 @@ struct RecommendationsScreenView: View {
                 SearchBookTextField(text: $searchText, scanAction: {
                     recommendationsCoordinator?.openScanScreen()
                 })
-                    .padding(.top, 20)
-                    .padding(.horizontal, 16)
+                .padding(.top, 20)
+                .padding(.horizontal, 16)
                 ScrollView {
                     if searchText == "" {
                         VStack {
@@ -44,6 +44,19 @@ struct RecommendationsScreenView: View {
                 Spacer()
             }
         }
+        .onTapGesture {
+            self.endEditing()
+        }
+    }
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
+    }
+}
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
