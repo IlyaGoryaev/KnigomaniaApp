@@ -40,6 +40,9 @@ struct SetupTrackerStep2View: View {
 				Spacer()
 			}
 		}
+        .onTapGesture {
+            self.endEditing()
+        }
 	}
 	
 	var timeInput: some View{
@@ -70,6 +73,10 @@ struct SetupTrackerStep2View: View {
 	func isButtonEnable() -> Bool{
 		(Int(hours) != nil) && (Int(minutes) != nil) && hoursCorrectValue && minutesCorrectValue
 	}
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
+    }
 }
 
 #Preview {

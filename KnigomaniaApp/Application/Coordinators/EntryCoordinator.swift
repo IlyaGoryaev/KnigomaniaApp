@@ -13,13 +13,13 @@ final class EntryCoordinator: Coordinator{
 	
 	var rootController: UINavigationController
 	
-	weak var isUserAutorise: CurrentValueSubject<Bool, Never>?
+	weak var isUserAuthorize: CurrentValueSubject<Bool, Never>?
 	
 	var childCoordinators = [any Coordinator]()
 	
-	init(navigationController: UINavigationController, isUserAutorise: CurrentValueSubject<Bool, Never>){
+	init(navigationController: UINavigationController, isUserAuthorize: CurrentValueSubject<Bool, Never>){
 		self.rootController = navigationController
-		self.isUserAutorise = isUserAutorise
+		self.isUserAuthorize = isUserAuthorize
 	}
 	
 	func start() {
@@ -60,7 +60,7 @@ final class EntryCoordinator: Coordinator{
 	}
 	
 	func logIn(){
-		isUserAutorise?.send(true)
+		isUserAuthorize?.send(true)
 	}
 	
 	func openRegistrationScreen(){
@@ -71,7 +71,7 @@ final class EntryCoordinator: Coordinator{
 	}
 	
 	func startRegistrationOnboarding(){
-		let registrationOnboardingCoordinator = RegistrationOnboardingCoordinator(navigationController: rootController, isUserAuthorise: isUserAutorise!)
+		let registrationOnboardingCoordinator = RegistrationOnboardingCoordinator(navigationController: rootController, isUserAuthorize: isUserAuthorize!)
 		childCoordinators.append(registrationOnboardingCoordinator)
 		registrationOnboardingCoordinator.start()
 	}

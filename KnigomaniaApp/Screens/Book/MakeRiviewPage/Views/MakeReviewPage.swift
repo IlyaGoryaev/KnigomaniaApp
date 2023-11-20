@@ -60,6 +60,9 @@ struct MakeReviewPage: BookCoordinatorViewProtocol {
 				}
 			}
 		}
+        .onTapGesture {
+            self.endEditing()
+        }
     }
 	
 	func validateTextHeadline() -> Bool {
@@ -69,6 +72,10 @@ struct MakeReviewPage: BookCoordinatorViewProtocol {
 	func validateTextReview() -> Bool {
 		textReview != "" && textReview.count <= 500
 	}
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
+    }
 }
 
 struct ReviewText: View {

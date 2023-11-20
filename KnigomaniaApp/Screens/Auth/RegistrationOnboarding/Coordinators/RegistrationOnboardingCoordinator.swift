@@ -13,7 +13,7 @@ final class RegistrationOnboardingCoordinator: Coordinator {
 	
 	var rootController: UINavigationController
 	
-	weak var isUserAuthorise: CurrentValueSubject<Bool, Never>?
+	weak var isUserAuthorize: CurrentValueSubject<Bool, Never>?
 	
 	var childCoordinators = [any Coordinator]()
 	
@@ -42,10 +42,10 @@ final class RegistrationOnboardingCoordinator: Coordinator {
 	
 	init(
 		navigationController: UINavigationController,
-		isUserAuthorise: CurrentValueSubject<Bool, Never>? = nil
+		isUserAuthorize: CurrentValueSubject<Bool, Never>? = nil
 	) {
 		self.rootController = navigationController
-		self.isUserAuthorise = isUserAuthorise
+		self.isUserAuthorize = isUserAuthorize
 	}
 	
 	func route(
@@ -72,13 +72,13 @@ final class RegistrationOnboardingCoordinator: Coordinator {
 	}
 	
 	func setUpTracker(){
-		let trackerCoordinator = TrackerCoordinator(navigationController: rootController, isUserAuthorise: isUserAuthorise!)
+		let trackerCoordinator = TrackerCoordinator(navigationController: rootController, isUserAuthorize: isUserAuthorize!)
 		trackerCoordinator.start()
 		childCoordinators.append(trackerCoordinator)
 	}
 	
 	func logIn(){
-		if let isUserAuthorise = isUserAuthorise {
+		if let isUserAuthorise = isUserAuthorize {
 			isUserAuthorise.send(true)
 		} else {
 			rootController.popToRootViewController(animated: false)

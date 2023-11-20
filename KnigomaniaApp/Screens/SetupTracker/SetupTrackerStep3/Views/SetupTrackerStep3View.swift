@@ -38,6 +38,9 @@ struct SetupTrackerStep3View: View {
 			}
 			
 		}
+        .onTapGesture {
+            self.endEditing()
+        }
 	}
 	
 	var slider: some View{
@@ -72,6 +75,10 @@ struct SetupTrackerStep3View: View {
 	func isButtonEnable() -> Bool{
 		Int(amountOfDaysString) != nil && Int(amountOfDaysString)! > 0 && Int(amountOfDaysString)! < 8
 	}
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
+    }
 }
 
 #Preview {

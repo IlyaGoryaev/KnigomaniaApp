@@ -14,11 +14,11 @@ final class SetUpReminderTrackerCoordinator: Coordinator {
 	
 	var rootController: UINavigationController
 	
-	weak var isUserAuthorise: CurrentValueSubject<Bool, Never>?
+	weak var isUserAuthorize: CurrentValueSubject<Bool, Never>?
 	
-	init(navigationController: UINavigationController, isUserAuthorise: CurrentValueSubject<Bool, Never>? = nil) {
+	init(navigationController: UINavigationController, isUserAuthorize: CurrentValueSubject<Bool, Never>? = nil) {
 		self.rootController = navigationController
-		self.isUserAuthorise = isUserAuthorise
+		self.isUserAuthorize = isUserAuthorize
 	}
 	
 	func start() {
@@ -36,7 +36,7 @@ final class SetUpReminderTrackerCoordinator: Coordinator {
 	}
 	
 	func logIn(){
-		isUserAuthorise?.send(true)
+		isUserAuthorize?.send(true)
 	}
 	
 }

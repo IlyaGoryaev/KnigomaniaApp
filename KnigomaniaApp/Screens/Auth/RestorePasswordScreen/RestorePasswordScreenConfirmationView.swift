@@ -64,8 +64,16 @@ struct RestorePasswordScreenConfirmationView: View {
 				Spacer()
 			}
 		}
+        .onTapGesture {
+            self.endEditing()
+        }
 	}
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
+    }
 }
+
 #Preview {
 	RestorePasswordScreenConfirmationView()
 }

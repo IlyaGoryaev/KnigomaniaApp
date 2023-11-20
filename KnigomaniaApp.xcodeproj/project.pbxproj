@@ -108,6 +108,7 @@
 		FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */; };
 		FE7A80112AC60EA0000A8711 /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A80102AC60EA0000A8711 /* StartScreenView.swift */; };
 		FE7ABC562AF932AC0069C4C4 /* TextFieldDynamicWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7ABC552AF932AC0069C4C4 /* TextFieldDynamicWidth.swift */; };
+		FE8B8EED2B0BB95200DE5ED4 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B8EEC2B0BB95200DE5ED4 /* UIApplicationExtension.swift */; };
 		FE9119442AEBDDF600B31380 /* GalleryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9119432AEBDDF600B31380 /* GalleryPickerView.swift */; };
 		FE91194C2AEC44E500B31380 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE91194B2AEC44E500B31380 /* ImagePicker.swift */; };
 		FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */; };
@@ -225,6 +226,7 @@
 		FE713E4C2AC5DF9900F6DA62 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		FE7A80102AC60EA0000A8711 /* StartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
 		FE7ABC552AF932AC0069C4C4 /* TextFieldDynamicWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDynamicWidth.swift; sourceTree = "<group>"; };
+		FE8B8EEC2B0BB95200DE5ED4 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		FE9119432AEBDDF600B31380 /* GalleryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPickerView.swift; sourceTree = "<group>"; };
 		FE91194B2AEC44E500B31380 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenConfirmationView.swift; sourceTree = "<group>"; };
@@ -1141,6 +1143,7 @@
 				FED451262AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift */,
 				FED451282AF3EBE000FAAFA5 /* ImageExtension.swift */,
 				FE7ABC552AF932AC0069C4C4 /* TextFieldDynamicWidth.swift */,
+				FE8B8EEC2B0BB95200DE5ED4 /* UIApplicationExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1257,6 +1260,7 @@
 				9D072C2B2B01A0AC001C2F54 /* NotificationDescription.swift in Sources */,
 				9D714E6A2AEA521700992E09 /* ScanCoordinator.swift in Sources */,
 				9D61F9C92AD882F20000393C /* NumberTextField.swift in Sources */,
+				FE8B8EED2B0BB95200DE5ED4 /* UIApplicationExtension.swift in Sources */,
 				FE5BC06B2AEAD01B008F366F /* SearchBookTextField.swift in Sources */,
 				9DC2D1212AFD801B0087FB34 /* CoordinatorEnums.swift in Sources */,
 				FE4B8B042ADEA9B800FE28CE /* ScanScreenView.swift in Sources */,

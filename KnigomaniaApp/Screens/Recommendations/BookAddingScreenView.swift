@@ -46,10 +46,17 @@ struct BookAddingScreenView: View {
                 Spacer()
             }
         }
+        .onTapGesture {
+            self.endEditing()
+        }
     }
     
     private var isButtonEnable: Bool {
         return !$bookAuthor.wrappedValue.isEmpty && !$bookTitle.wrappedValue.isEmpty
+    }
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
     }
 }
 

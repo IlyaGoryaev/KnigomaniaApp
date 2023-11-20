@@ -37,6 +37,9 @@ struct SetupTrackerStep1View: View {
 				Spacer()
 			}
 		}
+        .onTapGesture {
+            self.endEditing()
+        }
 	}
 	
 	var slider: some View{
@@ -71,7 +74,12 @@ struct SetupTrackerStep1View: View {
 	func isButtonEnable() -> Bool{
 		Int(amountOfBooksString) != nil && Int(amountOfBooksString)! > 0 && Int(amountOfBooksString)! < 101
 	}
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
+    }
 }
+
 #Preview {
 	SetupTrackerStep1View()
 }

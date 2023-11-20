@@ -42,6 +42,13 @@ struct ProfileSettingsView: SettingsCoordinatorViewProtocol {
 				Spacer()
 			}
 		}
+        .onTapGesture {
+            self.endEditing()
+        }
+    }
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
     }
 }
 

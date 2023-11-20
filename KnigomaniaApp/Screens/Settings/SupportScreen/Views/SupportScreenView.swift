@@ -32,6 +32,13 @@ struct SupportScreenView: View {
 				Spacer()
 			}
 		}
+        .onTapGesture {
+            self.endEditing()
+        }
+    }
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
     }
 }
 

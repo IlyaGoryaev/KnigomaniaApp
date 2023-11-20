@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
 	var coordinator: (any Coordinator)?
-	private let isUserAutorise = CurrentValueSubject<Bool, Never>(true)
+	private let isUserAuthorize = CurrentValueSubject<Bool, Never>(true)
 	var cancallables = Set<AnyCancellable>()
 	
 
@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		self.window?.makeKeyAndVisible()
 		
 		DispatchQueue.main.asyncAfter(deadline: .now() + 3){
-			self.isUserAutorise.sink { [weak self] boolValue in
+			self.isUserAuthorize.sink { [weak self] boolValue in
 				guard let self = self else { return }
 				if boolValue{
 //					let mainCoordinator = MainCoordinator(navigationController: viewController)
@@ -46,7 +46,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 					self.coordinator = mainCoordinator
 				} else {
 					viewController.removeFromParent()
-					let entryCoordinator = EntryCoordinator(navigationController: viewController, isUserAutorise: isUserAutorise)
+					let entryCoordinator = EntryCoordinator(navigationController: viewController, isUserAuthorize: isUserAuthorize)
 					entryCoordinator.start()
 					self.coordinator = entryCoordinator
 				}
