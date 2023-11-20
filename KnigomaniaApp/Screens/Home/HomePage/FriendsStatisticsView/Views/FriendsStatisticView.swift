@@ -18,7 +18,7 @@ struct FriendsStatisticView: View {
 			CustomColors.background.ignoresSafeArea()
 			VStack(spacing: 0) {
 				BookChallengeView {
-					print("Tap book challendge")
+					print("Tap book challenge")
 				}
                 .frame(height: 96)
 				.padding(.top, 24)
@@ -77,7 +77,7 @@ struct FriendsStatisticView: View {
 						.padding(.top, 40)
 
 					}
-					.frame(height: 250)
+                    .padding(.vertical, 24)
 				}
 				Spacer()
 			}
