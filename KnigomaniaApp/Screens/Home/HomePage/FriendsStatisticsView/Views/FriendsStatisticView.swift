@@ -24,6 +24,7 @@ struct FriendsStatisticView: View {
 				.padding(.top, 24)
 				Text("Статистика друзей")
 					.font(.system(size: 20, weight: .medium))
+                    .foregroundStyle(CustomColors.darkBrownColor)
 					.padding(.top, 40)
 				if friendsArray.isEmpty{
 					Text("У тебя еще нет друзей в Книгомании. Брось им книжный вызов, нажав кнопку выше, чтобы следить за их прогрессом!")

@@ -19,12 +19,12 @@ struct TrackerView: View {
 	
 	var isTrackerSetup: Bool
 	
-	init(isTracketSetup: Bool, goalValue: Double = 0, currentValue: Double = 0){
+	init(isTrackerSetup: Bool, goalValue: Double = 0, currentValue: Double = 0){
 		self.currentValue = currentValue
 		self.goalValue = goalValue
 		self.percent = currentValue / goalValue * 0.8
 		self.theta = (Double(Float.pi) * (percent * 360) / 180)
-		self.isTrackerSetup = isTracketSetup
+		self.isTrackerSetup = isTrackerSetup
 	}
 	
 	var body: some View {
@@ -61,6 +61,7 @@ struct TrackerView: View {
 					.foregroundStyle(CustomColors.greyColor)
 				Text("\(Int(currentValue)) / \(Int(goalValue))")
 					.font(.system(size: 24, weight: .bold))
+                    .foregroundStyle(CustomColors.darkBrownColor)
 					.opacity(isTrackerSetup ? 1 : 0)
 			}
 		}
@@ -68,5 +69,5 @@ struct TrackerView: View {
 }
 
 #Preview {
-	TrackerView(isTracketSetup: false)
+	TrackerView(isTrackerSetup: false)
 }

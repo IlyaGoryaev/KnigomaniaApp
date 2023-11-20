@@ -34,7 +34,7 @@ struct MyProgress: View {
                 }
                 .frame(height: 96)
                 .padding(.top, 24)
-                TrackerView(isTracketSetup: isTrackerSetup, goalValue: goalValue, currentValue: currentValue)
+                TrackerView(isTrackerSetup: isTrackerSetup, goalValue: goalValue, currentValue: currentValue)
                     .padding(.top, 32)
                 if isTrackerSetup {
                     if currentValue == 0 {

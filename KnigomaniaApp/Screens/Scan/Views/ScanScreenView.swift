@@ -54,10 +54,7 @@ struct ScanScreenView: View {
                 videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
                 videoPreviewLayer?.videoGravity = .resizeAspectFill
                 videoPreviewLayer?.frame = UIScreen.main.bounds
-                
-                DispatchQueue.main.async {
-                    self.captureSession?.startRunning()
-                }
+                self.captureSession?.startRunning()
             } catch {
                 print(error)
             }
