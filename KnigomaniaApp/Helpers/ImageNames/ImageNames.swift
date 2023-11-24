@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum ImageNames: String {
+	
+	case StartScreenViewImage = "startscreenimage"
+	case RegOnBoarding2 = "registrationscreenimage"
+	case chevronRight = "chevron.right"
+}

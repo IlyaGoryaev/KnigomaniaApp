@@ -10,24 +10,32 @@ import PhotosUI
 
 struct RegistrationOnboardingStep4View: RegistrationOnboardingViewProtocol {
 	
+	// MARK: Dependencies
+	
 	weak var applicationCoordinator: RegistrationOnboardingCoordinator?
+	
+	// MARK: Properties
 	
 	@State private var showImagePicker: Bool = false
 	@State private var image = Image("PersonImage")
 	@State private var inputImage: UIImage?
 	
+	// MARK: View
+	
 	var body: some View {
 		ZStack{
 			CustomColors.background
 				.ignoresSafeArea()
-			VStack(spacing: 0){
+			VStack(spacing: Sizes.Padding.zero.rawValue) {
                 NavBar(title: .registrationTitle) {
 					applicationCoordinator?.backAction()
 				}
-				.padding(.top, 20)
-				Text("Выберите аватар для своего профиля")
+				.padding(.top, Sizes.Padding.large.rawValue)
+				Text(TextTitles.RegOnBoarding4.setPhotoText.rawValue)
 					.modifier(RegularTextModifier())
-					.padding(.top, 32)
+					.lineSpacing(Sizes.Padding.normal.rawValue)
+					.padding(.top, Sizes.Padding.large.rawValue)
+					.padding(.horizontal, Sizes.Padding.normal.rawValue)
 				ZStack{
 					Circle()
 						.foregroundStyle(CustomColors.lightBrownColor)
@@ -43,7 +51,7 @@ struct RegistrationOnboardingStep4View: RegistrationOnboardingViewProtocol {
 					.offset(x: 167 / 3, y: 167 / 3)
 					.opacity(inputImage == nil ? 1 : 0)
 				}
-				.padding(.top, 32)
+				.padding(.top, Sizes.Padding.large.rawValue)
 				.onTapGesture {
 					showImagePicker = true
 				}
@@ -58,8 +66,8 @@ struct RegistrationOnboardingStep4View: RegistrationOnboardingViewProtocol {
 					Button(action: {
 						applicationCoordinator?.route(view: .step5)
 					}, label: {
-						HStack(spacing: 8){
-							Text("Пропустить")
+						HStack(spacing: Sizes.Padding.small.rawValue){
+							Text(TextTitles.RegOnBoarding4.skip.rawValue)
 							Image(systemName: "chevron.right")
 						}
 						.foregroundStyle(CustomColors.brownColor)
@@ -69,18 +77,22 @@ struct RegistrationOnboardingStep4View: RegistrationOnboardingViewProtocol {
 						applicationCoordinator?.route(view: .step5)
 					}
 				}
-				.padding(.top, 32)
+				.padding(.top, Sizes.Padding.large.rawValue)
 				
 				Spacer()
 			}
 		}
 	}
 	
+	// MARK: Actions
+	
 	func loadImage() {
 		guard let inputImage = inputImage else { return }
 		image = Image(uiImage: inputImage)
 	}
 }
+
+// MARK: Preview
 
 #Preview {
 	RegistrationOnboardingStep4View()

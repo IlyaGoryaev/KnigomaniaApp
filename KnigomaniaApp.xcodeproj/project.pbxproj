@@ -32,6 +32,9 @@
 		9D072C262B019CAC001C2F54 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D072C252B019CAC001C2F54 /* NotificationModel.swift */; };
 		9D072C292B01A06E001C2F54 /* NotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D072C282B01A06E001C2F54 /* NotificationItem.swift */; };
 		9D072C2B2B01A0AC001C2F54 /* NotificationDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D072C2A2B01A0AC001C2F54 /* NotificationDescription.swift */; };
+		9D0E70532B115F8B00C2EAA2 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E70522B115F8B00C2EAA2 /* Text.swift */; };
+		9D0E70562B11604300C2EAA2 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E70552B11604300C2EAA2 /* Sizes.swift */; };
+		9D0E70592B11609600C2EAA2 /* ImageNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E70582B11609600C2EAA2 /* ImageNames.swift */; };
 		9D61F9BB2AD881D40000393C /* RegistrationOnBoardingStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BA2AD881D40000393C /* RegistrationOnBoardingStep2View.swift */; };
 		9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */; };
 		9D61F9C22AD8825D0000393C /* TrackerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */; };
@@ -148,6 +151,9 @@
 		9D072C252B019CAC001C2F54 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		9D072C282B01A06E001C2F54 /* NotificationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItem.swift; sourceTree = "<group>"; };
 		9D072C2A2B01A0AC001C2F54 /* NotificationDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDescription.swift; sourceTree = "<group>"; };
+		9D0E70522B115F8B00C2EAA2 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		9D0E70552B11604300C2EAA2 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		9D0E70582B11609600C2EAA2 /* ImageNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNames.swift; sourceTree = "<group>"; };
 		9D61F9BA2AD881D40000393C /* RegistrationOnBoardingStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOnBoardingStep2View.swift; sourceTree = "<group>"; };
 		9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCoordinator.swift; sourceTree = "<group>"; };
@@ -486,6 +492,30 @@
 				9D072C282B01A06E001C2F54 /* NotificationItem.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		9D0E70512B115F7700C2EAA2 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				9D0E70522B115F8B00C2EAA2 /* Text.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		9D0E70542B11603B00C2EAA2 /* Sizes */ = {
+			isa = PBXGroup;
+			children = (
+				9D0E70552B11604300C2EAA2 /* Sizes.swift */,
+			);
+			path = Sizes;
+			sourceTree = "<group>";
+		};
+		9D0E70572B11608000C2EAA2 /* ImageNames */ = {
+			isa = PBXGroup;
+			children = (
+				9D0E70582B11609600C2EAA2 /* ImageNames.swift */,
+			);
+			path = ImageNames;
 			sourceTree = "<group>";
 		};
 		9D61F9B62AD881810000393C /* RegistrationOnboarding */ = {
@@ -1135,6 +1165,9 @@
 		FEF697292AC5E7B800708E1E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9D0E70572B11608000C2EAA2 /* ImageNames */,
+				9D0E70542B11603B00C2EAA2 /* Sizes */,
+				9D0E70512B115F7700C2EAA2 /* Text */,
 				9DC2D1132AFCFBB30087FB34 /* Data */,
 				FEF6972A2AC5E7CF00708E1E /* CustomColors.swift */,
 				9D61F9C62AD882D70000393C /* HeadlineTextModifier.swift */,
@@ -1240,11 +1273,13 @@
 				9D055EB22AE0EEFB00BDDF50 /* BooksCollectionView.swift in Sources */,
 				9D714E662AEA4D7000992E09 /* CustomTabBarController.swift in Sources */,
 				FE5BC0642AEACFF2008F366F /* BookAddingScreenView.swift in Sources */,
+				9D0E70562B11604300C2EAA2 /* Sizes.swift in Sources */,
 				9DA945CE2AC0BA0A002302D1 /* ViewController.swift in Sources */,
 				9D072BD72B016A94001C2F54 /* ProfileSettingsView.swift in Sources */,
 				FEC8EB082AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift in Sources */,
 				9D7A76D82AE4358700158781 /* ReviewsView.swift in Sources */,
 				9D61F9CB2AD883090000393C /* TextFieldTime.swift in Sources */,
+				9D0E70592B11609600C2EAA2 /* ImageNames.swift in Sources */,
 				9D61F9D62AD884760000393C /* RegistrationOnboardingStep4View.swift in Sources */,
 				FEAAB6322AFB7F4D009C0919 /* TextModifier.swift in Sources */,
 				9D055EA52AE0E49600BDDF50 /* ResetPasswordCoordinator.swift in Sources */,
@@ -1314,6 +1349,7 @@
 				9D6C06AA2B094FF000478609 /* SupportScreenView.swift in Sources */,
 				9D61FA042AD889F90000393C /* NavBar.swift in Sources */,
 				9D714E332AE8E11B00992E09 /* ListCategories.swift in Sources */,
+				9D0E70532B115F8B00C2EAA2 /* Text.swift in Sources */,
 				9D61F9F62AD888B90000393C /* SetupTrackerStep2View.swift in Sources */,
 				9D714E592AE9C94E00992E09 /* MainCoordinatorProtocol.swift in Sources */,
 				9D714E302AE8E03400992E09 /* AddBookToListPage.swift in Sources */,

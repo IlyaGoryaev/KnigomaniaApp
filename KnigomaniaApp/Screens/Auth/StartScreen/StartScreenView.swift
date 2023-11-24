@@ -9,22 +9,26 @@ import SwiftUI
 
 struct StartScreenView: View {
 	
+	// MARK: Dependencies
+	
 	weak var entryCoordinator: EntryCoordinator?
+	
+	// MARK: View
 	
 	var body: some View {
 		ZStack {
 			CustomColors.background
 				.edgesIgnoringSafeArea(.all)
 			VStack {
-				Image("startscreenimage")
+				Image(ImageNames.StartScreenViewImage.rawValue)
 					.padding(.top, 89)
 				VStack(spacing: 10) {
-					Text("Добро пожаловать")
+					Text(TextTitles.StartScreenView.welcome.rawValue)
 						.font(.system(size: 24, weight: .bold))
 						.foregroundColor(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
 						.padding(.leading, 17)
-					Text("Отслеживай свой прогресс по чтению и соревнуйся с друзьями!")
+					Text(TextTitles.StartScreenView.progress.rawValue)
 						.font(.system(size: 16, weight: .regular))
 						.foregroundColor(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
@@ -32,20 +36,9 @@ struct StartScreenView: View {
 				}
 				.padding(.top, 58)
 				Spacer(minLength: 32)
-				Button(action: {
+				ButtonView(title: .continuation, isButtonEnable: true) {
 					entryCoordinator?.openRegistrationScreen()
-				}) {
-					Rectangle()
-						.frame(height: 48)
-						.foregroundColor(CustomColors.yellowColor)
-						.cornerRadius(10)
-						.overlay(
-							Text("Регистрация")
-								.font(.system(size: 16, weight: .medium))
-								.foregroundColor(.white)
-						)
 				}
-				.padding(.horizontal, 16)
 				Spacer()
 				VStack(spacing: 24) {
 					HStack(spacing: 4) {
@@ -67,12 +60,14 @@ struct StartScreenView: View {
 						.accentColor(CustomColors.darkBrownColor)
 						.multilineTextAlignment(.center)
 				}
-				.padding(.horizontal, 17)
+				.padding(.horizontal, Sizes.Padding.normal.rawValue)
 				Spacer()
 			}
 		}
 	}
 }
+
+// MARK: Preview
 
 #Preview {
 	StartScreenView()

@@ -9,31 +9,32 @@ import SwiftUI
 
 struct RegistrationOnboardingStep3View: RegistrationOnboardingViewProtocol {
 	
+	// MARK: Dependencies
+	
 	weak var applicationCoordinator: RegistrationOnboardingCoordinator?
 	
+	// MARK: View
 	
 	var body: some View {
 		ZStack{
 			CustomColors.background
 				.ignoresSafeArea()
-			VStack{
-                NavBar(title: .registrationTitle) {
-					
-				}
-				.padding(.top, 20)
-				Text("Ваш адрес электронной почты подтвержден!")
+			VStack(spacing: Sizes.Padding.zero.rawValue) {
+				Text(TextTitles.RegOnBoarding3.emailConfirmed.rawValue)
 					.modifier(HeadlineTextModifier())
-					.padding(.top, 40)
-					.padding(.horizontal, 35)
+					.padding(.top, Sizes.Padding.large.rawValue)
+					.padding(.horizontal, Sizes.Padding.large.rawValue)
 				ButtonView(title: .continuation, isButtonEnable: true){
 					applicationCoordinator?.route(view: .step4)
 				}
-				.padding(.top, 32)
+				.padding(.top, Sizes.Padding.large.rawValue)
 				Spacer()
 			}
 		}
 	}
 }
+
+// MARK: Preview
 
 #Preview {
 	RegistrationOnboardingStep3View()
