@@ -49,7 +49,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 				} else {
 					viewController.removeFromParent()
 					let entryCoordinator = EntryCoordinator(navigationController: viewController, isUserAuthorize: isUserAuthorize)
-					entryCoordinator.start()
+					entryCoordinator.route(view: .startScreen, animated: false)
 					self.coordinator = entryCoordinator
 				}
 			}.store(in: &self.cancallables)

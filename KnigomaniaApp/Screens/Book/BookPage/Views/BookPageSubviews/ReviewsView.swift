@@ -1,10 +1,3 @@
-//
-//  ReviewsView.swift
-//  KnigomaniaApp
-//
-//  Created by Илья Горяев on 21.10.2023.
-//
-
 import SwiftUI
 
 struct ReviewsView: View {
@@ -13,7 +6,7 @@ struct ReviewsView: View {
 	
 	var action: () -> ()
 	
-    var body: some View {
+	var body: some View {
 		VStack{
 			HStack{
 				Text("Рецензии")
@@ -36,7 +29,9 @@ struct ReviewsView: View {
 			if !reviews.isEmpty{
 				VStack{
 					ForEach(reviews.indices, id: \.self){ index in
-						ReviewItemView(review: reviews[index])
+						if index < 3 {
+							ReviewItemView(review: reviews[index])
+						}
 					}
 				}
 				.padding(.top, 32)
@@ -49,7 +44,7 @@ struct ReviewsView: View {
 		}
 		
 		
-    }
+	}
 }
 
 struct ReviewItemView: View {
@@ -57,38 +52,42 @@ struct ReviewItemView: View {
 	let review: Review
 	
 	@State var isLiked: Bool = false
-
+	
 	var body: some View {
-		HStack(spacing: 0) {
-			VStack(spacing: 0){
-				Text("\(Int(review.grade)) (5)")
-				Image("star.fill")
-			}
-			VStack(alignment: .leading, spacing: 8){
-				HStack{
-					Text(review.title)
-						.textStyle(.boldText)
-					Spacer()
-					ZStack(alignment: .bottomTrailing){
-						Image(isLiked ? "like" : "like.fill")
-							.padding(.horizontal, 16)
-							.onTapGesture {
-								withAnimation {
-									isLiked.toggle()
-								}
-							}
-						Text("\(review.likes)")
-							.font(.system(size: 11))
-							.foregroundStyle(CustomColors.darkBrownColor)
-					}
+		ZStack(alignment: .topTrailing) {
+			HStack(spacing: Sizes.Padding.zero.rawValue) {
+				VStack(spacing: Sizes.Padding.zero.rawValue){
+					Text("\(Int(review.grade)) (5)")
+					Image("star.fill")
 				}
-				Text(review.text)
-					.font(.system(size: 14))
-					.frame(maxHeight: 90)
-					.multilineTextAlignment(.leading)
+				VStack(alignment: .leading, spacing: 8){
+					HStack{
+						Text(review.title)
+							.textStyle(.boldText)
+						Spacer()
+					}
+					Text(review.text)
+						.font(.system(size: 14))
+						.frame(maxHeight: 90)
+						.multilineTextAlignment(.leading)
+				}
+				.padding(.horizontal, 16)
 			}
 			.padding(.horizontal, 16)
+			ZStack(alignment: .bottomTrailing) {
+				Image(isLiked ? "like" : "like.fill")
+					.padding(.horizontal, 16)
+					.onTapGesture {
+						withAnimation {
+							isLiked.toggle()
+						}
+					}
+				Text("\(review.likes)")
+					.font(.system(size: 11))
+					.foregroundStyle(CustomColors.darkBrownColor)
+			}
+			.padding(Sizes.Padding.normal.rawValue)
+			
 		}
-		.padding(.horizontal, 16)
 	}
 }

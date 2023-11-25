@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RegistrationView: View {
+struct RegistrationView: EntryViewProtocol {
 	
 	// MARK: Dependencies
 	
@@ -27,7 +27,7 @@ struct RegistrationView: View {
 				.ignoresSafeArea()
 			VStack(spacing: Sizes.Padding.zero.rawValue){
                 NavBar(title: .registrationTitle) {
-					entryCoordinator?.backAction()
+					entryCoordinator?.backAction(type: .backAction)
 				}
 				.padding(.top, Sizes.Padding.large.rawValue)
 				VStack{
@@ -77,7 +77,9 @@ struct RegistrationView: View {
 					Text(TextTitles.RegistrationView.account.rawValue)
 						.font(.system(size: 14))
 					Button(action: {
-						entryCoordinator?.fromRegToEntry()
+						//entryCoordinator?.fromRegToEntry()
+						entryCoordinator?.backAction(type: .backAction, animated: false)
+						entryCoordinator?.route(view: .loginScreen, animated: false)
 					}, label: {
 						Text(TextTitles.RegistrationView.entry.rawValue)
 							.foregroundStyle(CustomColors.darkBrownColor)

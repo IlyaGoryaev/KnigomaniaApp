@@ -20,7 +20,7 @@ struct MailConfirmationStep2View: MailConfirmationViewProtocol {
 			CustomColors.background
 				.ignoresSafeArea()
 			VStack(spacing: Sizes.Padding.zero.rawValue) {
-				Text(TextTitles.RegOnBoarding3.emailConfirmed.rawValue)
+				Text(TextTitles.MailConfirmStep2.emailConfirmed.rawValue)
 					.modifier(HeadlineTextModifier())
 					.padding(.top, Sizes.Padding.large.rawValue)
 					.padding(.horizontal, Sizes.Padding.large.rawValue)

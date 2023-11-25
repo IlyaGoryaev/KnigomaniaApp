@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StartScreenView: View {
+struct StartScreenView: EntryViewProtocol {
 	
 	// MARK: Dependencies
 	
@@ -37,7 +37,7 @@ struct StartScreenView: View {
 				.padding(.top, 58)
 				Spacer(minLength: 32)
 				ButtonView(title: .continuation, isButtonEnable: true) {
-					entryCoordinator?.openRegistrationScreen()
+					entryCoordinator?.route(view: .regScreen)
 				}
 				Spacer()
 				VStack(spacing: 24) {
@@ -46,7 +46,7 @@ struct StartScreenView: View {
 							.font(.system(size: 14, weight: .regular))
 							.foregroundColor(CustomColors.darkBrownColor)
 						Button(action: {
-							entryCoordinator?.openEntryScreen()
+							entryCoordinator?.route(view: .loginScreen, animated: false)
 						}) {
 							Text("Войти")
 								.font(.system(size: 14, weight: .medium))

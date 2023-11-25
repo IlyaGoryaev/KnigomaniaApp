@@ -31,7 +31,7 @@ struct RegistrationOnboardingStep1View: RegistrationOnboardingViewProtocol {
 					applicationCoordinator?.backAction()
 				}
 				.padding(.top, Sizes.Padding.large.rawValue)
-				Text(TextTitles.RegOnBoarding4.setPhotoText.rawValue)
+				Text(TextTitles.RegOnBoarding1.setPhotoText.rawValue)
 					.modifier(RegularTextModifier())
 					.lineSpacing(Sizes.Padding.normal.rawValue)
 					.padding(.top, Sizes.Padding.large.rawValue)
@@ -68,7 +68,7 @@ struct RegistrationOnboardingStep1View: RegistrationOnboardingViewProtocol {
 						print("Route")
 					}, label: {
 						HStack(spacing: Sizes.Padding.small.rawValue){
-							Text(TextTitles.RegOnBoarding4.skip.rawValue)
+							Text(TextTitles.RegOnBoarding1.skip.rawValue)
 							Image(systemName: "chevron.right")
 						}
 						.foregroundStyle(CustomColors.brownColor)

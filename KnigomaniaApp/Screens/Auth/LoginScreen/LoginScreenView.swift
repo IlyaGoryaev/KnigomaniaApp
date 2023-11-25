@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LoginScreenView: View {
+struct LoginScreenView: EntryViewProtocol {
 	
 	weak var entryCoordinator: EntryCoordinator?
 	
@@ -21,7 +21,7 @@ struct LoginScreenView: View {
 				.edgesIgnoringSafeArea(.all)
 			VStack {
                 NavBar(title: .entryTitle) {
-					entryCoordinator?.backAction()
+					entryCoordinator?.backAction(type: .backAction)
 				}
 				.padding(.top, 20)
 				VStack{
@@ -86,7 +86,8 @@ struct LoginScreenView: View {
 						.font(.system(size: 14, weight: .regular))
 						.foregroundColor(CustomColors.darkBrownColor)
 					Button(action: {
-						entryCoordinator?.fromEntryToReg()
+						entryCoordinator?.backAction(type: .backAction, animated: false)
+						entryCoordinator?.route(view: .regScreen, animated: false)
 					}) {
 						Text("Зарегистрироваться")
 							.font(.system(size: 14, weight: .medium))

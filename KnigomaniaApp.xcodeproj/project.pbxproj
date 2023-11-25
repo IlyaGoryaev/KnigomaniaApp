@@ -80,6 +80,7 @@
 		9D8242822B12716800BF3ACF /* MailConfirmationViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242812B12716800BF3ACF /* MailConfirmationViewProtocol.swift */; };
 		9D8242842B12721A00BF3ACF /* MailConfirmationStep1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242832B12721A00BF3ACF /* MailConfirmationStep1View.swift */; };
 		9D8242882B12729E00BF3ACF /* MailConfirmationStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242872B12729E00BF3ACF /* MailConfirmationStep2View.swift */; };
+		9D82428A2B1284C500BF3ACF /* EntryViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242892B1284C500BF3ACF /* EntryViewProtocol.swift */; };
 		9DA5E4F92AE6678D00F4F99F /* ReviewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5E4F82AE6678D00F4F99F /* ReviewPage.swift */; };
 		9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */; };
 		9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */; };
@@ -207,6 +208,7 @@
 		9D8242812B12716800BF3ACF /* MailConfirmationViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailConfirmationViewProtocol.swift; sourceTree = "<group>"; };
 		9D8242832B12721A00BF3ACF /* MailConfirmationStep1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailConfirmationStep1View.swift; sourceTree = "<group>"; };
 		9D8242872B12729E00BF3ACF /* MailConfirmationStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailConfirmationStep2View.swift; sourceTree = "<group>"; };
+		9D8242892B1284C500BF3ACF /* EntryViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewProtocol.swift; sourceTree = "<group>"; };
 		9DA5E4F82AE6678D00F4F99F /* ReviewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPage.swift; sourceTree = "<group>"; };
 		9DA945C62AC0BA0A002302D1 /* KnigomaniaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnigomaniaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			children = (
 				9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */,
 				9D714E582AE9C94E00992E09 /* MainCoordinatorProtocol.swift */,
+				9D8242892B1284C500BF3ACF /* EntryViewProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1391,6 +1394,7 @@
 				9D055EB72AE0EF3B00BDDF50 /* CurrentLibraryView.swift in Sources */,
 				9D7A76DA2AE43A2A00158781 /* BookActionsView.swift in Sources */,
 				9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */,
+				9D82428A2B1284C500BF3ACF /* EntryViewProtocol.swift in Sources */,
 				9D072BC92B015EED001C2F54 /* MainSettingsScreen.swift in Sources */,
 				9D61F9E22AD885290000393C /* RegistrationStep2View.swift in Sources */,
 				FE171B152AFB80F300AFDCDB /* TestBookPageData.swift in Sources */,

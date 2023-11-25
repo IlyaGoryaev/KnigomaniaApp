@@ -17,7 +17,7 @@ struct RegistrationOnboardingStep3View: RegistrationOnboardingViewProtocol {
 					applicationCoordinator?.backAction()
 				}
 				.padding(.top, Sizes.Padding.large.rawValue)
-				Text(TextTitles.RegOnBoarding6.setGoals.rawValue)
+				Text(TextTitles.RegOnBoarding3.setGoals.rawValue)
 					.modifier(HeadlineTextModifier())
 					.padding(.horizontal, Sizes.Padding.normal.rawValue)
 					.padding(.top, Sizes.Padding.large.rawValue)
@@ -25,7 +25,7 @@ struct RegistrationOnboardingStep3View: RegistrationOnboardingViewProtocol {
 					applicationCoordinator?.logIn()
 				}, label: {
 					HStack(spacing: Sizes.Padding.small.rawValue) {
-						Text(TextTitles.RegOnBoarding6.skip.rawValue)
+						Text(TextTitles.RegOnBoarding3.skip.rawValue)
 						Image(systemName: ImageNames.chevronRight.rawValue)
 					}
 					.foregroundStyle(CustomColors.brownColor)

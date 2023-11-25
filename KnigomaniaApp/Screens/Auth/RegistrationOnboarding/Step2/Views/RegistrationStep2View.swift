@@ -32,10 +32,10 @@ struct RegistrationOnBoardingStep2View: RegistrationOnboardingViewProtocol {
 				.padding(.bottom, Sizes.Padding.normal.rawValue)
 				VStack{
 					ScrollView{
-						Text(TextTitles.RegOnBoarding5.whatToRead.rawValue)
+						Text(TextTitles.RegOnBoarding2.whatToRead.rawValue)
 							.modifier(RegularTextModifier())
 							.padding(.top, Sizes.Padding.normal.rawValue)
-						Text(TextTitles.RegOnBoarding5.chooseGenre.rawValue)
+						Text(TextTitles.RegOnBoarding2.chooseGenre.rawValue)
 							.font(.system(size: 14))
 							.foregroundStyle(CustomColors.brownColor)
 						GenreSelection(tags: genres, numberOfGenresChosen: $numberOfGenresChosen)

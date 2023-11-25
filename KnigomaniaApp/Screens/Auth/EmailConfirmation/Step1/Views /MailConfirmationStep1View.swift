@@ -26,11 +26,11 @@ struct MailConfirmationStep1View: MailConfirmationViewProtocol {
 				CustomColors.background
 					.ignoresSafeArea()
 				VStack {
-					Text(TextTitles.RegOnBoarding2.emailConfirm.rawValue)
+					Text(TextTitles.MailConfirmStep1.emailConfirm.rawValue)
 						.modifier(HeadlineTextModifier())
 						.padding(.top, Sizes.Padding.normal.rawValue)
 						.padding(.horizontal, Sizes.Padding.small.rawValue)
-					Text(TextTitles.RegOnBoarding2.sendMail.rawValue + email)
+					Text(TextTitles.MailConfirmStep1.sendMail.rawValue + email)
 						.modifier(RegularTextModifier())
 						.padding(.top, Sizes.Padding.normal.rawValue)
 						.padding(.horizontal, Sizes.Padding.large.rawValue)
@@ -38,13 +38,13 @@ struct MailConfirmationStep1View: MailConfirmationViewProtocol {
 						.padding(.top, Sizes.Padding.large.rawValue)
 						.padding(.horizontal, Sizes.Padding.normal.rawValue)
 					VStack(spacing: Sizes.Padding.normal.rawValue){
-						Text(TextTitles.RegOnBoarding2.doNotGetMail.rawValue)
+						Text(TextTitles.MailConfirmStep1.doNotGetMail.rawValue)
 							.font(.system(size: 14, weight: .regular))
 							.foregroundColor(CustomColors.darkBrownColor)
 						Button(action: {
 							
 						}, label: {
-							Text(TextTitles.RegOnBoarding2.sendAgain.rawValue)
+							Text(TextTitles.MailConfirmStep1.sendAgain.rawValue)
 								.foregroundStyle(CustomColors.darkBrownColor)
 								.font(.system(size: 14, weight: .bold))
 						})

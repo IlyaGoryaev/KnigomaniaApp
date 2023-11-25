@@ -28,28 +28,28 @@ enum TextTitles {
 		case entry = "Войти"
 	}
 	
-	enum RegOnBoarding2: String {
+	enum MailConfirmStep1: String {
 		case emailConfirm = "Подтвердите адрес электронной почты"
 		case sendMail = "Мы отправили письмо на"
 		case doNotGetMail = "Не получили письмо?"
 		case sendAgain = "Отправить еще раз"
 	}
 	
-	enum RegOnBoarding3: String {
+	enum MailConfirmStep2: String {
 		case emailConfirmed = "Ваш адрес электронной почты подтвержден!"
 	}
 	
-	enum RegOnBoarding4: String {
+	enum RegOnBoarding1: String {
 		case setPhotoText = "Поделись своей фотографией, чтобы друзьям было легче тебя найти. Если сейчас не готов, ты всегда можешь вернуться к этому в настройках своего профиля."
 		case skip = "Пропустить"
 	}
 	
-	enum RegOnBoarding5: String {
+	enum RegOnBoarding2: String {
 		case whatToRead = "Что вы любите читать?"
 		case chooseGenre = "Выберите как минимум 3 жанра"
 	}
 	
-	enum RegOnBoarding6: String {
+	enum RegOnBoarding3: String {
 		case setGoals = "Хотите настроить сейчас ваши цели по чтению?"
 		case skip = "Пропустить"
 	}
