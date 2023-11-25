@@ -70,10 +70,16 @@ final class EntryCoordinator: Coordinator{
 		rootController.pushViewController(viewController, animated: true)
 	}
 	
-	func startRegistrationOnboarding(){
-		let registrationOnboardingCoordinator = RegistrationOnboardingCoordinator(navigationController: rootController, isUserAuthorize: isUserAuthorize!)
-		childCoordinators.append(registrationOnboardingCoordinator)
-		registrationOnboardingCoordinator.start()
+//	func startRegistrationOnboarding(){
+//		let registrationOnboardingCoordinator = RegistrationOnboardingCoordinator(navigationController: rootController, isUserAuthorize: isUserAuthorize!)
+//		childCoordinators.append(registrationOnboardingCoordinator)
+//		registrationOnboardingCoordinator.start()
+//	}
+	
+	func startMailConfirmationCoordinator() {
+		let mailConfiramtionCoordinator = MailConfirmationCoordinator(navigationController: rootController, isUserAuthorize: isUserAuthorize!)
+		childCoordinators.append(mailConfiramtionCoordinator)
+		mailConfiramtionCoordinator.start()
 	}
 	
 	func backAction(){

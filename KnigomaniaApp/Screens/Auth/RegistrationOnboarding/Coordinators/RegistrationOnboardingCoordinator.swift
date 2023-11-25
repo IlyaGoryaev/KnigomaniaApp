@@ -18,24 +18,18 @@ final class RegistrationOnboardingCoordinator: Coordinator {
 	var childCoordinators = [any Coordinator]()
 	
 	enum Views {
+		case step1
 		case step2
 		case step3
-		case step4
-		case step5
-		case step6
 
 		var view: any RegistrationOnboardingViewProtocol {
 			switch self {
+			case .step1:
+				return RegistrationOnboardingStep1View()
 			case .step2:
 				return RegistrationOnBoardingStep2View()
 			case .step3:
 				return RegistrationOnboardingStep3View()
-			case .step4:
-				return RegistrationOnboardingStep4View()
-			case .step5:
-				return RegistrationStep5View()
-			case .step6:
-				return RegistrationOnboardingStep6View()
 			}
 		}
 	}
@@ -61,13 +55,6 @@ final class RegistrationOnboardingCoordinator: Coordinator {
 			rootController.present(viewController, animated: animated)
 		case .push:
 			rootController.pushViewController(viewController, animated: animated)
-		}
-	}
-	
-	func start() {
-		route(view: .step2, animated: false)
-		DispatchQueue.main.asyncAfter(deadline: .now() + 3){
-			self.route(view: .step3, animated: false)
 		}
 	}
 	

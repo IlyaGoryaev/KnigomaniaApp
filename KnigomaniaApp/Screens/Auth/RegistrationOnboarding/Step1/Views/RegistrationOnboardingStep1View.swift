@@ -8,7 +8,7 @@
 import SwiftUI
 import PhotosUI
 
-struct RegistrationOnboardingStep4View: RegistrationOnboardingViewProtocol {
+struct RegistrationOnboardingStep1View: RegistrationOnboardingViewProtocol {
 	
 	// MARK: Dependencies
 	
@@ -64,7 +64,8 @@ struct RegistrationOnboardingStep4View: RegistrationOnboardingViewProtocol {
 				
 				VStack{
 					Button(action: {
-						applicationCoordinator?.route(view: .step5)
+						applicationCoordinator?.route(view: .step2)
+						print("Route")
 					}, label: {
 						HStack(spacing: Sizes.Padding.small.rawValue){
 							Text(TextTitles.RegOnBoarding4.skip.rawValue)
@@ -74,7 +75,7 @@ struct RegistrationOnboardingStep4View: RegistrationOnboardingViewProtocol {
 						.font(.system(size: 14, weight: .semibold))
 					})
 					ButtonView(title: .continuation, isButtonEnable: true) {
-						applicationCoordinator?.route(view: .step5)
+						applicationCoordinator?.route(view: .step2)
 					}
 				}
 				.padding(.top, Sizes.Padding.large.rawValue)
@@ -95,5 +96,5 @@ struct RegistrationOnboardingStep4View: RegistrationOnboardingViewProtocol {
 // MARK: Preview
 
 #Preview {
-	RegistrationOnboardingStep4View()
+	RegistrationOnboardingStep1View()
 }

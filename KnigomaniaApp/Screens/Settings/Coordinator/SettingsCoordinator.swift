@@ -38,7 +38,7 @@ enum SettingsSectionItems: String {
 final class SettingsCoordinator: Coordinator {
 	
 	var rootController: UINavigationController
-	
+		
 	init(
 		rootController: UINavigationController
 	) {
@@ -78,5 +78,10 @@ final class SettingsCoordinator: Coordinator {
 		case .backAction:
 			rootController.popViewController(animated: animated)
 		}
+	}
+	
+	func setupMailConfirmationCoordinator() {
+		let mailConfirmationCoordinator = MailConfirmationCoordinator(navigationController: rootController)
+		mailConfirmationCoordinator.start()
 	}
 }

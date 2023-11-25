@@ -25,7 +25,12 @@ struct MailConfirmationStep2View: MailConfirmationViewProtocol {
 					.padding(.top, Sizes.Padding.large.rawValue)
 					.padding(.horizontal, Sizes.Padding.large.rawValue)
 				ButtonView(title: .continuation, isButtonEnable: true){
-
+					if ((mailConfirmationCoordinator?.isUserAuthorize?.value) != nil) {
+						mailConfirmationCoordinator?.startRegistrationOnBoardingCoordinator()
+					} else {
+						mailConfirmationCoordinator?.finishConfirmation()
+					}
+					
 				}
 				.padding(.top, Sizes.Padding.large.rawValue)
 				Spacer()

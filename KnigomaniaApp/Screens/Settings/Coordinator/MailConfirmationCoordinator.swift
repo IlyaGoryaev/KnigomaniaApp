@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 final class MailConfirmationCoordinator: Coordinator {
 	
@@ -26,10 +27,16 @@ final class MailConfirmationCoordinator: Coordinator {
 	
 	var rootController: UINavigationController
 	
+	weak var isUserAuthorize: CurrentValueSubject<Bool, Never>?
+	
+	var childCoordinators = [any Coordinator]()
+	
 	init(
-		navigationController: UINavigationController
+		navigationController: UINavigationController,
+		isUserAuthorize: CurrentValueSubject<Bool, Never>? = nil
 	) {
 		self.rootController = navigationController
+		self.isUserAuthorize = isUserAuthorize
 	}
 	
 	func route(
@@ -46,5 +53,26 @@ final class MailConfirmationCoordinator: Coordinator {
 		case .push:
 			rootController.pushViewController(viewController, animated: animated)
 		}
+	}
+	
+	func start() {
+		self.rootController.tabBarController?.tabBar.isHidden = true
+		route(view: .step1, animated: true)
+		// Mail Confirmation Logic instead
+		DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+			self.route(view: .step2, animated: false)
+		}
+	}
+	
+	func finishConfirmation() {
+		rootController.popViewController(animated: false)
+		rootController.popViewController(animated: false)
+		self.rootController.tabBarController?.tabBar.isHidden = false
+	}
+	
+	func startRegistrationOnBoardingCoordinator() {
+		let registrationOnBoardingCoordinator = RegistrationOnboardingCoordinator(navigationController: rootController, isUserAuthorize: isUserAuthorize!)
+		childCoordinators.append(registrationOnBoardingCoordinator)
+		registrationOnBoardingCoordinator.route(view: .step1)
 	}
 }

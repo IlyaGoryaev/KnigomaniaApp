@@ -1,5 +1,5 @@
 //
-//  RegistrationStep5View.swift
+//  RegistrationOnBoardingStep2View.swift
 //  KnigomaniaApp
 //
 //  Created by Илья Горяев on 29.09.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RegistrationStep5View: RegistrationOnboardingViewProtocol {
+struct RegistrationOnBoardingStep2View: RegistrationOnboardingViewProtocol {
 	
 	// MARK: Dependencies
 	
@@ -44,7 +44,7 @@ struct RegistrationStep5View: RegistrationOnboardingViewProtocol {
 					}
 				}
 				ButtonView(title: .continuation, isButtonEnable: isButtonEnable()){
-					applicationCoordinator?.route(view: .step6)
+					applicationCoordinator?.route(view: .step3)
 				}
 				.padding(.top, Sizes.Padding.normal.rawValue)
 				Spacer()
@@ -63,5 +63,5 @@ struct RegistrationStep5View: RegistrationOnboardingViewProtocol {
 // MARK: Preview
 
 #Preview {
-	RegistrationStep5View()
+	RegistrationOnBoardingStep2View()
 }

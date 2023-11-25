@@ -1,10 +1,3 @@
-//
-//  RegistrationOnboardingStep3View.swift
-//  KnigomaniaApp
-//
-//  Created by Илья Горяев on 26.09.2023.
-//
-
 import SwiftUI
 
 struct RegistrationOnboardingStep3View: RegistrationOnboardingViewProtocol {
@@ -20,16 +13,32 @@ struct RegistrationOnboardingStep3View: RegistrationOnboardingViewProtocol {
 			CustomColors.background
 				.ignoresSafeArea()
 			VStack(spacing: Sizes.Padding.zero.rawValue) {
-				Text(TextTitles.RegOnBoarding3.emailConfirmed.rawValue)
-					.modifier(HeadlineTextModifier())
-					.padding(.top, Sizes.Padding.large.rawValue)
-					.padding(.horizontal, Sizes.Padding.large.rawValue)
-				ButtonView(title: .continuation, isButtonEnable: true){
-					applicationCoordinator?.route(view: .step4)
+                NavBar(title: .registrationTitle) {
+					applicationCoordinator?.backAction()
 				}
 				.padding(.top, Sizes.Padding.large.rawValue)
+				Text(TextTitles.RegOnBoarding6.setGoals.rawValue)
+					.modifier(HeadlineTextModifier())
+					.padding(.horizontal, Sizes.Padding.normal.rawValue)
+					.padding(.top, Sizes.Padding.large.rawValue)
+				Button(action: {
+					applicationCoordinator?.logIn()
+				}, label: {
+					HStack(spacing: Sizes.Padding.small.rawValue) {
+						Text(TextTitles.RegOnBoarding6.skip.rawValue)
+						Image(systemName: ImageNames.chevronRight.rawValue)
+					}
+					.foregroundStyle(CustomColors.brownColor)
+					.font(.system(size: 14, weight: .semibold))
+				})
+				.padding(.top, Sizes.Padding.large.rawValue)
+				ButtonView(title: .setup, isButtonEnable: true){
+					applicationCoordinator?.setUpTracker()
+				}
+				.padding(.top, Sizes.Padding.small.rawValue)
 				Spacer()
 			}
+			
 		}
 	}
 }

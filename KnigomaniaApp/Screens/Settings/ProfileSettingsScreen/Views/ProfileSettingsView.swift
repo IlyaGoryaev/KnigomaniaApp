@@ -35,7 +35,9 @@ struct ProfileSettingsView: SettingsCoordinatorViewProtocol {
 //						.padding(.top, 32)
 					ProfileSettingsRow(title: "Пароль", text: $viewModel.person.password)
 						.padding(.top, 32)
-					ProfileSettingsRow(title: "E-mail", text: $viewModel.person.email)
+					ProfileSettingsRow(title: "E-mail", text: $viewModel.person.email) {
+							settingsCoordinator?.setupMailConfirmationCoordinator()
+						}
 						.padding(.top, 32)
 					Button(action: {
 						print("Удалить аккаунт")
@@ -73,6 +75,8 @@ struct ProfileSettingsRow: View {
 	
 	var allowEditing: Bool = true
 	
+	var action: (() -> ())?
+	
 	var body: some View {
 		VStack(spacing: 0) {
 			Text(title)
@@ -92,6 +96,9 @@ struct ProfileSettingsRow: View {
 					.background(RoundedRectangle(cornerRadius: 10).foregroundStyle(Color.white))
 					Button {
 						isEditing = false
+						if title == "E-mail" {
+							action!()
+						}
 					} label: {
 						Image(systemName: "checkmark")
 							.foregroundStyle(CustomColors.darkBrownColor)
