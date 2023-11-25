@@ -9,7 +9,8 @@ import SwiftUI
 
 struct FriendsStatisticView: View {
 	@Binding var friendsArray: [FriendModel]
-	@GestureState var isDragging = false
+    
+    weak var mainScreenCoordinator: MainCoordinator?
 		
 	var body: some View {
 		ZStack {
@@ -39,6 +40,10 @@ struct FriendsStatisticView: View {
 								ZStack {
 									FriendCellView(name: friendsArray[index].friendName, goalValue: friendsArray[index].goalValue, currentValue: friendsArray[index].currentValue)
 										.background(CustomColors.background)
+                                        .onTapGesture {
+                                            let friend = friendsArray[index]
+                                            mainScreenCoordinator?.friendPage(friend: friend)
+                                        }
 								}
 							}
 						}
@@ -51,33 +56,8 @@ struct FriendsStatisticView: View {
 		}
 	}
 	
-	private func deleteFriend(index: Int){
+    private func deleteFriend(index: Int) {
 		friendsArray.remove(at: index)
-	}
-	 
-	private func onChanged(value: DragGesture.Value, index: Int) {
-		if value.translation.width < 0 && isDragging && friendsArray[index].offset != -140 {
-			friendsArray[index].offset = value.translation.width
-			DispatchQueue.main.async {
-				for i in 0...friendsArray.count - 1 {
-					withAnimation {
-						if i != index {
-							friendsArray[i].offset = 0
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	private func onEnded(value: DragGesture.Value, index: Int) {
-		withAnimation {
-			if -value.translation.width >= 100 {
-				friendsArray[index].offset = -140
-			} else {
-				friendsArray[index].offset = 0
-			}
-		}
 	}
 }
 

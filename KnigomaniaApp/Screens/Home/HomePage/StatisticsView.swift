@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct StatisticsView: View {
-    
-    @State private var selection = 0
-    
+    @State private var selection = 0    
     @State private var friends: [FriendModel] = [FriendModel(friendName: "ejfj", goalValue: 10, currentValue: 4), FriendModel(friendName: "dwqdwq", goalValue: 8, currentValue: 3), FriendModel(friendName: "ghiohgior", goalValue: 12, currentValue: 7), FriendModel(friendName: "fhioeshif", goalValue: 34, currentValue: 12)]
     
     weak var mainScreenCoordinator: MainCoordinator?
@@ -28,7 +26,7 @@ struct StatisticsView: View {
                     }
                 })
                 .tag(0)
-            FriendsStatisticView(friendsArray: $friends)
+            FriendsStatisticView(friendsArray: $friends, mainScreenCoordinator: mainScreenCoordinator)
                 .tag(10)
         }
         .tabViewStyle(.page)

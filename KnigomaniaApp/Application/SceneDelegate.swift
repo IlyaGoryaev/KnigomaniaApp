@@ -36,9 +36,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			self.isUserAuthorize.sink { [weak self] boolValue in
 				guard let self = self else { return }
 				if boolValue{
-//					let mainCoordinator = MainCoordinator(navigationController: viewController)
-//					mainCoordinator.start()
-//					self.coordinator = mainCoordinator
 					let tabBarController = CustomTabBarViewController()
 					self.window?.rootViewController = tabBarController
 					self.window?.makeKeyAndVisible()
