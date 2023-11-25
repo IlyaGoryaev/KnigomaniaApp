@@ -9,9 +9,15 @@ import SwiftUI
 
 struct NotificationList: NotificationCoordinatorViewProtocol {
 	
+	// MARK: Dependencies
+	
+	@StateObject private var viewModel = NotificationListViewModel()
+	
+	// MARK: Properties
+	
 	var notificationCoordinator: NotificationCoordinator?
 	
-	private let notifications = TestBookPageData.notifications
+	// MARK: View
 	
     var body: some View {
 		ZStack {
@@ -21,14 +27,14 @@ struct NotificationList: NotificationCoordinatorViewProtocol {
 				NavBar(title: .emptyTitle) {
 					notificationCoordinator?.backAction(type: .backAction)
 				}
-				.padding(.vertical, 20)
-				
+				.padding(.top, Sizes.Padding.large.rawValue)
+				.padding(.bottom, Sizes.Padding.normal.rawValue)
 				ScrollView {
-					VStack(spacing: 24) {
-						ForEach(notifications, id: \.self) { item in
-							NotificationItem(notification: item, false)
+					VStack(spacing: Sizes.Padding.normal.rawValue) {
+						ForEach(viewModel.notifications.indices, id: \.self) { index in
+							NotificationItem(notification: viewModel.notifications[index], false)
 								.onTapGesture {
-									notificationCoordinator?.route(view: .descriptionNotification(notification: item))
+									openDescriptionScreen(index: index)
 								}
 						}
 					}
@@ -37,7 +43,16 @@ struct NotificationList: NotificationCoordinatorViewProtocol {
 			}
 		}
     }
+	
+	// MARK: Actions
+	
+	private func openDescriptionScreen(index: Int) {
+		viewModel.readNotification(by: index)
+		notificationCoordinator?.route(view: .descriptionNotification(notification: viewModel.notifications[index]))
+	}
 }
+
+// MARK: Preview
 
 #Preview {
     NotificationList()

@@ -13,9 +13,11 @@ struct NotificationModel: Decodable, Hashable {
 	let textNotification: String
 	let date: String
 	var isRead: Bool
+	var hasAction: Bool
+	var hasPhoto: Bool
 	
 	mutating func read() {
-		isRead.toggle()
+		isRead = true
 	}
 	
 }

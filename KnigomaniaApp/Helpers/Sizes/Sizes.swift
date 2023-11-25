@@ -17,5 +17,15 @@ enum Sizes {
 		case zero = 0
 	}
 	
+	enum Buttons {
+		enum ActionButtonPadding: CGFloat {
+			case large = 72
+			case normal = 44
+		}
+	}
 	
+	enum ProfileImage: CGFloat {
+		case normal = 36
+		case large = 72
+	}
 }

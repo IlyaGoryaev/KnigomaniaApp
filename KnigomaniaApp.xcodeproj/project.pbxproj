@@ -72,6 +72,12 @@
 		9D7A76DC2AE43A7F00158781 /* SimilarBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A76DB2AE43A7F00158781 /* SimilarBooksView.swift */; };
 		9D7A76DE2AE43DDC00158781 /* BookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A76DD2AE43DDC00158781 /* BookCoordinator.swift */; };
 		9D7A77152AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A77142AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift */; };
+		9D8242602B11D35900BF3ACF /* NotificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82425F2B11D35900BF3ACF /* NotificationProtocol.swift */; };
+		9D8242622B11D77400BF3ACF /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242612B11D77400BF3ACF /* DateService.swift */; };
+		9D8242642B11D94500BF3ACF /* NotificationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242632B11D94500BF3ACF /* NotificationListViewModel.swift */; };
+		9D8242682B1216A500BF3ACF /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242672B1216A500BF3ACF /* ActionView.swift */; };
+		9D82426B2B12174900BF3ACF /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82426A2B12174900BF3ACF /* ActionButton.swift */; };
+		9D82426F2B121B2100BF3ACF /* ActionButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82426E2B121B2100BF3ACF /* ActionButtonModifier.swift */; };
 		9DA5E4F92AE6678D00F4F99F /* ReviewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5E4F82AE6678D00F4F99F /* ReviewPage.swift */; };
 		9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */; };
 		9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */; };
@@ -191,6 +197,12 @@
 		9D7A76DB2AE43A7F00158781 /* SimilarBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarBooksView.swift; sourceTree = "<group>"; };
 		9D7A76DD2AE43DDC00158781 /* BookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCoordinator.swift; sourceTree = "<group>"; };
 		9D7A77142AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpReminderTrackerCoordinator.swift; sourceTree = "<group>"; };
+		9D82425F2B11D35900BF3ACF /* NotificationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationProtocol.swift; sourceTree = "<group>"; };
+		9D8242612B11D77400BF3ACF /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		9D8242632B11D94500BF3ACF /* NotificationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationListViewModel.swift; path = KnigomaniaApp/Helpers/NotificationListViewModel.swift; sourceTree = SOURCE_ROOT; };
+		9D8242672B1216A500BF3ACF /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		9D82426A2B12174900BF3ACF /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		9D82426E2B121B2100BF3ACF /* ActionButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonModifier.swift; sourceTree = "<group>"; };
 		9DA5E4F82AE6678D00F4F99F /* ReviewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPage.swift; sourceTree = "<group>"; };
 		9DA945C62AC0BA0A002302D1 /* KnigomaniaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnigomaniaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -450,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				9D072C212B019AE6001C2F54 /* NotificationCoordinatorViewProtocol.swift */,
+				9D82425F2B11D35900BF3ACF /* NotificationProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -474,6 +487,7 @@
 		9D072C1D2B019A06001C2F54 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9D8242632B11D94500BF3ACF /* NotificationListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -490,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				9D072C282B01A06E001C2F54 /* NotificationItem.swift */,
+				9D8242672B1216A500BF3ACF /* ActionView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -569,7 +584,7 @@
 		9D61F9C32AD8829A0000393C /* DesignElements */ = {
 			isa = PBXGroup;
 			children = (
-				9D61F9C42AD882B30000393C /* ButtonView.swift */,
+				9D8242692B12173B00BF3ACF /* Buttons */,
 				9D61FA032AD889F90000393C /* NavBar.swift */,
 				9D61F9CA2AD883090000393C /* TextFieldTime.swift */,
 				9D055EA62AE0EC0A00BDDF50 /* PasswordTextField.swift */,
@@ -858,6 +873,32 @@
 				9D7A76DB2AE43A7F00158781 /* SimilarBooksView.swift */,
 			);
 			path = BookPageSubviews;
+			sourceTree = "<group>";
+		};
+		9D8242692B12173B00BF3ACF /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9D82426D2B121B1000BF3ACF /* Modifiers */,
+				9D82426C2B121B0800BF3ACF /* Views */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		9D82426C2B121B0800BF3ACF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D61F9C42AD882B30000393C /* ButtonView.swift */,
+				9D82426A2B12174900BF3ACF /* ActionButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9D82426D2B121B1000BF3ACF /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				9D82426E2B121B2100BF3ACF /* ActionButtonModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		9DA5E4F12AE6669E00F4F99F /* Book */ = {
@@ -1177,6 +1218,7 @@
 				FED451282AF3EBE000FAAFA5 /* ImageExtension.swift */,
 				FE7ABC552AF932AC0069C4C4 /* TextFieldDynamicWidth.swift */,
 				FE8B8EEC2B0BB95200DE5ED4 /* UIApplicationExtension.swift */,
+				9D8242612B11D77400BF3ACF /* DateService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1263,8 +1305,10 @@
 			files = (
 				9D714E5B2AE9C98A00992E09 /* MainCoordinatorWithTabBar.swift in Sources */,
 				FE347F182AD032A900AE00DF /* Day.swift in Sources */,
+				9D82426F2B121B2100BF3ACF /* ActionButtonModifier.swift in Sources */,
 				9D7A76D32AE42BE500158781 /* BookPageModel.swift in Sources */,
 				9D055EC32AE0EFEB00BDDF50 /* MyProgress.swift in Sources */,
+				9D8242682B1216A500BF3ACF /* ActionView.swift in Sources */,
 				9D61F9FC2AD8896B0000393C /* SetupTrackerStep3View.swift in Sources */,
 				FE347F1A2AD055EE00AE00DF /* TimeSelectionModalView.swift in Sources */,
 				FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */,
@@ -1301,6 +1345,7 @@
 				FE4B8B042ADEA9B800FE28CE /* ScanScreenView.swift in Sources */,
 				9D055EAC2AE0EE0E00BDDF50 /* RegistrationView.swift in Sources */,
 				FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */,
+				9D82426B2B12174900BF3ACF /* ActionButton.swift in Sources */,
 				9D055EBB2AE0EF8E00BDDF50 /* FriendModel.swift in Sources */,
 				9D055EB72AE0EF3B00BDDF50 /* CurrentLibraryView.swift in Sources */,
 				9D61F9D12AD884180000393C /* RegistrationOnboardingStep3View.swift in Sources */,
@@ -1317,6 +1362,7 @@
 				FE7A80112AC60EA0000A8711 /* StartScreenView.swift in Sources */,
 				FE70D79B2AC819400018C5A1 /* LoginScreenView.swift in Sources */,
 				9DC2D1122AFCFA9C0087FB34 /* TextFieldModifier.swift in Sources */,
+				9D8242642B11D94500BF3ACF /* NotificationListViewModel.swift in Sources */,
 				9DC2D11B2AFD77E40087FB34 /* BookView.swift in Sources */,
 				FE9119442AEBDDF600B31380 /* GalleryPickerView.swift in Sources */,
 				9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */,
@@ -1333,6 +1379,7 @@
 				FED451272AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift in Sources */,
 				9D7A76D62AE432DA00158781 /* DescriptionView.swift in Sources */,
 				9D61F9DC2AD884D90000393C /* GenreModel.swift in Sources */,
+				9D8242602B11D35900BF3ACF /* NotificationProtocol.swift in Sources */,
 				9D055EA32AE0E47E00BDDF50 /* RegistrationOnboardingCoordinator.swift in Sources */,
 				9D055EA72AE0EC0A00BDDF50 /* PasswordTextField.swift in Sources */,
 				9D61F9C72AD882D70000393C /* HeadlineTextModifier.swift in Sources */,
@@ -1347,6 +1394,7 @@
 				FE5BC06F2AEAD369008F366F /* BookAddingCoordinator.swift in Sources */,
 				9DC2D1252AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift in Sources */,
 				9D6C06AA2B094FF000478609 /* SupportScreenView.swift in Sources */,
+				9D8242622B11D77400BF3ACF /* DateService.swift in Sources */,
 				9D61FA042AD889F90000393C /* NavBar.swift in Sources */,
 				9D714E332AE8E11B00992E09 /* ListCategories.swift in Sources */,
 				9D0E70532B115F8B00C2EAA2 /* Text.swift in Sources */,

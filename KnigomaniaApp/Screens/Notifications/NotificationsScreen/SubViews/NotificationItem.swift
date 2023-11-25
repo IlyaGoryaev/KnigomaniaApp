@@ -20,7 +20,7 @@ struct NotificationItem: View {
 	
 	var body: some View {
 		
-		VStack(spacing: 0) {
+		VStack(spacing: Sizes.Padding.zero.rawValue) {
 			HStack {
 				HStack(spacing: 2) {
 					if !notification.isRead {
@@ -32,20 +32,27 @@ struct NotificationItem: View {
 						.textStyle(.boldText)
 				}
 				Spacer()
-				Text(Date().description)
+				Text(DateService.shared.getDateDescription(date: Date()))
 					.textStyle(.regularText)
 			}
-			Text(notification.textNotification)
-				.lineLimit(2)
-				.textStyle(.regularText)
-				.frame(maxWidth: .infinity, alignment: .leading)
-				.padding(.top, 16)
+			HStack(alignment: .center) {
+				if notification.hasPhoto && isHidden{
+					Circle()
+						.foregroundStyle(CustomColors.lightBrownColor)
+						.frame(width: Sizes.ProfileImage.normal.rawValue, height: Sizes.ProfileImage.normal.rawValue)
+				}
+				Text(notification.textNotification)
+					.textStyle(.regularText)
+					.frame(maxWidth: .infinity, alignment: .leading)
+					.padding(.top, Sizes.Padding.normal.rawValue)
+			}
+			
 			Rectangle()
 				.frame(height: 0.5)
-				.padding(.top, 16)
+				.padding(.top, Sizes.Padding.normal.rawValue)
 				.opacity(isHidden ? 0 : 1)
 		}
-		.padding(.horizontal, 16)
+		.padding(.horizontal, Sizes.Padding.normal.rawValue)
 		
 	}
 	
