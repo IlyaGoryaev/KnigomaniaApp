@@ -9,7 +9,12 @@ import SwiftUI
 
 struct ProfileSettingsView: SettingsCoordinatorViewProtocol {
 	
+	// MARK: Dependecies
+	
 	var settingsCoordinator: SettingsCoordinator?
+	@StateObject private var viewModel = ProfileSettingsViewModel()
+	
+	// MARK: View
 	
     var body: some View {
 		ZStack {
@@ -19,26 +24,30 @@ struct ProfileSettingsView: SettingsCoordinatorViewProtocol {
 				ProfileSettingsNavBar {
 					settingsCoordinator?.backAction(type: .backAction)
 				}
-					.padding(.top, 20)
-				ProfileSettingsRow(title: "Имя")
+				.padding(.top, Sizes.Padding.normal.rawValue)
+				.padding(.bottom, Sizes.Padding.normal.rawValue)
+				ScrollView {
+					ProfileSettingsRow(title: "Имя", text: $viewModel.person.firstName)
+						.padding(.top, 32)
+					ProfileSettingsRow(title: "Фамилия", text: $viewModel.person.secondName)
+						.padding(.top, 32)
+//					ProfileSettingsRow(title: "Пол", text: $viewModel.person.gender)
+//						.padding(.top, 32)
+					ProfileSettingsRow(title: "Пароль", text: $viewModel.person.password)
+						.padding(.top, 32)
+					ProfileSettingsRow(title: "E-mail", text: $viewModel.person.email)
+						.padding(.top, 32)
+					Button(action: {
+						print("Удалить аккаунт")
+					}, label: {
+						Text("Удалить аккаунт")
+							.frame(maxWidth: .infinity, alignment: .leading)
+							.foregroundStyle(Color.red)
+							.padding(.horizontal, 16)
+					})
 					.padding(.top, 32)
-				ProfileSettingsRow(title: "Фамилия")
-					.padding(.top, 32)
-				ProfileSettingsRow(title: "Пол")
-					.padding(.top, 32)
-				ProfileSettingsRow(title: "Пароль")
-					.padding(.top, 32)
-				ProfileSettingsRow(title: "E-mail")
-					.padding(.top, 32)
-				Button(action: {
-					print("Удалить аккаунт")
-				}, label: {
-					Text("Удалить аккаунт")
-						.frame(maxWidth: .infinity, alignment: .leading)
-						.foregroundStyle(Color.red)
-						.padding(.horizontal, 16)
-				})
-				.padding(.top, 32)
+				}
+				
 				Spacer()
 			}
 		}
@@ -56,6 +65,8 @@ struct ProfileSettingsRow: View {
 	
 	let title: String
 	
+	@Binding var text: String
+	
 	@State private var textFieldTitle: String = ""
 	
 	@State private var isEditing: Bool = false
@@ -69,7 +80,7 @@ struct ProfileSettingsRow: View {
 				.frame(maxWidth: .infinity, alignment: .leading)
 			if isEditing {
 				ZStack(alignment: .trailing) {
-					TextField(text: $textFieldTitle) {
+					TextField(text: $text) {
 						Text("Введите электронную почту")
 							.foregroundStyle(CustomColors.brownColor)
 							.font(.system(size: 14))
@@ -91,7 +102,7 @@ struct ProfileSettingsRow: View {
 				.padding(.top, 16)
 			} else {
 				HStack {
-					Text(title)
+					Text(text)
 						.textStyle(.regularText)
 					Spacer()
 					Button {

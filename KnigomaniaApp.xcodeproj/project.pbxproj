@@ -57,8 +57,6 @@
 		9D6C06AA2B094FF000478609 /* SupportScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6C06A92B094FF000478609 /* SupportScreenView.swift */; };
 		9D6C06B02B09549800478609 /* NotificationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6C06AF2B09549800478609 /* NotificationScreenView.swift */; };
 		9D714E2A2AE8238600992E09 /* MakeReviewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714E292AE8238600992E09 /* MakeReviewPage.swift */; };
-		9D714E302AE8E03400992E09 /* AddBookToListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714E2F2AE8E03400992E09 /* AddBookToListPage.swift */; };
-		9D714E332AE8E11B00992E09 /* ListCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714E322AE8E11B00992E09 /* ListCategories.swift */; };
 		9D714E592AE9C94E00992E09 /* MainCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714E582AE9C94E00992E09 /* MainCoordinatorProtocol.swift */; };
 		9D714E5B2AE9C98A00992E09 /* MainCoordinatorWithTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714E5A2AE9C98A00992E09 /* MainCoordinatorWithTabBar.swift */; };
 		9D714E662AEA4D7000992E09 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714E652AEA4D7000992E09 /* CustomTabBarController.swift */; };
@@ -78,6 +76,8 @@
 		9D8242682B1216A500BF3ACF /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242672B1216A500BF3ACF /* ActionView.swift */; };
 		9D82426B2B12174900BF3ACF /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82426A2B12174900BF3ACF /* ActionButton.swift */; };
 		9D82426F2B121B2100BF3ACF /* ActionButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82426E2B121B2100BF3ACF /* ActionButtonModifier.swift */; };
+		9D8242712B12332500BF3ACF /* ProfileSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242702B12332500BF3ACF /* ProfileSettingsViewModel.swift */; };
+		9D8242732B12335D00BF3ACF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242722B12335D00BF3ACF /* UserModel.swift */; };
 		9DA5E4F92AE6678D00F4F99F /* ReviewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5E4F82AE6678D00F4F99F /* ReviewPage.swift */; };
 		9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */; };
 		9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */; };
@@ -182,8 +182,6 @@
 		9D6C06A92B094FF000478609 /* SupportScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportScreenView.swift; sourceTree = "<group>"; };
 		9D6C06AF2B09549800478609 /* NotificationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScreenView.swift; sourceTree = "<group>"; };
 		9D714E292AE8238600992E09 /* MakeReviewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReviewPage.swift; sourceTree = "<group>"; };
-		9D714E2F2AE8E03400992E09 /* AddBookToListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookToListPage.swift; sourceTree = "<group>"; };
-		9D714E322AE8E11B00992E09 /* ListCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCategories.swift; sourceTree = "<group>"; };
 		9D714E582AE9C94E00992E09 /* MainCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9D714E5A2AE9C98A00992E09 /* MainCoordinatorWithTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorWithTabBar.swift; sourceTree = "<group>"; };
 		9D714E652AEA4D7000992E09 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -203,6 +201,8 @@
 		9D8242672B1216A500BF3ACF /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		9D82426A2B12174900BF3ACF /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		9D82426E2B121B2100BF3ACF /* ActionButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonModifier.swift; sourceTree = "<group>"; };
+		9D8242702B12332500BF3ACF /* ProfileSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileSettingsViewModel.swift; path = KnigomaniaApp/DesignElements/Buttons/Modifiers/ProfileSettingsViewModel.swift; sourceTree = SOURCE_ROOT; };
+		9D8242722B12335D00BF3ACF /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = KnigomaniaApp/DesignElements/Buttons/Modifiers/UserModel.swift; sourceTree = SOURCE_ROOT; };
 		9DA5E4F82AE6678D00F4F99F /* ReviewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPage.swift; sourceTree = "<group>"; };
 		9DA945C62AC0BA0A002302D1 /* KnigomaniaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnigomaniaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -426,6 +426,7 @@
 		9D072BD02B01659B001C2F54 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9D8242702B12332500BF3ACF /* ProfileSettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -433,6 +434,7 @@
 		9D072BD12B0165A3001C2F54 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9D8242722B12335D00BF3ACF /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -810,31 +812,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9D714E2C2AE8E00400992E09 /* AddBookToList */ = {
-			isa = PBXGroup;
-			children = (
-				9D714E312AE8E10800992E09 /* Models */,
-				9D714E2D2AE8E01800992E09 /* Views */,
-			);
-			path = AddBookToList;
-			sourceTree = "<group>";
-		};
-		9D714E2D2AE8E01800992E09 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9D714E2F2AE8E03400992E09 /* AddBookToListPage.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9D714E312AE8E10800992E09 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				9D714E322AE8E11B00992E09 /* ListCategories.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		9D7A76CC2AE4294E00158781 /* BookPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -906,7 +883,6 @@
 			children = (
 				9DC2D11E2AFD7EEC0087FB34 /* Coordinator */,
 				9DC2D1162AFD05D60087FB34 /* Protocols */,
-				9D714E2C2AE8E00400992E09 /* AddBookToList */,
 				9D714E252AE8234500992E09 /* MakeRiviewPage */,
 				9DA5E4F22AE666B900F4F99F /* BookReviewPage */,
 				9D7A76CC2AE4294E00158781 /* BookPage */,
@@ -1331,6 +1307,7 @@
 				FE5BC0712AEAD774008F366F /* TextFieldSection.swift in Sources */,
 				FE314D442ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift in Sources */,
 				FE7ABC562AF932AC0069C4C4 /* TextFieldDynamicWidth.swift in Sources */,
+				9D8242712B12332500BF3ACF /* ProfileSettingsViewModel.swift in Sources */,
 				FEAB7AF12AE2BD000057F3C5 /* StatisticsView.swift in Sources */,
 				9D6C06B02B09549800478609 /* NotificationScreenView.swift in Sources */,
 				9D61F9C22AD8825D0000393C /* TrackerCoordinator.swift in Sources */,
@@ -1380,6 +1357,7 @@
 				9D7A76D62AE432DA00158781 /* DescriptionView.swift in Sources */,
 				9D61F9DC2AD884D90000393C /* GenreModel.swift in Sources */,
 				9D8242602B11D35900BF3ACF /* NotificationProtocol.swift in Sources */,
+				9D8242732B12335D00BF3ACF /* UserModel.swift in Sources */,
 				9D055EA32AE0E47E00BDDF50 /* RegistrationOnboardingCoordinator.swift in Sources */,
 				9D055EA72AE0EC0A00BDDF50 /* PasswordTextField.swift in Sources */,
 				9D61F9C72AD882D70000393C /* HeadlineTextModifier.swift in Sources */,
@@ -1396,11 +1374,9 @@
 				9D6C06AA2B094FF000478609 /* SupportScreenView.swift in Sources */,
 				9D8242622B11D77400BF3ACF /* DateService.swift in Sources */,
 				9D61FA042AD889F90000393C /* NavBar.swift in Sources */,
-				9D714E332AE8E11B00992E09 /* ListCategories.swift in Sources */,
 				9D0E70532B115F8B00C2EAA2 /* Text.swift in Sources */,
 				9D61F9F62AD888B90000393C /* SetupTrackerStep2View.swift in Sources */,
 				9D714E592AE9C94E00992E09 /* MainCoordinatorProtocol.swift in Sources */,
-				9D714E302AE8E03400992E09 /* AddBookToListPage.swift in Sources */,
 				9D7A76CE2AE42A1C00158781 /* BookPage.swift in Sources */,
 				9D055EB42AE0EF0A00BDDF50 /* BookChallengeView.swift in Sources */,
 				FE2029282B02AA1F00386526 /* BarcodeOverlay.swift in Sources */,

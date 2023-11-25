@@ -7,7 +7,14 @@
 
 import SwiftUI
 
-struct NotificationScreenView: View {
+struct NotificationScreenView: SettingsCoordinatorViewProtocol {
+	
+	// MARK: Dependencies
+	
+	var settingsCoordinator: SettingsCoordinator?
+	
+	// MARK: View
+	
     var body: some View {
 		ZStack {
 			CustomColors
@@ -15,7 +22,7 @@ struct NotificationScreenView: View {
 				.ignoresSafeArea()
 			VStack {
 				NavBar(title: .notification) {
-					
+					settingsCoordinator?.backAction(type: .backAction)
 				}
 				.padding(.top, 32)
 				NotificationToggle()

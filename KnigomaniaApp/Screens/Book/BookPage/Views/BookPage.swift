@@ -18,7 +18,7 @@ struct BookPage: BookCoordinatorViewProtocol {
 	@State private var opacity: CGFloat = 1
 	
 	@State private var bookTitleOpacity: CGFloat = 0
-		
+			
     var body: some View {
 		ZStack {
 			CustomColors.background
@@ -33,36 +33,44 @@ struct BookPage: BookCoordinatorViewProtocol {
 						.textStyle(.boldText)
 						.opacity(bookTitleOpacity)
 				}
-				ScrollView {
-					VStack(spacing: 0) {
-						BookView(bookAuthor: viewModel.book.author, bookTitle: viewModel.book.title, bookYear: viewModel.book.year, imageFrame: $imageFrame, opacity: $opacity)
-							.padding(.top, 24)
-						GradeView(bookGrade: Int(viewModel.book.grade), selection: $viewModel.selection)
-							.padding(.top, 24)
-						BookActionsView(bookCoordinator: bookCoordinator)
-							.padding(.top, 40)
-						DescriptionView(description: viewModel.book.description)
+				ScrollViewReader { reader in
+					ScrollView {
+						VStack(spacing: 0) {
+							BookView(bookAuthor: viewModel.book.author, bookTitle: viewModel.book.title, bookYear: viewModel.book.year, imageFrame: $imageFrame, opacity: $opacity)
+								.padding(.top, 24)
+							GradeView(bookGrade: Int(viewModel.book.grade), selection: $viewModel.selection)
+								.padding(.top, 24)
+							BookActionsView(bookCoordinator: bookCoordinator) {
+//								withAnimation {
+//									reader.scrollTo(.)
+//								}
+								print("Action")
+							}
+								.padding(.top, 40)
+							DescriptionView(description: viewModel.book.description)
+								.padding(.top, 56)
+							ReviewsView {
+								bookCoordinator?.route(view: .reviewsPage)
+							}
 							.padding(.top, 56)
-						ReviewsView {
-							bookCoordinator?.route(view: .reviewsPage)
+							SimilarBooksView()
+								.padding(.top, 56)
 						}
-						.padding(.top, 56)
-						SimilarBooksView()
-							.padding(.top, 56)
-					}
-					.background(
-						GeometryReader {
-							Color.clear.preference(key: ViewOffsetKey.self, value: -$0.frame(in: .named("scroll")).origin.y)
+						.background(
+							GeometryReader { reader in
+								Color.clear.preference(key: ViewOffsetKey.self, value: -reader.frame(in: .named("scroll")).origin.y)
+							}
+						)
+						.onPreferenceChange(ViewOffsetKey.self) {
+							setupBookOpacity(scrollOffset: $0)
+							setupBookTitleOpacity(scrollOffset: $0)
 						}
-					)
-					.onPreferenceChange(ViewOffsetKey.self) {
-						setupBookOpacity(scrollOffset: $0)
-						setupBookTitleOpacity(scrollOffset: $0)
 					}
+					.coordinateSpace(name: "scroll")
+					.ignoresSafeArea()
+					.padding(.bottom, 28)
 				}
-				.coordinateSpace(name: "scroll")
-				.ignoresSafeArea()
-				.padding(.bottom, 28)
+				
 			}
 		}
 	}

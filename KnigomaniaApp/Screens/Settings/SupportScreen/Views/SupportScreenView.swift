@@ -7,9 +7,18 @@
 
 import SwiftUI
 
-struct SupportScreenView: View {
+struct SupportScreenView: SettingsCoordinatorViewProtocol {
+	
+	// MARK: Dependencies
+	
+	var settingsCoordinator: SettingsCoordinator?
+	
+	// MARK: Properties
 	
 	@State private var troubleText: String = ""
+	@State var text: String = ""
+	
+	// MARK: View
 	
     var body: some View {
 		ZStack {
@@ -18,10 +27,10 @@ struct SupportScreenView: View {
 				.ignoresSafeArea()
 			VStack {
 				NavBar(title: .support) {
-					
+					settingsCoordinator?.backAction(type: .backAction)
 				}
 				.padding(.top, 32)
-				ProfileSettingsRow(title: "E-mail", allowEditing: false)
+				ProfileSettingsRow(title: "E-mail", text: $text, allowEditing: false)
 					.padding(.top, 44)
 				ReviewText(text: $troubleText)
 					.padding(.top, 32)
@@ -37,11 +46,13 @@ struct SupportScreenView: View {
         }
     }
     
+	// MARK: Actions
+	
     private func endEditing() {
         UIApplication.shared.endEditing()
     }
 }
 
 #Preview {
-    SupportScreenView()
+	SupportScreenView()
 }

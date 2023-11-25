@@ -23,11 +23,11 @@ enum SettingsSectionItems: String {
 		case .profileSettings:
 			ProfileSettingsView()
 		case .notifications:
-			ProfileSettingsView()
+			NotificationScreenView()
 		case .privacyPolicy:
 			ProfileSettingsView()
 		case .support:
-			ProfileSettingsView()
+			SupportScreenView()
 		case .aboutApp:
 			ProfileSettingsView()
 		}
