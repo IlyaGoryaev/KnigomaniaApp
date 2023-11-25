@@ -11,6 +11,8 @@ import Combine
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+	
+	
     var window: UIWindow?
 
 	var coordinator: (any Coordinator)?

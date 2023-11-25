@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct RegistrationOnBoardingStep2View: RegistrationOnboardingViewProtocol {
+	
+	// MARK: Dependencies
+	
 	weak var applicationCoordinator: RegistrationOnboardingCoordinator?
-	var email: String = "123356gmail.com"
+	
+	// MARK: Properties
+	
+	var email: String = "123356@gmail.com"
 	@State private var isLoading: Bool = false
+	
+	// MARK: View
 	
 	var body: some View {
 		ZStack {
@@ -18,30 +26,30 @@ struct RegistrationOnBoardingStep2View: RegistrationOnboardingViewProtocol {
 				CustomColors.background
 					.ignoresSafeArea()
 				VStack {
-					Text("Подтвердите адрес электронной почты")
+					Text(TextTitles.RegOnBoarding2.emailConfirm.rawValue)
 						.modifier(HeadlineTextModifier())
-						.padding(.top, 20)
-						.padding(.horizontal, 8)
-					Text("Мы отправили письмо на " + email)
+						.padding(.top, Sizes.Padding.normal.rawValue)
+						.padding(.horizontal, Sizes.Padding.small.rawValue)
+					Text(TextTitles.RegOnBoarding2.sendMail.rawValue + email)
 						.modifier(RegularTextModifier())
-						.padding(.top, 18)
-						.padding(.horizontal, 60)
-					Image("registrationscreenimage")
-						.padding(.top, 26)
-						.padding(.horizontal, 16)
-					VStack(spacing: 16){
-						Text("Не получили письмо?")
+						.padding(.top, Sizes.Padding.normal.rawValue)
+						.padding(.horizontal, Sizes.Padding.large.rawValue)
+					Image(ImageNames.RegOnBoarding2.rawValue)
+						.padding(.top, Sizes.Padding.large.rawValue)
+						.padding(.horizontal, Sizes.Padding.normal.rawValue)
+					VStack(spacing: Sizes.Padding.normal.rawValue){
+						Text(TextTitles.RegOnBoarding2.doNotGetMail.rawValue)
                             .font(.system(size: 14, weight: .regular))
                             .foregroundColor(CustomColors.darkBrownColor)
 						Button(action: {
 							applicationCoordinator?.route(view: .step3)
 						}, label: {
-							Text("Отправить еще раз")
+							Text(TextTitles.RegOnBoarding2.sendAgain.rawValue)
 								.foregroundStyle(CustomColors.darkBrownColor)
 								.font(.system(size: 14, weight: .bold))
 						})
 					}
-					.padding(.top, 94)
+					.padding(.top, Sizes.Padding.large.rawValue)
 					Spacer()
 				}
 				.blur(radius: isLoading ? 3 : 0)
@@ -56,6 +64,8 @@ struct RegistrationOnBoardingStep2View: RegistrationOnboardingViewProtocol {
 		}
 	}
 }
+
+// MARK: Preview
 
 #Preview {
 	RegistrationOnBoardingStep2View()

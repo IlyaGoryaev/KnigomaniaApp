@@ -17,6 +17,8 @@ struct BookActionsView: View {
 	let bookButtonInfoDict: [String: String] = ["Оставить\nрецензию": "Icon plus", "Добавить\nв список": "Icon edit", "Поделиться\nкнигой": "Icon share"]
 	let categoryNames = ["Оставить\nрецензию", "Добавить\nв список", "Поделиться\nкнигой"]
 	
+	var action: () -> ()
+	
 	var body: some View {
 		HStack {
 			BookPageButton(imageName: bookButtonInfoDict[categoryNames[0]]!, buttonText: categoryNames[0]){
@@ -24,7 +26,8 @@ struct BookActionsView: View {
 			}
 			Spacer()
 			BookPageButton(imageName: bookButtonInfoDict[categoryNames[1]]!, buttonText: categoryNames[1]){
-				bookCoordinator?.route(view: .addBookToList)
+				//bookCoordinator?.route(view: .addBookToList)
+				action()
 			}
 			Spacer()
 			BookPageButton(imageName: bookButtonInfoDict[categoryNames[2]]!, buttonText: categoryNames[2]){
@@ -59,5 +62,7 @@ struct BookPageButton: View {
 }
 
 #Preview {
-    BookActionsView()
+	BookActionsView {
+		print("feoihwiofohwe")
+	}
 }

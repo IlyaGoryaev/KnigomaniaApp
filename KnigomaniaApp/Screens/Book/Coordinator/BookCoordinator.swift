@@ -17,7 +17,6 @@ final class BookCoordinator: Coordinator{
 	enum Views {
 		
 		case makeReview
-		case addBookToList
 		case bookPage
 		//case similarBooksPage
 		case reviewsPage
@@ -26,8 +25,6 @@ final class BookCoordinator: Coordinator{
 			switch self {
 			case .makeReview:
 				return MakeReviewPage()
-			case .addBookToList:
-				return AddBookToListPage()
 			case .bookPage:
 				return BookPage()
 			case .reviewsPage:

@@ -2,43 +2,48 @@ import SwiftUI
 
 struct RegistrationOnboardingStep6View: RegistrationOnboardingViewProtocol {
 	
+	// MARK: Dependencies
+	
 	weak var applicationCoordinator: RegistrationOnboardingCoordinator?
+	
+	// MARK: View
 	
 	var body: some View {
 		ZStack{
 			CustomColors.background
 				.ignoresSafeArea()
-			//Main layer
-			VStack{
+			VStack(spacing: Sizes.Padding.zero.rawValue) {
                 NavBar(title: .registrationTitle) {
 					applicationCoordinator?.backAction()
 				}
-				.padding(.top, 20)
-				Text("Хотите настроить сейчас\n ваши цели по чтению?")
+				.padding(.top, Sizes.Padding.large.rawValue)
+				Text(TextTitles.RegOnBoarding6.setGoals.rawValue)
 					.modifier(HeadlineTextModifier())
-					.padding(.horizontal, 16)
-					.padding(.top, 40)
+					.padding(.horizontal, Sizes.Padding.normal.rawValue)
+					.padding(.top, Sizes.Padding.large.rawValue)
 				Button(action: {
 					applicationCoordinator?.logIn()
 				}, label: {
-					HStack(spacing: 8){
-						Text("Пропустить")
-						Image(systemName: "chevron.right")
+					HStack(spacing: Sizes.Padding.small.rawValue) {
+						Text(TextTitles.RegOnBoarding6.skip.rawValue)
+						Image(systemName: ImageNames.chevronRight.rawValue)
 					}
 					.foregroundStyle(CustomColors.brownColor)
 					.font(.system(size: 14, weight: .semibold))
 				})
-				.padding(.top, 32)
+				.padding(.top, Sizes.Padding.large.rawValue)
 				ButtonView(title: .setup, isButtonEnable: true){
 					applicationCoordinator?.setUpTracker()
 				}
-				.padding(.top, 8)
+				.padding(.top, Sizes.Padding.small.rawValue)
 				Spacer()
 			}
 			
 		}
 	}
 }
+
+// MARK: Preview
 
 #Preview {
 	RegistrationOnboardingStep6View()

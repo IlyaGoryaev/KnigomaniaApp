@@ -30,18 +30,7 @@ struct GalleryPickerView: View {
                     .background(Color.white)
                     .cornerRadius(10)
                 HStack {
-                    Button(action: {
-                        requestAuthorizationForPhotos()
-                    }, label: {
-                        Text("Выбрать из галереи")
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(Color.white)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 36)
-                            .background(CustomColors.darkBrownColor)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .padding(.horizontal, 72)
-                    })
+					ActionButton(title: "Выбрать из галереи", padding: Sizes.Buttons.ActionButtonPadding.large.rawValue, actionType: .approveAction)
                     .sheet(isPresented: $showImagePicker) {
                         ImagePicker(image: $inputImage)
                     }
