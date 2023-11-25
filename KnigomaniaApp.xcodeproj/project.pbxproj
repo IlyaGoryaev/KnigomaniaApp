@@ -78,6 +78,10 @@
 		9D82426F2B121B2100BF3ACF /* ActionButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82426E2B121B2100BF3ACF /* ActionButtonModifier.swift */; };
 		9D8242712B12332500BF3ACF /* ProfileSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242702B12332500BF3ACF /* ProfileSettingsViewModel.swift */; };
 		9D8242732B12335D00BF3ACF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242722B12335D00BF3ACF /* UserModel.swift */; };
+		9D82427C2B126FC900BF3ACF /* MailConfirmationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82427B2B126FC900BF3ACF /* MailConfirmationCoordinator.swift */; };
+		9D8242822B12716800BF3ACF /* MailConfirmationViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242812B12716800BF3ACF /* MailConfirmationViewProtocol.swift */; };
+		9D8242842B12721A00BF3ACF /* MailConfirmationStep1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242832B12721A00BF3ACF /* MailConfirmationStep1View.swift */; };
+		9D8242882B12729E00BF3ACF /* MailConfirmationStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8242872B12729E00BF3ACF /* MailConfirmationStep2View.swift */; };
 		9DA5E4F92AE6678D00F4F99F /* ReviewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5E4F82AE6678D00F4F99F /* ReviewPage.swift */; };
 		9DA945CA2AC0BA0A002302D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */; };
 		9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA945CB2AC0BA0A002302D1 /* SceneDelegate.swift */; };
@@ -203,6 +207,10 @@
 		9D82426E2B121B2100BF3ACF /* ActionButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonModifier.swift; sourceTree = "<group>"; };
 		9D8242702B12332500BF3ACF /* ProfileSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileSettingsViewModel.swift; path = KnigomaniaApp/DesignElements/Buttons/Modifiers/ProfileSettingsViewModel.swift; sourceTree = SOURCE_ROOT; };
 		9D8242722B12335D00BF3ACF /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = KnigomaniaApp/DesignElements/Buttons/Modifiers/UserModel.swift; sourceTree = SOURCE_ROOT; };
+		9D82427B2B126FC900BF3ACF /* MailConfirmationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MailConfirmationCoordinator.swift; path = KnigomaniaApp/Screens/Settings/Coordinator/MailConfirmationCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		9D8242812B12716800BF3ACF /* MailConfirmationViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailConfirmationViewProtocol.swift; sourceTree = "<group>"; };
+		9D8242832B12721A00BF3ACF /* MailConfirmationStep1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailConfirmationStep1View.swift; sourceTree = "<group>"; };
+		9D8242872B12729E00BF3ACF /* MailConfirmationStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailConfirmationStep2View.swift; sourceTree = "<group>"; };
 		9DA5E4F82AE6678D00F4F99F /* ReviewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPage.swift; sourceTree = "<group>"; };
 		9DA945C62AC0BA0A002302D1 /* KnigomaniaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnigomaniaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA945C92AC0BA0A002302D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -572,13 +580,8 @@
 				9D055E9D2AE0E3EC00BDDF50 /* Protocols */,
 				9D055E9E2AE0E42300BDDF50 /* EntryCoordinator.swift */,
 				9D7A77142AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift */,
-				9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */,
 				9D714E5A2AE9C98A00992E09 /* MainCoordinatorWithTabBar.swift */,
 				9D055EA02AE0E45E00BDDF50 /* MainCoordinator.swift */,
-				9D714E672AEA50B500992E09 /* RecommendationsCoordinator.swift */,
-				9D055EA42AE0E49600BDDF50 /* ResetPasswordCoordinator.swift */,
-				9D714E692AEA521700992E09 /* ScanCoordinator.swift */,
-				FE5BC06E2AEAD369008F366F /* BookAddingCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 		9D61F9E82AD887FB0000393C /* SetupTracker */ = {
 			isa = PBXGroup;
 			children = (
+				9D82427D2B12706800BF3ACF /* Coordinator */,
 				FE314D422ACC81E100BA3356 /* TrackerSetupScreen */,
 				9D61F9FD2AD8898B0000393C /* SetupTrackerStep4 */,
 				9D61F9F72AD889170000393C /* SetupTrackerStep3 */,
@@ -878,6 +882,98 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		9D8242762B126F4300BF3ACF /* EmailConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				9D82427A2B126FA900BF3ACF /* Coordinator */,
+				9D8242792B126F8400BF3ACF /* Step2 */,
+				9D8242782B126F7A00BF3ACF /* Step1 */,
+				9D8242772B126F7000BF3ACF /* Protocols */,
+			);
+			path = EmailConfirmation;
+			sourceTree = "<group>";
+		};
+		9D8242772B126F7000BF3ACF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9D8242812B12716800BF3ACF /* MailConfirmationViewProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9D8242782B126F7A00BF3ACF /* Step1 */ = {
+			isa = PBXGroup;
+			children = (
+				9D8242852B12721D00BF3ACF /* Views  */,
+			);
+			path = Step1;
+			sourceTree = "<group>";
+		};
+		9D8242792B126F8400BF3ACF /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+				9D8242862B12728A00BF3ACF /* Views */,
+			);
+			path = Step2;
+			sourceTree = "<group>";
+		};
+		9D82427A2B126FA900BF3ACF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9D82427B2B126FC900BF3ACF /* MailConfirmationCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9D82427D2B12706800BF3ACF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9D82427E2B12708900BF3ACF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9D055EA42AE0E49600BDDF50 /* ResetPasswordCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9D82427F2B1270A300BF3ACF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9D714E692AEA521700992E09 /* ScanCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9D8242802B1270B200BF3ACF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FE5BC06E2AEAD369008F366F /* BookAddingCoordinator.swift */,
+				9D714E672AEA50B500992E09 /* RecommendationsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9D8242852B12721D00BF3ACF /* Views  */ = {
+			isa = PBXGroup;
+			children = (
+				9D8242832B12721A00BF3ACF /* MailConfirmationStep1View.swift */,
+			);
+			path = "Views ";
+			sourceTree = "<group>";
+		};
+		9D8242862B12728A00BF3ACF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D8242872B12729E00BF3ACF /* MailConfirmationStep2View.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9DA5E4F12AE6669E00F4F99F /* Book */ = {
 			isa = PBXGroup;
 			children = (
@@ -1010,6 +1106,7 @@
 		FE20291D2B028DAA00386526 /* Scan */ = {
 			isa = PBXGroup;
 			children = (
+				9D82427F2B1270A300BF3ACF /* Coordinator */,
 				FE20291E2B02929300386526 /* Views */,
 			);
 			path = Scan;
@@ -1074,6 +1171,7 @@
 		FE5BC0602AEACF2A008F366F /* Recommendations */ = {
 			isa = PBXGroup;
 			children = (
+				9D8242802B1270B200BF3ACF /* Coordinator */,
 				FE5BC0612AEACFE9008F366F /* RecommendationsScreenView.swift */,
 				FE5BC0632AEACFF2008F366F /* BookAddingScreenView.swift */,
 				FE5BC0672AEAD00D008F366F /* SubViews */,
@@ -1125,6 +1223,7 @@
 		FE70D79C2AC861790018C5A1 /* RestorePasswordScreen */ = {
 			isa = PBXGroup;
 			children = (
+				9D82427E2B12708900BF3ACF /* Coordinator */,
 				FE70D79D2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift */,
 				FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */,
 				FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */,
@@ -1160,6 +1259,7 @@
 		FEEF84C42AD9B05E00B6DC39 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				9D8242762B126F4300BF3ACF /* EmailConfirmation */,
 				FE70D7952AC815510018C5A1 /* StartScreen */,
 				9D055EA82AE0EDE200BDDF50 /* RegistrationScreen */,
 				9D61F9B62AD881810000393C /* RegistrationOnboarding */,
@@ -1297,9 +1397,11 @@
 				9DA945CE2AC0BA0A002302D1 /* ViewController.swift in Sources */,
 				9D072BD72B016A94001C2F54 /* ProfileSettingsView.swift in Sources */,
 				FEC8EB082AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift in Sources */,
+				9D82427C2B126FC900BF3ACF /* MailConfirmationCoordinator.swift in Sources */,
 				9D7A76D82AE4358700158781 /* ReviewsView.swift in Sources */,
 				9D61F9CB2AD883090000393C /* TextFieldTime.swift in Sources */,
 				9D0E70592B11609600C2EAA2 /* ImageNames.swift in Sources */,
+				9D8242822B12716800BF3ACF /* MailConfirmationViewProtocol.swift in Sources */,
 				9D61F9D62AD884760000393C /* RegistrationOnboardingStep4View.swift in Sources */,
 				FEAAB6322AFB7F4D009C0919 /* TextModifier.swift in Sources */,
 				9D055EA52AE0E49600BDDF50 /* ResetPasswordCoordinator.swift in Sources */,
@@ -1344,6 +1446,7 @@
 				FE9119442AEBDDF600B31380 /* GalleryPickerView.swift in Sources */,
 				9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */,
 				9D072C222B019AE6001C2F54 /* NotificationCoordinatorViewProtocol.swift in Sources */,
+				9D8242882B12729E00BF3ACF /* MailConfirmationStep2View.swift in Sources */,
 				9D055EB02AE0EEE800BDDF50 /* MainScreen.swift in Sources */,
 				FE1BF0F82AE6B9FA00FB302A /* TabBarWrapperView.swift in Sources */,
 				9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */,
@@ -1363,6 +1466,7 @@
 				9D61F9C72AD882D70000393C /* HeadlineTextModifier.swift in Sources */,
 				FE5BC06D2AEAD01B008F366F /* NotFoundView.swift in Sources */,
 				FE70D79E2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift in Sources */,
+				9D8242842B12721A00BF3ACF /* MailConfirmationStep1View.swift in Sources */,
 				9D714E682AEA50B500992E09 /* RecommendationsCoordinator.swift in Sources */,
 				9DA5E4F92AE6678D00F4F99F /* ReviewPage.swift in Sources */,
 				9DC2D1182AFD05E70087FB34 /* BookCoordinatorViewProtocol.swift in Sources */,
