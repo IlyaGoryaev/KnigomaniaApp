@@ -98,6 +98,7 @@
 		9DC2D1252AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D1242AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift */; };
 		FE171B152AFB80F300AFDCDB /* TestBookPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */; };
 		FE171B172AFB812C00AFDCDB /* BookPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */; };
+		FE1E368C2B1297AD0053D07E /* FriendPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1E368B2B1297AD0053D07E /* FriendPageView.swift */; };
 		FE2029282B02AA1F00386526 /* BarcodeOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2029272B02AA1F00386526 /* BarcodeOverlay.swift */; };
 		FE20292A2B02AA4C00386526 /* VideoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2029292B02AA4C00386526 /* VideoCaptureView.swift */; };
 		FE314D442ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE314D432ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift */; };
@@ -227,6 +228,7 @@
 		9DC2D1242AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOnboardingViewProtocol.swift; sourceTree = "<group>"; };
 		FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBookPageData.swift; sourceTree = "<group>"; };
 		FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookPageViewModel.swift; sourceTree = "<group>"; };
+		FE1E368B2B1297AD0053D07E /* FriendPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPageView.swift; sourceTree = "<group>"; };
 		FE2029272B02AA1F00386526 /* BarcodeOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeOverlay.swift; sourceTree = "<group>"; };
 		FE2029292B02AA4C00386526 /* VideoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureView.swift; sourceTree = "<group>"; };
 		FE314D432ACC830600BA3356 /* TrackerSetupRemindersScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerSetupRemindersScreenView.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				9D055EBD2AE0EFA600BDDF50 /* FriendsStatisticView.swift */,
+				FE1E368B2B1297AD0053D07E /* FriendPageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1449,6 +1452,7 @@
 				FE5BC0622AEACFE9008F366F /* RecommendationsScreenView.swift in Sources */,
 				9D61F9F02AD888840000393C /* SetupTrackerStep1View.swift in Sources */,
 				9D055EBE2AE0EFA600BDDF50 /* FriendsStatisticView.swift in Sources */,
+				FE1E368C2B1297AD0053D07E /* FriendPageView.swift in Sources */,
 				9D61F9E72AD885950000393C /* RegistrationOnboardingStep3View.swift in Sources */,
 				FE5BC06C2AEAD01B008F366F /* SectionNameView.swift in Sources */,
 				9D072C262B019CAC001C2F54 /* NotificationModel.swift in Sources */,
