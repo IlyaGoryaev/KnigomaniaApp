@@ -20,6 +20,7 @@ struct ButtonView: View {
 		case addBook = "Добавить книгу"
 		case complete = "Завершить"
 		case support = "Сообщить о проблеме"
+        case delete = "Удалить"
 	}
 	
 	private(set) var title: Titles

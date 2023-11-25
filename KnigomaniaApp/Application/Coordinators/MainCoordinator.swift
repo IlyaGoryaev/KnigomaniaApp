@@ -45,4 +45,15 @@ final class MainCoordinator: Coordinator{
 		notificationCoordinator.route(view: .notificationList)
 		//childCoordinators.append(notificationCoordinator)
 	}
+    
+    func friendPage(friend: FriendModel) {
+        var view = FriendPageView(friend: friend)
+        view.mainScreenCoordinator = self
+        let viewController = UIHostingController(rootView: view)
+        rootController.pushViewController(viewController, animated: true)
+    }
+    
+    func backAction() {
+        rootController.popViewController(animated: true)
+    }
 }
