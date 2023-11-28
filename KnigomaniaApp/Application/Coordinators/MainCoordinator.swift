@@ -46,8 +46,11 @@ final class MainCoordinator: Coordinator{
 		//childCoordinators.append(notificationCoordinator)
 	}
     
-    func friendPage(friend: FriendModel) {
-        var view = FriendPageView(friend: friend)
+    func friendPage(friend: FriendModel, onDelete: @escaping () -> Void) {
+        var view = FriendPageView(friend: friend) {
+            onDelete()
+            self.backAction()
+        }
         view.mainScreenCoordinator = self
         let viewController = UIHostingController(rootView: view)
         rootController.pushViewController(viewController, animated: true)

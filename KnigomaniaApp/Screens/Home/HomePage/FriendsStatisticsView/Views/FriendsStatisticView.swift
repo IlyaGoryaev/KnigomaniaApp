@@ -42,7 +42,9 @@ struct FriendsStatisticView: View {
 										.background(CustomColors.background)
                                         .onTapGesture {
                                             let friend = friendsArray[index]
-                                            mainScreenCoordinator?.friendPage(friend: friend)
+                                            mainScreenCoordinator?.friendPage(friend: friend) {
+                                                friendsArray.remove(at: index)
+                                            }
                                         }
 								}
 							}
@@ -54,10 +56,6 @@ struct FriendsStatisticView: View {
 				Spacer()
 			}
 		}
-	}
-	
-    private func deleteFriend(index: Int) {
-		friendsArray.remove(at: index)
 	}
 }
 

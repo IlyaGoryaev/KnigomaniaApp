@@ -12,6 +12,7 @@ struct FriendPageView: View {
     
     var friend: FriendModel
     var friendBooks: [BookModel] = [BookModel(bookName: "Book1", imageName: "book1"), BookModel(bookName: "Book2", imageName: "book2"), BookModel(bookName: "Book3", imageName: "book3"), BookModel(bookName: "Book4", imageName: "book4"), BookModel(bookName: "Book5", imageName: "book5")]
+    var onDelete: () -> Void
     
     var body: some View {
         ZStack {
@@ -64,7 +65,7 @@ struct FriendPageView: View {
                         .padding(.top, 32)
                 }
                 ButtonView(title: .delete, isButtonEnable: true, action: {
-                    
+                    onDelete()
                 })
                 .padding(.top, 8)
                 .padding(.bottom, 24)
