@@ -65,12 +65,29 @@ struct FriendPageView: View {
                         .padding(.top, 32)
                 }
                 ButtonView(title: .delete, isButtonEnable: true, action: {
-                    onDelete()
+                    showConfirmationAlert()
                 })
                 .padding(.top, 8)
                 .padding(.bottom, 24)
                 Spacer()
             }
+        }
+    }
+    
+    private func showConfirmationAlert() {
+        let alertController = UIAlertController(
+            title: "Удалить",
+            message: "Вы уверены, что хотите удалить \(friend.friendName)?",
+            preferredStyle: .alert
+        )
+        
+        alertController.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Удалить", style: .destructive, handler: { _ in
+            onDelete()
+        }))
+        
+        if let topViewController = mainScreenCoordinator?.rootController.topViewController {
+            topViewController.present(alertController, animated: true, completion: nil)
         }
     }
 }
