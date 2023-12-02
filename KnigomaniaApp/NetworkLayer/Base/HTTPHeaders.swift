@@ -8,5 +8,11 @@
 import Foundation
 
 enum HTTPHeader {
-	
+	case contentType(ContentType)
+}
+
+extension HTTPHeader {
+	enum ContentType: String {
+		case json = "application/json"
+	}
 }

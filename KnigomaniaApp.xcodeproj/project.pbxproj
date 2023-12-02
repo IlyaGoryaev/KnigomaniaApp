@@ -35,6 +35,8 @@
 		9D0E70532B115F8B00C2EAA2 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E70522B115F8B00C2EAA2 /* Text.swift */; };
 		9D0E70562B11604300C2EAA2 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E70552B11604300C2EAA2 /* Sizes.swift */; };
 		9D0E70592B11609600C2EAA2 /* ImageNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E70582B11609600C2EAA2 /* ImageNames.swift */; };
+		9D359DB82B1BA79500CF2BB8 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D359DB72B1BA79500CF2BB8 /* RequestError.swift */; };
+		9D359DBA2B1BABE800CF2BB8 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D359DB92B1BABE800CF2BB8 /* LoginResponse.swift */; };
 		9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */; };
 		9D61F9C22AD8825D0000393C /* TrackerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */; };
 		9D61F9C52AD882B30000393C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9C42AD882B30000393C /* ButtonView.swift */; };
@@ -102,6 +104,12 @@
 		9DC2D1212AFD801B0087FB34 /* CoordinatorEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D1202AFD801B0087FB34 /* CoordinatorEnums.swift */; };
 		9DC2D1252AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D1242AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift */; };
 		9DF6912D2B1B14FC00F4FB3E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF6912C2B1B14FC00F4FB3E /* ErrorView.swift */; };
+		9DF691302B1B545E00F4FB3E /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF6912F2B1B545E00F4FB3E /* KeyChainManager.swift */; };
+		9DF691332B1B839200F4FB3E /* KeyChainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF691322B1B839200F4FB3E /* KeyChainModels.swift */; };
+		9DF691382B1B9BC700F4FB3E /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF691372B1B9BC700F4FB3E /* AuthEndpoint.swift */; };
+		9DF6913A2B1BA4A400F4FB3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF691392B1BA4A400F4FB3E /* User.swift */; };
+		9DF6913C2B1BA50500F4FB3E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF6913B2B1BA50500F4FB3E /* AuthService.swift */; };
+		9DF6913E2B1BA56E00F4FB3E /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF6913D2B1BA56E00F4FB3E /* HttpClient.swift */; };
 		FE171B152AFB80F300AFDCDB /* TestBookPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */; };
 		FE171B172AFB812C00AFDCDB /* BookPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */; };
 		FE1E368C2B1297AD0053D07E /* FriendPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1E368B2B1297AD0053D07E /* FriendPageView.swift */; };
@@ -169,6 +177,8 @@
 		9D0E70522B115F8B00C2EAA2 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		9D0E70552B11604300C2EAA2 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		9D0E70582B11609600C2EAA2 /* ImageNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNames.swift; sourceTree = "<group>"; };
+		9D359DB72B1BA79500CF2BB8 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		9D359DB92B1BABE800CF2BB8 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9D61F9C12AD8825D0000393C /* TrackerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCoordinator.swift; sourceTree = "<group>"; };
 		9D61F9C42AD882B30000393C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
@@ -238,6 +248,12 @@
 		9DC2D1202AFD801B0087FB34 /* CoordinatorEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorEnums.swift; sourceTree = "<group>"; };
 		9DC2D1242AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOnboardingViewProtocol.swift; sourceTree = "<group>"; };
 		9DF6912C2B1B14FC00F4FB3E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		9DF6912F2B1B545E00F4FB3E /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
+		9DF691322B1B839200F4FB3E /* KeyChainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainModels.swift; sourceTree = "<group>"; };
+		9DF691372B1B9BC700F4FB3E /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
+		9DF691392B1BA4A400F4FB3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9DF6913B2B1BA50500F4FB3E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		9DF6913D2B1BA56E00F4FB3E /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBookPageData.swift; sourceTree = "<group>"; };
 		FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookPageViewModel.swift; sourceTree = "<group>"; };
 		FE1E368B2B1297AD0053D07E /* FriendPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPageView.swift; sourceTree = "<group>"; };
@@ -555,6 +571,14 @@
 			path = ImageNames;
 			sourceTree = "<group>";
 		};
+		9D359DB62B1BA78C00CF2BB8 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				9D359DB72B1BA79500CF2BB8 /* RequestError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		9D61F9B62AD881810000393C /* RegistrationOnboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,6 +757,10 @@
 		9D698ABB2B1B08AF0005E16F /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9D359DB62B1BA78C00CF2BB8 /* Errors */,
+				9DF691362B1B9B9800F4FB3E /* AuthService */,
+				9DF691312B1B838200F4FB3E /* Models */,
+				9DF6912E2B1B1EBE00F4FB3E /* KeyChain */,
 				9D698ABC2B1B09720005E16F /* Base */,
 			);
 			path = NetworkLayer;
@@ -744,6 +772,7 @@
 				9D698ABD2B1B09820005E16F /* HTTPMethods.swift */,
 				9D698ABF2B1B09D00005E16F /* Endpoint.swift */,
 				9D698AC12B1B0A3C0005E16F /* HTTPHeaders.swift */,
+				9DF6913D2B1BA56E00F4FB3E /* HttpClient.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1090,6 +1119,33 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		9DF6912E2B1B1EBE00F4FB3E /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				9DF6912F2B1B545E00F4FB3E /* KeyChainManager.swift */,
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		9DF691312B1B838200F4FB3E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9DF691322B1B839200F4FB3E /* KeyChainModels.swift */,
+				9DF691392B1BA4A400F4FB3E /* User.swift */,
+				9D359DB92B1BABE800CF2BB8 /* LoginResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9DF691362B1B9B9800F4FB3E /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				9DF691372B1B9BC700F4FB3E /* AuthEndpoint.swift */,
+				9DF6913B2B1BA50500F4FB3E /* AuthService.swift */,
+			);
+			path = AuthService;
+			sourceTree = "<group>";
+		};
 		FE1BF0EE2AE6A5D000FB302A /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -1405,6 +1461,7 @@
 				9D8242822B12716800BF3ACF /* MailConfirmationViewProtocol.swift in Sources */,
 				9D61F9D62AD884760000393C /* RegistrationOnboardingStep1View.swift in Sources */,
 				FEAAB6322AFB7F4D009C0919 /* TextModifier.swift in Sources */,
+				9DF6913C2B1BA50500F4FB3E /* AuthService.swift in Sources */,
 				9D055EA52AE0E49600BDDF50 /* ResetPasswordCoordinator.swift in Sources */,
 				9D61FA022AD889B20000393C /* SetupTrackerStep4View.swift in Sources */,
 				FE5BC0712AEAD774008F366F /* TextFieldSection.swift in Sources */,
@@ -1423,6 +1480,8 @@
 				FE8B8EED2B0BB95200DE5ED4 /* UIApplicationExtension.swift in Sources */,
 				FE5BC06B2AEAD01B008F366F /* SearchBookTextField.swift in Sources */,
 				9DC2D1212AFD801B0087FB34 /* CoordinatorEnums.swift in Sources */,
+				9DF6913E2B1BA56E00F4FB3E /* HttpClient.swift in Sources */,
+				9DF691332B1B839200F4FB3E /* KeyChainModels.swift in Sources */,
 				FE4B8B042ADEA9B800FE28CE /* ScanScreenView.swift in Sources */,
 				9D055EAC2AE0EE0E00BDDF50 /* RegistrationView.swift in Sources */,
 				FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */,
@@ -1435,6 +1494,7 @@
 				9D072BC92B015EED001C2F54 /* MainSettingsScreen.swift in Sources */,
 				9D61F9E22AD885290000393C /* RegistrationStep2View.swift in Sources */,
 				FE171B152AFB80F300AFDCDB /* TestBookPageData.swift in Sources */,
+				9DF6913A2B1BA4A400F4FB3E /* User.swift in Sources */,
 				FE91194C2AEC44E500B31380 /* ImagePicker.swift in Sources */,
 				9DC2D11D2AFD79870087FB34 /* GradeView.swift in Sources */,
 				FE5BC0772AEAD9A6008F366F /* AddBookTextField.swift in Sources */,
@@ -1464,6 +1524,7 @@
 				9D8242732B12335D00BF3ACF /* UserModel.swift in Sources */,
 				9D698ABA2B1B03B10005E16F /* HelpButton.swift in Sources */,
 				9D055EA32AE0E47E00BDDF50 /* RegistrationOnboardingCoordinator.swift in Sources */,
+				9D359DB82B1BA79500CF2BB8 /* RequestError.swift in Sources */,
 				9D055EA72AE0EC0A00BDDF50 /* PasswordTextField.swift in Sources */,
 				9D61F9C72AD882D70000393C /* HeadlineTextModifier.swift in Sources */,
 				FE5BC06D2AEAD01B008F366F /* NotFoundView.swift in Sources */,
@@ -1481,6 +1542,7 @@
 				9D6C06AA2B094FF000478609 /* SupportScreenView.swift in Sources */,
 				9D8242622B11D77400BF3ACF /* DateService.swift in Sources */,
 				9D61FA042AD889F90000393C /* NavBar.swift in Sources */,
+				9DF691382B1B9BC700F4FB3E /* AuthEndpoint.swift in Sources */,
 				9D0E70532B115F8B00C2EAA2 /* Text.swift in Sources */,
 				9D61F9F62AD888B90000393C /* SetupTrackerStep2View.swift in Sources */,
 				9D714E592AE9C94E00992E09 /* MainCoordinatorProtocol.swift in Sources */,
@@ -1491,10 +1553,12 @@
 				9DC2D1152AFCFC060087FB34 /* UserActionsTitle.swift in Sources */,
 				FE5BC0622AEACFE9008F366F /* RecommendationsScreenView.swift in Sources */,
 				9D61F9F02AD888840000393C /* SetupTrackerStep1View.swift in Sources */,
+				9D359DBA2B1BABE800CF2BB8 /* LoginResponse.swift in Sources */,
 				9D055EBE2AE0EFA600BDDF50 /* FriendsStatisticView.swift in Sources */,
 				FE1E368C2B1297AD0053D07E /* FriendPageView.swift in Sources */,
 				9D61F9E72AD885950000393C /* RegistrationOnboardingStep3View.swift in Sources */,
 				FE5BC06C2AEAD01B008F366F /* SectionNameView.swift in Sources */,
+				9DF691302B1B545E00F4FB3E /* KeyChainManager.swift in Sources */,
 				9D072C262B019CAC001C2F54 /* NotificationModel.swift in Sources */,
 				FEAA59BA2ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift in Sources */,
 				9D072C292B01A06E001C2F54 /* NotificationItem.swift in Sources */,
@@ -1657,7 +1721,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 767DT3Q3RN;
+				DEVELOPMENT_TEAM = 34UB5HMPNV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KnigomaniaApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Разрешить приложению доступ к камере на вашем устройстве?";
@@ -1693,7 +1757,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 767DT3Q3RN;
+				DEVELOPMENT_TEAM = 34UB5HMPNV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KnigomaniaApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Разрешить приложению доступ к камере на вашем устройстве?";

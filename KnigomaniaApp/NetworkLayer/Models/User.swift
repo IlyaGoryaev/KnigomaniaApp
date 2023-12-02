@@ -1,5 +1,5 @@
 //
-//  HTTPMethods.swift
+//  UserModel.swift
 //  KnigomaniaApp
 //
 //  Created by Илья Горяев on 02.12.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RequestMethod: String {
-	case get = "GET"
-	case post = "POST"
+struct User: Codable {
+	let email: String
+	let password: String
 }
