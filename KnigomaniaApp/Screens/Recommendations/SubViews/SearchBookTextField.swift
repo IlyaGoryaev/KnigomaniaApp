@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchBookTextField: View {
     @Binding var text: String
-    @State private var isEditing = false
+    @FocusState private var isFocused: Bool
     
     private (set) var scanAction: () -> ()
     
@@ -22,24 +22,19 @@ struct SearchBookTextField: View {
                 .cornerRadius(8)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
-                        .stroke(isEditing ? CustomColors.darkBrownColor : Color.clear, lineWidth: 1)
+                        .stroke(isFocused ? CustomColors.darkBrownColor : Color.clear, lineWidth: 1)
                 )
             HStack {
                 Image("searchicon")
                     .resizable()
                     .frame(width: 16, height: 16)
-                    .foregroundColor(isEditing ? CustomColors.darkBrownColor : CustomColors.greyColor)
+                    .foregroundColor(isFocused ? CustomColors.darkBrownColor : CustomColors.greyColor)
                     .padding(.leading, 8)
                 HStack(spacing: 8) {
                     TextFieldDynamicWidth(title: "Название, автор или ISBN", text: $text)
+                        .focused($isFocused)
                         .foregroundColor(CustomColors.greyColor)
                         .font(.system(size: 14))
-                        .onTapGesture {
-                            isEditing = true
-                        }
-                        .onSubmit {
-                            isEditing = false
-                        }
                     if !text.isEmpty {
                         Button(action: {
                             text = ""
@@ -63,7 +58,7 @@ struct SearchBookTextField: View {
                     Image("scanicon")
                         .resizable()
                         .frame(width: 16, height: 16)
-                        .foregroundColor(isEditing ? CustomColors.darkBrownColor : CustomColors.greyColor)
+                        .foregroundColor(isFocused ? CustomColors.darkBrownColor : CustomColors.greyColor)
                         .padding(.trailing, 8)
                 })
             }

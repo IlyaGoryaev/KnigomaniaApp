@@ -32,7 +32,7 @@ struct PasswordTextField: View {
 				}
 				.foregroundStyle(CustomColors.darkBrownColor)
 			}
-			Image(!isPasswordShown ? "Icon show password" : "Icon not show password")
+			Image(!isPasswordShown ? "Icon not show password" : "Icon show password")
 				.onTapGesture {
 					isPasswordShown.toggle()
 				}

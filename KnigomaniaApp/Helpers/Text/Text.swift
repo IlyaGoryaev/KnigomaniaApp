@@ -23,7 +23,8 @@ enum TextTitles {
 		case email = "E-mail"
 		case enterEmail = "Введите электронную почту"
 		case password = "Пароль"
-		case enterPassword = "Повторите пароль"
+		case enterPassword = "Введите пароль"
+        case repeatPassword = "Повторите пароль"
 		case account = "Уже есть аккаунт?"
 		case entry = "Войти"
 	}

@@ -18,6 +18,10 @@ struct RegistrationView: EntryViewProtocol {
 	@State private var email: String = ""
 	@State private var passwordText: String = ""
 	@State private var confirmPasswordText: String = ""
+    
+    @FocusState private var isEmailTextFieldFocused: Bool
+    @FocusState private var isPasswordTextFieldFocused: Bool
+    @FocusState private var isSecondPasswordTextFieldFocused: Bool
 	
 	// MARK: View
 	
@@ -41,10 +45,18 @@ struct RegistrationView: EntryViewProtocol {
 							.foregroundStyle(CustomColors.brownColor)
 							.font(.system(size: 14))
 					}
+                    .focused($isEmailTextFieldFocused)
 					.foregroundStyle(CustomColors.darkBrownColor)
 					.padding(.horizontal, 12)
 					.padding(.vertical, Sizes.Padding.normal.rawValue)
-					.background(RoundedRectangle(cornerRadius: 10).foregroundStyle(Color.white))
+					.background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundStyle(Color.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(isEmailTextFieldFocused ? CustomColors.darkBrownColor : Color.clear, lineWidth: 1)
+                            )
+                    )
 					.padding(.horizontal, Sizes.Padding.normal.rawValue)
 				}
 				.padding(.top, Sizes.Padding.large.rawValue)
@@ -56,16 +68,28 @@ struct RegistrationView: EntryViewProtocol {
 						.frame(maxWidth: .infinity, alignment: .leading)
 						.padding(.horizontal, Sizes.Padding.normal.rawValue)
 					PasswordTextField(text: $passwordText, title: TextTitles.RegistrationView.enterPassword.rawValue)
+                        .focused($isPasswordTextFieldFocused)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(isPasswordTextFieldFocused ? CustomColors.darkBrownColor : Color.clear, lineWidth: 1)
+                                .padding(.horizontal, 16)
+                        )
 				}
 				.padding(.top, Sizes.Padding.normal.rawValue)
 				
 				VStack{
-					Text(TextTitles.RegistrationView.enterPassword.rawValue)
+					Text(TextTitles.RegistrationView.repeatPassword.rawValue)
 						.font(.system(size: 14))
 						.foregroundStyle(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
 						.padding(.horizontal, Sizes.Padding.normal.rawValue)
-					PasswordTextField(text: $confirmPasswordText, title: TextTitles.RegistrationView.enterPassword.rawValue)
+					PasswordTextField(text: $confirmPasswordText, title: TextTitles.RegistrationView.repeatPassword.rawValue)
+                        .focused($isSecondPasswordTextFieldFocused)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(isSecondPasswordTextFieldFocused ? CustomColors.darkBrownColor : Color.clear, lineWidth: 1)
+                                .padding(.horizontal, 16)
+                        )
 				}
 				.padding(.top, Sizes.Padding.normal.rawValue)
 				ButtonView(title: .continuation, isButtonEnable: true) {
