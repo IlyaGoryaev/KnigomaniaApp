@@ -35,7 +35,7 @@ struct RegistrationView: EntryViewProtocol {
 						.font(.system(size: 14))
 						.foregroundStyle(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
-						.padding(.horizontal, 16)
+						.padding(.horizontal, Sizes.Padding.normal.rawValue)
 					TextField(text: $email) {
 						Text(TextTitles.RegistrationView.enterEmail.rawValue)
 							.foregroundStyle(CustomColors.brownColor)
@@ -43,9 +43,9 @@ struct RegistrationView: EntryViewProtocol {
 					}
 					.foregroundStyle(CustomColors.darkBrownColor)
 					.padding(.horizontal, 12)
-					.padding(.vertical, 15)
+					.padding(.vertical, Sizes.Padding.normal.rawValue)
 					.background(RoundedRectangle(cornerRadius: 10).foregroundStyle(Color.white))
-					.padding(.horizontal, 16)
+					.padding(.horizontal, Sizes.Padding.normal.rawValue)
 				}
 				.padding(.top, Sizes.Padding.large.rawValue)
 				
@@ -54,7 +54,7 @@ struct RegistrationView: EntryViewProtocol {
 						.font(.system(size: 14))
 						.foregroundStyle(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
-						.padding(.horizontal, 16)
+						.padding(.horizontal, Sizes.Padding.normal.rawValue)
 					PasswordTextField(text: $passwordText, title: TextTitles.RegistrationView.enterPassword.rawValue)
 				}
 				.padding(.top, Sizes.Padding.normal.rawValue)
@@ -64,27 +64,21 @@ struct RegistrationView: EntryViewProtocol {
 						.font(.system(size: 14))
 						.foregroundStyle(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
-						.padding(.horizontal, 16)
+						.padding(.horizontal, Sizes.Padding.normal.rawValue)
 					PasswordTextField(text: $confirmPasswordText, title: TextTitles.RegistrationView.enterPassword.rawValue)
 				}
 				.padding(.top, Sizes.Padding.normal.rawValue)
 				ButtonView(title: .continuation, isButtonEnable: true) {
-//					entryCoordinator?.startRegistrationOnboarding()
 					entryCoordinator?.startMailConfirmationCoordinator()
 				}
 				.padding(.top, Sizes.Padding.large.rawValue)
 				HStack(spacing: 4){
 					Text(TextTitles.RegistrationView.account.rawValue)
 						.font(.system(size: 14))
-					Button(action: {
-						//entryCoordinator?.fromRegToEntry()
+					HelpButton(title: .entry) {
 						entryCoordinator?.backAction(type: .backAction, animated: false)
 						entryCoordinator?.route(view: .loginScreen, animated: false)
-					}, label: {
-						Text(TextTitles.RegistrationView.entry.rawValue)
-							.foregroundStyle(CustomColors.darkBrownColor)
-							.font(.system(size: 14, weight: .bold))
-					})
+					}
 				}
 				.frame(maxWidth: .infinity, alignment: .center)
 				.padding(.top, Sizes.Padding.normal.rawValue)

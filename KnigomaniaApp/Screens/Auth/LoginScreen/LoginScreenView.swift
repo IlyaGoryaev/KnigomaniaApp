@@ -9,11 +9,16 @@ import SwiftUI
 
 struct LoginScreenView: EntryViewProtocol {
 	
+	// MARK: Dependencies
+	
 	weak var entryCoordinator: EntryCoordinator?
 	
-	@State private var email: String = ""
+	// MARK: Properties
 	
+	@State private var email: String = ""
 	@State private var passwordText: String = ""
+	
+	// MARK: View
 	
 	var body: some View {
 		ZStack {
@@ -23,13 +28,13 @@ struct LoginScreenView: EntryViewProtocol {
                 NavBar(title: .entryTitle) {
 					entryCoordinator?.backAction(type: .backAction)
 				}
-				.padding(.top, 20)
+				.padding(.top, Sizes.Padding.double.rawValue)
 				VStack{
 					Text("E-mail")
 						.font(.system(size: 14))
 						.foregroundStyle(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
-						.padding(.horizontal, 16)
+						.padding(.horizontal, Sizes.Padding.normal.rawValue)
 					TextField(text: $email) {
 						Text("Введите электронную почту")
 							.foregroundStyle(CustomColors.brownColor)
@@ -39,62 +44,37 @@ struct LoginScreenView: EntryViewProtocol {
 					.padding(.horizontal, 12)
 					.padding(.vertical, 15)
 					.background(RoundedRectangle(cornerRadius: 10).foregroundStyle(Color.white))
-					.padding(.horizontal, 16)
+					.padding(.horizontal, Sizes.Padding.normal.rawValue)
 				}
-				.padding(.top, 40)
+				.padding(.top, Sizes.Padding.large.rawValue)
 				VStack(spacing: 8) {
-					HStack {
-						Text("Пароль")
-							.font(.system(size: 14, weight: .regular))
-							.foregroundColor(CustomColors.darkBrownColor)
-							.padding(.leading, 17)
-						Spacer()
-					}
+					Text("Пароль")
+						.font(.system(size: 14, weight: .regular))
+						.foregroundColor(CustomColors.darkBrownColor)
+						.frame(maxWidth: .infinity, alignment: .leading)
+						.padding(.leading, Sizes.Padding.normal.rawValue)
 					PasswordTextField(text: $passwordText, title: "Введите пароль")
 				}
-				.padding(.top, 16)
-				// TODO: add password field
-				HStack {
-					Button(action: {
-						entryCoordinator?.resetPassword()
-					}, label: {
-						Text("Забыли пароль?")
-							.font(.system(size: 14, weight: .medium))
-							.foregroundColor(CustomColors.darkBrownColor)
-					})
-					.padding(.leading, 18)
-					Spacer()
+				.padding(.top, Sizes.Padding.normal.rawValue)
+				HelpButton(title: .missPassword) {
+					entryCoordinator?.resetPassword()
 				}
-				.padding(.top, 16)
-				Button(action: {
+				.frame(maxWidth: .infinity, alignment: .leading)
+				.padding([.top, .horizontal], Sizes.Padding.normal.rawValue)
+				ButtonView(title: .entry, isButtonEnable: true) {
 					entryCoordinator?.logIn()
-				}) {
-					Rectangle()
-						.frame(height: 48)
-						.foregroundColor(CustomColors.yellowColor)
-						.cornerRadius(10)
-						.overlay(
-							Text("Войти")
-								.font(.system(size: 16, weight: .medium))
-								.foregroundColor(.white)
-						)
 				}
-				.padding(.horizontal, 16)
-				.padding(.top, 32)
+				.padding(.top, Sizes.Padding.double.rawValue)
 				HStack(spacing: 3) {
 					Text("Еще нет аккаунта?")
 						.font(.system(size: 14, weight: .regular))
 						.foregroundColor(CustomColors.darkBrownColor)
-					Button(action: {
+					HelpButton(title: .registration) {
 						entryCoordinator?.backAction(type: .backAction, animated: false)
 						entryCoordinator?.route(view: .regScreen, animated: false)
-					}) {
-						Text("Зарегистрироваться")
-							.font(.system(size: 14, weight: .medium))
-							.foregroundColor(CustomColors.darkBrownColor)
 					}
 				}
-				.padding(.top, 16)
+				.padding(.top, Sizes.Padding.normal.rawValue)
 				Spacer()
 			}
 		}
@@ -107,6 +87,8 @@ struct LoginScreenView: EntryViewProtocol {
         UIApplication.shared.endEditing()
     }
 }
+
+// MARK: Preview
 
 #Preview {
 	LoginScreenView()
