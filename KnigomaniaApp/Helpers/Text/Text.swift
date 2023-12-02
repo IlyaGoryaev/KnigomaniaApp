@@ -22,6 +22,7 @@ enum TextTitles {
 	enum RegistrationView: String {
 		case email = "E-mail"
 		case enterEmail = "Введите электронную почту"
+        case wrongEmail = "Введите корректную электронную почту"
 		case password = "Пароль"
 		case enterPassword = "Введите пароль"
         case repeatPassword = "Повторите пароль"
