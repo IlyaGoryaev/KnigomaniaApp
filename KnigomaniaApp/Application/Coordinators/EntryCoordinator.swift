@@ -83,4 +83,8 @@ final class EntryCoordinator: Coordinator{
 		}
 	}
 	
+	func showError() {
+		self.rootController.present(ErrorViewController(), animated: false)
+	}
+	
 }

@@ -69,7 +69,8 @@ struct RegistrationView: EntryViewProtocol {
 				}
 				.padding(.top, Sizes.Padding.normal.rawValue)
 				ButtonView(title: .continuation, isButtonEnable: true) {
-					entryCoordinator?.startMailConfirmationCoordinator()
+//					entryCoordinator?.startMailConfirmationCoordinator()
+					entryCoordinator?.showError()
 				}
 				.padding(.top, Sizes.Padding.large.rawValue)
 				HStack(spacing: 4){

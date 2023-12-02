@@ -53,6 +53,10 @@
 		9D61FA022AD889B20000393C /* SetupTrackerStep4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61FA012AD889B20000393C /* SetupTrackerStep4View.swift */; };
 		9D61FA042AD889F90000393C /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61FA032AD889F90000393C /* NavBar.swift */; };
 		9D698ABA2B1B03B10005E16F /* HelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D698AB92B1B03B10005E16F /* HelpButton.swift */; };
+		9D698ABE2B1B09820005E16F /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D698ABD2B1B09820005E16F /* HTTPMethods.swift */; };
+		9D698AC02B1B09D00005E16F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D698ABF2B1B09D00005E16F /* Endpoint.swift */; };
+		9D698AC22B1B0A3C0005E16F /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D698AC12B1B0A3C0005E16F /* HTTPHeaders.swift */; };
+		9D698ACC2B1B0EB70005E16F /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D698ACB2B1B0EB70005E16F /* ErrorViewController.swift */; };
 		9D6C06AA2B094FF000478609 /* SupportScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6C06A92B094FF000478609 /* SupportScreenView.swift */; };
 		9D6C06B02B09549800478609 /* NotificationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6C06AF2B09549800478609 /* NotificationScreenView.swift */; };
 		9D714E2A2AE8238600992E09 /* MakeReviewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714E292AE8238600992E09 /* MakeReviewPage.swift */; };
@@ -97,6 +101,7 @@
 		9DC2D11D2AFD79870087FB34 /* GradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D11C2AFD79870087FB34 /* GradeView.swift */; };
 		9DC2D1212AFD801B0087FB34 /* CoordinatorEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D1202AFD801B0087FB34 /* CoordinatorEnums.swift */; };
 		9DC2D1252AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D1242AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift */; };
+		9DF6912D2B1B14FC00F4FB3E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF6912C2B1B14FC00F4FB3E /* ErrorView.swift */; };
 		FE171B152AFB80F300AFDCDB /* TestBookPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */; };
 		FE171B172AFB812C00AFDCDB /* BookPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */; };
 		FE1E368C2B1297AD0053D07E /* FriendPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1E368B2B1297AD0053D07E /* FriendPageView.swift */; };
@@ -182,6 +187,10 @@
 		9D61FA012AD889B20000393C /* SetupTrackerStep4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTrackerStep4View.swift; sourceTree = "<group>"; };
 		9D61FA032AD889F90000393C /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		9D698AB92B1B03B10005E16F /* HelpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpButton.swift; sourceTree = "<group>"; };
+		9D698ABD2B1B09820005E16F /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
+		9D698ABF2B1B09D00005E16F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		9D698AC12B1B0A3C0005E16F /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
+		9D698ACB2B1B0EB70005E16F /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		9D6C06A92B094FF000478609 /* SupportScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportScreenView.swift; sourceTree = "<group>"; };
 		9D6C06AF2B09549800478609 /* NotificationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScreenView.swift; sourceTree = "<group>"; };
 		9D714E292AE8238600992E09 /* MakeReviewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReviewPage.swift; sourceTree = "<group>"; };
@@ -228,6 +237,7 @@
 		9DC2D11C2AFD79870087FB34 /* GradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeView.swift; sourceTree = "<group>"; };
 		9DC2D1202AFD801B0087FB34 /* CoordinatorEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorEnums.swift; sourceTree = "<group>"; };
 		9DC2D1242AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOnboardingViewProtocol.swift; sourceTree = "<group>"; };
+		9DF6912C2B1B14FC00F4FB3E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		FE171B142AFB80F300AFDCDB /* TestBookPageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBookPageData.swift; sourceTree = "<group>"; };
 		FE171B162AFB812C00AFDCDB /* BookPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookPageViewModel.swift; sourceTree = "<group>"; };
 		FE1E368B2B1297AD0053D07E /* FriendPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPageView.swift; sourceTree = "<group>"; };
@@ -578,8 +588,8 @@
 				9D61F9CA2AD883090000393C /* TextFieldTime.swift */,
 				9D055EA62AE0EC0A00BDDF50 /* PasswordTextField.swift */,
 				9D714E652AEA4D7000992E09 /* CustomTabBarController.swift */,
-				FEAAB6312AFB7F4D009C0919 /* TextModifier.swift */,
-				9DC2D1112AFCFA9C0087FB34 /* TextFieldModifier.swift */,
+				9D698ACB2B1B0EB70005E16F /* ErrorViewController.swift */,
+				9DF6912C2B1B14FC00F4FB3E /* ErrorView.swift */,
 			);
 			path = DesignElements;
 			sourceTree = "<group>";
@@ -718,6 +728,24 @@
 				9D61FA012AD889B20000393C /* SetupTrackerStep4View.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9D698ABB2B1B08AF0005E16F /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				9D698ABC2B1B09720005E16F /* Base */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		9D698ABC2B1B09720005E16F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9D698ABD2B1B09820005E16F /* HTTPMethods.swift */,
+				9D698ABF2B1B09D00005E16F /* Endpoint.swift */,
+				9D698AC12B1B0A3C0005E16F /* HTTPHeaders.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		9D6C06A62B094FAB00478609 /* SupportScreen */ = {
@@ -993,6 +1021,7 @@
 			children = (
 				FEF697282AC5E69300708E1E /* Application */,
 				9DA945CD2AC0BA0A002302D1 /* ViewController.swift */,
+				9D698ABB2B1B08AF0005E16F /* NetworkLayer */,
 				FEEF84C32AD9A99000B6DC39 /* Screens */,
 				9D61F9C32AD8829A0000393C /* DesignElements */,
 				FEF697292AC5E7B800708E1E /* Helpers */,
@@ -1261,6 +1290,8 @@
 				FED451262AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift */,
 				FED451282AF3EBE000FAAFA5 /* ImageExtension.swift */,
 				FE7ABC552AF932AC0069C4C4 /* TextFieldDynamicWidth.swift */,
+				9DC2D1112AFCFA9C0087FB34 /* TextFieldModifier.swift */,
+				FEAAB6312AFB7F4D009C0919 /* TextModifier.swift */,
 				FE8B8EEC2B0BB95200DE5ED4 /* UIApplicationExtension.swift */,
 				9D8242612B11D77400BF3ACF /* DateService.swift */,
 			);
@@ -1348,12 +1379,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D714E5B2AE9C98A00992E09 /* MainCoordinatorWithTabBar.swift in Sources */,
+				9DF6912D2B1B14FC00F4FB3E /* ErrorView.swift in Sources */,
 				FE347F182AD032A900AE00DF /* Day.swift in Sources */,
 				9D82426F2B121B2100BF3ACF /* ActionButtonModifier.swift in Sources */,
 				9D7A76D32AE42BE500158781 /* BookPageModel.swift in Sources */,
 				9D055EC32AE0EFEB00BDDF50 /* MyProgress.swift in Sources */,
 				9D8242682B1216A500BF3ACF /* ActionView.swift in Sources */,
 				9D61F9FC2AD8896B0000393C /* SetupTrackerStep3View.swift in Sources */,
+				9D698ACC2B1B0EB70005E16F /* ErrorViewController.swift in Sources */,
 				FE347F1A2AD055EE00AE00DF /* TimeSelectionModalView.swift in Sources */,
 				FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */,
 				9D055EA12AE0E45E00BDDF50 /* MainCoordinator.swift in Sources */,
@@ -1385,6 +1418,7 @@
 				9D072C202B019A6A001C2F54 /* NotificationCoordinator.swift in Sources */,
 				9D072C2B2B01A0AC001C2F54 /* NotificationDescription.swift in Sources */,
 				9D714E6A2AEA521700992E09 /* ScanCoordinator.swift in Sources */,
+				9D698AC02B1B09D00005E16F /* Endpoint.swift in Sources */,
 				9D61F9C92AD882F20000393C /* NumberTextField.swift in Sources */,
 				FE8B8EED2B0BB95200DE5ED4 /* UIApplicationExtension.swift in Sources */,
 				FE5BC06B2AEAD01B008F366F /* SearchBookTextField.swift in Sources */,
@@ -1421,6 +1455,7 @@
 				9D055E9F2AE0E42300BDDF50 /* EntryCoordinator.swift in Sources */,
 				FE713E4D2AC5DF9900F6DA62 /* SplashScreenView.swift in Sources */,
 				FE20292A2B02AA4C00386526 /* VideoCaptureView.swift in Sources */,
+				9D698ABE2B1B09820005E16F /* HTTPMethods.swift in Sources */,
 				FED451292AF3EBE000FAAFA5 /* ImageExtension.swift in Sources */,
 				FED451272AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift in Sources */,
 				9D7A76D62AE432DA00158781 /* DescriptionView.swift in Sources */,
@@ -1442,6 +1477,7 @@
 				FEF697302AC5EF1800708E1E /* CustomActivityIndicator.swift in Sources */,
 				FE5BC06F2AEAD369008F366F /* BookAddingCoordinator.swift in Sources */,
 				9DC2D1252AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift in Sources */,
+				9D698AC22B1B0A3C0005E16F /* HTTPHeaders.swift in Sources */,
 				9D6C06AA2B094FF000478609 /* SupportScreenView.swift in Sources */,
 				9D8242622B11D77400BF3ACF /* DateService.swift in Sources */,
 				9D61FA042AD889F90000393C /* NavBar.swift in Sources */,

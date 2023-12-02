@@ -28,4 +28,11 @@ enum Sizes {
 		case normal = 36
 		case large = 72
 	}
+	
+	enum ErrorView: CGFloat {
+		case height = 162
+		case width = 254
+		case cornerRadius = 10
+		case buttonHeight = 40
+	}
 }
