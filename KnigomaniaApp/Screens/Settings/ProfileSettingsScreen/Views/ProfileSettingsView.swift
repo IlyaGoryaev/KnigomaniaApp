@@ -24,8 +24,8 @@ struct ProfileSettingsView: SettingsCoordinatorViewProtocol {
 				ProfileSettingsNavBar {
 					settingsCoordinator?.backAction(type: .backAction)
 				}
-				.padding(.top, Sizes.Padding.normal.rawValue)
-				.padding(.bottom, Sizes.Padding.normal.rawValue)
+				.padding(.top, Sizes.Padding.normal)
+				.padding(.bottom, Sizes.Padding.normal)
 				ScrollView {
 					ProfileSettingsRow(title: "Имя", text: $viewModel.person.firstName)
 						.padding(.top, 32)

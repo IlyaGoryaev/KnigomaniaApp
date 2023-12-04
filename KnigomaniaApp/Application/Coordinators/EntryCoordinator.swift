@@ -83,8 +83,13 @@ final class EntryCoordinator: Coordinator{
 		}
 	}
 	
-	func showError() {
-		self.rootController.present(ErrorViewController(), animated: false)
+	func showError(errorDescription: String) {
+		let alert = UIAlertController(
+			title: "Ошибка",
+			message: errorDescription,
+			preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "ОК", style: .default))
+		self.rootController.present(alert, animated: true)
 	}
 	
 }

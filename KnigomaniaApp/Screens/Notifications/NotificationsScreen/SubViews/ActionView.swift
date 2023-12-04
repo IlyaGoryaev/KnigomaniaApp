@@ -10,11 +10,11 @@ import SwiftUI
 struct ActionView: View {
     var body: some View {
 		HStack {
-			ActionButton(title: "Принять", padding: Sizes.Buttons.ActionButtonPadding.normal.rawValue, actionType: .approveAction)
+			ActionButton(title: "Принять", padding: Sizes.Buttons.ActionButtonPadding.normal, actionType: .approveAction)
 			Spacer()
-			ActionButton(title: "Отклонить", padding: Sizes.Buttons.ActionButtonPadding.normal.rawValue, actionType: .distructAction)
+			ActionButton(title: "Отклонить", padding: Sizes.Buttons.ActionButtonPadding.normal, actionType: .distructAction)
 		}
-		.padding(.horizontal, Sizes.Padding.normal.rawValue)
+		.padding(.horizontal, Sizes.Padding.normal)
     }
 }
 

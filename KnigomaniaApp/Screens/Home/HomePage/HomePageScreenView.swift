@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomePageScreenView: View {
+	
 	@State private var selection = 0
 	@Namespace private var lineAnimation
 	@State private var lineWidth: CGFloat = 0
@@ -18,7 +19,7 @@ struct HomePageScreenView: View {
 		ZStack {
 			CustomColors.background
 				.edgesIgnoringSafeArea(.all)
-			VStack {
+			VStack(spacing: Sizes.Padding.zero) {
 				HStack {
 					Text("Привет, Мария!")
 						.font(.system(size: 18, weight: .semibold))
@@ -43,9 +44,9 @@ struct HomePageScreenView: View {
 							.overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.black, lineWidth: 2))
 					}
 				}
-				.padding(.top, 29)
-				.padding(.horizontal, 16)
-				ScrollView(.horizontal, showsIndicators: false){
+				.padding(.top, Sizes.Padding.double)
+				.padding(.horizontal, Sizes.Padding.normal)
+				ScrollView(.horizontal, showsIndicators: false) {
 					HStack(spacing: 29) {
 						Text("Мой прогресс")
 							.foregroundColor(CustomColors.darkBrownColor)
@@ -77,7 +78,7 @@ struct HomePageScreenView: View {
 							.animation(.default, value: selection)
 						Spacer()
 					}
-					.padding(.leading, 16)
+					.padding(.leading, Sizes.Padding.normal)
 				}
 				TabView(selection: $selection) {
 					StatisticsView(mainScreenCoordinator:mainScreenCoordinator)

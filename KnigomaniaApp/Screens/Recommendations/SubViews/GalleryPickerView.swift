@@ -30,7 +30,7 @@ struct GalleryPickerView: View {
                     .background(Color.white)
                     .cornerRadius(10)
                 HStack {
-					ActionButton(title: "Выбрать из галереи", padding: Sizes.Buttons.ActionButtonPadding.large.rawValue, actionType: .approveAction)
+					ActionButton(title: "Выбрать из галереи", padding: Sizes.Buttons.ActionButtonPadding.large, actionType: .approveAction)
                     .sheet(isPresented: $showImagePicker) {
                         ImagePicker(image: $inputImage)
                     }

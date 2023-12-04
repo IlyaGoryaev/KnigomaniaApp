@@ -7,10 +7,13 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 final class MainCoordinator: Coordinator{
 	
 	var rootController: UINavigationController
+	
+	weak var isUserAuthorize: CurrentValueSubject<Bool, Never>?
 	
 	var childCoordinators = [any Coordinator]()
 	

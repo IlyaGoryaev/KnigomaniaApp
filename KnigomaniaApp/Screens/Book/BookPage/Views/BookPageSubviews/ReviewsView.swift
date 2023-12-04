@@ -55,8 +55,8 @@ struct ReviewItemView: View {
 	
 	var body: some View {
 		ZStack(alignment: .topTrailing) {
-			HStack(spacing: Sizes.Padding.zero.rawValue) {
-				VStack(spacing: Sizes.Padding.zero.rawValue){
+			HStack(spacing: Sizes.Padding.zero) {
+				VStack(spacing: Sizes.Padding.zero){
 					Text("\(Int(review.grade)) (5)")
 					Image("star.fill")
 				}
@@ -86,7 +86,7 @@ struct ReviewItemView: View {
 					.font(.system(size: 11))
 					.foregroundStyle(CustomColors.darkBrownColor)
 			}
-			.padding(Sizes.Padding.normal.rawValue)
+			.padding(Sizes.Padding.normal)
 			
 		}
 	}

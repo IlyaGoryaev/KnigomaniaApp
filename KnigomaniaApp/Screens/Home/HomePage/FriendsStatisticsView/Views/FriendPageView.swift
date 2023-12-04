@@ -90,4 +90,5 @@ struct FriendPageView: View {
             topViewController.present(alertController, animated: true, completion: nil)
         }
     }
+	
 }

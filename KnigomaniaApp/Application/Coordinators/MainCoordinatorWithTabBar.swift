@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Combine
 
 final class MainCoordinatorWithTabBar: Coordinator {
 	
@@ -14,10 +15,16 @@ final class MainCoordinatorWithTabBar: Coordinator {
 	
 	var childCoordinators: [any Coordinator] = []
 	
+	weak var isUserAuthorize: CurrentValueSubject<Bool, Never>?
+	
 	var navcontrollers = [UINavigationController]()
 	
-	init(tabBarController: UITabBarController) {
+	init(
+		tabBarController: UITabBarController,
+		isUserAuthorize: CurrentValueSubject<Bool, Never>? = nil
+	) {
 		self.rootController = tabBarController
+		self.isUserAuthorize = isUserAuthorize
 	}
 		
 	func start() {
@@ -27,6 +34,10 @@ final class MainCoordinatorWithTabBar: Coordinator {
 			setupScanCoordinator(),
 			setupSettingsCoordinator()
 		]
+		for vc in rootController.viewControllers! {
+			vc.tabBarItem.title = nil
+			vc.tabBarItem.imageInsets = UIEdgeInsets(top: 20, left: 0, bottom: -20, right: 0)
+		}
 	}
 
 }
@@ -65,7 +76,7 @@ private extension MainCoordinatorWithTabBar {
 	func setupSettingsCoordinator() -> UINavigationController {
 		let navController = UINavigationController()
 		navController.navigationBar.isHidden = true
-		let settingsCoordinator = SettingsCoordinator(rootController: navController)
+		let settingsCoordinator = SettingsCoordinator(rootController: navController, isUserAuthorize: isUserAuthorize)
 		childCoordinators.append(settingsCoordinator)
 		settingsCoordinator.start()
 		settingsCoordinator.rootController.tabBarItem.image = UIImage(named: "settingsicon")

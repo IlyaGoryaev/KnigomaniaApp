@@ -45,12 +45,8 @@ struct StartScreenView: EntryViewProtocol {
 						Text("Уже есть аккаунт?")
 							.font(.system(size: 14, weight: .regular))
 							.foregroundColor(CustomColors.darkBrownColor)
-						Button(action: {
+						HelpButton(title: .entry) {
 							entryCoordinator?.route(view: .loginScreen, animated: false)
-						}) {
-							Text("Войти")
-								.font(.system(size: 14, weight: .medium))
-								.foregroundColor(CustomColors.darkBrownColor)
 						}
 					}
 					// TODO: underline links
@@ -60,7 +56,7 @@ struct StartScreenView: EntryViewProtocol {
 						.accentColor(CustomColors.darkBrownColor)
 						.multilineTextAlignment(.center)
 				}
-				.padding(.horizontal, Sizes.Padding.normal.rawValue)
+				.padding(.horizontal, Sizes.Padding.normal)
 				Spacer()
 			}
 		}

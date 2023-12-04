@@ -27,10 +27,10 @@ struct NotificationList: NotificationCoordinatorViewProtocol {
 				NavBar(title: .emptyTitle) {
 					notificationCoordinator?.backAction(type: .backAction)
 				}
-				.padding(.top, Sizes.Padding.large.rawValue)
-				.padding(.bottom, Sizes.Padding.normal.rawValue)
+				.padding(.top, Sizes.Padding.large)
+				.padding(.bottom, Sizes.Padding.normal)
 				ScrollView {
-					VStack(spacing: Sizes.Padding.normal.rawValue) {
+					VStack(spacing: Sizes.Padding.normal) {
 						ForEach(viewModel.notifications.indices, id: \.self) { index in
 							NotificationItem(notification: viewModel.notifications[index], false)
 								.onTapGesture {

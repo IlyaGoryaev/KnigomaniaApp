@@ -23,13 +23,13 @@ struct NotificationDescription: NotificationCoordinatorViewProtocol {
 		ZStack {
 			CustomColors.background
 				.ignoresSafeArea()
-			VStack(spacing: Sizes.Padding.zero.rawValue) {
+			VStack(spacing: Sizes.Padding.zero) {
 				NavBar(title: .emptyTitle) {
 					notificationCoordinator?.backAction(type: .backAction)
 				}
-				.padding(.top, Sizes.Padding.large.rawValue)
+				.padding(.top, Sizes.Padding.large)
 				NotificationItem(notification: notification, true)
-					.padding(.top, Sizes.Padding.large.rawValue)
+					.padding(.top, Sizes.Padding.large)
 				ActionView()
 					.opacity(notification.hasAction ? 1 : 0)
 				Spacer()

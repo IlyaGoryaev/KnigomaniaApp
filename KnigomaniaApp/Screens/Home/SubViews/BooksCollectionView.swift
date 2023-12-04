@@ -33,7 +33,11 @@ struct BooksCollectionView: View {
 						}
 				}
 			}
-			.padding(.horizontal, 16)
+			.padding(Sizes.Padding.normal)
 		}
 	}
+}
+
+#Preview {
+	BooksCollectionView(books: [BookModel(bookName: "Book1", imageName: "book1"), BookModel(bookName: "Book2", imageName: "book2"), BookModel(bookName: "Book3", imageName: "book3"), BookModel(bookName: "Book4", imageName: "book4"), BookModel(bookName: "Book5", imageName: "book5")])
 }

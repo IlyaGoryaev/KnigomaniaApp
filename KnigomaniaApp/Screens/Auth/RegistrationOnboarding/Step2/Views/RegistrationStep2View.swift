@@ -24,29 +24,29 @@ struct RegistrationOnBoardingStep2View: RegistrationOnboardingViewProtocol {
 		ZStack{
 			CustomColors.background
 				.ignoresSafeArea()
-			VStack(spacing: Sizes.Padding.zero.rawValue){
+			VStack(spacing: Sizes.Padding.zero){
                 NavBar(title: .registrationTitle) {
 					applicationCoordinator?.backAction()
 				}
-				.padding(.top, Sizes.Padding.large.rawValue)
-				.padding(.bottom, Sizes.Padding.normal.rawValue)
+				.padding(.top, Sizes.Padding.large)
+				.padding(.bottom, Sizes.Padding.normal)
 				VStack{
 					ScrollView{
 						Text(TextTitles.RegOnBoarding2.whatToRead.rawValue)
 							.modifier(RegularTextModifier())
-							.padding(.top, Sizes.Padding.normal.rawValue)
+							.padding(.top, Sizes.Padding.normal)
 						Text(TextTitles.RegOnBoarding2.chooseGenre.rawValue)
 							.font(.system(size: 14))
 							.foregroundStyle(CustomColors.brownColor)
 						GenreSelection(tags: genres, numberOfGenresChosen: $numberOfGenresChosen)
-							.padding(.horizontal, Sizes.Padding.normal.rawValue)
-							.padding(.top, Sizes.Padding.normal.rawValue)
+							.padding(.horizontal, Sizes.Padding.normal)
+							.padding(.top, Sizes.Padding.normal)
 					}
 				}
 				ButtonView(title: .continuation, isButtonEnable: isButtonEnable()){
 					applicationCoordinator?.route(view: .step3)
 				}
-				.padding(.top, Sizes.Padding.normal.rawValue)
+				.padding(.top, Sizes.Padding.normal)
 				Spacer()
 			}
 			

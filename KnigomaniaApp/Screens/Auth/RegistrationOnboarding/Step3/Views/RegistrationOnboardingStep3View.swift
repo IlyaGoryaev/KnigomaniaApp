@@ -12,30 +12,30 @@ struct RegistrationOnboardingStep3View: RegistrationOnboardingViewProtocol {
 		ZStack{
 			CustomColors.background
 				.ignoresSafeArea()
-			VStack(spacing: Sizes.Padding.zero.rawValue) {
+			VStack(spacing: Sizes.Padding.zero) {
                 NavBar(title: .registrationTitle) {
 					applicationCoordinator?.backAction()
 				}
-				.padding(.top, Sizes.Padding.large.rawValue)
+				.padding(.top, Sizes.Padding.large)
 				Text(TextTitles.RegOnBoarding3.setGoals.rawValue)
 					.modifier(HeadlineTextModifier())
-					.padding(.horizontal, Sizes.Padding.normal.rawValue)
-					.padding(.top, Sizes.Padding.large.rawValue)
+					.padding(.horizontal, Sizes.Padding.normal)
+					.padding(.top, Sizes.Padding.large)
 				Button(action: {
 					applicationCoordinator?.logIn()
 				}, label: {
-					HStack(spacing: Sizes.Padding.small.rawValue) {
+					HStack(spacing: Sizes.Padding.small) {
 						Text(TextTitles.RegOnBoarding3.skip.rawValue)
 						Image(systemName: ImageNames.chevronRight.rawValue)
 					}
 					.foregroundStyle(CustomColors.brownColor)
 					.font(.system(size: 14, weight: .semibold))
 				})
-				.padding(.top, Sizes.Padding.large.rawValue)
+				.padding(.top, Sizes.Padding.large)
 				ButtonView(title: .setup, isButtonEnable: true){
 					applicationCoordinator?.setUpTracker()
 				}
-				.padding(.top, Sizes.Padding.small.rawValue)
+				.padding(.top, Sizes.Padding.small)
 				Spacer()
 			}
 			

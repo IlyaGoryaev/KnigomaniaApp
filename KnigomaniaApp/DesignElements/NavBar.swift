@@ -36,7 +36,7 @@ struct NavBar: View {
 			}, label: {
 				Image(systemName: "chevron.left")
 					.foregroundStyle(CustomColors.darkBrownColor)
-					.padding(.horizontal, 18)
+					.padding(.horizontal, Sizes.Padding.double)
 			})
 		}
 	}

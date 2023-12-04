@@ -14,9 +14,9 @@ struct CurrentLibraryView: View {
 	weak var mainScreenCoordinator: MainCoordinator?
 	
 	var body: some View {
-		ZStack{
+		ZStack {
 			CustomColors.background.ignoresSafeArea()
-			VStack(spacing: 0){
+			VStack(spacing: Sizes.Padding.zero) {
 				if books.isEmpty{
 					Text("У тебя ещё нет отмеченных книг. Чтобы добавить книги, воспользуйся поиском.")
 						.font(.system(size: 16))
@@ -26,10 +26,9 @@ struct CurrentLibraryView: View {
 					Spacer()
 				} else {
 					BooksCollectionView(books: books, mainScreenCoordinator: mainScreenCoordinator)
-						.padding(.top, 26)
+						.padding([.top, .bottom], 16)
 				}
 			}
-			
 		}
 	}
 }

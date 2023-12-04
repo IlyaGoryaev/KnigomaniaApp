@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct FriendsStatisticView: View {
+	
+	var size: CGSize
+	
+	@State private var offsetY: CGFloat = .zero
+	
 	@Binding var friendsArray: [FriendModel]
     
     weak var mainScreenCoordinator: MainCoordinator?
@@ -21,10 +26,6 @@ struct FriendsStatisticView: View {
 				}
                 .frame(height: 96)
 				.padding(.top, 24)
-				Text("Статистика друзей")
-					.font(.system(size: 20, weight: .medium))
-                    .foregroundStyle(CustomColors.darkBrownColor)
-					.padding(.top, 40)
 				if friendsArray.isEmpty {
 					Text("У тебя еще нет друзей в Книгомании. Брось им книжный вызов, нажав кнопку выше, чтобы следить за их прогрессом!")
 						.font(.system(size: 16))
@@ -35,25 +36,65 @@ struct FriendsStatisticView: View {
 					
 				} else {
 					ScrollView {
-						VStack(spacing: 16.5) {
-							ForEach(friendsArray.indices, id: \.self) { index in
-								ZStack {
-									FriendCellView(name: friendsArray[index].friendName, goalValue: friendsArray[index].goalValue, currentValue: friendsArray[index].currentValue)
-										.background(CustomColors.background)
-                                        .onTapGesture {
-                                            let friend = friendsArray[index]
-                                            mainScreenCoordinator?.friendPage(friend: friend) {
-                                                friendsArray.remove(at: index)
-                                            }
-                                        }
-								}
-							}
+						VStack(spacing: Sizes.Padding.zero) {
+							makeFriendsStatiscticsHeader()
+								.zIndex(1)
+							makeFriendsList()
+								.padding(.top, 24)
 						}
-                        .padding(.top, 24)
-					}
-                    .padding(.bottom, 24)
+						.background {
+							ScrollDetector { offset in
+								offsetY = -offset
+							} onDraggingEnd: { offset, velocity in
+								
+							}
+
+						}
+						.padding([.bottom, .top], 24)
+						}
+						
 				}
 				Spacer()
+			}
+		}
+	}
+	
+	@ViewBuilder
+	private func makeFriendsStatiscticsHeader() -> some View {
+		let headerHeight = (size.height * 0.1)
+		let minimumHeaderHeigth = 30
+		let progress = max(min(-offsetY / (headerHeight - CGFloat(minimumHeaderHeigth)), 1), 0)
+		GeometryReader { _ in
+			ZStack {
+				Rectangle()
+					.fill(CustomColors.background)
+				Text("Статистика друзей")
+					.font(.system(size: 24, weight: .medium))
+					.foregroundStyle(CustomColors.darkBrownColor)
+					.scaleEffect(1 - (progress * 0.2))
+					.padding(.top, Sizes.Padding.double)
+					.frame(height: headerHeight)
+			}
+			.frame(height: max((headerHeight + offsetY), CGFloat(minimumHeaderHeigth)), alignment: .bottom)
+		}
+		.frame(height: headerHeight, alignment: .bottom)
+		.offset(y: -offsetY)
+	}
+	
+	@ViewBuilder
+	private func makeFriendsList() -> some View {
+		VStack(spacing: 16.5) {
+			ForEach(friendsArray.indices, id: \.self) { index in
+				ZStack {
+					FriendCellView(name: friendsArray[index].friendName, goalValue: friendsArray[index].goalValue, currentValue: friendsArray[index].currentValue)
+						.background(CustomColors.background)
+						.onTapGesture {
+							let friend = friendsArray[index]
+							mainScreenCoordinator?.friendPage(friend: friend) {
+								friendsArray.remove(at: index)
+							}
+						}
+				}
 			}
 		}
 	}
@@ -65,13 +106,13 @@ struct FriendCellView: View {
     var currentValue: Double
     
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: Sizes.Padding.zero) {
             HStack {
-                HStack(spacing: 0) {
+                HStack(spacing: Sizes.Padding.zero) {
                     Circle()
                         .frame(width: 50, height: 50)
                     Text(name)
-                        .font(.system(size: 16))
+						.font(.system(size: Sizes.Padding.normal))
                         .padding(.leading, 24)
                 }
                 Spacer()
@@ -101,4 +142,11 @@ struct FriendCellView: View {
                 .padding(.horizontal, 16)
         }
     }
+}
+
+#Preview {
+	GeometryReader {
+		FriendsStatisticView(size: $0.size, friendsArray: .constant(FriendsTestData.friends))
+	}
+	
 }

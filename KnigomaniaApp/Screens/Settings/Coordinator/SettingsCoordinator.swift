@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 enum SettingsSectionItems: String {
 	
@@ -38,11 +39,15 @@ enum SettingsSectionItems: String {
 final class SettingsCoordinator: Coordinator {
 	
 	var rootController: UINavigationController
+	
+	weak var isUserAuthorize: CurrentValueSubject<Bool, Never>?
 		
 	init(
-		rootController: UINavigationController
+		rootController: UINavigationController,
+		isUserAuthorize: CurrentValueSubject<Bool, Never>? = nil
 	) {
 		self.rootController = rootController
+		self.isUserAuthorize = isUserAuthorize
 	}
 	
 	func start() {
@@ -83,5 +88,9 @@ final class SettingsCoordinator: Coordinator {
 	func setupMailConfirmationCoordinator() {
 		let mailConfirmationCoordinator = MailConfirmationCoordinator(navigationController: rootController)
 		mailConfirmationCoordinator.start()
+	}
+	
+	func accoutExit() {
+		isUserAuthorize?.send(false)
 	}
 }

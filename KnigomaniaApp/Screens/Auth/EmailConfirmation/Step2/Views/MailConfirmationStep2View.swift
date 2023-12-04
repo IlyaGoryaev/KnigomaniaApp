@@ -19,11 +19,11 @@ struct MailConfirmationStep2View: MailConfirmationViewProtocol {
 		ZStack{
 			CustomColors.background
 				.ignoresSafeArea()
-			VStack(spacing: Sizes.Padding.zero.rawValue) {
+			VStack(spacing: Sizes.Padding.zero) {
 				Text(TextTitles.MailConfirmStep2.emailConfirmed.rawValue)
 					.modifier(HeadlineTextModifier())
-					.padding(.top, Sizes.Padding.large.rawValue)
-					.padding(.horizontal, Sizes.Padding.large.rawValue)
+					.padding(.top, Sizes.Padding.large)
+					.padding(.horizontal, Sizes.Padding.large)
 				ButtonView(title: .continuation, isButtonEnable: true){
 					if ((mailConfirmationCoordinator?.isUserAuthorize?.value) != nil) {
 						mailConfirmationCoordinator?.startRegistrationOnBoardingCoordinator()
@@ -32,7 +32,7 @@ struct MailConfirmationStep2View: MailConfirmationViewProtocol {
 					}
 					
 				}
-				.padding(.top, Sizes.Padding.large.rawValue)
+				.padding(.top, Sizes.Padding.large)
 				Spacer()
 			}
 		}

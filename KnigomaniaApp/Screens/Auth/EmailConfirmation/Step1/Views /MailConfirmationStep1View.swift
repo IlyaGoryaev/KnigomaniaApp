@@ -28,16 +28,16 @@ struct MailConfirmationStep1View: MailConfirmationViewProtocol {
 				VStack {
 					Text(TextTitles.MailConfirmStep1.emailConfirm.rawValue)
 						.modifier(HeadlineTextModifier())
-						.padding(.top, Sizes.Padding.normal.rawValue)
-						.padding(.horizontal, Sizes.Padding.small.rawValue)
+						.padding(.top, Sizes.Padding.normal)
+						.padding(.horizontal, Sizes.Padding.small)
 					Text(TextTitles.MailConfirmStep1.sendMail.rawValue + email)
 						.modifier(RegularTextModifier())
-						.padding(.top, Sizes.Padding.normal.rawValue)
-						.padding(.horizontal, Sizes.Padding.large.rawValue)
+						.padding(.top, Sizes.Padding.normal)
+						.padding(.horizontal, Sizes.Padding.large)
 					Image(ImageNames.RegOnBoarding2.rawValue)
-						.padding(.top, Sizes.Padding.large.rawValue)
-						.padding(.horizontal, Sizes.Padding.normal.rawValue)
-					VStack(spacing: Sizes.Padding.normal.rawValue){
+						.padding(.top, Sizes.Padding.large)
+						.padding(.horizontal, Sizes.Padding.normal)
+					VStack(spacing: Sizes.Padding.normal){
 						Text(TextTitles.MailConfirmStep1.doNotGetMail.rawValue)
 							.font(.system(size: 14, weight: .regular))
 							.foregroundColor(CustomColors.darkBrownColor)
@@ -49,7 +49,7 @@ struct MailConfirmationStep1View: MailConfirmationViewProtocol {
 								.font(.system(size: 14, weight: .bold))
 						})
 					}
-					.padding(.top, Sizes.Padding.large.rawValue)
+					.padding(.top, Sizes.Padding.large)
 					Spacer()
 				}
 				.blur(radius: isLoading ? 3 : 0)

@@ -35,6 +35,7 @@
 		9D0E70532B115F8B00C2EAA2 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E70522B115F8B00C2EAA2 /* Text.swift */; };
 		9D0E70562B11604300C2EAA2 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E70552B11604300C2EAA2 /* Sizes.swift */; };
 		9D0E70592B11609600C2EAA2 /* ImageNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E70582B11609600C2EAA2 /* ImageNames.swift */; };
+		9D1486252B1E5B770067C5E4 /* ScrollDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1486242B1E5B770067C5E4 /* ScrollDetector.swift */; };
 		9D359DB82B1BA79500CF2BB8 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D359DB72B1BA79500CF2BB8 /* RequestError.swift */; };
 		9D359DBA2B1BABE800CF2BB8 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D359DB92B1BABE800CF2BB8 /* LoginResponse.swift */; };
 		9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */; };
@@ -58,7 +59,6 @@
 		9D698ABE2B1B09820005E16F /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D698ABD2B1B09820005E16F /* HTTPMethods.swift */; };
 		9D698AC02B1B09D00005E16F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D698ABF2B1B09D00005E16F /* Endpoint.swift */; };
 		9D698AC22B1B0A3C0005E16F /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D698AC12B1B0A3C0005E16F /* HTTPHeaders.swift */; };
-		9D698ACC2B1B0EB70005E16F /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D698ACB2B1B0EB70005E16F /* ErrorViewController.swift */; };
 		9D6C06AA2B094FF000478609 /* SupportScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6C06A92B094FF000478609 /* SupportScreenView.swift */; };
 		9D6C06B02B09549800478609 /* NotificationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6C06AF2B09549800478609 /* NotificationScreenView.swift */; };
 		9D714E2A2AE8238600992E09 /* MakeReviewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D714E292AE8238600992E09 /* MakeReviewPage.swift */; };
@@ -103,7 +103,6 @@
 		9DC2D11D2AFD79870087FB34 /* GradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D11C2AFD79870087FB34 /* GradeView.swift */; };
 		9DC2D1212AFD801B0087FB34 /* CoordinatorEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D1202AFD801B0087FB34 /* CoordinatorEnums.swift */; };
 		9DC2D1252AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2D1242AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift */; };
-		9DF6912D2B1B14FC00F4FB3E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF6912C2B1B14FC00F4FB3E /* ErrorView.swift */; };
 		9DF691302B1B545E00F4FB3E /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF6912F2B1B545E00F4FB3E /* KeyChainManager.swift */; };
 		9DF691332B1B839200F4FB3E /* KeyChainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF691322B1B839200F4FB3E /* KeyChainModels.swift */; };
 		9DF691382B1B9BC700F4FB3E /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF691372B1B9BC700F4FB3E /* AuthEndpoint.swift */; };
@@ -177,6 +176,7 @@
 		9D0E70522B115F8B00C2EAA2 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		9D0E70552B11604300C2EAA2 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		9D0E70582B11609600C2EAA2 /* ImageNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNames.swift; sourceTree = "<group>"; };
+		9D1486242B1E5B770067C5E4 /* ScrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDetector.swift; sourceTree = "<group>"; };
 		9D359DB72B1BA79500CF2BB8 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		9D359DB92B1BABE800CF2BB8 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -200,7 +200,6 @@
 		9D698ABD2B1B09820005E16F /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
 		9D698ABF2B1B09D00005E16F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		9D698AC12B1B0A3C0005E16F /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
-		9D698ACB2B1B0EB70005E16F /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		9D6C06A92B094FF000478609 /* SupportScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportScreenView.swift; sourceTree = "<group>"; };
 		9D6C06AF2B09549800478609 /* NotificationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScreenView.swift; sourceTree = "<group>"; };
 		9D714E292AE8238600992E09 /* MakeReviewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReviewPage.swift; sourceTree = "<group>"; };
@@ -247,7 +246,6 @@
 		9DC2D11C2AFD79870087FB34 /* GradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeView.swift; sourceTree = "<group>"; };
 		9DC2D1202AFD801B0087FB34 /* CoordinatorEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorEnums.swift; sourceTree = "<group>"; };
 		9DC2D1242AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOnboardingViewProtocol.swift; sourceTree = "<group>"; };
-		9DF6912C2B1B14FC00F4FB3E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		9DF6912F2B1B545E00F4FB3E /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		9DF691322B1B839200F4FB3E /* KeyChainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainModels.swift; sourceTree = "<group>"; };
 		9DF691372B1B9BC700F4FB3E /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
@@ -571,6 +569,14 @@
 			path = ImageNames;
 			sourceTree = "<group>";
 		};
+		9D1486232B1E5B670067C5E4 /* SwiftUI+UIKIt */ = {
+			isa = PBXGroup;
+			children = (
+				9D1486242B1E5B770067C5E4 /* ScrollDetector.swift */,
+			);
+			path = "SwiftUI+UIKIt";
+			sourceTree = "<group>";
+		};
 		9D359DB62B1BA78C00CF2BB8 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,8 +618,6 @@
 				9D61F9CA2AD883090000393C /* TextFieldTime.swift */,
 				9D055EA62AE0EC0A00BDDF50 /* PasswordTextField.swift */,
 				9D714E652AEA4D7000992E09 /* CustomTabBarController.swift */,
-				9D698ACB2B1B0EB70005E16F /* ErrorViewController.swift */,
-				9DF6912C2B1B14FC00F4FB3E /* ErrorView.swift */,
 			);
 			path = DesignElements;
 			sourceTree = "<group>";
@@ -1335,6 +1339,7 @@
 		FEF697292AC5E7B800708E1E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9D1486232B1E5B670067C5E4 /* SwiftUI+UIKIt */,
 				9D0E70572B11608000C2EAA2 /* ImageNames */,
 				9D0E70542B11603B00C2EAA2 /* Sizes */,
 				9D0E70512B115F7700C2EAA2 /* Text */,
@@ -1435,14 +1440,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D714E5B2AE9C98A00992E09 /* MainCoordinatorWithTabBar.swift in Sources */,
-				9DF6912D2B1B14FC00F4FB3E /* ErrorView.swift in Sources */,
 				FE347F182AD032A900AE00DF /* Day.swift in Sources */,
 				9D82426F2B121B2100BF3ACF /* ActionButtonModifier.swift in Sources */,
 				9D7A76D32AE42BE500158781 /* BookPageModel.swift in Sources */,
 				9D055EC32AE0EFEB00BDDF50 /* MyProgress.swift in Sources */,
 				9D8242682B1216A500BF3ACF /* ActionView.swift in Sources */,
 				9D61F9FC2AD8896B0000393C /* SetupTrackerStep3View.swift in Sources */,
-				9D698ACC2B1B0EB70005E16F /* ErrorViewController.swift in Sources */,
 				FE347F1A2AD055EE00AE00DF /* TimeSelectionModalView.swift in Sources */,
 				FE347F152AD02F2400AE00DF /* DaySelectionModalView.swift in Sources */,
 				9D055EA12AE0E45E00BDDF50 /* MainCoordinator.swift in Sources */,
@@ -1522,6 +1525,7 @@
 				9D61F9DC2AD884D90000393C /* GenreModel.swift in Sources */,
 				9D8242602B11D35900BF3ACF /* NotificationProtocol.swift in Sources */,
 				9D8242732B12335D00BF3ACF /* UserModel.swift in Sources */,
+				9D1486252B1E5B770067C5E4 /* ScrollDetector.swift in Sources */,
 				9D698ABA2B1B03B10005E16F /* HelpButton.swift in Sources */,
 				9D055EA32AE0E47E00BDDF50 /* RegistrationOnboardingCoordinator.swift in Sources */,
 				9D359DB82B1BA79500CF2BB8 /* RequestError.swift in Sources */,
@@ -1731,13 +1735,14 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ilyaagoryaev.KnigomaniaApp;
+				PRODUCT_BUNDLE_IDENTIFIER = ilyaagoryaev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1767,13 +1772,14 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ilyaagoryaev.KnigomaniaApp;
+				PRODUCT_BUNDLE_IDENTIFIER = ilyaagoryaev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

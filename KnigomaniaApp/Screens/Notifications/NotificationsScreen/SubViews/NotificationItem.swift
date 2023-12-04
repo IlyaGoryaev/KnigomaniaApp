@@ -20,7 +20,7 @@ struct NotificationItem: View {
 	
 	var body: some View {
 		
-		VStack(spacing: Sizes.Padding.zero.rawValue) {
+		VStack(spacing: Sizes.Padding.zero) {
 			HStack {
 				HStack(spacing: 2) {
 					if !notification.isRead {
@@ -39,20 +39,20 @@ struct NotificationItem: View {
 				if notification.hasPhoto && isHidden{
 					Circle()
 						.foregroundStyle(CustomColors.lightBrownColor)
-						.frame(width: Sizes.ProfileImage.normal.rawValue, height: Sizes.ProfileImage.normal.rawValue)
+						.frame(width: Sizes.ProfileImage.normal, height: Sizes.ProfileImage.normal)
 				}
 				Text(notification.textNotification)
 					.textStyle(.regularText)
 					.frame(maxWidth: .infinity, alignment: .leading)
-					.padding(.top, Sizes.Padding.normal.rawValue)
+					.padding(.top, Sizes.Padding.normal)
 			}
 			
 			Rectangle()
 				.frame(height: 0.5)
-				.padding(.top, Sizes.Padding.normal.rawValue)
+				.padding(.top, Sizes.Padding.normal)
 				.opacity(isHidden ? 0 : 1)
 		}
-		.padding(.horizontal, Sizes.Padding.normal.rawValue)
+		.padding(.horizontal, Sizes.Padding.normal)
 		
 	}
 	

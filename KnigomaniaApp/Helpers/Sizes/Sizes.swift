@@ -9,30 +9,23 @@ import Foundation
 
 enum Sizes {
 	
-	enum Padding: CGFloat {
-		case normal = 16
-		case small = 8
-		case double = 24
-		case large = 40
-		case zero = 0
+	enum Padding {
+		static let normal: CGFloat = 16
+		static let small: CGFloat = 8
+		static let double: CGFloat = 24
+		static let large: CGFloat = 40
+		static let zero: CGFloat = 0
 	}
 	
 	enum Buttons {
-		enum ActionButtonPadding: CGFloat {
-			case large = 72
-			case normal = 44
+		enum ActionButtonPadding {
+			static let large: CGFloat = 72
+			static let normal: CGFloat = 44
 		}
 	}
 	
-	enum ProfileImage: CGFloat {
-		case normal = 36
-		case large = 72
-	}
-	
-	enum ErrorView: CGFloat {
-		case height = 162
-		case width = 254
-		case cornerRadius = 10
-		case buttonHeight = 40
+	enum ProfileImage {
+		static let normal: CGFloat = 36
+		static let large: CGFloat = 72
 	}
 }

@@ -29,8 +29,7 @@ private extension CustomTabBarViewController {
 		let width = tabBar.bounds.width
         _ = tabBar.bounds.height
         roundedLayer.fillColor = UIColor(CustomColors.brownColor.opacity(0.75)).cgColor
-		
-		let bezierPath = UIBezierPath(roundedRect: CGRect(x: 0, y: -24, width: width, height: 120), cornerRadius: 8)
+		let bezierPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: width, height: 100), cornerRadius: 8)
 		roundedLayer.path = bezierPath.cgPath
 		tabBar.layer.insertSublayer(roundedLayer, at: 0)
 		tabBar.itemWidth = width / 7

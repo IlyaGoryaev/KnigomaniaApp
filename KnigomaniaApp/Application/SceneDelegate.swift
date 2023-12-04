@@ -37,8 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 					let tabBarController = CustomTabBarViewController()
 					self.window?.rootViewController = tabBarController
 					self.window?.makeKeyAndVisible()
-					print("Main Coordinator")
-					let mainCoordinator = MainCoordinatorWithTabBar(tabBarController: tabBarController)
+					let mainCoordinator = MainCoordinatorWithTabBar(tabBarController: tabBarController, isUserAuthorize: isUserAuthorize)
 					mainCoordinator.start()
 					self.coordinator = mainCoordinator
 				} else {
@@ -51,5 +50,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			
 		}
     }
+	
+	private func isLogin() -> Bool {
+		return true
+	}
 }
 

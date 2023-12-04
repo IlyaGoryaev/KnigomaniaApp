@@ -26,16 +26,16 @@ struct RegistrationOnboardingStep1View: RegistrationOnboardingViewProtocol {
 		ZStack{
 			CustomColors.background
 				.ignoresSafeArea()
-			VStack(spacing: Sizes.Padding.zero.rawValue) {
+			VStack(spacing: Sizes.Padding.zero) {
                 NavBar(title: .registrationTitle) {
 					applicationCoordinator?.backAction()
 				}
-				.padding(.top, Sizes.Padding.large.rawValue)
+				.padding(.top, Sizes.Padding.large)
 				Text(TextTitles.RegOnBoarding1.setPhotoText.rawValue)
 					.modifier(RegularTextModifier())
-					.lineSpacing(Sizes.Padding.normal.rawValue)
-					.padding(.top, Sizes.Padding.large.rawValue)
-					.padding(.horizontal, Sizes.Padding.normal.rawValue)
+					.lineSpacing(Sizes.Padding.normal)
+					.padding(.top, Sizes.Padding.large)
+					.padding(.horizontal, Sizes.Padding.normal)
 				ZStack{
 					Circle()
 						.foregroundStyle(CustomColors.lightBrownColor)
@@ -51,7 +51,7 @@ struct RegistrationOnboardingStep1View: RegistrationOnboardingViewProtocol {
 					.offset(x: 167 / 3, y: 167 / 3)
 					.opacity(inputImage == nil ? 1 : 0)
 				}
-				.padding(.top, Sizes.Padding.large.rawValue)
+				.padding(.top, Sizes.Padding.large)
 				.onTapGesture {
 					showImagePicker = true
 				}
@@ -67,7 +67,7 @@ struct RegistrationOnboardingStep1View: RegistrationOnboardingViewProtocol {
 						applicationCoordinator?.route(view: .step2)
 						print("Route")
 					}, label: {
-						HStack(spacing: Sizes.Padding.small.rawValue){
+						HStack(spacing: Sizes.Padding.small){
 							Text(TextTitles.RegOnBoarding1.skip.rawValue)
 							Image(systemName: "chevron.right")
 						}
@@ -78,7 +78,7 @@ struct RegistrationOnboardingStep1View: RegistrationOnboardingViewProtocol {
 						applicationCoordinator?.route(view: .step2)
 					}
 				}
-				.padding(.top, Sizes.Padding.large.rawValue)
+				.padding(.top, Sizes.Padding.large)
 				
 				Spacer()
 			}

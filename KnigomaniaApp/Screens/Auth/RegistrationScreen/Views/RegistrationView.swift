@@ -25,17 +25,17 @@ struct RegistrationView: EntryViewProtocol {
 		ZStack{
 			CustomColors.background
 				.ignoresSafeArea()
-			VStack(spacing: Sizes.Padding.zero.rawValue){
+			VStack(spacing: Sizes.Padding.zero){
                 NavBar(title: .registrationTitle) {
 					entryCoordinator?.backAction(type: .backAction)
 				}
-				.padding(.top, Sizes.Padding.large.rawValue)
+				.padding(.top, Sizes.Padding.large)
 				VStack{
 					Text(TextTitles.RegistrationView.email.rawValue)
 						.font(.system(size: 14))
 						.foregroundStyle(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
-						.padding(.horizontal, Sizes.Padding.normal.rawValue)
+						.padding(.horizontal, Sizes.Padding.normal)
 					TextField(text: $email) {
 						Text(TextTitles.RegistrationView.enterEmail.rawValue)
 							.foregroundStyle(CustomColors.brownColor)
@@ -43,36 +43,36 @@ struct RegistrationView: EntryViewProtocol {
 					}
 					.foregroundStyle(CustomColors.darkBrownColor)
 					.padding(.horizontal, 12)
-					.padding(.vertical, Sizes.Padding.normal.rawValue)
+					.padding(.vertical, Sizes.Padding.normal)
 					.background(RoundedRectangle(cornerRadius: 10).foregroundStyle(Color.white))
-					.padding(.horizontal, Sizes.Padding.normal.rawValue)
+					.padding(.horizontal, Sizes.Padding.normal)
 				}
-				.padding(.top, Sizes.Padding.large.rawValue)
+				.padding(.top, Sizes.Padding.large)
 				
 				VStack{
 					Text(TextTitles.RegistrationView.password.rawValue)
 						.font(.system(size: 14))
 						.foregroundStyle(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
-						.padding(.horizontal, Sizes.Padding.normal.rawValue)
+						.padding(.horizontal, Sizes.Padding.normal)
 					PasswordTextField(text: $passwordText, title: TextTitles.RegistrationView.enterPassword.rawValue)
 				}
-				.padding(.top, Sizes.Padding.normal.rawValue)
+				.padding(.top, Sizes.Padding.normal)
 				
 				VStack{
 					Text(TextTitles.RegistrationView.enterPassword.rawValue)
 						.font(.system(size: 14))
 						.foregroundStyle(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
-						.padding(.horizontal, Sizes.Padding.normal.rawValue)
+						.padding(.horizontal, Sizes.Padding.normal)
 					PasswordTextField(text: $confirmPasswordText, title: TextTitles.RegistrationView.enterPassword.rawValue)
 				}
-				.padding(.top, Sizes.Padding.normal.rawValue)
+				.padding(.top, Sizes.Padding.normal)
 				ButtonView(title: .continuation, isButtonEnable: true) {
 //					entryCoordinator?.startMailConfirmationCoordinator()
-					entryCoordinator?.showError()
+					entryCoordinator?.showError(errorDescription: "Ошибка")
 				}
-				.padding(.top, Sizes.Padding.large.rawValue)
+				.padding(.top, Sizes.Padding.large)
 				HStack(spacing: 4){
 					Text(TextTitles.RegistrationView.account.rawValue)
 						.font(.system(size: 14))
@@ -82,7 +82,7 @@ struct RegistrationView: EntryViewProtocol {
 					}
 				}
 				.frame(maxWidth: .infinity, alignment: .center)
-				.padding(.top, Sizes.Padding.normal.rawValue)
+				.padding(.top, Sizes.Padding.normal)
 				Spacer()
 			}
 		}

@@ -40,5 +40,5 @@ struct ActionButton: View {
 // MARK: Preview
 
 #Preview {
-	ActionButton(title: "Принять", padding: Sizes.Buttons.ActionButtonPadding.normal.rawValue, actionType: .distructAction)
+	ActionButton(title: "Принять", padding: Sizes.Buttons.ActionButtonPadding.normal, actionType: .distructAction)
 }
