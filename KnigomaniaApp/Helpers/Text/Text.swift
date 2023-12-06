@@ -26,6 +26,7 @@ enum TextTitles {
 		case password = "Пароль"
 		case enterPassword = "Введите пароль"
         case repeatPassword = "Повторите пароль"
+        case differentPasswords = "Введенные пароли не совпадают"
 		case account = "Уже есть аккаунт?"
 		case entry = "Войти"
 	}

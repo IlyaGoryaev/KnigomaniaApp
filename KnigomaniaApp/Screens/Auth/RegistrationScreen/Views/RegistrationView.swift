@@ -18,6 +18,9 @@ struct RegistrationView: EntryViewProtocol {
     // MARK: State properties
     
     @State private var isEmailValid: Bool = true
+    @State private var email: String = ""
+    @State private var passwordText: String = ""
+    @State private var confirmPasswordText: String = ""
     
     @FocusState private var isEmailTextFieldFocused: Bool
     @FocusState private var isPasswordTextFieldFocused: Bool
@@ -40,7 +43,7 @@ struct RegistrationView: EntryViewProtocol {
                         .foregroundStyle(CustomColors.darkBrownColor)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, Sizes.Padding.normal.rawValue)
-                    TextField(text: $viewModel.email) {
+                    TextField(text: $email) {
                         Text(TextTitles.RegistrationView.enterEmail.rawValue)
                             .foregroundStyle(CustomColors.brownColor)
                             .font(.system(size: 14))
@@ -48,6 +51,7 @@ struct RegistrationView: EntryViewProtocol {
                     .focused($isEmailTextFieldFocused)
                     .autocapitalization(.none)
                     .keyboardType(.emailAddress)
+                    .disableAutocorrection(true)
                     .foregroundStyle(CustomColors.darkBrownColor)
                     .padding(.horizontal, 12)
                     .padding(.vertical, Sizes.Padding.normal.rawValue)
@@ -60,9 +64,9 @@ struct RegistrationView: EntryViewProtocol {
                             )
                     )
                     .padding(.horizontal, Sizes.Padding.normal.rawValue)
-                    .onChange(of: viewModel.email, perform: { newEmail in
+                    .onChange(of: email) { newEmail in
                         isEmailValid = viewModel.validateEmail(newEmail)
-                    })
+                    }
                     if !isEmailValid {
                         HStack {
                             Text(TextTitles.RegistrationView.wrongEmail.rawValue)
@@ -81,7 +85,7 @@ struct RegistrationView: EntryViewProtocol {
                         .foregroundStyle(CustomColors.darkBrownColor)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, Sizes.Padding.normal.rawValue)
-                    PasswordTextField(text: $viewModel.passwordText, title: TextTitles.RegistrationView.enterPassword.rawValue)
+                    PasswordTextField(text: $passwordText, title: TextTitles.RegistrationView.enterPassword.rawValue)
                         .focused($isPasswordTextFieldFocused)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
@@ -97,15 +101,25 @@ struct RegistrationView: EntryViewProtocol {
                         .foregroundStyle(CustomColors.darkBrownColor)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, Sizes.Padding.normal.rawValue)
-                    PasswordTextField(text: $viewModel.confirmPasswordText, title: TextTitles.RegistrationView.repeatPassword.rawValue)
+                    PasswordTextField(text: $confirmPasswordText, title: TextTitles.RegistrationView.repeatPassword.rawValue)
                         .focused($isSecondPasswordTextFieldFocused)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(isSecondPasswordTextFieldFocused ? CustomColors.darkBrownColor : Color.clear, lineWidth: 1)
                                 .padding(.horizontal, 16)
                         )
+                    if !matchPasswords() {
+                        HStack {
+                            Text(TextTitles.RegistrationView.differentPasswords.rawValue)
+                                .font(.system(size: 11))
+                                .foregroundStyle(Color.red)
+                            Spacer()
+                        }
+                        .padding(.horizontal, Sizes.Padding.normal.rawValue)
+                    }
                 }
                 .padding(.top, Sizes.Padding.normal.rawValue)
+                
                 ButtonView(title: .continuation, isButtonEnable: true) {
                     //					entryCoordinator?.startMailConfirmationCoordinator()
                     entryCoordinator?.showError()
@@ -127,6 +141,20 @@ struct RegistrationView: EntryViewProtocol {
         .onTapGesture {
             viewModel.endEditing()
         }
+    }
+    
+    // MARK: Actions
+    
+    private func matchPasswords() -> Bool {
+        let password = passwordText
+        let confirmPassword = confirmPasswordText
+        
+        if isSecondPasswordTextFieldFocused {
+            guard password == confirmPassword else {
+                return false
+            }
+        }
+        return true
     }
 }
 
