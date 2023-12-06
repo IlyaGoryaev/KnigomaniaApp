@@ -56,5 +56,16 @@ enum TextTitles {
 		case setGoals = "Хотите настроить сейчас ваши цели по чтению?"
 		case skip = "Пропустить"
 	}
+    
+    enum LoginScreenView: String {
+        case email = "E-mail"
+        case enterEmail = "Введите электронную почту"
+        case wrongEmail = "Введите корректную электронную почту"
+        case password = "Пароль"
+        case enterPassword = "Введите пароль"
+        case forgetPassword = "Забыли пароль?"
+        case entry = "Войти"
+        case noAccount = "Еще нет аккаунта?"
+    }
 	
 }

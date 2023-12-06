@@ -136,6 +136,7 @@
 		FE8B8EED2B0BB95200DE5ED4 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B8EEC2B0BB95200DE5ED4 /* UIApplicationExtension.swift */; };
 		FE9119442AEBDDF600B31380 /* GalleryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9119432AEBDDF600B31380 /* GalleryPickerView.swift */; };
 		FE91194C2AEC44E500B31380 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE91194B2AEC44E500B31380 /* ImagePicker.swift */; };
+		FEA914B42B20A8CE0060F8EA /* LoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA914B32B20A8CE0060F8EA /* LoginScreenViewModel.swift */; };
 		FEAA59B82ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */; };
 		FEAA59BA2ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */; };
 		FEAAB6322AFB7F4D009C0919 /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAAB6312AFB7F4D009C0919 /* TextModifier.swift */; };
@@ -280,6 +281,7 @@
 		FE8B8EEC2B0BB95200DE5ED4 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		FE9119432AEBDDF600B31380 /* GalleryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPickerView.swift; sourceTree = "<group>"; };
 		FE91194B2AEC44E500B31380 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		FEA914B32B20A8CE0060F8EA /* LoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModel.swift; sourceTree = "<group>"; };
 		FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenConfirmationView.swift; sourceTree = "<group>"; };
 		FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenSuccessView.swift; sourceTree = "<group>"; };
 		FEAAB6312AFB7F4D009C0919 /* TextModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
@@ -1275,7 +1277,8 @@
 		FE70D7992AC8192F0018C5A1 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				FE70D79A2AC819400018C5A1 /* LoginScreenView.swift */,
+				FEA914B12B20A8A80060F8EA /* Views */,
+				FEA914B22B20A8B20060F8EA /* ViewModels */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -1298,6 +1301,22 @@
 				FEF6972E2AC5EEFA00708E1E /* SubViews */,
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		FEA914B12B20A8A80060F8EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE70D79A2AC819400018C5A1 /* LoginScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FEA914B22B20A8B20060F8EA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FEA914B32B20A8CE0060F8EA /* LoginScreenViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FEBA7B3D2B1B636500C12F3F /* ViewModels */ = {
@@ -1564,6 +1583,7 @@
 				9D7A76CE2AE42A1C00158781 /* BookPage.swift in Sources */,
 				9D055EB42AE0EF0A00BDDF50 /* BookChallengeView.swift in Sources */,
 				FE2029282B02AA1F00386526 /* BarcodeOverlay.swift in Sources */,
+				FEA914B42B20A8CE0060F8EA /* LoginScreenViewModel.swift in Sources */,
 				9D072BD32B0166F1001C2F54 /* SettingsCoordinator.swift in Sources */,
 				9DC2D1152AFCFC060087FB34 /* UserActionsTitle.swift in Sources */,
 				FE5BC0622AEACFE9008F366F /* RecommendationsScreenView.swift in Sources */,

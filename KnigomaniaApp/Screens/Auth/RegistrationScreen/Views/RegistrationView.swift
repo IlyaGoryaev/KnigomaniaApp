@@ -87,6 +87,8 @@ struct RegistrationView: EntryViewProtocol {
                         .padding(.horizontal, Sizes.Padding.normal)
                     PasswordTextField(text: $passwordText, title: TextTitles.RegistrationView.enterPassword.rawValue)
                         .focused($isPasswordTextFieldFocused)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(isPasswordTextFieldFocused ? CustomColors.darkBrownColor : Color.clear, lineWidth: 1)
@@ -103,6 +105,8 @@ struct RegistrationView: EntryViewProtocol {
                         .padding(.horizontal, Sizes.Padding.normal)
                     PasswordTextField(text: $confirmPasswordText, title: TextTitles.RegistrationView.repeatPassword.rawValue)
                         .focused($isSecondPasswordTextFieldFocused)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(isSecondPasswordTextFieldFocused ? CustomColors.darkBrownColor : Color.clear, lineWidth: 1)

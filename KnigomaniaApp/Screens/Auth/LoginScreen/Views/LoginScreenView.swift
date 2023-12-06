@@ -12,11 +12,14 @@ struct LoginScreenView: EntryViewProtocol {
 	// MARK: Dependencies
 	
 	weak var entryCoordinator: EntryCoordinator?
+    
+    @ObservedObject private var viewModel = LoginScreenViewModel()
 	
 	// MARK: Properties
 	
 	@State private var email: String = ""
 	@State private var passwordText: String = ""
+    @State private var isEmailValid: Bool = true
 	
 	// MARK: View
 	
@@ -30,16 +33,19 @@ struct LoginScreenView: EntryViewProtocol {
 				}
 				.padding(.top, Sizes.Padding.double)
 				VStack{
-					Text("E-mail")
+                    Text(TextTitles.LoginScreenView.email.rawValue)
 						.font(.system(size: 14))
 						.foregroundStyle(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
 						.padding(.horizontal, Sizes.Padding.normal)
 					TextField(text: $email) {
-						Text("Введите электронную почту")
+                        Text(TextTitles.LoginScreenView.enterEmail.rawValue)
 							.foregroundStyle(CustomColors.brownColor)
 							.font(.system(size: 14))
 					}
+                    .autocapitalization(.none)
+                    .keyboardType(.emailAddress)
+                    .disableAutocorrection(true)
 					.foregroundStyle(CustomColors.darkBrownColor)
 					.padding(.horizontal, 12)
 					.padding(.vertical, 15)
@@ -48,12 +54,14 @@ struct LoginScreenView: EntryViewProtocol {
 				}
 				.padding(.top, Sizes.Padding.large)
 				VStack(spacing: 8) {
-					Text("Пароль")
+                    Text(TextTitles.LoginScreenView.password.rawValue)
 						.font(.system(size: 14, weight: .regular))
 						.foregroundColor(CustomColors.darkBrownColor)
 						.frame(maxWidth: .infinity, alignment: .leading)
 						.padding(.leading, Sizes.Padding.normal)
-					PasswordTextField(text: $passwordText, title: "Введите пароль")
+                    PasswordTextField(text: $passwordText, title: TextTitles.LoginScreenView.enterPassword.rawValue)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
 				}
 				.padding(.top, Sizes.Padding.normal)
 				HelpButton(title: .missPassword) {
@@ -66,7 +74,7 @@ struct LoginScreenView: EntryViewProtocol {
 				}
 				.padding(.top, Sizes.Padding.double)
 				HStack(spacing: 3) {
-					Text("Еще нет аккаунта?")
+                    Text(TextTitles.LoginScreenView.noAccount.rawValue)
 						.font(.system(size: 14, weight: .regular))
 						.foregroundColor(CustomColors.darkBrownColor)
 					HelpButton(title: .registration) {
@@ -79,13 +87,9 @@ struct LoginScreenView: EntryViewProtocol {
 			}
 		}
         .onTapGesture {
-            self.endEditing()
+            viewModel.endEditing()
         }
 	}
-    
-    private func endEditing() {
-        UIApplication.shared.endEditing()
-    }
 }
 
 // MARK: Preview
