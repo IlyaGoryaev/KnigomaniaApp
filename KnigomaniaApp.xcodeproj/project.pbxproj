@@ -140,6 +140,7 @@
 		FEAA59BA2ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */; };
 		FEAAB6322AFB7F4D009C0919 /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAAB6312AFB7F4D009C0919 /* TextModifier.swift */; };
 		FEAB7AF12AE2BD000057F3C5 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB7AF02AE2BD000057F3C5 /* StatisticsView.swift */; };
+		FEBA7B3F2B1B638300C12F3F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBA7B3E2B1B638300C12F3F /* RegistrationViewModel.swift */; };
 		FEC8EB082AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8EB072AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift */; };
 		FED451272AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED451262AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift */; };
 		FED451292AF3EBE000FAAFA5 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED451282AF3EBE000FAAFA5 /* ImageExtension.swift */; };
@@ -283,6 +284,7 @@
 		FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordScreenSuccessView.swift; sourceTree = "<group>"; };
 		FEAAB6312AFB7F4D009C0919 /* TextModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
 		FEAB7AF02AE2BD000057F3C5 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		FEBA7B3E2B1B638300C12F3F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		FEC8EB072AD07D4600EB102F /* TrackerSetupConfirmationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerSetupConfirmationScreenView.swift; sourceTree = "<group>"; };
 		FED451262AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerRegistration.swift; sourceTree = "<group>"; };
 		FED451282AF3EBE000FAAFA5 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				9D055EA92AE0EDF500BDDF50 /* Views */,
+				FEBA7B3D2B1B636500C12F3F /* ViewModels */,
 			);
 			path = RegistrationScreen;
 			sourceTree = "<group>";
@@ -1297,6 +1300,14 @@
 			path = SplashScreen;
 			sourceTree = "<group>";
 		};
+		FEBA7B3D2B1B636500C12F3F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FEBA7B3E2B1B638300C12F3F /* RegistrationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		FEEF84C32AD9A99000B6DC39 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -1571,6 +1582,7 @@
 				9D714E2A2AE8238600992E09 /* MakeReviewPage.swift in Sources */,
 				9D61F9DE2AD884F70000393C /* CustomButtonStyle.swift in Sources */,
 				9D61F9C52AD882B30000393C /* ButtonView.swift in Sources */,
+				FEBA7B3F2B1B638300C12F3F /* RegistrationViewModel.swift in Sources */,
 				9D072C242B019B27001C2F54 /* NotificationList.swift in Sources */,
 				9D7A76DE2AE43DDC00158781 /* BookCoordinator.swift in Sources */,
 			);
