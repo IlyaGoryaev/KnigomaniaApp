@@ -51,6 +51,18 @@ struct LoginScreenView: EntryViewProtocol {
 					.padding(.vertical, 15)
 					.background(RoundedRectangle(cornerRadius: 10).foregroundStyle(Color.white))
 					.padding(.horizontal, Sizes.Padding.normal)
+                    .onChange(of: email) { newEmail in
+                        isEmailValid = viewModel.validateEmail(newEmail)
+                    }
+                    if !isEmailValid {
+                        HStack {
+                            Text(TextTitles.RegistrationView.wrongEmail.rawValue)
+                                .font(.system(size: 11))
+                                .foregroundStyle(Color.red)
+                            Spacer()
+                        }
+                        .padding(.horizontal, Sizes.Padding.normal)
+                    }
 				}
 				.padding(.top, Sizes.Padding.large)
 				VStack(spacing: 8) {
@@ -62,6 +74,15 @@ struct LoginScreenView: EntryViewProtocol {
                     PasswordTextField(text: $passwordText, title: TextTitles.LoginScreenView.enterPassword.rawValue)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
+                    if !viewModel.validatePassword() {
+                        HStack {
+                            Text(TextTitles.LoginScreenView.wrongPassword.rawValue)
+                                .font(.system(size: 11))
+                                .foregroundStyle(Color.red)
+                            Spacer()
+                        }
+                        .padding(.horizontal, Sizes.Padding.normal)
+                    }
 				}
 				.padding(.top, Sizes.Padding.normal)
 				HelpButton(title: .missPassword) {

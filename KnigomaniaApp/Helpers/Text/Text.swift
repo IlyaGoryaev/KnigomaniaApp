@@ -66,6 +66,7 @@ enum TextTitles {
         case forgetPassword = "Забыли пароль?"
         case entry = "Войти"
         case noAccount = "Еще нет аккаунта?"
+        case wrongPassword = "Введите корректный пароль"
     }
 	
 }

@@ -17,4 +17,9 @@ class LoginScreenViewModel: ObservableObject {
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
         return emailPredicate.evaluate(with: email)
     }
+    
+    func validatePassword() -> Bool {
+        // validate password
+        return true
+    }
 }
