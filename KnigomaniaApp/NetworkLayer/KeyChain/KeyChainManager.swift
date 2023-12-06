@@ -13,6 +13,7 @@ protocol KeyChainManagerProtocol {
 	func getData(userLogin: String) throws -> Data?
 	func update(item: TokensInfo)
 	func delete()
+    func savePassword(userLogin: String, password: String) throws
 	
 }
 
@@ -65,4 +66,21 @@ final class KeyChainManager: KeyChainManagerProtocol {
 	func delete() {
 		
 	}
+    
+    func savePassword(userLogin: String, password: String) throws {
+        let passwordData = password.data(using: .utf8)
+
+        let query: [CFString: Any] = [
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrAccount: userLogin,
+            kSecValueData: passwordData as Any
+        ]
+
+        let status = SecItemAdd(query as CFDictionary, nil)
+
+        guard status == errSecSuccess else {
+            throw KeyChainError.unknownError(status)
+        }
+        print("password saved successfully")
+    }
 }

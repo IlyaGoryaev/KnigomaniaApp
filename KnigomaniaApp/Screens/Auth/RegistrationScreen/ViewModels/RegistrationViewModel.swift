@@ -17,4 +17,14 @@ class RegistrationViewModel: ObservableObject {
     func endEditing() {
         UIApplication.shared.endEditing()
     }
+    
+    func savePasswordToKeychain() {
+        do {
+            let userLogin = "exampleUser"
+            let password = "examplePassword"
+            try KeyChainManager.shared.savePassword(userLogin: userLogin, password: password)
+        } catch {
+            print("Error saving password: \(error)")
+        }
+    }
 }

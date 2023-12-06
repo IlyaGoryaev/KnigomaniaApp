@@ -156,6 +156,25 @@ struct RegistrationView: EntryViewProtocol {
         }
         return true
     }
+    
+    private func showConfirmationAlert() {
+        let alertController = UIAlertController(
+            title: "",
+            message: "Сохранить пароль на устройстве?",
+            preferredStyle: .alert
+        )
+        
+        alertController.addAction(UIAlertAction(title: "Сохранить", style: .cancel, handler: { _ in
+            viewModel.savePasswordToKeychain()
+        }))
+        alertController.addAction(UIAlertAction(title: "Пропустить", style: .destructive, handler: { _ in
+            
+        }))
+        
+        if let topViewController = entryCoordinator?.rootController.topViewController {
+            topViewController.present(alertController, animated: true, completion: nil)
+        }
+    }
 }
 
 // MARK: Preview
