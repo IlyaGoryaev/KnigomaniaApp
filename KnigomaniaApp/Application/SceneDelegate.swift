@@ -11,6 +11,8 @@ import Combine
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+	var userDefaultManager = UserDefaultManager.shared
+	
     var window: UIWindow?
 
 	var coordinator: (any Coordinator)?
@@ -20,7 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
-		
+		isUserAuthorize.send(isAuth())
+		print(userDefaultManager.getValue())
 		let window = UIWindow(windowScene: windowScene)
 		let viewController = UINavigationController()
 		let uiHostingController = UIHostingController(rootView: SplashScreenView())
@@ -51,8 +54,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		}
     }
 	
-	private func isLogin() -> Bool {
-		return true
+	private func isAuth() -> Bool {
+		userDefaultManager.isAuthorize()
 	}
 }
 

@@ -62,6 +62,7 @@ final class EntryCoordinator: Coordinator{
 	}
 	
 	func logIn(){
+		print("Login")
 		isUserAuthorize?.send(true)
 	}
 	

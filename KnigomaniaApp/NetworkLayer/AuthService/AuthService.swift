@@ -9,18 +9,18 @@ import Foundation
 
 protocol AuthServiceProtocol {
 	func signUp(with user: User) async throws -> LoginResponse
-	func signIn(with user: User) async throws -> Bool
+	func signIn(with user: User) async throws -> LoginResponse
 	func refreshTokens(for user: User) async throws -> Bool
 	func updatePassword(for user: User) async throws -> Bool
 }
 
 final class AuthService: AuthServiceProtocol, HttpClient {
 	func signUp(with user: User) async throws -> LoginResponse {
-		return try await request(endpoint: AuthEndpoint.signIn(user: user))
+		return try await request(endpoint: AuthEndpoint.signUp(user: user))
 	}
 	
-	func signIn(with user: User) async throws -> Bool {
-		return try await request(endpoint: AuthEndpoint.signUp(user: user))
+	func signIn(with user: User) async throws -> LoginResponse {
+		return try await request(endpoint: AuthEndpoint.signIn(user: user))
 	}
 	
 	func refreshTokens(for user: User) async throws -> Bool {

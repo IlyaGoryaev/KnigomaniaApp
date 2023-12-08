@@ -12,5 +12,5 @@ struct TokensInfo: Codable {
 	let accessTokenExpire: Int64
 	let refreshToken: String
 	let refreshTokenExpire: Int64
-	let userLogin: String
+	let userLogin: User
 }

@@ -42,7 +42,7 @@ extension AuthEndpoint: Endpoint {
 		}
 	}
 	
-	var body: [String : Any]? {
+	var body: [String : String]? {
 		switch self {
 		case .refreshTokens(let user), .signIn(let user), .signUp(let user), .updatePassword(let user):
 			return [

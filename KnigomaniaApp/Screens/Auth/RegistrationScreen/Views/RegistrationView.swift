@@ -7,17 +7,23 @@
 
 import SwiftUI
 
+enum DataState {
+	case initState
+	case errorState
+	case successState
+}
+
 struct RegistrationView: EntryViewProtocol {
     
     // MARK: Dependencies
     
     weak var entryCoordinator: EntryCoordinator?
     
-    @ObservedObject private var viewModel = RegistrationViewModel()
+    @StateObject private var viewModel = RegistrationViewModel()
     
     // MARK: State properties
     
-    @State private var isEmailValid: Bool = true
+	@State private var isEmailValid: DataState = .initState
     @State private var email: String = ""
     @State private var passwordText: String = ""
     @State private var confirmPasswordText: String = ""
@@ -60,14 +66,14 @@ struct RegistrationView: EntryViewProtocol {
                             .foregroundStyle(Color.white)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(isEmailTextFieldFocused ? (isEmailValid ? CustomColors.darkBrownColor : Color.red) : Color.clear, lineWidth: 1)
+									.stroke(isEmailTextFieldFocused ? (isEmailValid != DataState.errorState ? CustomColors.darkBrownColor : Color.red) : Color.clear, lineWidth: 1)
                             )
                     )
                     .padding(.horizontal, Sizes.Padding.normal)
                     .onChange(of: email) { newEmail in
                         isEmailValid = viewModel.validateEmail(newEmail)
                     }
-                    if !isEmailValid {
+					if isEmailValid == DataState.errorState {
                         HStack {
                             Text(TextTitles.RegistrationView.wrongEmail.rawValue)
                                 .font(.system(size: 11))
@@ -112,7 +118,7 @@ struct RegistrationView: EntryViewProtocol {
                                 .stroke(isSecondPasswordTextFieldFocused ? CustomColors.darkBrownColor : Color.clear, lineWidth: 1)
                                 .padding(.horizontal, 16)
                         )
-                    if !matchPasswords() {
+					if matchPasswords() == .errorState {
                         HStack {
                             Text(TextTitles.RegistrationView.differentPasswords.rawValue)
                                 .font(.system(size: 11))
@@ -125,8 +131,23 @@ struct RegistrationView: EntryViewProtocol {
                 .padding(.top, Sizes.Padding.normal)
                 
                 ButtonView(title: .continuation, isButtonEnable: true) {
-                    //					entryCoordinator?.startMailConfirmationCoordinator()
-                    entryCoordinator?.showError(errorDescription: "")
+					if matchPasswords() == .successState && isEmailValid == .successState {
+						Task {
+							
+							do {
+								try await viewModel.signUp(user: User(email: email, password: passwordText))
+								entryCoordinator?.startMailConfirmationCoordinator()
+							} catch(let error) {
+								entryCoordinator?.showError(errorDescription: error.localizedDescription)
+								print(error.localizedDescription)
+							}
+							
+							
+						}
+						//entryCoordinator?.startMailConfirmationCoordinator()
+					} else {
+						entryCoordinator?.showError(errorDescription: "")
+					}
                 }
                 .padding(.top, Sizes.Padding.large)
                 HStack(spacing: 4){
@@ -149,16 +170,18 @@ struct RegistrationView: EntryViewProtocol {
     
     // MARK: Actions
     
-    private func matchPasswords() -> Bool {
+    private func matchPasswords() -> DataState {
         let password = passwordText
         let confirmPassword = confirmPasswordText
-        
+		if password == confirmPassword && password == "" {
+			return .initState
+		}
         if isSecondPasswordTextFieldFocused {
             guard password == confirmPassword else {
-                return false
+				return .errorState
             }
         }
-        return true
+		return .successState
     }
     
     private func showConfirmationAlert() {

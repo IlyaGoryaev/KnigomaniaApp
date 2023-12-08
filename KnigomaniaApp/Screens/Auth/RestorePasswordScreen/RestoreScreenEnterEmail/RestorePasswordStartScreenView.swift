@@ -9,10 +9,16 @@ import SwiftUI
 
 struct RestorePasswordStartScreenView: View {
 	
+	// MARK: Dependencies
 	weak var resetPasswordCoordinator: ResetPasswordCoordinator?
+	@StateObject private var viewModel = RestoreSrceenEnterEmailViewModel()
 	
+	// MARK: Properties
 	@State private var email: String = ""
+	@State private var isEmailValid: DataState = .initState
+	@FocusState private var emailTextField: Bool
 	
+	// MARK: View
 	var body: some View {
 		ZStack {
 			CustomColors.background
@@ -33,11 +39,22 @@ struct RestorePasswordStartScreenView: View {
 							.foregroundStyle(CustomColors.brownColor)
 							.font(.system(size: 14))
 					}
+					.focused($emailTextField)
+					.autocorrectionDisabled()
+					.textInputAutocapitalization(.never)
 					.foregroundStyle(CustomColors.darkBrownColor)
 					.padding(.horizontal, 12)
 					.padding(.vertical, 15)
-					.background(RoundedRectangle(cornerRadius: 10).foregroundStyle(Color.white))
+					.background(RoundedRectangle(cornerRadius: 10)
+						.foregroundStyle(Color.white)
+						.overlay(
+							RoundedRectangle(cornerRadius: 10)
+								.stroke(emailTextField ? (isEmailValid != DataState.errorState ? CustomColors.darkBrownColor : Color.red) : Color.clear, lineWidth: 1)
+						))
 					.padding(.horizontal, 16)
+					.onChange(of: email) { newValue in
+						isEmailValid = viewModel.validateEmail(newValue)
+					}
 				}
 				.padding(.top, 40)
 				ButtonView(title: .resetPassword, isButtonEnable: true) {
@@ -52,11 +69,13 @@ struct RestorePasswordStartScreenView: View {
         }
 	}
     
+	// MARK: Functions
     private func endEditing() {
         UIApplication.shared.endEditing()
     }
 }
 
+// MARK: Preview
 #Preview {
 	RestorePasswordStartScreenView()
 }

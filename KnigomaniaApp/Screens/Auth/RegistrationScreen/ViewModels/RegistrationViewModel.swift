@@ -7,11 +7,14 @@
 
 import UIKit
 
-class RegistrationViewModel: ObservableObject {
-    func validateEmail(_ email: String) -> Bool {
+final class RegistrationViewModel: ObservableObject {
+	
+	private let userDefaultManager = UserDefaultManager.shared
+	
+    func validateEmail(_ email: String) -> DataState {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        return emailPredicate.evaluate(with: email)
+		return emailPredicate.evaluate(with: email) ? .successState : .errorState
     }
     
     func endEditing() {
@@ -27,4 +30,16 @@ class RegistrationViewModel: ObservableObject {
             print("Error saving password: \(error)")
         }
     }
+	
+	func signUp(user: User) async throws {
+		let loginResponse = try await AuthService().signUp(with: user)
+		do {
+			print(loginResponse)
+			try KeyChainManager.shared.save(item: TokensInfo(accessToken: loginResponse.accessToken, accessTokenExpire: 0, refreshToken: loginResponse.refreshToken, refreshTokenExpire: 0, userLogin: user))
+			userDefaultManager.login(login: user.email)
+		} catch(let error) {
+			print(error.localizedDescription)
+			throw error
+		}
+	}
 }

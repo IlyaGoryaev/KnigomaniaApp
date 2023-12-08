@@ -9,6 +9,12 @@ import Foundation
 
 enum HTTPHeader {
 	case contentType(ContentType)
+	
+	var header: (field: String, value: String) {
+		switch self {
+		case .contentType(let value):   return (field: "Content-Type", value: value.rawValue)
+		}
+	}
 }
 
 extension HTTPHeader {

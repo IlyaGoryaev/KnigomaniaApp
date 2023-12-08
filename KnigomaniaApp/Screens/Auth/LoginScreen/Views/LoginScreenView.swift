@@ -13,13 +13,16 @@ struct LoginScreenView: EntryViewProtocol {
 	
 	weak var entryCoordinator: EntryCoordinator?
     
-    @ObservedObject private var viewModel = LoginScreenViewModel()
+    @StateObject private var viewModel = LoginScreenViewModel()
 	
 	// MARK: Properties
 	
 	@State private var email: String = ""
 	@State private var passwordText: String = ""
-    @State private var isEmailValid: Bool = true
+	@State private var isEmailValid: DataState = .initState
+	
+	@FocusState private var isEmailTextFieldFocused: Bool
+	@FocusState private var isPasswordTextFieldFocused: Bool
 	
 	// MARK: View
 	
@@ -43,18 +46,24 @@ struct LoginScreenView: EntryViewProtocol {
 							.foregroundStyle(CustomColors.brownColor)
 							.font(.system(size: 14))
 					}
+					.focused($isEmailTextFieldFocused)
                     .autocapitalization(.none)
-                    .keyboardType(.emailAddress)
+					.keyboardType(.emailAddress)
                     .disableAutocorrection(true)
 					.foregroundStyle(CustomColors.darkBrownColor)
 					.padding(.horizontal, 12)
 					.padding(.vertical, 15)
-					.background(RoundedRectangle(cornerRadius: 10).foregroundStyle(Color.white))
+					.background(RoundedRectangle(cornerRadius: 10)
+						.foregroundStyle(Color.white)
+						.overlay(
+							RoundedRectangle(cornerRadius: 10)
+								.stroke(isEmailTextFieldFocused ? (isEmailValid != DataState.errorState ? CustomColors.darkBrownColor : Color.red) : Color.clear, lineWidth: 1)
+						))
 					.padding(.horizontal, Sizes.Padding.normal)
                     .onChange(of: email) { newEmail in
                         isEmailValid = viewModel.validateEmail(newEmail)
                     }
-                    if !isEmailValid {
+					if isEmailValid == .errorState {
                         HStack {
                             Text(TextTitles.RegistrationView.wrongEmail.rawValue)
                                 .font(.system(size: 11))
@@ -72,9 +81,15 @@ struct LoginScreenView: EntryViewProtocol {
 						.frame(maxWidth: .infinity, alignment: .leading)
 						.padding(.leading, Sizes.Padding.normal)
                     PasswordTextField(text: $passwordText, title: TextTitles.LoginScreenView.enterPassword.rawValue)
+						.focused($isPasswordTextFieldFocused)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
-                    if !viewModel.validatePassword() {
+						.overlay(
+							RoundedRectangle(cornerRadius: 10)
+								.stroke(isPasswordTextFieldFocused ? CustomColors.darkBrownColor : Color.clear, lineWidth: 1)
+								.padding(.horizontal, 16)
+						)
+					if viewModel.validatePassword() == .errorState {
                         HStack {
                             Text(TextTitles.LoginScreenView.wrongPassword.rawValue)
                                 .font(.system(size: 11))
@@ -91,7 +106,19 @@ struct LoginScreenView: EntryViewProtocol {
 				.frame(maxWidth: .infinity, alignment: .leading)
 				.padding([.top, .horizontal], Sizes.Padding.normal)
 				ButtonView(title: .entry, isButtonEnable: true) {
-					entryCoordinator?.logIn()
+					if isEmailValid == .successState && viewModel.validatePassword() == .successState {
+						Task {
+							do {
+								try await viewModel.logInUser(user: User(email: email, password: passwordText))
+								entryCoordinator?.logIn()
+							} catch(let error) {
+								entryCoordinator?.showError(errorDescription: error.localizedDescription)
+							}
+						}
+					} else {
+						entryCoordinator?.showError(errorDescription: "")
+					}
+					//entryCoordinator?.logIn()
 				}
 				.padding(.top, Sizes.Padding.double)
 				HStack(spacing: 3) {

@@ -26,9 +26,7 @@ struct MainSettingsScreen: SettingsCoordinatorViewProtocol {
 					}
 				}
 				.padding(.top, 32)
-				SettingsAccountExit {
-					settingsCoordinator?.accoutExit()
-				}
+				SettingsAccountExit()
 				.padding(.top, 32)
 				Spacer()
 			}
@@ -53,11 +51,11 @@ struct SettingsSectionView: View {
 
 struct SettingsAccountExit: View {
 	
-	let action: () -> ()
+	private let userDefaultManager = UserDefaultManager.shared
 	
 	var body: some View {
 		Button(action: {
-			action()
+			userDefaultManager.logout()
 			print("Выйти из аккаунта")
 		}, label: {
 			Text("Выйти из аккаунта")

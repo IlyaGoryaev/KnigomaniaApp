@@ -36,6 +36,11 @@
 		9D0E70562B11604300C2EAA2 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E70552B11604300C2EAA2 /* Sizes.swift */; };
 		9D0E70592B11609600C2EAA2 /* ImageNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E70582B11609600C2EAA2 /* ImageNames.swift */; };
 		9D1486252B1E5B770067C5E4 /* ScrollDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1486242B1E5B770067C5E4 /* ScrollDetector.swift */; };
+		9D1486282B2319160067C5E4 /* Encodable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1486272B2319160067C5E4 /* Encodable+Ext.swift */; };
+		9D14862A2B23195E0067C5E4 /* Dictionary+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1486292B23195E0067C5E4 /* Dictionary+Ext.swift */; };
+		9D14862D2B2319830067C5E4 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14862C2B2319830067C5E4 /* String+Ext.swift */; };
+		9D14862F2B2333920067C5E4 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14862E2B2333920067C5E4 /* UserDefaultManager.swift */; };
+		9D173F652B235E84001BDA92 /* RestoreSrceenEnterEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D173F642B235E84001BDA92 /* RestoreSrceenEnterEmailViewModel.swift */; };
 		9D359DB82B1BA79500CF2BB8 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D359DB72B1BA79500CF2BB8 /* RequestError.swift */; };
 		9D359DBA2B1BABE800CF2BB8 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D359DB92B1BABE800CF2BB8 /* LoginResponse.swift */; };
 		9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */; };
@@ -179,6 +184,11 @@
 		9D0E70552B11604300C2EAA2 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		9D0E70582B11609600C2EAA2 /* ImageNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNames.swift; sourceTree = "<group>"; };
 		9D1486242B1E5B770067C5E4 /* ScrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDetector.swift; sourceTree = "<group>"; };
+		9D1486272B2319160067C5E4 /* Encodable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Ext.swift"; sourceTree = "<group>"; };
+		9D1486292B23195E0067C5E4 /* Dictionary+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ext.swift"; sourceTree = "<group>"; };
+		9D14862C2B2319830067C5E4 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		9D14862E2B2333920067C5E4 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		9D173F642B235E84001BDA92 /* RestoreSrceenEnterEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreSrceenEnterEmailViewModel.swift; sourceTree = "<group>"; };
 		9D359DB72B1BA79500CF2BB8 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		9D359DB92B1BABE800CF2BB8 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -580,6 +590,15 @@
 				9D1486242B1E5B770067C5E4 /* ScrollDetector.swift */,
 			);
 			path = "SwiftUI+UIKIt";
+			sourceTree = "<group>";
+		};
+		9D173F632B235E66001BDA92 /* RestoreScreenEnterEmail */ = {
+			isa = PBXGroup;
+			children = (
+				FE70D79D2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift */,
+				9D173F642B235E84001BDA92 /* RestoreSrceenEnterEmailViewModel.swift */,
+			);
+			path = RestoreScreenEnterEmail;
 			sourceTree = "<group>";
 		};
 		9D359DB62B1BA78C00CF2BB8 /* Errors */ = {
@@ -1132,6 +1151,7 @@
 			isa = PBXGroup;
 			children = (
 				9DF6912F2B1B545E00F4FB3E /* KeyChainManager.swift */,
+				9D14862E2B2333920067C5E4 /* UserDefaultManager.swift */,
 			);
 			path = KeyChain;
 			sourceTree = "<group>";
@@ -1287,7 +1307,7 @@
 			isa = PBXGroup;
 			children = (
 				9D82427E2B12708900BF3ACF /* Coordinator */,
-				FE70D79D2AC861A90018C5A1 /* RestorePasswordStartScreenView.swift */,
+				9D173F632B235E66001BDA92 /* RestoreScreenEnterEmail */,
 				FEAA59B72ACB2E12004AE907 /* RestorePasswordScreenConfirmationView.swift */,
 				FEAA59B92ACB38F6004AE907 /* RestorePasswordScreenSuccessView.swift */,
 			);
@@ -1380,6 +1400,9 @@
 				FE91194B2AEC44E500B31380 /* ImagePicker.swift */,
 				FED451262AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift */,
 				FED451282AF3EBE000FAAFA5 /* ImageExtension.swift */,
+				9D1486272B2319160067C5E4 /* Encodable+Ext.swift */,
+				9D14862C2B2319830067C5E4 /* String+Ext.swift */,
+				9D1486292B23195E0067C5E4 /* Dictionary+Ext.swift */,
 				FE7ABC552AF932AC0069C4C4 /* TextFieldDynamicWidth.swift */,
 				9DC2D1112AFCFA9C0087FB34 /* TextFieldModifier.swift */,
 				FEAAB6312AFB7F4D009C0919 /* TextModifier.swift */,
@@ -1503,6 +1526,7 @@
 				9D8242712B12332500BF3ACF /* ProfileSettingsViewModel.swift in Sources */,
 				FEAB7AF12AE2BD000057F3C5 /* StatisticsView.swift in Sources */,
 				9D6C06B02B09549800478609 /* NotificationScreenView.swift in Sources */,
+				9D14862F2B2333920067C5E4 /* UserDefaultManager.swift in Sources */,
 				9D61F9C22AD8825D0000393C /* TrackerCoordinator.swift in Sources */,
 				FEF6972B2AC5E7CF00708E1E /* CustomColors.swift in Sources */,
 				9D072C202B019A6A001C2F54 /* NotificationCoordinator.swift in Sources */,
@@ -1543,6 +1567,7 @@
 				9D8242882B12729E00BF3ACF /* MailConfirmationStep2View.swift in Sources */,
 				9D055EB02AE0EEE800BDDF50 /* MainScreen.swift in Sources */,
 				9DA945CC2AC0BA0A002302D1 /* SceneDelegate.swift in Sources */,
+				9D173F652B235E84001BDA92 /* RestoreSrceenEnterEmailViewModel.swift in Sources */,
 				9D7A76DC2AE43A7F00158781 /* SimilarBooksView.swift in Sources */,
 				FE171B172AFB812C00AFDCDB /* BookPageViewModel.swift in Sources */,
 				9D055E9F2AE0E42300BDDF50 /* EntryCoordinator.swift in Sources */,
@@ -1552,8 +1577,10 @@
 				FED451292AF3EBE000FAAFA5 /* ImageExtension.swift in Sources */,
 				FED451272AF3DE6B00FAAFA5 /* ImagePickerRegistration.swift in Sources */,
 				9D7A76D62AE432DA00158781 /* DescriptionView.swift in Sources */,
+				9D14862D2B2319830067C5E4 /* String+Ext.swift in Sources */,
 				9D61F9DC2AD884D90000393C /* GenreModel.swift in Sources */,
 				9D8242602B11D35900BF3ACF /* NotificationProtocol.swift in Sources */,
+				9D14862A2B23195E0067C5E4 /* Dictionary+Ext.swift in Sources */,
 				9D8242732B12335D00BF3ACF /* UserModel.swift in Sources */,
 				9D1486252B1E5B770067C5E4 /* ScrollDetector.swift in Sources */,
 				9D698ABA2B1B03B10005E16F /* HelpButton.swift in Sources */,
@@ -1569,6 +1596,7 @@
 				9DC2D1182AFD05E70087FB34 /* BookCoordinatorViewProtocol.swift in Sources */,
 				9D7A77152AE47CDF00158781 /* SetUpReminderTrackerCoordinator.swift in Sources */,
 				FE4B8B002ADEA94A00FE28CE /* HomePageScreenView.swift in Sources */,
+				9D1486282B2319160067C5E4 /* Encodable+Ext.swift in Sources */,
 				FEF697302AC5EF1800708E1E /* CustomActivityIndicator.swift in Sources */,
 				FE5BC06F2AEAD369008F366F /* BookAddingCoordinator.swift in Sources */,
 				9DC2D1252AFD84810087FB34 /* RegistrationOnboardingViewProtocol.swift in Sources */,
