@@ -6,81 +6,50 @@
 //
 
 import Foundation
+import KeychainAccess
 
 protocol KeyChainManagerProtocol {
 	
-	func save(item: TokensInfo) throws
-	func getData(userLogin: String) throws -> Data?
+	func save(item: TokensInfo)
+	func getData() -> String?
 	func update(item: TokensInfo)
 	func delete()
-    func savePassword(userLogin: String, password: String) throws
+    func savePassword(password: String)
 	
 }
 
 final class KeyChainManager: KeyChainManagerProtocol {
 	
-	enum KeyChainError: Error {
-		case unknownError(OSStatus)
-	}
-	
+	private var keychain: Keychain
+	private let userDefaultManager = UserDefaultManager.shared
 	static let shared = KeyChainManager()
-	private init() { }
-	
-	func save(item: TokensInfo) throws {
-		
-		let query: [CFString: Any] = [
-			kSecClass: kSecClassGenericPassword,
-			kSecAttrAccount: item.userLogin.email,
-			kSecValueData: item.accessToken
-		]
-		
-		let status = SecItemAdd(query as CFDictionary, nil)
-		print(status)
-		guard status == errSecSuccess else {
-			throw KeyChainError.unknownError(status)
-		}
-		print("Save")
+	private init() {
+		self.keychain = Keychain(service: "Tokens")
 	}
 	
-	func getData(userLogin: String) throws -> Data? {
-		let query: [CFString: Any] = [
-			kSecClass: kSecClassGenericPassword,
-			kSecAttrAccount: userLogin,
-			kSecReturnData: kCFBooleanTrue as Any
-		]
-		
-		var result: AnyObject?
-		
-		let status = SecItemCopyMatching(query as CFDictionary, &result)
-		
-		guard status == errSecSuccess else { throw KeyChainError.unknownError(status) }
-		
-		
-		return result as? Data
+	func save(item: TokensInfo) {
+		keychain[item.userLogin.email] = item.accessToken
 	}
 	
-	func update(item: TokensInfo) {
-		
+	func getData() -> String? {
+		guard let currentLogin = userDefaultManager.getValue() else { return nil }
+		return keychain[currentLogin]
+	}
+	
+	func update(item: TokensInfo){
+		guard let currentLogin = userDefaultManager.getValue() else { return }
+		keychain[currentLogin] = item.accessToken
 	}
 	
 	func delete() {
-		
+		guard let currentLogin = userDefaultManager.getValue() else { return }
+		keychain[currentLogin] = nil
 	}
-    
-    func savePassword(userLogin: String, password: String) throws {
-        let passwordData = password.data(using: .utf8)
-
-        let query: [CFString: Any] = [
-            kSecClass: kSecClassGenericPassword,
-            kSecAttrAccount: userLogin,
-            kSecValueData: passwordData as Any
-        ]
-
-        let status = SecItemAdd(query as CFDictionary, nil)
-
-        guard status == errSecSuccess else {
-            throw KeyChainError.unknownError(status)
-        }
-        print("password saved successfully")
-    }
+	
+	func savePassword(password: String) {
+		guard let currentLogin = userDefaultManager.getValue() else { return }
+		keychain[currentLogin + "password"] = password
+	}
+	
+	
 }

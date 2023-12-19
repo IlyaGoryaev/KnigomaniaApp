@@ -28,8 +28,10 @@ class LoginScreenViewModel: ObservableObject {
 	
 	func logInUser(user: User) async throws {
 		do {
-			try await AuthService().signIn(with: user)
+			let loginResponse = try await AuthService().signIn(with: user)
+			KeyChainManager.shared.save(item: TokensInfo(accessToken: loginResponse.accessToken, accessTokenExpire: 0, refreshToken: loginResponse.refreshToken, refreshTokenExpire: 0, userLogin: user))
 			userDefaultManager.login(login: user.email)
+			print(KeyChainManager.shared.getData())
 		} catch(let error) {
 			print(error)
 		}

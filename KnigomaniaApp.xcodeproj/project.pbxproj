@@ -41,6 +41,7 @@
 		9D14862D2B2319830067C5E4 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14862C2B2319830067C5E4 /* String+Ext.swift */; };
 		9D14862F2B2333920067C5E4 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D14862E2B2333920067C5E4 /* UserDefaultManager.swift */; };
 		9D173F652B235E84001BDA92 /* RestoreSrceenEnterEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D173F642B235E84001BDA92 /* RestoreSrceenEnterEmailViewModel.swift */; };
+		9D173F682B237511001BDA92 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 9D173F672B237511001BDA92 /* KeychainAccess */; };
 		9D359DB82B1BA79500CF2BB8 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D359DB72B1BA79500CF2BB8 /* RequestError.swift */; };
 		9D359DBA2B1BABE800CF2BB8 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D359DB92B1BABE800CF2BB8 /* LoginResponse.swift */; };
 		9D61F9C02AD882360000393C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61F9BF2AD882360000393C /* CoordinatorProtocol.swift */; };
@@ -309,6 +310,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D173F682B237511001BDA92 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1436,6 +1438,9 @@
 			dependencies = (
 			);
 			name = KnigomaniaApp;
+			packageProductDependencies = (
+				9D173F672B237511001BDA92 /* KeychainAccess */,
+			);
 			productName = KnigomaniaApp;
 			productReference = 9DA945C62AC0BA0A002302D1 /* KnigomaniaApp.app */;
 			productType = "com.apple.product-type.application";
@@ -1464,6 +1469,9 @@
 				Base,
 			);
 			mainGroup = 9DA945BD2AC0BA0A002302D1;
+			packageReferences = (
+				9D173F662B237511001BDA92 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 9DA945C72AC0BA0A002302D1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1873,6 +1881,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9D173F662B237511001BDA92 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9D173F672B237511001BDA92 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D173F662B237511001BDA92 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9DA945BE2AC0BA0A002302D1 /* Project object */;
 }
